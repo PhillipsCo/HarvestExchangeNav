@@ -10,6 +10,17 @@
   <url>http://www.talend.org/</url>
   <modules>
     <module>code/routines</module>
+    <module>jobs/process/DSD_TO_ERP/DSD_TO_NAV/Objects/j_dsdtonav_010_order_order_rm_archive_0.1</module>
+    <module>jobs/process/DSD_TO_ERP/DSD_TO_NAV/Objects/j_dsdnav_010_polldata_0.1</module>
+    <module>jobs/process/DSD_TO_ERP/DSD_TO_NAV/Objects/not_sure_what_this_isj_dsdtonav_010_invoice_0.1</module>
+    <module>jobs/process/DSD_TO_ERP/DSD_TO_NAV/Objects/j_dsdtonav_010_invoice_0.1</module>
+    <module>jobs/process/DSD_TO_ERP/DSD_TO_NAV/Objects/j_dsdtonav_010_adjustment_0.1</module>
+    <module>jobs/process/DSD_TO_ERP/DSD_TO_NAV/Objects/j_dsdtonav_020_bmeod_loadadj_0.1</module>
+    <module>jobs/process/DSD_TO_ERP/DSD_TO_NAV/Objects/j_dsdtonav_010_order_order_rm_archive_test_0.1</module>
+    <module>jobs/process/DSD_TO_ERP/DSD_TO_NAV/Objects/copy_of_j_dsdtonav_010_order_order_0.1</module>
+    <module>jobs/process/DSD_TO_ERP/DSD_TO_NAV/Objects/j_dsdtonav_010_order_order_manual_0.1</module>
+    <module>jobs/process/DSD_TO_ERP/DSD_TO_NAV/Objects/j_dsdtonav_010_orderexchg_0.1</module>
+    <module>jobs/process/DSD_TO_ERP/DSD_TO_NAV/Objects/j_dsdtonav_010_order_order_0.1</module>
   </modules>
   <properties>
     <talend.project.name>NAV_MOV</talend.project.name>

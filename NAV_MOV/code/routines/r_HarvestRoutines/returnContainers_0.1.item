@@ -1,0 +1,131 @@
+package routines;
+
+/*
+ * user specification: the function's comment should contain keys as follows: 1. write about the function's comment.but
+ * it must be before the "{talendTypes}" key.
+ * 
+ * 2. {talendTypes} 's value must be talend Type, it is required . its value should be one of: String, char | Character,
+ * long | Long, int | Integer, boolean | Boolean, byte | Byte, Date, double | Double, float | Float, Object, short |
+ * Short
+ * 
+ * 3. {Category} define a category for the Function. it is required. its value is user-defined .
+ * 
+ * 4. {param} 's format is: {param} <type>[(<default value or closed list values>)] <name>[ : <comment>]
+ * 
+ * <type> 's value should be one of: string, int, list, double, object, boolean, long, char, date. <name>'s value is the
+ * Function's parameter name. the {param} is optional. so if you the Function without the parameters. the {param} don't
+ * added. you can have many parameters for the Function.
+ * 
+ * 5. {example} gives a example for the Function. it is optional.
+ */
+import java.text.DecimalFormat;
+public class returnContainers {
+
+    /**
+     * helloExample: not return value, only print "hello" + message.
+     * 
+     * 
+     * {talendTypes} String
+     * 
+     * {Category} User Defined
+     * 
+     * {param} string("world") input: The string need to be printed.
+     * 
+     * {example} helloExemple("world") # hello world !.
+     */
+    public static void helloExample(String message) {
+        if (message == null) {
+            message = "World"; //$NON-NLS-1$
+        }
+        System.out.println("Hello " + message + " !"); //$NON-NLS-1$ //$NON-NLS-2$
+    }
+    private static DecimalFormat df2 = new DecimalFormat(".0000");
+    
+    public static String formatAmt(String amountIn) {
+		String amountOut = null;
+		if(amountIn == null)
+			amountIn = "0";
+		String leadingSign = "+";
+		Double dAmt = Double.parseDouble(amountIn);
+		if(dAmt < 0)
+			leadingSign = "-";
+		amountOut = "0000000000" + df2.format(dAmt).replace(".", "").replace("-", "");
+		return leadingSign + amountOut.substring(amountOut.length()-10);
+	}
+    public static String timestampToDate(String dateIn){
+    	Long bigNo = Long.parseLong(dateIn); 
+    	String dateOut = TalendDate.formatDate("yyyyMMdd",new java.util.Date((long)(bigNo))); 
+    	
+    	return dateOut;
+    	
+    }
+    
+    public static String timestampToDateOrder(String dateIn){
+    	Long bigNo = Long.parseLong(dateIn); 
+    	String dateOut = TalendDate.formatDate("MMddyyyy",new java.util.Date((long)(bigNo))); 
+    	
+    	return dateOut;
+    	
+    }
+    public static String timestampToDateMMddyyyy(String dateIn){
+    	Long bigNo = Long.parseLong(dateIn); 
+    	String dateOut = TalendDate.formatDate("MMddyyyy",new java.util.Date((long)(bigNo))); 
+    	
+    	return dateOut;
+    	
+    }
+    public static int timestampToDOW(String dateIn){
+    	Long bigNo = Long.parseLong(dateIn); 
+    	int DOW = TalendDate.getPartOfDate("DAY_OF_WEEK",new java.util.Date((long)(bigNo))) + 1; 
+    	
+    	return DOW;
+    	
+    }
+    public static String timestampToStrTimestamp(String dateIn){
+    	Long bigNo = Long.parseLong(dateIn); 
+    	String dateOut = TalendDate.formatDate("yyyyMMddhhmm",new java.util.Date((long)(bigNo))); 
+    	String s = "0.01";
+    	double d = Double.parseDouble(s);
+    	int i = (int) d;
+    	return dateOut;
+    	
+    }
+    public static String formatQty(String qtyIn){
+    	 
+    	double d = Double.parseDouble(qtyIn);
+    	if(d<0) d=d*-1;
+    	String qtyOut = String.format("%09d",(int) d);
+    	return qtyOut;    	
+    }
+    public static Long formatLongQty(String qtyIn){
+   	 
+    	double d = Double.parseDouble(qtyIn);
+    	
+    	long qtyOut = (long) d;
+    	return qtyOut;    	
+    }
+    public static int formatIntQty(String qtyIn){
+      	 
+    	double d = Double.parseDouble(qtyIn);
+    	
+    	int qtyOut = (int) d;
+    	return qtyOut;    	
+    }
+    public static String getRouteNo(String refNoIn){
+   	 
+    	String[] parts = refNoIn.split("_");
+    	 //System.out.println("RouteNo= " + parts[1]);
+    	String RouteNo = "000000000" + parts[1];
+    	String refNoOut = RouteNo.substring(RouteNo.length()-9);
+    	return refNoOut;    	
+    }
+    public static String createNavRouteNo(String refNoIn){
+      	 
+    	String[] parts = refNoIn.split("_");
+    	 //System.out.println("RouteNo= " + parts[1]);
+    	int intRouteNo = Integer.valueOf(parts[1]);
+    	int intCompany = Integer.valueOf(parts[0]);
+    	String routeNoOut = "R" + Integer.toString(intCompany) + String.format ("%04d", intRouteNo);
+    	return routeNoOut;    	
+    }
+}
