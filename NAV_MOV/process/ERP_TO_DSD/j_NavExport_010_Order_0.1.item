@@ -1,0 +1,1715 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><talendfile:ProcessType xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" defaultContext="Default" jobType="Standard" xmi:version="2.0">
+  <context confirmationNeeded="false" name="Default">
+    <contextParameter comment="" name="filepath" prompt="filepath?" promptNeeded="false" type="id_Directory" value="C:\ERP_DSD_Integration\RMExportFiles\GORDER05.DNL"/>
+    <contextParameter comment="" name="objectType" prompt="objectType?" promptNeeded="false" type="id_String" value="Order"/>
+    <contextParameter comment="" name="directory" prompt="directory?" promptNeeded="false" type="id_Directory" value="\\Srvretlfs100.harvestfoodsolutions.com\Shared\ERP_DSD_Integration\RMExportFiles\Instance1"/>
+    <contextParameter comment="" name="source" prompt="source?" promptNeeded="false" type="id_String" value="NAV"/>
+    <contextParameter comment="" name="JobName" prompt="JobName?" promptNeeded="false" type="id_String" value="j_NavExport_010_Order"/>
+    <contextParameter comment="" name="group" prompt="group?" promptNeeded="false" type="id_String" value="DEFAULT"/>
+    <contextParameter comment="" name="description" prompt="description?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="mafAppSpace" prompt="mafAppSpace?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="table" prompt="table?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="viewname" prompt="viewname?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="database" prompt="database?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="table_view" prompt="table_view?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="mom_Host" prompt="mom_Host?" promptNeeded="false" repositoryContextId="__0oFgDc-Eea1Xeo0s3oKJA" type="id_String" value=""/>
+    <contextParameter comment="" name="mom_Password" prompt="mom_Password?" promptNeeded="false" repositoryContextId="__0oFgDc-Eea1Xeo0s3oKJA" type="id_String" value=""/>
+    <contextParameter comment="" name="mom_Port" prompt="mom_Port?" promptNeeded="false" repositoryContextId="__0oFgDc-Eea1Xeo0s3oKJA" type="id_Integer" value=""/>
+    <contextParameter comment="" name="mom_To" prompt="mom_To?" promptNeeded="false" repositoryContextId="__0oFgDc-Eea1Xeo0s3oKJA" type="id_String" value=""/>
+    <contextParameter comment="" name="mom_Username" prompt="mom_Username?" promptNeeded="false" repositoryContextId="__0oFgDc-Eea1Xeo0s3oKJA" type="id_String" value=""/>
+    <contextParameter comment="" name="batch" prompt="batch?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value=""/>
+    <contextParameter comment="" name="CRC" prompt="CRC?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_Long" value=""/>
+    <contextParameter comment="" name="Customer_Process_Queue" prompt="Customer_Process_Queue?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value=""/>
+    <contextParameter comment="" name="environment" prompt="environment?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value=""/>
+    <contextParameter comment="" name="ErrorMsg" prompt="ErrorMsg?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value=""/>
+    <contextParameter comment="" name="instance" prompt="instance?" promptNeeded="true" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value="CUST04"/>
+    <contextParameter comment="" name="key" prompt="key?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value=""/>
+    <contextParameter comment="" name="keystore" prompt="keystore?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value=""/>
+    <contextParameter comment="" name="message1" prompt="message1?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value=""/>
+    <contextParameter comment="" name="message2" prompt="message2?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value=""/>
+    <contextParameter comment="" name="movilizerURL" prompt="movilizerURL?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value=""/>
+    <contextParameter comment="" name="movilizerVersion" prompt="movilizerVersion?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_Integer" value=""/>
+    <contextParameter comment="" name="Nested_Context" prompt="Nested_Context?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value=""/>
+    <contextParameter comment="" name="object" prompt="object?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value=""/>
+    <contextParameter comment="" name="objectId" prompt="objectId?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value=""/>
+    <contextParameter comment="" name="objectName" prompt="objectName?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value=""/>
+    <contextParameter comment="" name="partition" prompt="partition?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value=""/>
+    <contextParameter comment="" name="Pool" prompt="Pool?" promptNeeded="false" type="id_String" value="ORDER"/>
+    <contextParameter comment="" name="ProcessTimeStamp" prompt="ProcessTimeStamp?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value="9999-01-01 00:00:00"/>
+    <contextParameter comment="" name="SystemId" prompt="SystemId?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value=""/>
+    <contextParameter comment="" name="SystemPassword" prompt="SystemPassword?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value=""/>
+    <contextParameter comment="" name="type" prompt="type?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value=""/>
+    <contextParameter comment="" name="DB_AMC_AdditionalParams" prompt="DB_AMC_AdditionalParams?" promptNeeded="false" repositoryContextId="_CJyp8EJfEeae0cO5bkhd8A" type="id_String" value=""/>
+    <contextParameter comment="" name="DB_AMC_Database" prompt="DB_AMC_Database?" promptNeeded="false" repositoryContextId="_CJyp8EJfEeae0cO5bkhd8A" type="id_String" value="TALEND_DEV_AMC_641"/>
+    <contextParameter comment="" name="DB_AMC_Login" prompt="DB_AMC_Login?" promptNeeded="false" repositoryContextId="_CJyp8EJfEeae0cO5bkhd8A" type="id_String" value="talend"/>
+    <contextParameter comment="" name="DB_AMC_Password" prompt="DB_AMC_Password?" promptNeeded="false" repositoryContextId="_CJyp8EJfEeae0cO5bkhd8A" type="id_Password" value="YdTnhbqBAdo="/>
+    <contextParameter comment="" name="DB_AMC_Port" prompt="DB_AMC_Port?" promptNeeded="false" repositoryContextId="_CJyp8EJfEeae0cO5bkhd8A" type="id_String" value="1433"/>
+    <contextParameter comment="" name="DB_AMC_Schema" prompt="DB_AMC_Schema?" promptNeeded="false" repositoryContextId="_CJyp8EJfEeae0cO5bkhd8A" type="id_String" value=""/>
+    <contextParameter comment="" name="DB_AMC_Server" prompt="DB_AMC_Server?" promptNeeded="false" repositoryContextId="_CJyp8EJfEeae0cO5bkhd8A" type="id_String" value="SRVRSQL200.harvestfoodsolutions.com"/>
+    <contextParameter comment="" name="DB_ERP_DSD_Integration_AdditionalParams" prompt="DB_ERP_DSD_Integration_AdditionalParams?" promptNeeded="false" repositoryContextId="_-v_zwEGGEeazMKeZhCw-4Q" type="id_String" value=""/>
+    <contextParameter comment="" name="DB_ERP_DSD_Integration_Database" prompt="DB_ERP_DSD_Integration_Database?" promptNeeded="false" repositoryContextId="_-v_zwEGGEeazMKeZhCw-4Q" type="id_String" value="ERP_DSD_Integration_DEV"/>
+    <contextParameter comment="" name="DB_ERP_DSD_Integration_Login" prompt="DB_ERP_DSD_Integration_Login?" promptNeeded="false" repositoryContextId="_-v_zwEGGEeazMKeZhCw-4Q" type="id_String" value="talend"/>
+    <contextParameter comment="" name="DB_ERP_DSD_Integration_Password" prompt="DB_ERP_DSD_Integration_Password?" promptNeeded="false" repositoryContextId="_-v_zwEGGEeazMKeZhCw-4Q" type="id_Password" value="YdTnhbqBAdo="/>
+    <contextParameter comment="" name="DB_ERP_DSD_Integration_Port" prompt="DB_ERP_DSD_Integration_Port?" promptNeeded="false" repositoryContextId="_-v_zwEGGEeazMKeZhCw-4Q" type="id_String" value="1433"/>
+    <contextParameter comment="" name="DB_ERP_DSD_Integration_Schema" prompt="DB_ERP_DSD_Integration_Schema?" promptNeeded="false" repositoryContextId="_-v_zwEGGEeazMKeZhCw-4Q" type="id_String" value="dbo"/>
+    <contextParameter comment="" name="DB_ERP_DSD_Integration_Server" prompt="DB_ERP_DSD_Integration_Server?" promptNeeded="false" repositoryContextId="_-v_zwEGGEeazMKeZhCw-4Q" type="id_String" value="srvrsql200.harvestfoodsolutions.com"/>
+    <contextParameter comment="" name="DB_Navision_AdditionalParams" prompt="DB_Navision_AdditionalParams?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value=""/>
+    <contextParameter comment="" name="DB_Navision_Database" prompt="DB_Navision_Database?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="TEST-USB-2013"/>
+    <contextParameter comment="" name="DB_Navision_Login" prompt="DB_Navision_Login?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="talend_hfs2"/>
+    <contextParameter comment="" name="DB_Navision_Password" prompt="DB_Navision_Password?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_Password" value="PrT+NDdqPMBr/HtJWqzj6w=="/>
+    <contextParameter comment="" name="DB_Navision_Port" prompt="DB_Navision_Port?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="1433"/>
+    <contextParameter comment="" name="DB_Navision_Schema" prompt="DB_Navision_Schema?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="dbo"/>
+    <contextParameter comment="" name="DB_Navision_Server" prompt="DB_Navision_Server?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="testnav10.corp.usbakery.com"/>
+    <contextParameter comment="" name="DB_Talend_Context_AdditionalParams" prompt="DB_Talend_Context_AdditionalParams?" promptNeeded="false" repositoryContextId="_ypE2UFnREeaCBrSnOG5XMg" type="id_String" value=""/>
+    <contextParameter comment="" name="DB_Talend_Context_Database" prompt="DB_Talend_Context_Database?" promptNeeded="false" repositoryContextId="_ypE2UFnREeaCBrSnOG5XMg" type="id_String" value="talend_context"/>
+    <contextParameter comment="" name="DB_Talend_Context_Login" prompt="DB_Talend_Context_Login?" promptNeeded="false" repositoryContextId="_ypE2UFnREeaCBrSnOG5XMg" type="id_String" value="talend"/>
+    <contextParameter comment="" name="DB_Talend_Context_Password" prompt="DB_Talend_Context_Password?" promptNeeded="false" repositoryContextId="_ypE2UFnREeaCBrSnOG5XMg" type="id_Password" value="YdTnhbqBAdo="/>
+    <contextParameter comment="" name="DB_Talend_Context_Port" prompt="DB_Talend_Context_Port?" promptNeeded="false" repositoryContextId="_ypE2UFnREeaCBrSnOG5XMg" type="id_String" value="1433"/>
+    <contextParameter comment="" name="DB_Talend_Context_Schema" prompt="DB_Talend_Context_Schema?" promptNeeded="false" repositoryContextId="_ypE2UFnREeaCBrSnOG5XMg" type="id_String" value="dbo"/>
+    <contextParameter comment="" name="DB_Talend_Context_Server" prompt="DB_Talend_Context_Server?" promptNeeded="false" repositoryContextId="_ypE2UFnREeaCBrSnOG5XMg" type="id_String" value="SRVRSQL200.harvestfoodsolutions.com"/>
+    <contextParameter comment="" name="NAV_Contact" prompt="NAV_Contact?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="NAV_DSD_Contacts"/>
+    <contextParameter comment="" name="NAV_Customer" prompt="NAV_Customer?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="Nav_DSD_Customer Download"/>
+    <contextParameter comment="" name="NAV_Order" prompt="NAV_Order?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="NAV_DSD_Order"/>
+    <contextParameter comment="" name="NAV_Itinerary" prompt="NAV_Itinerary?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="Nav_DSD_Itinerary"/>
+    <contextParameter comment="" name="NAV_Shipment" prompt="NAV_Shipment?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="NAV_DSD_Shipment"/>
+    <contextParameter comment="" name="RM_Order_Encoding" prompt="RM_Order_Encoding?" promptNeeded="false" repositoryContextId="_hIrjIDceEeaqN-Jziuqx3w" type="id_String" value=""/>
+    <contextParameter comment="" name="RM_Order_FieldSeparator" prompt="RM_Order_FieldSeparator?" promptNeeded="false" repositoryContextId="_hIrjIDceEeaqN-Jziuqx3w" type="id_String" value=""/>
+    <contextParameter comment="" name="RM_Order_File" prompt="RM_Order_File?" promptNeeded="false" repositoryContextId="_hIrjIDceEeaqN-Jziuqx3w" type="id_String" value=""/>
+    <contextParameter comment="" name="RM_Order_RowSeparator" prompt="RM_Order_RowSeparator?" promptNeeded="false" repositoryContextId="_hIrjIDceEeaqN-Jziuqx3w" type="id_String" value=""/>
+  </context>
+  <context confirmationNeeded="false" name="QA">
+    <contextParameter comment="" name="filepath" prompt="filepath?" promptNeeded="false" type="id_Directory" value="C:\ERP_DSD_Integration\RMExportFiles\GORDER05.DNL"/>
+    <contextParameter comment="" name="objectType" prompt="objectType?" promptNeeded="false" type="id_String" value="Order"/>
+    <contextParameter comment="" name="directory" prompt="directory?" promptNeeded="false" type="id_Directory" value="\\Srvretlfs100.harvestfoodsolutions.com\Shared\ERP_DSD_Integration\RMExportFiles\Instance1"/>
+    <contextParameter comment="" name="source" prompt="source?" promptNeeded="false" type="id_String" value="NAV"/>
+    <contextParameter comment="" name="JobName" prompt="JobName?" promptNeeded="false" type="id_String" value="j_NavExport_010_Order"/>
+    <contextParameter comment="" name="group" prompt="group?" promptNeeded="false" type="id_String" value="DEFAULT"/>
+    <contextParameter comment="" name="description" prompt="description?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="mafAppSpace" prompt="mafAppSpace?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="table" prompt="table?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="viewname" prompt="viewname?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="database" prompt="database?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="table_view" prompt="table_view?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="mom_Host" prompt="mom_Host?" promptNeeded="false" repositoryContextId="__0oFgDc-Eea1Xeo0s3oKJA" type="id_String" value=""/>
+    <contextParameter comment="" name="mom_Password" prompt="mom_Password?" promptNeeded="false" repositoryContextId="__0oFgDc-Eea1Xeo0s3oKJA" type="id_String" value=""/>
+    <contextParameter comment="" name="mom_Port" prompt="mom_Port?" promptNeeded="false" repositoryContextId="__0oFgDc-Eea1Xeo0s3oKJA" type="id_Integer" value=""/>
+    <contextParameter comment="" name="mom_To" prompt="mom_To?" promptNeeded="false" repositoryContextId="__0oFgDc-Eea1Xeo0s3oKJA" type="id_String" value=""/>
+    <contextParameter comment="" name="mom_Username" prompt="mom_Username?" promptNeeded="false" repositoryContextId="__0oFgDc-Eea1Xeo0s3oKJA" type="id_String" value=""/>
+    <contextParameter comment="" name="batch" prompt="batch?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value=""/>
+    <contextParameter comment="" name="CRC" prompt="CRC?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_Long" value=""/>
+    <contextParameter comment="" name="Customer_Process_Queue" prompt="Customer_Process_Queue?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value=""/>
+    <contextParameter comment="" name="environment" prompt="environment?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value=""/>
+    <contextParameter comment="" name="ErrorMsg" prompt="ErrorMsg?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value=""/>
+    <contextParameter comment="" name="instance" prompt="instance?" promptNeeded="true" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value="CUST04"/>
+    <contextParameter comment="" name="key" prompt="key?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value=""/>
+    <contextParameter comment="" name="keystore" prompt="keystore?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value=""/>
+    <contextParameter comment="" name="message1" prompt="message1?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value=""/>
+    <contextParameter comment="" name="message2" prompt="message2?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value=""/>
+    <contextParameter comment="" name="movilizerURL" prompt="movilizerURL?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value=""/>
+    <contextParameter comment="" name="movilizerVersion" prompt="movilizerVersion?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_Integer" value=""/>
+    <contextParameter comment="" name="Nested_Context" prompt="Nested_Context?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value=""/>
+    <contextParameter comment="" name="object" prompt="object?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value=""/>
+    <contextParameter comment="" name="objectId" prompt="objectId?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value=""/>
+    <contextParameter comment="" name="objectName" prompt="objectName?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value=""/>
+    <contextParameter comment="" name="partition" prompt="partition?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value=""/>
+    <contextParameter comment="" name="Pool" prompt="Pool?" promptNeeded="false" type="id_String" value="ORDER"/>
+    <contextParameter comment="" name="ProcessTimeStamp" prompt="ProcessTimeStamp?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value="9999-01-01 00:00:00"/>
+    <contextParameter comment="" name="SystemId" prompt="SystemId?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value=""/>
+    <contextParameter comment="" name="SystemPassword" prompt="SystemPassword?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value=""/>
+    <contextParameter comment="" name="type" prompt="type?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value=""/>
+    <contextParameter comment="" name="DB_AMC_AdditionalParams" prompt="DB_AMC_AdditionalParams?" promptNeeded="false" repositoryContextId="_CJyp8EJfEeae0cO5bkhd8A" type="id_String" value=""/>
+    <contextParameter comment="" name="DB_AMC_Database" prompt="DB_AMC_Database?" promptNeeded="false" repositoryContextId="_CJyp8EJfEeae0cO5bkhd8A" type="id_String" value="TALEND_QA_AMC_641"/>
+    <contextParameter comment="" name="DB_AMC_Login" prompt="DB_AMC_Login?" promptNeeded="false" repositoryContextId="_CJyp8EJfEeae0cO5bkhd8A" type="id_String" value="talend"/>
+    <contextParameter comment="" name="DB_AMC_Password" prompt="DB_AMC_Password?" promptNeeded="false" repositoryContextId="_CJyp8EJfEeae0cO5bkhd8A" type="id_Password" value="YdTnhbqBAdo="/>
+    <contextParameter comment="" name="DB_AMC_Port" prompt="DB_AMC_Port?" promptNeeded="false" repositoryContextId="_CJyp8EJfEeae0cO5bkhd8A" type="id_String" value="1433"/>
+    <contextParameter comment="" name="DB_AMC_Schema" prompt="DB_AMC_Schema?" promptNeeded="false" repositoryContextId="_CJyp8EJfEeae0cO5bkhd8A" type="id_String" value=""/>
+    <contextParameter comment="" name="DB_AMC_Server" prompt="DB_AMC_Server?" promptNeeded="false" repositoryContextId="_CJyp8EJfEeae0cO5bkhd8A" type="id_String" value="SRVRSQL200.harvestfoodsolutions.com"/>
+    <contextParameter comment="" name="DB_Navision_AdditionalParams" prompt="DB_Navision_AdditionalParams?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value=""/>
+    <contextParameter comment="" name="DB_Navision_Database" prompt="DB_Navision_Database?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="TEST-USB-2013"/>
+    <contextParameter comment="" name="DB_Navision_Login" prompt="DB_Navision_Login?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="talend_hfs2"/>
+    <contextParameter comment="" name="DB_Navision_Password" prompt="DB_Navision_Password?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_Password" value="PrT+NDdqPMBr/HtJWqzj6w=="/>
+    <contextParameter comment="" name="DB_Navision_Port" prompt="DB_Navision_Port?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="1433"/>
+    <contextParameter comment="" name="DB_Navision_Schema" prompt="DB_Navision_Schema?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="dbo"/>
+    <contextParameter comment="" name="DB_Navision_Server" prompt="DB_Navision_Server?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="testnav10.corp.usbakery.com"/>
+    <contextParameter comment="" name="DB_Talend_Context_AdditionalParams" prompt="DB_Talend_Context_AdditionalParams?" promptNeeded="false" repositoryContextId="_ypE2UFnREeaCBrSnOG5XMg" type="id_String" value=""/>
+    <contextParameter comment="" name="DB_Talend_Context_Database" prompt="DB_Talend_Context_Database?" promptNeeded="false" repositoryContextId="_ypE2UFnREeaCBrSnOG5XMg" type="id_String" value="talend_context"/>
+    <contextParameter comment="" name="DB_Talend_Context_Login" prompt="DB_Talend_Context_Login?" promptNeeded="false" repositoryContextId="_ypE2UFnREeaCBrSnOG5XMg" type="id_String" value="talend"/>
+    <contextParameter comment="" name="DB_Talend_Context_Password" prompt="DB_Talend_Context_Password?" promptNeeded="false" repositoryContextId="_ypE2UFnREeaCBrSnOG5XMg" type="id_Password" value="YdTnhbqBAdo="/>
+    <contextParameter comment="" name="DB_Talend_Context_Port" prompt="DB_Talend_Context_Port?" promptNeeded="false" repositoryContextId="_ypE2UFnREeaCBrSnOG5XMg" type="id_String" value="1433"/>
+    <contextParameter comment="" name="DB_Talend_Context_Schema" prompt="DB_Talend_Context_Schema?" promptNeeded="false" repositoryContextId="_ypE2UFnREeaCBrSnOG5XMg" type="id_String" value="dbo"/>
+    <contextParameter comment="" name="DB_Talend_Context_Server" prompt="DB_Talend_Context_Server?" promptNeeded="false" repositoryContextId="_ypE2UFnREeaCBrSnOG5XMg" type="id_String" value="SRVRSQL200.harvestfoodsolutions.com"/>
+    <contextParameter comment="" name="NAV_Contact" prompt="NAV_Contact?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="NAV_DSD_Contacts"/>
+    <contextParameter comment="" name="NAV_Customer" prompt="NAV_Customer?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="Nav_DSD_Customer Download"/>
+    <contextParameter comment="" name="NAV_Order" prompt="NAV_Order?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="NAV_DSD_Order"/>
+    <contextParameter comment="" name="NAV_Itinerary" prompt="NAV_Itinerary?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="Nav_DSD_Itinerary"/>
+    <contextParameter comment="" name="NAV_Shipment" prompt="NAV_Shipment?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="NAV_DSD_Shipment"/>
+    <contextParameter comment="" name="RM_Order_Encoding" prompt="RM_Order_Encoding?" promptNeeded="false" repositoryContextId="_hIrjIDceEeaqN-Jziuqx3w" type="id_String" value=""/>
+    <contextParameter comment="" name="RM_Order_FieldSeparator" prompt="RM_Order_FieldSeparator?" promptNeeded="false" repositoryContextId="_hIrjIDceEeaqN-Jziuqx3w" type="id_String" value=""/>
+    <contextParameter comment="" name="RM_Order_File" prompt="RM_Order_File?" promptNeeded="false" repositoryContextId="_hIrjIDceEeaqN-Jziuqx3w" type="id_String" value=""/>
+    <contextParameter comment="" name="RM_Order_RowSeparator" prompt="RM_Order_RowSeparator?" promptNeeded="false" repositoryContextId="_hIrjIDceEeaqN-Jziuqx3w" type="id_String" value=""/>
+    <contextParameter comment="" name="DB_ERP_DSD_Integration_Login" prompt="DB_ERP_DSD_Integration_Login?" promptNeeded="false" repositoryContextId="_-v_zwEGGEeazMKeZhCw-4Q" type="id_String" value="talend"/>
+    <contextParameter comment="" name="DB_ERP_DSD_Integration_Port" prompt="DB_ERP_DSD_Integration_Port?" promptNeeded="false" repositoryContextId="_-v_zwEGGEeazMKeZhCw-4Q" type="id_String" value="1433"/>
+    <contextParameter comment="" name="DB_ERP_DSD_Integration_Database" prompt="DB_ERP_DSD_Integration_Database?" promptNeeded="false" repositoryContextId="_-v_zwEGGEeazMKeZhCw-4Q" type="id_String" value="ERP_DSD_Integration_QA"/>
+    <contextParameter comment="" name="DB_ERP_DSD_Integration_Password" prompt="DB_ERP_DSD_Integration_Password?" promptNeeded="false" repositoryContextId="_-v_zwEGGEeazMKeZhCw-4Q" type="id_Password" value="YdTnhbqBAdo="/>
+    <contextParameter comment="" name="DB_ERP_DSD_Integration_Schema" prompt="DB_ERP_DSD_Integration_Schema?" promptNeeded="false" repositoryContextId="_-v_zwEGGEeazMKeZhCw-4Q" type="id_String" value="dbo"/>
+    <contextParameter comment="" name="DB_ERP_DSD_Integration_Server" prompt="DB_ERP_DSD_Integration_Server?" promptNeeded="false" repositoryContextId="_-v_zwEGGEeazMKeZhCw-4Q" type="id_String" value="srvrsql200.harvestfoodsolutions.com"/>
+    <contextParameter comment="" name="DB_ERP_DSD_Integration_AdditionalParams" prompt="DB_ERP_DSD_Integration_AdditionalParams?" promptNeeded="false" repositoryContextId="_-v_zwEGGEeazMKeZhCw-4Q" type="id_String" value=""/>
+  </context>
+  <context confirmationNeeded="false" name="PREPROD">
+    <contextParameter comment="" name="filepath" prompt="filepath?" promptNeeded="false" type="id_Directory" value="C:\ERP_DSD_Integration\RMExportFiles\GORDER05.DNL"/>
+    <contextParameter comment="" name="objectType" prompt="objectType?" promptNeeded="false" type="id_String" value="Order"/>
+    <contextParameter comment="" name="directory" prompt="directory?" promptNeeded="false" type="id_Directory" value="\\Srvretlfs100.harvestfoodsolutions.com\Shared\ERP_DSD_Integration\RMExportFiles\Instance1"/>
+    <contextParameter comment="" name="source" prompt="source?" promptNeeded="false" type="id_String" value="NAV"/>
+    <contextParameter comment="" name="JobName" prompt="JobName?" promptNeeded="false" type="id_String" value="j_NavExport_010_Order"/>
+    <contextParameter comment="" name="group" prompt="group?" promptNeeded="false" type="id_String" value="DEFAULT"/>
+    <contextParameter comment="" name="description" prompt="description?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="mafAppSpace" prompt="mafAppSpace?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="table" prompt="table?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="viewname" prompt="viewname?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="database" prompt="database?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="table_view" prompt="table_view?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="mom_Host" prompt="mom_Host?" promptNeeded="false" repositoryContextId="__0oFgDc-Eea1Xeo0s3oKJA" type="id_String" value=""/>
+    <contextParameter comment="" name="mom_Password" prompt="mom_Password?" promptNeeded="false" repositoryContextId="__0oFgDc-Eea1Xeo0s3oKJA" type="id_String" value=""/>
+    <contextParameter comment="" name="mom_Port" prompt="mom_Port?" promptNeeded="false" repositoryContextId="__0oFgDc-Eea1Xeo0s3oKJA" type="id_Integer" value=""/>
+    <contextParameter comment="" name="mom_To" prompt="mom_To?" promptNeeded="false" repositoryContextId="__0oFgDc-Eea1Xeo0s3oKJA" type="id_String" value=""/>
+    <contextParameter comment="" name="mom_Username" prompt="mom_Username?" promptNeeded="false" repositoryContextId="__0oFgDc-Eea1Xeo0s3oKJA" type="id_String" value=""/>
+    <contextParameter comment="" name="batch" prompt="batch?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value=""/>
+    <contextParameter comment="" name="CRC" prompt="CRC?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_Long" value=""/>
+    <contextParameter comment="" name="Customer_Process_Queue" prompt="Customer_Process_Queue?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value=""/>
+    <contextParameter comment="" name="environment" prompt="environment?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value=""/>
+    <contextParameter comment="" name="ErrorMsg" prompt="ErrorMsg?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value=""/>
+    <contextParameter comment="" name="instance" prompt="instance?" promptNeeded="true" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value="CUST04"/>
+    <contextParameter comment="" name="key" prompt="key?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value=""/>
+    <contextParameter comment="" name="keystore" prompt="keystore?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value=""/>
+    <contextParameter comment="" name="message1" prompt="message1?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value=""/>
+    <contextParameter comment="" name="message2" prompt="message2?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value=""/>
+    <contextParameter comment="" name="movilizerURL" prompt="movilizerURL?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value=""/>
+    <contextParameter comment="" name="movilizerVersion" prompt="movilizerVersion?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_Integer" value=""/>
+    <contextParameter comment="" name="Nested_Context" prompt="Nested_Context?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value=""/>
+    <contextParameter comment="" name="object" prompt="object?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value=""/>
+    <contextParameter comment="" name="objectId" prompt="objectId?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value=""/>
+    <contextParameter comment="" name="objectName" prompt="objectName?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value=""/>
+    <contextParameter comment="" name="partition" prompt="partition?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value=""/>
+    <contextParameter comment="" name="Pool" prompt="Pool?" promptNeeded="false" type="id_String" value="ORDER"/>
+    <contextParameter comment="" name="ProcessTimeStamp" prompt="ProcessTimeStamp?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value="9999-01-01 00:00:00"/>
+    <contextParameter comment="" name="SystemId" prompt="SystemId?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value=""/>
+    <contextParameter comment="" name="SystemPassword" prompt="SystemPassword?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value=""/>
+    <contextParameter comment="" name="type" prompt="type?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value=""/>
+    <contextParameter comment="" name="DB_AMC_AdditionalParams" prompt="DB_AMC_AdditionalParams?" promptNeeded="false" repositoryContextId="_CJyp8EJfEeae0cO5bkhd8A" type="id_String" value=""/>
+    <contextParameter comment="" name="DB_AMC_Database" prompt="DB_AMC_Database?" promptNeeded="false" repositoryContextId="_CJyp8EJfEeae0cO5bkhd8A" type="id_String" value="TALEND_DEV_AMC_641"/>
+    <contextParameter comment="" name="DB_AMC_Login" prompt="DB_AMC_Login?" promptNeeded="false" repositoryContextId="_CJyp8EJfEeae0cO5bkhd8A" type="id_String" value="talend"/>
+    <contextParameter comment="" name="DB_AMC_Password" prompt="DB_AMC_Password?" promptNeeded="false" repositoryContextId="_CJyp8EJfEeae0cO5bkhd8A" type="id_Password" value="YdTnhbqBAdo="/>
+    <contextParameter comment="" name="DB_AMC_Port" prompt="DB_AMC_Port?" promptNeeded="false" repositoryContextId="_CJyp8EJfEeae0cO5bkhd8A" type="id_String" value="1433"/>
+    <contextParameter comment="" name="DB_AMC_Schema" prompt="DB_AMC_Schema?" promptNeeded="false" repositoryContextId="_CJyp8EJfEeae0cO5bkhd8A" type="id_String" value=""/>
+    <contextParameter comment="" name="DB_AMC_Server" prompt="DB_AMC_Server?" promptNeeded="false" repositoryContextId="_CJyp8EJfEeae0cO5bkhd8A" type="id_String" value="SRVRSQL200.harvestfoodsolutions.com"/>
+    <contextParameter comment="" name="DB_Navision_AdditionalParams" prompt="DB_Navision_AdditionalParams?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value=""/>
+    <contextParameter comment="" name="DB_Navision_Database" prompt="DB_Navision_Database?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="TEST-USB-2013"/>
+    <contextParameter comment="" name="DB_Navision_Login" prompt="DB_Navision_Login?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="talend_hfs2"/>
+    <contextParameter comment="" name="DB_Navision_Password" prompt="DB_Navision_Password?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_Password" value="PrT+NDdqPMBr/HtJWqzj6w=="/>
+    <contextParameter comment="" name="DB_Navision_Port" prompt="DB_Navision_Port?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="1433"/>
+    <contextParameter comment="" name="DB_Navision_Schema" prompt="DB_Navision_Schema?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="dbo"/>
+    <contextParameter comment="" name="DB_Navision_Server" prompt="DB_Navision_Server?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="testnav10.corp.usbakery.com"/>
+    <contextParameter comment="" name="DB_Talend_Context_AdditionalParams" prompt="DB_Talend_Context_AdditionalParams?" promptNeeded="false" repositoryContextId="_ypE2UFnREeaCBrSnOG5XMg" type="id_String" value=""/>
+    <contextParameter comment="" name="DB_Talend_Context_Database" prompt="DB_Talend_Context_Database?" promptNeeded="false" repositoryContextId="_ypE2UFnREeaCBrSnOG5XMg" type="id_String" value="talend_context"/>
+    <contextParameter comment="" name="DB_Talend_Context_Login" prompt="DB_Talend_Context_Login?" promptNeeded="false" repositoryContextId="_ypE2UFnREeaCBrSnOG5XMg" type="id_String" value="talend"/>
+    <contextParameter comment="" name="DB_Talend_Context_Password" prompt="DB_Talend_Context_Password?" promptNeeded="false" repositoryContextId="_ypE2UFnREeaCBrSnOG5XMg" type="id_Password" value="YdTnhbqBAdo="/>
+    <contextParameter comment="" name="DB_Talend_Context_Port" prompt="DB_Talend_Context_Port?" promptNeeded="false" repositoryContextId="_ypE2UFnREeaCBrSnOG5XMg" type="id_String" value="1433"/>
+    <contextParameter comment="" name="DB_Talend_Context_Schema" prompt="DB_Talend_Context_Schema?" promptNeeded="false" repositoryContextId="_ypE2UFnREeaCBrSnOG5XMg" type="id_String" value="dbo"/>
+    <contextParameter comment="" name="DB_Talend_Context_Server" prompt="DB_Talend_Context_Server?" promptNeeded="false" repositoryContextId="_ypE2UFnREeaCBrSnOG5XMg" type="id_String" value="SRVRSQL200.harvestfoodsolutions.com"/>
+    <contextParameter comment="" name="NAV_Contact" prompt="NAV_Contact?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="NAV_DSD_Contacts"/>
+    <contextParameter comment="" name="NAV_Customer" prompt="NAV_Customer?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="Nav_DSD_Customer Download"/>
+    <contextParameter comment="" name="NAV_Order" prompt="NAV_Order?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="NAV_DSD_Order"/>
+    <contextParameter comment="" name="NAV_Itinerary" prompt="NAV_Itinerary?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="Nav_DSD_Itinerary"/>
+    <contextParameter comment="" name="NAV_Shipment" prompt="NAV_Shipment?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="NAV_DSD_Shipment"/>
+    <contextParameter comment="" name="RM_Order_Encoding" prompt="RM_Order_Encoding?" promptNeeded="false" repositoryContextId="_hIrjIDceEeaqN-Jziuqx3w" type="id_String" value=""/>
+    <contextParameter comment="" name="RM_Order_FieldSeparator" prompt="RM_Order_FieldSeparator?" promptNeeded="false" repositoryContextId="_hIrjIDceEeaqN-Jziuqx3w" type="id_String" value=""/>
+    <contextParameter comment="" name="RM_Order_File" prompt="RM_Order_File?" promptNeeded="false" repositoryContextId="_hIrjIDceEeaqN-Jziuqx3w" type="id_String" value=""/>
+    <contextParameter comment="" name="RM_Order_RowSeparator" prompt="RM_Order_RowSeparator?" promptNeeded="false" repositoryContextId="_hIrjIDceEeaqN-Jziuqx3w" type="id_String" value=""/>
+    <contextParameter comment="" name="DB_ERP_DSD_Integration_Login" prompt="DB_ERP_DSD_Integration_Login?" promptNeeded="false" repositoryContextId="_-v_zwEGGEeazMKeZhCw-4Q" type="id_String" value="talend"/>
+    <contextParameter comment="" name="DB_ERP_DSD_Integration_Port" prompt="DB_ERP_DSD_Integration_Port?" promptNeeded="false" repositoryContextId="_-v_zwEGGEeazMKeZhCw-4Q" type="id_String" value="1433"/>
+    <contextParameter comment="" name="DB_ERP_DSD_Integration_Database" prompt="DB_ERP_DSD_Integration_Database?" promptNeeded="false" repositoryContextId="_-v_zwEGGEeazMKeZhCw-4Q" type="id_String" value="ERP_DSD_Integration_PREPROD_04"/>
+    <contextParameter comment="" name="DB_ERP_DSD_Integration_Password" prompt="DB_ERP_DSD_Integration_Password?" promptNeeded="false" repositoryContextId="_-v_zwEGGEeazMKeZhCw-4Q" type="id_Password" value="YdTnhbqBAdo="/>
+    <contextParameter comment="" name="DB_ERP_DSD_Integration_Schema" prompt="DB_ERP_DSD_Integration_Schema?" promptNeeded="false" repositoryContextId="_-v_zwEGGEeazMKeZhCw-4Q" type="id_String" value="dbo"/>
+    <contextParameter comment="" name="DB_ERP_DSD_Integration_Server" prompt="DB_ERP_DSD_Integration_Server?" promptNeeded="false" repositoryContextId="_-v_zwEGGEeazMKeZhCw-4Q" type="id_String" value="srvrsql200.harvestfoodsolutions.com"/>
+    <contextParameter comment="" name="DB_ERP_DSD_Integration_AdditionalParams" prompt="DB_ERP_DSD_Integration_AdditionalParams?" promptNeeded="false" repositoryContextId="_-v_zwEGGEeazMKeZhCw-4Q" type="id_String" value=""/>
+  </context>
+  <parameters>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" show="false" value="384"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" show="false" value="0"/>
+    <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_HADOOP_DISTRIBUTION" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_HADOOP_VERSION" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_ENABLE_KERBEROS" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_NAME_NODE_PRINCIPAL" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_USERNAME" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_GROUP" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_USE_KEYTAB" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_KT_PRINCIPAL" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_KEY_TAB" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_ENABLE_OO_KERBEROS" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_NAME_NODE_END_POINT" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_JOB_TRACKER_ENDPOINT" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_END_POINT" show="false" value=""/>
+    <elementParameter field="CHECK" name="IMPLICITCONTEXT_USE_PROJECT_SETTINGS" show="false" value="false"/>
+    <elementParameter field="CHECK" name="STATANDLOG_USE_PROJECT_SETTINGS" show="false" value="true"/>
+    <elementParameter field="CHECK" name="MULTI_THREAD_EXECATION" value="false"/>
+    <elementParameter field="TEXT" name="PARALLELIZE_UNIT_SIZE" value="25000"/>
+    <elementParameter field="CHECK" name="IMPLICIT_TCONTEXTLOAD" value="false"/>
+    <elementParameter field="RADIO" name="FROM_FILE_FLAG_IMPLICIT_CONTEXT" show="false" value="false"/>
+    <elementParameter field="RADIO" name="FROM_DATABASE_FLAG_IMPLICIT_CONTEXT" show="false" value="true"/>
+    <elementParameter field="FILE" name="IMPLICIT_TCONTEXTLOAD_FILE" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY_TYPE_IMPLICIT_CONTEXT:PROPERTY_TYPE" show="false" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY_TYPE_IMPLICIT_CONTEXT:REPOSITORY_PROPERTY_TYPE" show="false" value="_pwEOQFnREeaCBrSnOG5XMg"/>
+    <elementParameter field="CLOSED_LIST" name="DB_TYPE_IMPLICIT_CONTEXT" show="false" value="tMSSqlInput"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION_IMPLICIT_CONTEXT" show="false" value="jtds-1.3.1-patch.jar;jtds-1.3.1-patch.jar;mssql-jdbc.jar"/>
+    <elementParameter field="TEXT" name="URL_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR_IMPLICIT_CONTEXT" show="false"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="HOST_IMPLICIT_CONTEXT" show="false" value="context.DB_Talend_Context_Server"/>
+    <elementParameter field="TEXT" name="PORT_IMPLICIT_CONTEXT" show="false" value="context.DB_Talend_Context_Port"/>
+    <elementParameter field="TEXT" name="DBNAME_IMPLICIT_CONTEXT" show="false" value="context.DB_Talend_Context_Database"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="context.DB_Talend_Context_AdditionalParams"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="context.DB_Talend_Context_Schema"/>
+    <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="context.DB_Talend_Context_Login"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="8pW6Nmy2kucLjGhvUSbDq84OWsHfgBeFZAQb8uzNil07jqrUDLX3mg=="/>
+    <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;IMPLICIT_CONTEXT_DEV&quot;"/>
+    <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="LOAD_NEW_VARIABLE" show="false" value="Warning"/>
+    <elementParameter field="CLOSED_LIST" name="NOT_LOAD_OLD_VARIABLE" show="false" value="Warning"/>
+    <elementParameter field="CHECK" name="PRINT_OPERATIONS" show="false" value="false"/>
+    <elementParameter field="CHECK" name="DISABLE_ERROR" show="false" value="false"/>
+    <elementParameter field="CHECK" name="DISABLE_WARNINGS" show="false" value="false"/>
+    <elementParameter field="CHECK" name="DISABLE_INFO" show="false" value="false"/>
+    <elementParameter field="CHECK" name="ON_STATCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_LOGCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_METERCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_CONSOLE_FLAG" show="false" value="false"/>
+    <elementParameter field="CHECK" name="ON_FILES_FLAG" show="false" value="false"/>
+    <elementParameter field="DIRECTORY" name="FILE_PATH" show="false" value="&quot;C:/Talend641/workspace_QA_641/.metadata&quot;"/>
+    <elementParameter field="TEXT" name="FILENAME_STATS" show="false" value="&quot;stats_file.txt&quot;"/>
+    <elementParameter field="TEXT" name="FILENAME_LOGS" show="false" value="&quot;logs_file.txt&quot;"/>
+    <elementParameter field="TEXT" name="FILENAME_METTER" show="false" value="&quot;meter_file.txt&quot;"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="ISO-8859-15"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" show="false" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="ON_DATABASE_FLAG" show="false" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_TYPE" show="false" value="tJDBCOutput"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" show="false" value="ORACLE_11"/>
+    <elementParameter field="TEXT" name="URL" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR" show="false"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="HOST" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PORT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DATASOURCE" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="0RMsyjmybrE="/>
+    <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE_METER" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="CATCH_RUNTIME_ERRORS" show="false" value="true"/>
+    <elementParameter field="CHECK" name="CATCH_USER_ERRORS" show="false" value="true"/>
+    <elementParameter field="CHECK" name="CATCH_USER_WARNING" show="false" value="true"/>
+    <elementParameter field="CHECK" name="CATCH_REALTIME_STATS" show="false" value="false"/>
+    <elementParameter field="TEXT" name="HEADERFOOTER_HEADERID" show="false" value=""/>
+    <elementParameter field="CHECK" name="HEADER_ENABLED" show="false" value="false"/>
+    <elementParameter field="TEXT" name="HEADER_LIBRARY" show="false" value=""/>
+    <elementParameter field="TEXT" name="HEADER_CODE" show="false" value=""/>
+    <elementParameter field="TEXT" name="HEADER_IMPORT" show="false" value=""/>
+    <elementParameter field="TEXT" name="HEADERFOOTER_FOOTERID" show="false" value=""/>
+    <elementParameter field="CHECK" name="FOOTER_ENABLED" show="false" value="false"/>
+    <elementParameter field="TEXT" name="FOOTER_LIBRARY" show="false" value=""/>
+    <elementParameter field="TEXT" name="FOOTER_CODE" show="false" value=""/>
+    <elementParameter field="TEXT" name="FOOTER_IMPORT" show="false" value=""/>
+    <routinesParameter id="_0-plEDQKEea1ca2e6W801Q" name="DataOperation"/>
+    <routinesParameter id="_0-8gADQKEea1ca2e6W801Q" name="Mathematical"/>
+    <routinesParameter id="_0-8gBDQKEea1ca2e6W801Q" name="Numeric"/>
+    <routinesParameter id="_0_GRADQKEea1ca2e6W801Q" name="Relational"/>
+    <routinesParameter id="_0_GRBDQKEea1ca2e6W801Q" name="StringHandling"/>
+    <routinesParameter id="_0_Pa8DQKEea1ca2e6W801Q" name="TalendDataGenerator"/>
+    <routinesParameter id="_0_Pa9DQKEea1ca2e6W801Q" name="TalendDate"/>
+    <routinesParameter id="_0_Pa-DQKEea1ca2e6W801Q" name="TalendString"/>
+    <routinesParameter id="_ft244AfUEeaWjfLrTICINw" name="DQTechnical"/>
+    <routinesParameter id="_fsvekAfUEeaWjfLrTICINw" name="DataQualityDependencies"/>
+    <routinesParameter id="_fsjRUAfUEeaWjfLrTICINw" name="DataQuality"/>
+    <routinesParameter id="_ftiv0AfUEeaWjfLrTICINw" name="DqStringHandling"/>
+    <routinesParameter id="_fRS4sAfUEeaWjfLrTICINw" name="MDM"/>
+    <routinesParameter id="_ft8YcAfUEeaWjfLrTICINw" name="SQLike"/>
+    <routinesParameter id="_vps38CaIEea_ms0nY9pZIA" name="ErrorCodes"/>
+    <routinesParameter id="_1O3uwE9bEeaVF8G8vl5N8w" name="r_HarvestRoutine"/>
+    <routinesParameter id="_0j_yEMHyEeSNhdip82GOWw" name="POC_DataFabrics"/>
+    <routinesParameter id="_VXttoEmBEeawesAJwD8tOQ" name="Test1"/>
+    <routinesParameter id="_suI5YDpKEeamOLnzKdRlBg" name="r_HF_MetaProcess"/>
+    <routinesParameter id="_jrop4FQvEean2swMz5BPSw" name="r_HarvestRoutine_A"/>
+    <routinesParameter id="_TYkogF2aEeaaXZAFLs91JQ" name="r_HarvestRoutineLoop"/>
+    <routinesParameter id="_Jtc8kIQyEeaSeKUmyb5T2g" name="r_HarvestRoutineLoop_Delivery"/>
+    <routinesParameter id="_uzcNYH90Eeaxh-zMx0MyeQ" name="Generate_StopSequence"/>
+    <routinesParameter id="_UbPP4IBLEeaeC7XJ4_AgcA" name="ShippingRouteLoad"/>
+    <routinesParameter id="_QksxYIE2EeaeC7XJ4_AgcA" name="Counting_Uniques"/>
+    <routinesParameter id="_RUoWAIKVEeaB7tvdiINlSA" name="Shipping_Load"/>
+    <routinesParameter id="_TqbUAHlmEeaNBYiuVY8lHg" name="r_HarvestRoutineLoop_9122016"/>
+    <routinesParameter id="_NWTJ4HluEeaNBYiuVY8lHg" name="r_HarvestRoutineLoop_9122016_Updated"/>
+    <routinesParameter id="_7urMUIK3Eea7w742bOLtBg" name="Itinerary"/>
+    <routinesParameter id="_Jtc8kIQyEeaSeKUmyb5T2g" name="Delivery"/>
+    <routinesParameter id="_S4JqMH07EeeFm-QRMuwecA" name="TalendStringUtil"/>
+    <routinesParameter id="_XcblYGvHEeiSPfXkXiVT4Q" name="DataMasking"/>
+  </parameters>
+  <node componentName="tPrejob" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="-320" posY="96">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tPrejob_2"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="tMSSqlConnection" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="0" posY="96">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMSSqlConnection_1"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_-uKbAEF2EeazMKeZhCw-4Q"/>
+    <elementParameter field="CLOSED_LIST" name="DRIVER" value="JTDS"/>
+    <elementParameter field="TEXT" name="HOST" value="context.DB_ERP_DSD_Integration_Server"/>
+    <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
+    <elementParameter field="TEXT" name="PORT" value="context.DB_ERP_DSD_Integration_Port"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="context.DB_ERP_DSD_Integration_Schema"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.DB_ERP_DSD_Integration_Database"/>
+    <elementParameter field="TEXT" name="USER" value="context.DB_ERP_DSD_Integration_Login"/>
+    <elementParameter field="PASSWORD" name="PASS" value="8pW6Nmy2kucqfsDz9kx+JD4fCX5XMuLYBrRSpMZbhzTKJD0WltAbBg=="/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="context.DB_ERP_DSD_Integration_AdditionalParams"/>
+    <elementParameter field="CHECK" name="USE_SHARED_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="SHARED_CONNECTION_NAME" show="false" value=""/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="AUTO_COMMIT" value="false"/>
+    <elementParameter field="CHECK" name="SHARE_IDENTITY_SETTING" value="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="DB_ERP_DSD_Integration"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="tPostjob" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="-160" posY="704">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tPostjob_2"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="tMSSqlCommit" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="704">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMSSqlCommit_1"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tMSSqlConnection_1"/>
+    <elementParameter field="CHECK" name="CLOSE" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tMSSqlCommit_1"/>
+  </node>
+  <node componentName="tLogCatcher" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1184" posY="96">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogCatcher_2"/>
+    <elementParameter field="CHECK" name="CATCH_JAVA_EXCEPTION" value="true"/>
+    <elementParameter field="CHECK" name="CATCH_TDIE" value="true"/>
+    <elementParameter field="CHECK" name="CATCH_TWARN" value="true"/>
+    <elementParameter field="CHECK" name="CATCH_TACTIONFAILURE" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tLogCatcher_2">
+      <column key="false" length="0" name="moment" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column key="false" length="20" name="pid" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="20" name="root_pid" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="20" name="father_pid" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="50" name="project" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="255" name="job" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="50" name="context" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="3" name="priority" nullable="true" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column key="false" length="255" name="type" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="255" name="origin" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="255" name="message" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="3" name="code" nullable="true" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="jlet_CustomLogging" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="1216" posY="384">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="jlet_CustomLogging_1"/>
+    <elementParameter field="TEXT" name="FAMILY" value="Joblets"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="CHECK" name="DUMMY" show="false" value="false"/>
+    <elementParameter field="CHECK" name="STARTABLE" show="false" value="true"/>
+    <elementParameter field="CHECK" name="START" show="false" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="PROCESS_TYPE_VERSION" value="Latest"/>
+    <elementParameter field="TEXT" name="LABEL" value="jlet_CustomLogging"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;__COMMENT__"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <metadata connector="FLOW" name="jlet_CustomLogging_1">
+      <column key="false" length="0" name="moment" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column key="false" length="20" name="pid" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="20" name="root_pid" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="20" name="father_pid" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="50" name="project" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="255" name="job" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="50" name="context" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="3" name="priority" nullable="true" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column key="false" length="255" name="type" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="255" name="origin" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="255" name="message" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="3" name="code" nullable="true" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tSetKeystore" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="256" posY="96">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSetKeystore_1"/>
+    <elementParameter field="CLOSED_LIST" name="TRUSTSTORE_TYPE" value="JKS"/>
+    <elementParameter field="FILE" name="SSL_TRUSTSERVER_TRUSTSTORE" value="context.keystore"/>
+    <elementParameter field="PASSWORD" name="SSL_TRUSTSERVER_PASSWORD" value="gmadCMWmAaz2zwU4wd+xMQ=="/>
+    <elementParameter field="CHECK" name="NEED_CLIENT_AUTH" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="KEYSTORE_TYPE" show="false" value="JKS"/>
+    <elementParameter field="FILE" name="SSL_KEYSTORE" show="false" value="&quot;C:/client.keystore&quot;"/>
+    <elementParameter field="PASSWORD" name="SSL_KEYSTORE_PASSWORD" show="false" value="PoLvNyVG2XWndNDdLn696A=="/>
+    <elementParameter field="CHECK" name="VERIFY_NAME" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="-352" posY="320">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMSSqlInput_1"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_BbudkE3lEeaYYuHJp6GolQ"/>
+    <elementParameter field="TEXT" name="HOST" value="context.DB_Navision_Server"/>
+    <elementParameter field="CLOSED_LIST" name="DRIVER" value="MSSQL_PROP"/>
+    <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
+    <elementParameter field="TEXT" name="PORT" value="context.DB_Navision_Port"/>
+    <elementParameter field="TEXT" name="DB_SCHEMA" value="context.DB_Navision_Schema"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.DB_Navision_Database"/>
+    <elementParameter field="TEXT" name="USER" value="context.DB_Navision_Login"/>
+    <elementParameter field="PASSWORD" name="PASS" value="8pW6Nmy2kudjruFRcwAihsBT1Er3Hu3qE2w729Tj3Vw="/>
+    <elementParameter field="DBTABLE" name="TABLE" value="context.NAV_Order"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT \&quot;&quot;+context.DB_Navision_Schema+&quot;\&quot;.\&quot;&quot;+context.NAV_Order+&quot;\&quot;.\&quot;Company ID\&quot;,&#10;&#9;&#9;\&quot;&quot;+context.DB_Navision_Schema+&quot;\&quot;.\&quot;&quot;+context.NAV_Order+&quot;\&quot;.\&quot;Company Name\&quot;,&#10;&#9;&#9;\&quot;&quot;+context.DB_Navision_Schema+&quot;\&quot;.\&quot;&quot;+context.NAV_Order+&quot;\&quot;.\&quot;Sell-to Customer No\&quot;,&#10;&#9;&#9;\&quot;&quot;+context.DB_Navision_Schema+&quot;\&quot;.\&quot;&quot;+context.NAV_Order+&quot;\&quot;.\&quot;Ship-to Customer No\&quot;,&#10;&#9;&#9;\&quot;&quot;+context.DB_Navision_Schema+&quot;\&quot;.\&quot;&quot;+context.NAV_Order+&quot;\&quot;.\&quot;Item No\&quot;,&#10;&#9;&#9;\&quot;&quot;+context.DB_Navision_Schema+&quot;\&quot;.\&quot;&quot;+context.NAV_Order+&quot;\&quot;.\&quot;Variant Code\&quot;,&#10;&#9;&#9;\&quot;&quot;+context.DB_Navision_Schema+&quot;\&quot;.\&quot;&quot;+context.NAV_Order+&quot;\&quot;.\&quot;Requested Ship Date\&quot;,&#10;&#9;&#9;\&quot;&quot;+context.DB_Navision_Schema+&quot;\&quot;.\&quot;&quot;+context.NAV_Order+&quot;\&quot;.\&quot;Entry Date\&quot;,&#10;&#9;&#9;\&quot;&quot;+context.DB_Navision_Schema+&quot;\&quot;.\&quot;&quot;+context.NAV_Order+&quot;\&quot;.\&quot;Entry Time\&quot;,&#10;&#9;&#9;\&quot;&quot;+context.DB_Navision_Schema+&quot;\&quot;.\&quot;&quot;+context.NAV_Order+&quot;\&quot;.\&quot;Quantity Perm\&quot;,&#10;&#9;&#9;\&quot;&quot;+context.DB_Navision_Schema+&quot;\&quot;.\&quot;&quot;+context.NAV_Order+&quot;\&quot;.\&quot;Quantity Temp\&quot;,&#10;&#9;&#9;\&quot;&quot;+context.DB_Navision_Schema+&quot;\&quot;.\&quot;&quot;+context.NAV_Order+&quot;\&quot;.\&quot;Customer Delivery Route Code\&quot;,&#10;&#9;&#9;\&quot;&quot;+context.DB_Navision_Schema+&quot;\&quot;.\&quot;&quot;+context.NAV_Order+&quot;\&quot;.\&quot;Sales Manager No\&quot;,&#10;&#9;&#9;\&quot;&quot;+context.DB_Navision_Schema+&quot;\&quot;.\&quot;&quot;+context.NAV_Order+&quot;\&quot;.\&quot;External Document No\&quot;,&#10;&#9;&#9;\&quot;&quot;+context.DB_Navision_Schema+&quot;\&quot;.\&quot;&quot;+context.NAV_Order+&quot;\&quot;.\&quot;Sales Order No\&quot;,&#10;&#9;&#9;\&quot;&quot;+context.DB_Navision_Schema+&quot;\&quot;.\&quot;&quot;+context.NAV_Order+&quot;\&quot;.\&quot;Unit of Measure Code\&quot;,&#10;&#9;&#9;\&quot;&quot;+context.DB_Navision_Schema+&quot;\&quot;.\&quot;&quot;+context.NAV_Order+&quot;\&quot;.\&quot;Guaranteed Order\&quot;,&#10;&#9;&#9;\&quot;&quot;+context.DB_Navision_Schema+&quot;\&quot;.\&quot;&quot;+context.NAV_Order+&quot;\&quot;.\&quot;Shipment Method Code\&quot;,&#10;&#9;&#9;\&quot;&quot;+context.DB_Navision_Schema+&quot;\&quot;.\&quot;&quot;+context.NAV_Order+&quot;\&quot;.\&quot;Payment Terms Code\&quot;,&#10;&#9;&#9;\&quot;&quot;+context.DB_Navision_Schema+&quot;\&quot;.\&quot;&quot;+context.NAV_Order+&quot;\&quot;.\&quot;Payment Terms Description\&quot;&quot;&#10;+&quot;&#10;FROM&#9;\&quot;&quot;+context.DB_Navision_Schema+&quot;\&quot;.\&quot;&quot;+context.NAV_Order+&quot;\&quot;&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="id_MSSQL"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="context.DB_Navision_AdditionalParams"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
+    <elementParameter field="TABLE" name="TRIM_COLUMN">
+      <elementValue elementRef="SCHEMA_COLUMN" value="Company_ID"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Company_Name"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Sell_to_Customer_No"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Ship_to_Customer_No"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Item_No"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Variant_Code"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Requested_Ship_Date"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Entry_Date"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Entry_Time"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Quantity_Perm"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Quantity_Temp"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Customer_Delivery_Route_Code"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Sales_Manager_No"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="External_Document_No"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Sales_Order_No"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Unit_of_Measure_Code"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Guaranteed_Order"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Shipment_Method_Code"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Payment_Terms_Code"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Payment_Terms_Description"/>
+      <elementValue elementRef="TRIM" value="false"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="LABEL" value="View_NAV_Order"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tMSSqlInput_1">
+      <column comment="" key="false" length="-1" name="Company_ID" nullable="false" originalDbColumnName="Company ID" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Company_Name" nullable="false" originalDbColumnName="Company Name" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Sell_to_Customer_No" nullable="false" originalDbColumnName="Sell-to Customer No" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Ship_to_Customer_No" nullable="false" originalDbColumnName="Ship-to Customer No" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Item_No" nullable="false" originalDbColumnName="Item No" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Variant_Code" nullable="false" originalDbColumnName="Variant Code" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Requested_Ship_Date" nullable="false" originalDbColumnName="Requested Ship Date" originalLength="-1" pattern="yyyy-MM-dd" precision="-1" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Entry_Date" nullable="false" originalDbColumnName="Entry Date" originalLength="-1" pattern="yyyy-MM-dd" precision="-1" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Entry_Time" nullable="true" originalDbColumnName="Entry Time" originalLength="-1" pattern="yyyy-MM-dd" precision="-1" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="-1" name="Quantity_Perm" nullable="true" originalDbColumnName="Quantity Perm" originalLength="-1" pattern="" precision="-1" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="-1" name="Quantity_Temp" nullable="true" originalDbColumnName="Quantity Temp" originalLength="-1" pattern="" precision="-1" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Customer_Delivery_Route_Code" nullable="true" originalDbColumnName="Customer Delivery Route Code" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Sales_Manager_No" nullable="true" originalDbColumnName="Sales Manager No" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="External_Document_No" nullable="false" originalDbColumnName="External Document No" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Sales_Order_No" nullable="false" originalDbColumnName="Sales Order No" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Unit_of_Measure_Code" nullable="false" originalDbColumnName="Unit of Measure Code" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="-1" name="Guaranteed_Order" nullable="true" originalDbColumnName="Guaranteed Order" originalLength="-1" pattern="" precision="-1" sourceType="SMALLINT" type="id_Short" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Shipment_Method_Code" nullable="true" originalDbColumnName="Shipment Method Code" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Payment_Terms_Code" nullable="true" originalDbColumnName="Payment Terms Code" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Payment_Terms_Description" nullable="true" originalDbColumnName="Payment Terms Description" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="-288" posY="448">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_1"/>
+    <elementParameter field="RADIO" name="BASIC_MODE" value="true"/>
+    <elementParameter field="RADIO" name="TABLE_PRINT" value="false"/>
+    <elementParameter field="RADIO" name="VERTICAL" value="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE" show="false" value="true"/>
+    <elementParameter field="RADIO" name="PRINT_LABEL" show="false" value="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE_LABEL" show="false" value="false"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;|&quot;"/>
+    <elementParameter field="CHECK" name="PRINT_HEADER" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_UNIQUE_NAME" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_COLNAMES" value="false"/>
+    <elementParameter field="CHECK" name="USE_FIXED_LENGTH" value="false"/>
+    <elementParameter field="TABLE" name="LENGTHS" show="false"/>
+    <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tLogRow_1">
+      <column comment="" key="false" length="-1" name="Company_ID" nullable="false" originalDbColumnName="Company ID" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Company_Name" nullable="false" originalDbColumnName="Company Name" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Sell_to_Customer_No" nullable="false" originalDbColumnName="Sell-to Customer No" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Ship_to_Customer_No" nullable="false" originalDbColumnName="Ship-to Customer No" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Item_No" nullable="false" originalDbColumnName="Item No" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Variant_Code" nullable="false" originalDbColumnName="Variant Code" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Requested_Ship_Date" nullable="false" originalDbColumnName="Requested Ship Date" originalLength="-1" pattern="yyyy-MM-dd" precision="-1" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Entry_Date" nullable="false" originalDbColumnName="Entry Date" originalLength="-1" pattern="yyyy-MM-dd" precision="-1" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Entry_Time" nullable="true" originalDbColumnName="Entry Time" originalLength="-1" pattern="yyyy-MM-dd" precision="-1" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="-1" name="Quantity_Perm" nullable="true" originalDbColumnName="Quantity Perm" originalLength="-1" pattern="" precision="-1" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="-1" name="Quantity_Temp" nullable="true" originalDbColumnName="Quantity Temp" originalLength="-1" pattern="" precision="-1" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Customer_Delivery_Route_Code" nullable="true" originalDbColumnName="Customer Delivery Route Code" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Sales_Manager_No" nullable="true" originalDbColumnName="Sales Manager No" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="External_Document_No" nullable="false" originalDbColumnName="External Document No" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Sales_Order_No" nullable="false" originalDbColumnName="Sales Order No" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Unit_of_Measure_Code" nullable="false" originalDbColumnName="Unit of Measure Code" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="-1" name="Guaranteed_Order" nullable="true" originalDbColumnName="Guaranteed Order" originalLength="-1" pattern="" precision="-1" sourceType="SMALLINT" type="id_Short" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Shipment_Method_Code" nullable="true" originalDbColumnName="Shipment Method Code" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Payment_Terms_Code" nullable="true" originalDbColumnName="Payment Terms Code" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Payment_Terms_Description" nullable="true" originalDbColumnName="Payment Terms Description" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tJavaFlex" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="-224" posY="320">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJavaFlex_3"/>
+    <elementParameter field="CHECK" name="DATA_AUTO_PROPAGATE" value="true"/>
+    <elementParameter field="MEMO_JAVA" name="CODE_START" value="// start part of your Java code&#10;  int i=1;    "/>
+    <elementParameter field="MEMO_JAVA" name="CODE_MAIN" value="context.objectId=row8.Company_ID+&quot; - &quot;+row8.Sell_to_Customer_No+&quot; - &quot;+row8.Sell_to_Customer_No;&#10;context.objectName=&quot;&quot;;&#10;if( i%5000 == 0)&#10;{&#10;//System.out.println(&quot;Source - Directory - PF_Dorder05 - 5000 rows processed  &quot; + TalendDate.getCurrentDate());&#10;System.out.println(i+&quot;-----5000 Records Have Processed&quot;);&#10;}&#10;i++;&#10;// here is the main part of the component,&#10;// a piece of code executed in the row&#10;// loop&#10;"/>
+    <elementParameter field="MEMO_JAVA" name="CODE_END" value="// end of the component, outside/closing the loop&#10;i--;&#10;           System.out.println(i+&quot; Records Processed and end of records&quot;); "/>
+    <elementParameter field="CHECK" name="Version_V2_0" show="false" value="false"/>
+    <elementParameter field="CHECK" name="Version_V3_2" show="false" value="false"/>
+    <elementParameter field="CHECK" name="Version_V4.0" show="false" value="true"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJavaFlex_3">
+      <column comment="" key="false" length="-1" name="Company_ID" nullable="false" originalDbColumnName="Company ID" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Company_Name" nullable="false" originalDbColumnName="Company Name" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Sell_to_Customer_No" nullable="false" originalDbColumnName="Sell-to Customer No" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Ship_to_Customer_No" nullable="false" originalDbColumnName="Ship-to Customer No" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Item_No" nullable="false" originalDbColumnName="Item No" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Variant_Code" nullable="false" originalDbColumnName="Variant Code" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Requested_Ship_Date" nullable="false" originalDbColumnName="Requested Ship Date" originalLength="-1" pattern="yyyy-MM-dd" precision="-1" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Entry_Date" nullable="false" originalDbColumnName="Entry Date" originalLength="-1" pattern="yyyy-MM-dd" precision="-1" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Entry_Time" nullable="true" originalDbColumnName="Entry Time" originalLength="-1" pattern="yyyy-MM-dd" precision="-1" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="-1" name="Quantity_Perm" nullable="true" originalDbColumnName="Quantity Perm" originalLength="-1" pattern="" precision="-1" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="-1" name="Quantity_Temp" nullable="true" originalDbColumnName="Quantity Temp" originalLength="-1" pattern="" precision="-1" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Customer_Delivery_Route_Code" nullable="true" originalDbColumnName="Customer Delivery Route Code" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Sales_Manager_No" nullable="true" originalDbColumnName="Sales Manager No" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="External_Document_No" nullable="false" originalDbColumnName="External Document No" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Sales_Order_No" nullable="false" originalDbColumnName="Sales Order No" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Unit_of_Measure_Code" nullable="false" originalDbColumnName="Unit of Measure Code" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="-1" name="Guaranteed_Order" nullable="true" originalDbColumnName="Guaranteed Order" originalLength="-1" pattern="" precision="-1" sourceType="SMALLINT" type="id_Short" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Shipment_Method_Code" nullable="true" originalDbColumnName="Shipment Method Code" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Payment_Terms_Code" nullable="true" originalDbColumnName="Payment Terms Code" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Payment_Terms_Description" nullable="true" originalDbColumnName="Payment Terms Description" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tSchemaComplianceCheck" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="-96" posY="320">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSchemaComplianceCheck_1"/>
+    <elementParameter field="RADIO" name="CHECK_ALL" value="false"/>
+    <elementParameter field="RADIO" name="CUSTOMER" value="true"/>
+    <elementParameter field="TABLE" name="CHECKCOLS">
+      <elementValue elementRef="SCHEMA_COLUMN" value="Company_ID"/>
+      <elementValue elementRef="SELECTED_TYPE" value="String"/>
+      <elementValue elementRef="DATEPATTERN" value=""/>
+      <elementValue elementRef="NULLABLE" value="true"/>
+      <elementValue elementRef="MAX_LENGTH" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Company_Name"/>
+      <elementValue elementRef="SELECTED_TYPE" value="String"/>
+      <elementValue elementRef="DATEPATTERN" value=""/>
+      <elementValue elementRef="NULLABLE" value="true"/>
+      <elementValue elementRef="MAX_LENGTH" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Sell_to_Customer_No"/>
+      <elementValue elementRef="SELECTED_TYPE" value="String"/>
+      <elementValue elementRef="DATEPATTERN" value=""/>
+      <elementValue elementRef="NULLABLE" value="false"/>
+      <elementValue elementRef="MAX_LENGTH" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Ship_to_Customer_No"/>
+      <elementValue elementRef="SELECTED_TYPE" value="String"/>
+      <elementValue elementRef="DATEPATTERN" value=""/>
+      <elementValue elementRef="NULLABLE" value="true"/>
+      <elementValue elementRef="MAX_LENGTH" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Item_No"/>
+      <elementValue elementRef="SELECTED_TYPE" value="String"/>
+      <elementValue elementRef="DATEPATTERN" value=""/>
+      <elementValue elementRef="NULLABLE" value="false"/>
+      <elementValue elementRef="MAX_LENGTH" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Variant_Code"/>
+      <elementValue elementRef="SELECTED_TYPE" value="String"/>
+      <elementValue elementRef="DATEPATTERN" value=""/>
+      <elementValue elementRef="NULLABLE" value="true"/>
+      <elementValue elementRef="MAX_LENGTH" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Requested_Ship_Date"/>
+      <elementValue elementRef="SELECTED_TYPE" value="String"/>
+      <elementValue elementRef="DATEPATTERN" value=""/>
+      <elementValue elementRef="NULLABLE" value="false"/>
+      <elementValue elementRef="MAX_LENGTH" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Entry_Date"/>
+      <elementValue elementRef="SELECTED_TYPE" value="String"/>
+      <elementValue elementRef="DATEPATTERN" value=""/>
+      <elementValue elementRef="NULLABLE" value="true"/>
+      <elementValue elementRef="MAX_LENGTH" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Entry_Time"/>
+      <elementValue elementRef="SELECTED_TYPE" value="String"/>
+      <elementValue elementRef="DATEPATTERN" value=""/>
+      <elementValue elementRef="NULLABLE" value="true"/>
+      <elementValue elementRef="MAX_LENGTH" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Quantity_Perm"/>
+      <elementValue elementRef="SELECTED_TYPE" value="String"/>
+      <elementValue elementRef="DATEPATTERN" value=""/>
+      <elementValue elementRef="NULLABLE" value="false"/>
+      <elementValue elementRef="MAX_LENGTH" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Quantity_Temp"/>
+      <elementValue elementRef="SELECTED_TYPE" value="String"/>
+      <elementValue elementRef="DATEPATTERN" value=""/>
+      <elementValue elementRef="NULLABLE" value="false"/>
+      <elementValue elementRef="MAX_LENGTH" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Customer_Delivery_Route_Code"/>
+      <elementValue elementRef="SELECTED_TYPE" value="String"/>
+      <elementValue elementRef="DATEPATTERN" value=""/>
+      <elementValue elementRef="NULLABLE" value="true"/>
+      <elementValue elementRef="MAX_LENGTH" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Sales_Manager_No"/>
+      <elementValue elementRef="SELECTED_TYPE" value="String"/>
+      <elementValue elementRef="DATEPATTERN" value=""/>
+      <elementValue elementRef="NULLABLE" value="true"/>
+      <elementValue elementRef="MAX_LENGTH" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="External_Document_No"/>
+      <elementValue elementRef="SELECTED_TYPE" value="String"/>
+      <elementValue elementRef="DATEPATTERN" value=""/>
+      <elementValue elementRef="NULLABLE" value="true"/>
+      <elementValue elementRef="MAX_LENGTH" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Sales_Order_No"/>
+      <elementValue elementRef="SELECTED_TYPE" value="String"/>
+      <elementValue elementRef="DATEPATTERN" value=""/>
+      <elementValue elementRef="NULLABLE" value="true"/>
+      <elementValue elementRef="MAX_LENGTH" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Unit_of_Measure_Code"/>
+      <elementValue elementRef="SELECTED_TYPE" value="String"/>
+      <elementValue elementRef="DATEPATTERN" value=""/>
+      <elementValue elementRef="NULLABLE" value="true"/>
+      <elementValue elementRef="MAX_LENGTH" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Guaranteed_Order"/>
+      <elementValue elementRef="SELECTED_TYPE" value="String"/>
+      <elementValue elementRef="DATEPATTERN" value=""/>
+      <elementValue elementRef="NULLABLE" value="true"/>
+      <elementValue elementRef="MAX_LENGTH" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Shipment_Method_Code"/>
+      <elementValue elementRef="SELECTED_TYPE" value="String"/>
+      <elementValue elementRef="DATEPATTERN" value=""/>
+      <elementValue elementRef="NULLABLE" value="true"/>
+      <elementValue elementRef="MAX_LENGTH" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Payment_Terms_Code"/>
+      <elementValue elementRef="SELECTED_TYPE" value="String"/>
+      <elementValue elementRef="DATEPATTERN" value=""/>
+      <elementValue elementRef="NULLABLE" value="true"/>
+      <elementValue elementRef="MAX_LENGTH" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Payment_Terms_Description"/>
+      <elementValue elementRef="SELECTED_TYPE" value="String"/>
+      <elementValue elementRef="DATEPATTERN" value=""/>
+      <elementValue elementRef="NULLABLE" value="true"/>
+      <elementValue elementRef="MAX_LENGTH" value="false"/>
+    </elementParameter>
+    <elementParameter field="LABEL" name="NOTE_CUSTOMER" value="Please note:&#10;(1) Nullable setting in this table is more preferential than the default schema.&#10;(2) Length checking is base on the value of the default schema."/>
+    <elementParameter field="RADIO" name="CHECK_ANOTHER" value="false"/>
+    <elementParameter field="LABEL" name="NOTE_CHECK_ANOTHER" show="false" value="Please note: only index matching, for example, the second column of checking schema is correspond to the second of input schema"/>
+    <elementParameter field="CHECK" name="SUB_STRING" value="false"/>
+    <elementParameter field="LABEL" name="NOTE_SUB_STRING" value="     If exceed, either trim the field when above option checked or reject the row."/>
+    <elementParameter field="LABEL" name="INFO" value="If only one column has error, the errCode value is a summation of all error code; else the errCode is 16:&#10;(1) Type discrepancy (include wrong date pattern): 2&#10;(2) Empty or NULL: 4&#10;(3) Length/Precision Error: 8"/>
+    <elementParameter field="CHECK" name="FAST_DATE_CHECK" value="false"/>
+    <elementParameter field="LABEL" name="NOTE" value="(Not compatible with multi-threaded jobs)"/>
+    <elementParameter field="CHECK" name="IGNORE_TIMEZONE" value="false"/>
+    <elementParameter field="CHECK" name="EMPTY_IS_NULL" show="false" value="false"/>
+    <elementParameter field="CHECK" name="ALL_EMPTY_ARE_NULL" value="true"/>
+    <elementParameter field="TABLE" name="EMPTY_NULL_TABLE" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="Company_ID"/>
+      <elementValue elementRef="EMPTY_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Company_Name"/>
+      <elementValue elementRef="EMPTY_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Sell_to_Customer_No"/>
+      <elementValue elementRef="EMPTY_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Ship_to_Customer_No"/>
+      <elementValue elementRef="EMPTY_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Item_No"/>
+      <elementValue elementRef="EMPTY_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Variant_Code"/>
+      <elementValue elementRef="EMPTY_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Requested_Ship_Date"/>
+      <elementValue elementRef="EMPTY_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Entry_Date"/>
+      <elementValue elementRef="EMPTY_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Entry_Time"/>
+      <elementValue elementRef="EMPTY_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Quantity_Perm"/>
+      <elementValue elementRef="EMPTY_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Quantity_Temp"/>
+      <elementValue elementRef="EMPTY_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Customer_Delivery_Route_Code"/>
+      <elementValue elementRef="EMPTY_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Sales_Manager_No"/>
+      <elementValue elementRef="EMPTY_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="External_Document_No"/>
+      <elementValue elementRef="EMPTY_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Sales_Order_No"/>
+      <elementValue elementRef="EMPTY_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Unit_of_Measure_Code"/>
+      <elementValue elementRef="EMPTY_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Guaranteed_Order"/>
+      <elementValue elementRef="EMPTY_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Shipment_Method_Code"/>
+      <elementValue elementRef="EMPTY_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Payment_Terms_Code"/>
+      <elementValue elementRef="EMPTY_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Payment_Terms_Description"/>
+      <elementValue elementRef="EMPTY_NULL" value="false"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tSchemaComplianceCheck_1">
+      <column comment="" key="false" length="-1" name="Company_ID" nullable="false" originalDbColumnName="Company ID" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Company_Name" nullable="false" originalDbColumnName="Company Name" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Sell_to_Customer_No" nullable="false" originalDbColumnName="Sell-to Customer No" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Ship_to_Customer_No" nullable="false" originalDbColumnName="Ship-to Customer No" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Item_No" nullable="false" originalDbColumnName="Item No" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Variant_Code" nullable="false" originalDbColumnName="Variant Code" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Requested_Ship_Date" nullable="false" originalDbColumnName="Requested Ship Date" originalLength="-1" pattern="yyyy-MM-dd" precision="-1" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Entry_Date" nullable="false" originalDbColumnName="Entry Date" originalLength="-1" pattern="yyyy-MM-dd" precision="-1" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Entry_Time" nullable="true" originalDbColumnName="Entry Time" originalLength="-1" pattern="yyyy-MM-dd" precision="-1" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="-1" name="Quantity_Perm" nullable="true" originalDbColumnName="Quantity Perm" originalLength="-1" pattern="" precision="-1" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="-1" name="Quantity_Temp" nullable="true" originalDbColumnName="Quantity Temp" originalLength="-1" pattern="" precision="-1" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Customer_Delivery_Route_Code" nullable="true" originalDbColumnName="Customer Delivery Route Code" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Sales_Manager_No" nullable="true" originalDbColumnName="Sales Manager No" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="External_Document_No" nullable="false" originalDbColumnName="External Document No" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Sales_Order_No" nullable="false" originalDbColumnName="Sales Order No" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Unit_of_Measure_Code" nullable="false" originalDbColumnName="Unit of Measure Code" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="-1" name="Guaranteed_Order" nullable="true" originalDbColumnName="Guaranteed Order" originalLength="-1" pattern="" precision="-1" sourceType="SMALLINT" type="id_Short" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Shipment_Method_Code" nullable="true" originalDbColumnName="Shipment Method Code" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Payment_Terms_Code" nullable="true" originalDbColumnName="Payment Terms Code" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Payment_Terms_Description" nullable="true" originalDbColumnName="Payment Terms Description" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="OTHER" name="OTHER"/>
+    <metadata connector="REJECT" name="REJECT">
+      <column comment="" key="false" length="-1" name="Company_ID" nullable="false" originalDbColumnName="Company ID" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Company_Name" nullable="false" originalDbColumnName="Company Name" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Sell_to_Customer_No" nullable="false" originalDbColumnName="Sell-to Customer No" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Ship_to_Customer_No" nullable="false" originalDbColumnName="Ship-to Customer No" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Item_No" nullable="false" originalDbColumnName="Item No" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Variant_Code" nullable="false" originalDbColumnName="Variant Code" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Requested_Ship_Date" nullable="false" originalDbColumnName="Requested Ship Date" originalLength="-1" pattern="yyyy-MM-dd" precision="-1" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Entry_Date" nullable="false" originalDbColumnName="Entry Date" originalLength="-1" pattern="yyyy-MM-dd" precision="-1" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Entry_Time" nullable="true" originalDbColumnName="Entry Time" originalLength="-1" pattern="yyyy-MM-dd" precision="-1" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="-1" name="Quantity_Perm" nullable="true" originalDbColumnName="Quantity Perm" originalLength="-1" pattern="" precision="-1" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="-1" name="Quantity_Temp" nullable="true" originalDbColumnName="Quantity Temp" originalLength="-1" pattern="" precision="-1" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Customer_Delivery_Route_Code" nullable="true" originalDbColumnName="Customer Delivery Route Code" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Sales_Manager_No" nullable="true" originalDbColumnName="Sales Manager No" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="External_Document_No" nullable="false" originalDbColumnName="External Document No" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Sales_Order_No" nullable="false" originalDbColumnName="Sales Order No" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Unit_of_Measure_Code" nullable="false" originalDbColumnName="Unit of Measure Code" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="-1" name="Guaranteed_Order" nullable="true" originalDbColumnName="Guaranteed Order" originalLength="-1" pattern="" precision="-1" sourceType="SMALLINT" type="id_Short" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Shipment_Method_Code" nullable="true" originalDbColumnName="Shipment Method Code" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Payment_Terms_Code" nullable="true" originalDbColumnName="Payment Terms Code" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Payment_Terms_Description" nullable="true" originalDbColumnName="Payment Terms Description" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="32" posY="320">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_2"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_xB6b0IMLEem03cJ6aknsMQ-tMap_2-PREVIEW.bmp"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
+    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="LEVENSHTEIN" show="false" value="0"/>
+    <elementParameter field="TEXT" name="JACCARD" show="false" value="0"/>
+    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="out" name="out">
+      <column comment="" key="false" length="9" name="CUSTOMER_NUMBER" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="30" name="ORDER_DATE" nullable="true" originalLength="30" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="REF_NUMBER" nullable="true" originalLength="225" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="2" name="REF_DATE" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="9" name="PRODUCT_NUMBER" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="6" name="QUANTITY_TEMP" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="30" name="QUANTITY_PERM" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="ORDER_DETAIL_FLAG" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="DELIVERY_TYPE" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="ORDER_TYPE" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="PayTermDesc" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="PayTermCode" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="30" name="Sold_To" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="30" name="ProcessTimeStamp" nullable="true" originalLength="30" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <uiProperties/>
+      <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
+      <outputTables name="out" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="row3.Sell_to_Customer_No " name="CUSTOMER_NUMBER" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row3.Requested_Ship_Date " name="ORDER_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="row3.External_Document_No " name="REF_NUMBER" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row3.Entry_Date" name="REF_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="row3.Item_No " name="PRODUCT_NUMBER" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row3.Quantity_Temp " name="QUANTITY_TEMP" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="row3.Quantity_Perm " name="QUANTITY_PERM" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="" name="ORDER_DETAIL_FLAG" nullable="true" type="id_Integer"/>
+        <mapperTableEntries expression="row3.Shipment_Method_Code " name="DELIVERY_TYPE" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row3.Guaranteed_Order +&quot;&quot;" name="ORDER_TYPE" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row3.Payment_Terms_Description " name="PayTermDesc" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row3.Payment_Terms_Code " name="PayTermCode" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row3.Ship_to_Customer_No " name="Sold_To" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="context.ProcessTimeStamp" name="ProcessTimeStamp" nullable="true" type="id_String"/>
+      </outputTables>
+      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row3" sizeState="INTERMEDIATE">
+        <mapperTableEntries name="Company_ID" type="id_String"/>
+        <mapperTableEntries name="Company_Name" type="id_String"/>
+        <mapperTableEntries name="Sell_to_Customer_No" type="id_String"/>
+        <mapperTableEntries name="Ship_to_Customer_No" type="id_String"/>
+        <mapperTableEntries name="Item_No" type="id_String"/>
+        <mapperTableEntries name="Variant_Code" type="id_String"/>
+        <mapperTableEntries name="Requested_Ship_Date" type="id_Date"/>
+        <mapperTableEntries name="Entry_Date" type="id_Date"/>
+        <mapperTableEntries name="Entry_Time" nullable="true" type="id_Date"/>
+        <mapperTableEntries name="Quantity_Perm" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries name="Quantity_Temp" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries name="Customer_Delivery_Route_Code" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Sales_Manager_No" nullable="true" type="id_String"/>
+        <mapperTableEntries name="External_Document_No" type="id_String"/>
+        <mapperTableEntries name="Sales_Order_No" type="id_String"/>
+        <mapperTableEntries name="Unit_of_Measure_Code" type="id_String"/>
+        <mapperTableEntries name="Guaranteed_Order" nullable="true" type="id_Short"/>
+        <mapperTableEntries name="Shipment_Method_Code" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Payment_Terms_Code" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Payment_Terms_Description" nullable="true" type="id_String"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="-96" posY="416">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJavaRow_1"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="context.ErrorMsg = input_row.errorMessage;&#13;&#10;"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="metadata" name="tJavaRow_1">
+      <column comment="" key="false" length="4" name="RTE_NUMBER" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="9" name="CUSTOMER_NUMBER" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="2" name="CENTURY" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="2" name="YEAR" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="2" name="MONTH" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="2" name="DAY" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="9" name="PRODUCT_NUMBER" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="6" name="PERM_QUANTITY" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="PERM_QUANTITY_SIGN" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="6" name="TEMP_QUANTITY" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="TEMP_QUANTITY_SIGN" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="6" name="LADJ_QUANTITY" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="LADJ_QUANTITY_SIGN" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="6" name="RETURN_QUANTITY" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="RETURN_QUANTITY_SIGN" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="6" name="ONHAND_QUANTITY" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="ONHAND_QUANTITY_SIGN" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="ORDER_DETAIL_FLAG" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="newColumn" nullable="true" pattern="" precision="0" type="id_Integer" usefulColumn="true"/>
+      <column key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="128" posY="416">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tWarn_1"/>
+    <elementParameter field="TEXT" name="MESSAGE" value="context.ErrorMsg"/>
+    <elementParameter field="TEXT" name="CODE" value="599"/>
+    <elementParameter field="CLOSED_LIST" name="PRIORITY" value="5"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="metadata" name="tWarn_1">
+      <column comment="" key="false" length="4" name="RTE_NUMBER" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="9" name="CUSTOMER_NUMBER" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="2" name="CENTURY" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="2" name="YEAR" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="2" name="MONTH" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="2" name="DAY" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="9" name="PRODUCT_NUMBER" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="6" name="PERM_QUANTITY" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="PERM_QUANTITY_SIGN" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="6" name="TEMP_QUANTITY" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="TEMP_QUANTITY_SIGN" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="6" name="LADJ_QUANTITY" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="LADJ_QUANTITY_SIGN" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="6" name="RETURN_QUANTITY" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="RETURN_QUANTITY_SIGN" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="6" name="ONHAND_QUANTITY" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="ONHAND_QUANTITY_SIGN" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="ORDER_DETAIL_FLAG" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="newColumn" nullable="true" pattern="" precision="0" type="id_Integer" usefulColumn="true"/>
+      <column key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tMSSqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="256" posY="320">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMSSqlOutput_2"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" show="false" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_-uKbAEF2EeazMKeZhCw-4Q"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tMSSqlConnection_1"/>
+    <elementParameter field="CLOSED_LIST" name="DRIVER" show="false" value="JTDS"/>
+    <elementParameter field="TEXT" name="HOST" show="false" value="context.DB_ERP_DSD_Integration_Server"/>
+    <elementParameter field="TEXT" name="PORT" show="false" value="context.DB_ERP_DSD_Integration_Port"/>
+    <elementParameter field="TEXT" name="DB_SCHEMA" show="false" value="context.DB_ERP_DSD_Integration_Schema"/>
+    <elementParameter field="TEXT" name="DBNAME" show="false" value="context.DB_ERP_DSD_Integration_Database"/>
+    <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
+    <elementParameter field="TEXT" name="USER" show="false" value="context.DB_ERP_DSD_Integration_Login"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="8pW6Nmy2kucqfsDz9kx+JD4fCX5XMuLYBrRSpMZbhzTKJD0WltAbBg=="/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;Nav_Order&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="CREATE_IF_NOT_EXISTS"/>
+    <elementParameter field="CHECK" name="IDENTITY_INSERT" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
+    <elementParameter field="LABEL" name="NOTE" show="false" value="NOTE: batch size must be less than or equal to total number of parameter markers divided by number of columns"/>
+    <elementParameter field="CHECK" name="SPECIFY_IDENTITY_FIELD" value="false"/>
+    <elementParameter field="COLUMN_LIST" name="IDENTITY_FIELD" show="false" value="CUSTOMER_NUMBER"/>
+    <elementParameter field="TEXT" name="START_VALUE" show="false" value="1"/>
+    <elementParameter field="TEXT" name="STEP" show="false" value="1"/>
+    <elementParameter field="LABEL" name="NOTE" show="false" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" show="false" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="id_MSSQL"/>
+    <elementParameter field="TEXT" name="PROPERTIES" show="false" value="context.DB_ERP_DSD_Integration_AdditionalParams"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="TEXT" name="COMMIT_EVERY" show="false" value="10000"/>
+    <elementParameter field="TABLE" name="ADD_COLS"/>
+    <elementParameter field="CHECK" name="USE_FIELD_OPTIONS" value="false"/>
+    <elementParameter field="TABLE" name="FIELD_OPTIONS" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="CUSTOMER_NUMBER"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ORDER_DATE"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="REF_NUMBER"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="REF_DATE"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PRODUCT_NUMBER"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="QUANTITY_TEMP"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="QUANTITY_PERM"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ORDER_DETAIL_FLAG"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DELIVERY_TYPE"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ORDER_TYPE"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PayTermDesc"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PayTermCode"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Sold_To"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ProcessTimeStamp"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="IGNORE_DATE_OUTOF_RANGE" value="false"/>
+    <elementParameter field="CHECK" name="ENABLE_DEBUG_MODE" value="false"/>
+    <elementParameter field="CHECK" name="SUPPORT_NULL_WHERE" value="false"/>
+    <elementParameter field="CHECK" name="USE_BATCH_SIZE" value="true"/>
+    <elementParameter field="TEXT" name="BATCH_SIZE" value="10000"/>
+    <elementParameter field="TEXT" name="LABEL" value="NAV_Order"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="out" name="tMSSqlOutput_2">
+      <column comment="" key="false" length="9" name="CUSTOMER_NUMBER" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="30" name="ORDER_DATE" nullable="true" originalLength="30" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="REF_NUMBER" nullable="true" originalLength="225" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="2" name="REF_DATE" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="9" name="PRODUCT_NUMBER" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="6" name="QUANTITY_TEMP" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="30" name="QUANTITY_PERM" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="ORDER_DETAIL_FLAG" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="DELIVERY_TYPE" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="ORDER_TYPE" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="PayTermDesc" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="PayTermCode" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="30" name="Sold_To" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="30" name="ProcessTimeStamp" nullable="true" originalLength="30" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="REJECT" label="out" name="REJECT">
+      <column comment="" key="false" length="9" name="CUSTOMER_NUMBER" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="30" name="ORDER_DATE" nullable="true" originalLength="30" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="REF_NUMBER" nullable="true" originalLength="225" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="2" name="REF_DATE" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="9" name="PRODUCT_NUMBER" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="6" name="QUANTITY_TEMP" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="30" name="QUANTITY_PERM" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="ORDER_DETAIL_FLAG" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="DELIVERY_TYPE" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="ORDER_TYPE" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="PayTermDesc" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="PayTermCode" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="30" name="Sold_To" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="30" name="ProcessTimeStamp" nullable="true" originalLength="30" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tJavaFlex" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="384" posY="384">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJavaFlex_14"/>
+    <elementParameter field="CHECK" name="DATA_AUTO_PROPAGATE" value="true"/>
+    <elementParameter field="MEMO_JAVA" name="CODE_START" value="// start part of your Java code&#10;"/>
+    <elementParameter field="MEMO_JAVA" name="CODE_MAIN" value="// here is the main part of the component,&#10;// a piece of code executed in the row&#10;// loop&#10;&#10;&#10;int a =routines.ShippingRouteLoad.getRTEcount(&quot;&quot;+row7.CUSTOMER_NUMBER.substring(1));&#10;&#10;"/>
+    <elementParameter field="MEMO_JAVA" name="CODE_END" value="// end of the component, outside/closing the loocontext.count  &#10;&#10;"/>
+    <elementParameter field="CHECK" name="Version_V2_0" show="false" value="false"/>
+    <elementParameter field="CHECK" name="Version_V3_2" show="false" value="false"/>
+    <elementParameter field="CHECK" name="Version_V4.0" show="false" value="true"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="out" name="tJavaFlex_14">
+      <column comment="" key="false" length="9" name="CUSTOMER_NUMBER" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="30" name="ORDER_DATE" nullable="true" originalLength="30" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="REF_NUMBER" nullable="true" originalLength="225" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="2" name="REF_DATE" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="9" name="PRODUCT_NUMBER" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="6" name="QUANTITY_TEMP" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="QUANTITY_PERM" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="ORDER_DETAIL_FLAG" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="DELIVERY_TYPE" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="ORDER_TYPE" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="PayTermDesc" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="PayTermCode" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="Sold_To" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tSortRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="512" posY="384">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSortRow_1"/>
+    <elementParameter field="TABLE" name="CRITERIA">
+      <elementValue elementRef="COLNAME" value="CUSTOMER_NUMBER"/>
+      <elementValue elementRef="SORT" value="alpha"/>
+      <elementValue elementRef="ORDER" value="asc"/>
+      <elementValue elementRef="COLNAME" value="ORDER_DATE"/>
+      <elementValue elementRef="SORT" value="date"/>
+      <elementValue elementRef="ORDER" value="asc"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="EXTERNAL" value="false"/>
+    <elementParameter field="DIRECTORY" name="TEMPFILE" show="false" value="&quot;C:/Talend/6.2.1/studio/workspace/temp&quot;"/>
+    <elementParameter field="CHECK" name="CREATEDIR" show="false" value="true"/>
+    <elementParameter field="TEXT" name="EXTERNAL_SORT_BUFFERSIZE" show="false" value="1000000"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="out" name="tSortRow_1">
+      <column comment="" key="false" length="9" name="CUSTOMER_NUMBER" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="30" name="ORDER_DATE" nullable="true" originalLength="30" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="REF_NUMBER" nullable="true" originalLength="225" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="2" name="REF_DATE" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="9" name="PRODUCT_NUMBER" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="6" name="QUANTITY_TEMP" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="QUANTITY_PERM" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="ORDER_DETAIL_FLAG" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="DELIVERY_TYPE" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="ORDER_TYPE" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="PayTermDesc" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="PayTermCode" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="Sold_To" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="608" posY="384">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_1"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_xB6b0IMLEem03cJ6aknsMQ-tMap_1-PREVIEW.bmp"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
+    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="LEVENSHTEIN" show="false" value="0"/>
+    <elementParameter field="TEXT" name="JACCARD" show="false" value="0"/>
+    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="masterdataPoolUpdate" name="masterdataPoolUpdate">
+      <column comment="" key="false" length="-1" name="SystemId" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="SystemPassword" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Pool" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="FLOW" label="MasterdataUpdate" name="MasterdataUpdate">
+      <column comment="" key="false" length="-1" name="Group" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Key" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Description" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="mafAppSpace" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="FLOW" name="items">
+      <column comment="" key="false" length="-1" name="items" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="items1" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="altQty" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="baseQty" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="FLOW" label="order" name="hd">
+      <column comment="" key="false" length="-1" name="referenceNumber" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="referenceDate" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="handheldCreated" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="shipTo" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="soldTo" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="outtype" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="paytermCode" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="paytermDesc" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="orderType" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="deliveryType" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="FLOW" label="SendMasterData" name="SendMasterData">
+      <column comment="" key="false" length="-1" name="newColumn" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <uiProperties/>
+      <varTables name="Var" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="TalendDate.formatDate(&quot;yyyy-MM-dd&quot;,row6.ORDER_DATE) " name="ORDER_DATE" type="id_String"/>
+        <mapperTableEntries expression="Integer.valueOf(  row6.QUANTITY_PERM.intValue() ) " name="ALTQTY" type="id_Integer"/>
+        <mapperTableEntries expression="String.format(&quot;%010d&quot;, Integer.parseInt(row6.CUSTOMER_NUMBER.replaceAll(&quot;\\D+&quot;,&quot;&quot;))) " name="Group" type="id_String"/>
+        <mapperTableEntries expression="Integer.valueOf(  row6.QUANTITY_TEMP.intValue()) " name="BASEQTY" type="id_Integer"/>
+        <mapperTableEntries expression="String.format(&quot;%010d&quot;,Integer.parseInt(row6.CUSTOMER_NUMBER.replaceAll(&quot;\\D+&quot;,&quot;&quot;))) +&quot;_&quot;+TalendDate.formatDate(&quot;yyyyddMM&quot;,row6.REF_DATE) " name="key" type="id_String"/>
+        <mapperTableEntries expression="TalendDate.formatDate(&quot;yyyy-MM-dd&quot;,row6.REF_DATE) " name="REF_DATE" type="id_String"/>
+      </varTables>
+      <outputTables name="masterdataPoolUpdate" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="context.SystemId" name="SystemId" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="context.SystemPassword" name="SystemPassword" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="context.Pool" name="Pool" nullable="true" type="id_String"/>
+      </outputTables>
+      <outputTables name="MasterdataUpdate" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="Var.Group" name="Group" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="Var.key" name="Key" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="context.description" name="Description" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="&quot;MD_TOUR&quot;" name="mafAppSpace" nullable="true" type="id_String"/>
+      </outputTables>
+      <outputTables name="items" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="String.format(&quot;%012d&quot;,Integer.parseInt(row6.PRODUCT_NUMBER.replaceAll(&quot;\\D+&quot;, &quot;&quot;))) " name="items" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="Var.ORDER_DATE" name="items1" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="Var.ALTQTY" name="altQty" nullable="true" type="id_Integer"/>
+        <mapperTableEntries expression="Var.BASEQTY" name="baseQty" nullable="true" type="id_Integer"/>
+      </outputTables>
+      <outputTables name="hd" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="row6.REF_NUMBER " name="referenceNumber" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="Var.REF_DATE " name="referenceDate" nullable="true" type="id_String"/>
+        <mapperTableEntries name="handheldCreated" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row6.CUSTOMER_NUMBER .substring(1)" name="shipTo" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row6.Sold_To " name="soldTo" nullable="true" type="id_String"/>
+        <mapperTableEntries name="outtype" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row6.PayTermCode " name="paytermCode" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row6.PayTermDesc " name="paytermDesc" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row6.ORDER_TYPE" name="orderType" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row6.DELIVERY_TYPE " name="deliveryType" nullable="true" type="id_String"/>
+      </outputTables>
+      <outputTables name="SendMasterData" sizeState="INTERMEDIATE">
+        <mapperTableEntries name="newColumn" nullable="true" type="id_String"/>
+      </outputTables>
+      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row6" sizeState="INTERMEDIATE">
+        <mapperTableEntries name="CUSTOMER_NUMBER" nullable="true" type="id_String"/>
+        <mapperTableEntries name="ORDER_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries name="REF_NUMBER" nullable="true" type="id_String"/>
+        <mapperTableEntries name="REF_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries name="PRODUCT_NUMBER" nullable="true" type="id_String"/>
+        <mapperTableEntries name="QUANTITY_TEMP" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries name="QUANTITY_PERM" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries name="ORDER_DETAIL_FLAG" nullable="true" type="id_Integer"/>
+        <mapperTableEntries name="DELIVERY_TYPE" nullable="true" type="id_String"/>
+        <mapperTableEntries name="ORDER_TYPE" nullable="true" type="id_String"/>
+        <mapperTableEntries name="PayTermDesc" nullable="true" type="id_String"/>
+        <mapperTableEntries name="PayTermCode" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Sold_To" nullable="true" type="id_String"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <node componentName="tJavaFlex" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="864" posY="256">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJavaFlex_9"/>
+    <elementParameter field="CHECK" name="DATA_AUTO_PROPAGATE" value="true"/>
+    <elementParameter field="MEMO_JAVA" name="CODE_START" value="// start part of your Java code&#10; int b=1;"/>
+    <elementParameter field="MEMO_JAVA" name="CODE_MAIN" value="routines.ShippingRouteLoad.createAllObjects();&#10;&#10;if(b==1){&#10;&#10;routines.ShippingRouteLoad.populateMasterdataPoolUpdate(masterdataPoolUpdate);&#10;}&#10;b++;&#10;"/>
+    <elementParameter field="MEMO_JAVA" name="CODE_END" value="// end of the component, outside/closing the loop&#10; routines.ShippingRouteLoad.createAllObjects();&#10;routines.ShippingRouteLoad.populateMasterdataPoolUpdate(masterdataPoolUpdate);     "/>
+    <elementParameter field="CHECK" name="Version_V2_0" show="false" value="false"/>
+    <elementParameter field="CHECK" name="Version_V3_2" show="false" value="false"/>
+    <elementParameter field="CHECK" name="Version_V4.0" show="false" value="true"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJavaFlex_9"/>
+  </node>
+  <node componentName="tJavaFlex" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="864" posY="352">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJavaFlex_10"/>
+    <elementParameter field="CHECK" name="DATA_AUTO_PROPAGATE" value="true"/>
+    <elementParameter field="MEMO_JAVA" name="CODE_START" value="// start part of your Java code&#10;     &#10;"/>
+    <elementParameter field="MEMO_JAVA" name="CODE_MAIN" value="routines.ShippingRouteLoad.populateMasterdataUpdate(MasterdataUpdate);"/>
+    <elementParameter field="MEMO_JAVA" name="CODE_END" value="// end of the component, outside/closing the loop  &#10;   "/>
+    <elementParameter field="CHECK" name="Version_V2_0" show="false" value="false"/>
+    <elementParameter field="CHECK" name="Version_V3_2" show="false" value="false"/>
+    <elementParameter field="CHECK" name="Version_V4.0" show="false" value="true"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJavaFlex_10"/>
+  </node>
+  <node componentName="tJavaFlex" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="864" posY="448">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJavaFlex_11"/>
+    <elementParameter field="CHECK" name="DATA_AUTO_PROPAGATE" value="true"/>
+    <elementParameter field="MEMO_JAVA" name="CODE_START" value="// start part of your Java code&#10; // context.QTYACT=0;    "/>
+    <elementParameter field="MEMO_JAVA" name="CODE_MAIN" value="routines.ShippingRouteLoad.populateDataContainerEntryChildNode(items);&#10;&#10;"/>
+    <elementParameter field="MEMO_JAVA" name="CODE_END" value="// end of the component, outside/closing the loop&#10;     "/>
+    <elementParameter field="CHECK" name="Version_V2_0" show="false" value="false"/>
+    <elementParameter field="CHECK" name="Version_V3_2" show="false" value="false"/>
+    <elementParameter field="CHECK" name="Version_V4.0" show="false" value="true"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJavaFlex_11"/>
+  </node>
+  <node componentName="tJavaFlex" componentVersion="0.101" offsetLabelX="12" offsetLabelY="0" posX="896" posY="544">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJavaFlex_12"/>
+    <elementParameter field="CHECK" name="DATA_AUTO_PROPAGATE" value="true"/>
+    <elementParameter field="MEMO_JAVA" name="CODE_START" value="// start part of your Java code&#10;     int row_count=0;&#10;"/>
+    <elementParameter field="MEMO_JAVA" name="CODE_MAIN" value="&#10;row_count++;&#10;&#10;int chk=Integer.parseInt(routines.ShippingRouteLoad.hmRTEcount.get(&quot;&quot; +hd.shipTo).toString());&#10;if(chk==row_count){&#10;&#9;routines.ShippingRouteLoad.populateDataContainerEntry(hd);&#10;&#9;routines.ShippingRouteLoad.populateUpdateContainerEntry();&#10;&#9;row_count=0;&#10;&#9;routines.ShippingRouteLoad.clearhmITM();&#10;}&#10;&#10;&#10;"/>
+    <elementParameter field="MEMO_JAVA" name="CODE_END" value="// end of the component, outside/closing the loop&#10;      "/>
+    <elementParameter field="CHECK" name="Version_V2_0" show="false" value="false"/>
+    <elementParameter field="CHECK" name="Version_V3_2" show="false" value="false"/>
+    <elementParameter field="CHECK" name="Version_V4.0" show="false" value="true"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJavaFlex_12"/>
+  </node>
+  <node componentName="tJavaFlex" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="896" posY="640">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJavaFlex_13"/>
+    <elementParameter field="CHECK" name="DATA_AUTO_PROPAGATE" value="true"/>
+    <elementParameter field="MEMO_JAVA" name="CODE_START" value="// start part of your Java code&#10;  int a=1;    "/>
+    <elementParameter field="MEMO_JAVA" name="CODE_MAIN" value="&#10;&#10;if(a==50 /*&amp;&amp; f==(a-50)*/){&#10;row12.responseXML=routines.ShippingRouteLoad.sendMasterData(context.movilizerURL, context.movilizerVersion);&#10;&#10;//f = a;&#10;a=0;&#10;//System.out.println(f);&#10;}&#10;a++;&#10;routines.r_HarvestRoutineLoop.resetObjects();&#10;"/>
+    <elementParameter field="MEMO_JAVA" name="CODE_END" value="// end of the component, outside/closing the loop&#10;   routines.ShippingRouteLoad.sendMasterData(context.movilizerURL, context.movilizerVersion);&#10;   routines.ShippingRouteLoad.resetObjects();     "/>
+    <elementParameter field="CHECK" name="Version_V2_0" show="false" value="false"/>
+    <elementParameter field="CHECK" name="Version_V3_2" show="false" value="false"/>
+    <elementParameter field="CHECK" name="Version_V4.0" show="false" value="true"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJavaFlex_13">
+      <column comment="" key="false" length="-1" name="responseXML" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="jlet_ResponseLogging" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="1088" posY="640">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="jlet_ResponseLogging_1"/>
+    <elementParameter field="TEXT" name="FAMILY" value="Joblets"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="CHECK" name="DUMMY" show="false" value="false"/>
+    <elementParameter field="CHECK" name="STARTABLE" show="false" value="true"/>
+    <elementParameter field="CHECK" name="START" show="false" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="PROCESS_TYPE_VERSION" value="Latest"/>
+    <elementParameter field="TEXT" name="LABEL" value="jlet_ResponseLogging"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;__COMMENT__"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <metadata connector="FLOW" name="jlet_ResponseLogging_1">
+      <column comment="" key="false" length="-1" name="responseXML" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tMSSqlClose" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="288" posY="704">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMSSqlClose_1"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tMSSqlConnection_1"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="512" posY="96">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJava_1"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="String foo = &quot;bar&quot;;&#10;&#10;context.DB_Navision_Database = &quot;HFS_Master_DataAccess_DB&quot;;&#10;//context.DB_Navision_Schema = &quot;dbo&quot;;"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="LABEL" value="Setting contetxs fr test only"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJava_1"/>
+  </node>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPrejob_2" offsetLabelX="0" offsetLabelY="0" source="tPrejob_2" target="tMSSqlConnection_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk5"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tMSSqlConnection_1" offsetLabelX="0" offsetLabelY="0" source="tMSSqlConnection_1" target="tSetKeystore_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk3"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPostjob_2" offsetLabelX="0" offsetLabelY="0" source="tPostjob_2" target="tMSSqlCommit_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk6"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tMSSqlCommit_1" offsetLabelX="0" offsetLabelY="0" source="tMSSqlCommit_1" target="tMSSqlClose_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk7"/>
+  </connection>
+  <connection connectorName="FLOW" label="row11" lineStyle="0" metaname="tLogCatcher_2" offsetLabelX="0" offsetLabelY="0" source="tLogCatcher_2" target="jlet_CustomLogging_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row11"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tSetKeystore_1" offsetLabelX="0" offsetLabelY="0" source="tSetKeystore_1" target="tJava_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk8"/>
+  </connection>
+  <connection connectorName="FLOW" label="row4" lineStyle="0" metaname="tMSSqlInput_1" offsetLabelX="0" offsetLabelY="0" source="tMSSqlInput_1" target="tLogRow_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row4"/>
+  </connection>
+  <connection connectorName="FLOW" label="row8" lineStyle="0" metaname="tLogRow_1" offsetLabelX="0" offsetLabelY="0" source="tLogRow_1" target="tJavaFlex_3">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="Variant_Code"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Sales_Manager_No"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="External_Document_No"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Quantity_Temp"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Guaranteed_Order"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Quantity_Perm"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Entry_Time"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Payment_Terms_Code"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Shipment_Method_Code"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Payment_Terms_Description"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Entry_Date"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Customer_Delivery_Route_Code"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Sales_Order_No"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Ship_to_Customer_No"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Item_No"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Requested_Ship_Date"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Sell_to_Customer_No"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Unit_of_Measure_Code"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row8"/>
+  </connection>
+  <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tJavaFlex_3" offsetLabelX="0" offsetLabelY="0" source="tJavaFlex_3" target="tSchemaComplianceCheck_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row2"/>
+  </connection>
+  <connection connectorName="FLOW" label="row3" lineStyle="0" metaname="tSchemaComplianceCheck_1" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tSchemaComplianceCheck_1" target="tMap_2">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row3"/>
+  </connection>
+  <connection connectorName="REJECT" label="row10" lineStyle="0" metaname="REJECT" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tSchemaComplianceCheck_1" target="tJavaRow_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row10"/>
+  </connection>
+  <connection connectorName="FLOW" label="out" lineStyle="0" metaname="out" offsetLabelX="0" offsetLabelY="0" source="tMap_2" target="tMSSqlOutput_2">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="Sold_To"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="PayTermDesc"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Quantity_Temp"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Delivery_Type"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ORDER_TYPE"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Quantity_Perm"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Ref_Date"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="PayTermCode"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Order_Date"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Ref_Number"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="QUANTITY_TEMP"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="DELIVERY_TYPE"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="REF_NUMBER"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="QUANTITY_PERM"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ORDER_DATE"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="REF_DATE"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ProcessTimeStamp"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="out"/>
+  </connection>
+  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tJavaRow_1" offsetLabelX="0" offsetLabelY="0" source="tJavaRow_1" target="tWarn_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
+  </connection>
+  <connection connectorName="FLOW" label="row7" lineStyle="0" metaname="tMSSqlOutput_2" offsetLabelX="0" offsetLabelY="0" source="tMSSqlOutput_2" target="tJavaFlex_14">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row7"/>
+  </connection>
+  <connection connectorName="FLOW" label="row13" lineStyle="0" metaname="tJavaFlex_14" offsetLabelX="0" offsetLabelY="0" source="tJavaFlex_14" target="tSortRow_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row13"/>
+  </connection>
+  <connection connectorName="FLOW" label="row6" lineStyle="0" metaname="tSortRow_1" offsetLabelX="0" offsetLabelY="0" source="tSortRow_1" target="tMap_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row6"/>
+  </connection>
+  <connection connectorName="FLOW" label="masterdataPoolUpdate" lineStyle="0" metaname="masterdataPoolUpdate" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tMap_1" target="tJavaFlex_9">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="SystemId"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="masterdataPoolUpdate"/>
+  </connection>
+  <connection connectorName="FLOW" label="MasterdataUpdate" lineStyle="0" metaname="MasterdataUpdate" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tMap_1" target="tJavaFlex_10">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="Group"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="mafAppSpace"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="MasterdataUpdate"/>
+  </connection>
+  <connection connectorName="FLOW" label="items" lineStyle="0" metaname="items" offsetLabelX="0" offsetLabelY="0" outputId="3" source="tMap_1" target="tJavaFlex_11">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="items1"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="items"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="altQty"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="items"/>
+  </connection>
+  <connection connectorName="FLOW" label="hd" lineStyle="0" metaname="hd" offsetLabelX="0" offsetLabelY="0" outputId="4" source="tMap_1" target="tJavaFlex_12">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="ITEMS"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="SHIPTO"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="paytermCode"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="soldTo"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="paytermDesc"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="referenceNumber"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="referenceDate"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="shipTo"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="handheldCreated"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="orderType"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="outtype"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="deliveryType"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="hd"/>
+  </connection>
+  <connection connectorName="FLOW" label="SendMasterData" lineStyle="0" metaname="SendMasterData" offsetLabelX="0" offsetLabelY="0" outputId="5" source="tMap_1" target="tJavaFlex_13">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="SendMasterData"/>
+  </connection>
+  <connection connectorName="FLOW" label="row12" lineStyle="0" metaname="tJavaFlex_13" offsetLabelX="0" offsetLabelY="0" source="tJavaFlex_13" target="jlet_ResponseLogging_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row12"/>
+  </connection>
+  <subjob>
+    <elementParameter field="CHECK" name="COLLAPSED" show="false" value="true"/>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" show="false" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tPrejob_2"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="230;100;0"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="255;220;180"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMSSqlConnection_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" show="false" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tPostjob_2"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="230;100;0"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="255;220;180"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMSSqlCommit_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogCatcher_2"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSetKeystore_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMSSqlInput_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMSSqlClose_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJava_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_b17c31ef-bf84-435d-9405-d88494e52f18"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>y7U2bq6Sj4qsVtUW6FL58MHKIxxEEDes39t0Rv+TFQqYinnltgFSP5vwZxxSCF3iepwKt11P2680
+EU9zyk72hw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_d3d9b876-41f7-4e70-a149-dd5852865138"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>eKF4MfE0mUn4Z+R9TEJNr/YEWHh3YFL+nF+milYlh+U2h4LBWo5bQCwDg8o60cP3e4loJNemL1q2
+qpd2/sEHjA==</DigestValue></Reference></SignedInfo><SignatureValue>11muTmjBrsMrIJ6ObYjFjN17Wm4K0tgOEP1bxGsdrLElb8mYr/lo6DZmrt5fwLm/PQKZy3kTSI5H
+gmvQe7k0VzV3tIx9ud8tr+uscw0G5pKwiZwcg6dsqU//lc7rynmOdt6D59ztb8FR8gvaAxGuaoA8
+PaBfj/pMz4vtuV1OHDdR+xMZxVkf010u0uw6UsQFffZnM6Gfx3F9ZO8uo9JDsd5PklL0VjKOyxgG
+nGoWH1k+3upheoUwBQuaLLYVPiWpCoWtr+dSzP0i7OkJnl/VgowE2EvKqKqXtmMoRp53JHD46lpr
+HcgQa4It74Ca7U70OTzE6Gk1YQtPfEjWwxxmvg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
+RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
+LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
+VQQIDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1ImRDEpMCcGA1UEAwwg
+RGVmYXVsdCBjb2RlLXNpZ25pbmcgY2VydGlmaWNhdGUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAw
+ggEKAoIBAQDiCz1II/o6hDUWu/ygxTCT2o/fYxVzPW23AoONQC/Vuiqh0COyLIgaMTjBPmQdTQFq
+rmM5tD64gi4TEQF+Z3iYt3daLdQUfaW9SzaMlY+XVNz5xnMBVDuiSHJSFE9lKnhgbKAHvOeoJo46
+UgWwb1za0WpRckDtjKcntwEK1orZCgrcIo1nDvFXyB5n0KfpLyktEOa0bSHde50MPbvQeB66XlEb
+lhjfs5S9WnAUja9RgqdwqZoI0ss+x/pjkQygDT8f17MktM21HOtg09lJlhMGJckhgD7jUF5tfYGM
+sv/O27g5CToFhxOnutDtsrDw7AkEQIml8KJp97bQLAFlLnh1AgMBAAGjge0wgeowHQYDVR0OBBYE
+FFzdy6ZfpUX8JwkM/SUrqkwLNqWAMB8GA1UdIwQYMBaAFOd9C3L8tYGZxoAr2SzsgnMytaj3MAsG
+A1UdDwQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzAJBgNVHRMEAjAAMHsGCWCGSAGG+EIBDQRu
+FmxEZWZhdWx0IHRoaXJkIHBhcnR5IGNvZGUtc2lnbmluZyBjZXJ0aWZpY2F0ZS4gTm8gY29tbWl0
+bWVudCBpcyBtYWRlIG9uIHRoZSBjb250ZW50IHNpZ25lZCBieSB0aGUgdGhpcmQgcGFydHkwDQYJ
+KoZIhvcNAQELBQADggIBAKzYdnzoFgrRtDLSSzWtwuOrGo5+1RPoDHm/1dlbVnB7oZzUwfRGwZT5
+ser0V7OZyt9wWR8iQ2ka30fHWrNAosNtlIkF88s5YZw7OOIMxR+qYA99BnWLa79DZVIuukI2f5qJ
+Cr9nw6Oygo8CWeNMWhtXcvV4gqROhb2QMBrvWBw9QvNK1XMdtPShfWiXwyPzzRKgwqrN2meXtOY3
+S+MXu6u+RUD9EYeElp9M+9Yp+zRySl5/s+0sbvo7qz369dlsw8XhKXT+s4YQQe3Sx14Kg3SDFXKn
+QcVgycaZMOw4YUxOeP2hKOHnNuOMORfu3qlYkN/0RMGjn6r4PU4+yL276TiWI5b8J06y4leng2as
+r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
+EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
+BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
+6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_d3d9b876-41f7-4e70-a149-dd5852865138" Target="#_b17c31ef-bf84-435d-9405-d88494e52f18"><Timestamp>2019-11-15 18:12:15</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
