@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:TalendProperties="http://www.talend.org/properties">
+  <TalendProperties:Project xmi:id="_P-TboQfLEeqrc9gJfUDNpw" label="NAV_MOV" description="" language="java" technicalLabel="NAV_MOV" creationDate="2019-11-15T08:54:46.157-0800" author="_P-TbogfLEeqrc9gJfUDNpw" productVersion="Talend Data Management Platform-7.0.1.20180411_1414" url="{&quot;commitLogPattern&quot;:&quot;{0}&quot;,&quot;location&quot;:&quot;https://github.com/PhillipsCo/HarvestExchangeNav.git&quot;,&quot;login&quot;:&quot;phillipsco&quot;,&quot;passwd&quot;:&quot;VsyX323SdxSAu9yk8mgv0w==&quot;,&quot;settings&quot;:&quot;000&quot;,&quot;storage&quot;:&quot;git&quot;}" type="DI" bigData="false"/>
+  <TalendProperties:User xmi:id="_P-TbogfLEeqrc9gJfUDNpw" login="cody.phillips@harvestfoodsolutions.com" firstName="Cody" lastName="Phillips" type="DQ" additionnalData="{}"/>
+</xmi:XMI>
