@@ -366,4 +366,6 @@
     <migrationTask xmi:id="_SxIJ3QfLEeqrc9gJfUDNpw" id="org.talend.repository.model.migration.AutoUpdateRelationsMigrationTask" breaks="5.1.1" version="5.1.2" status="noimpact"/>
   </TalendProperties:Project>
   <TalendProperties:User xmi:id="_P-TbogfLEeqrc9gJfUDNpw" login="cody.phillips@harvestfoodsolutions.com" firstName="Cody" lastName="Phillips" type="DQ" additionnalData="{}"/>
+  <TalendProperties:User xmi:id="_x3W8kQfSEeqqn_wI9dbZVA" login="security@company.com" firstName="security" lastName="security" type="DQ" additionnalData="{}"/>
+  <TalendProperties:User xmi:id="_x3W8kgfSEeqqn_wI9dbZVA" login="kashyap.shah@thinkartha.com" firstName="Kashyap" lastName="Shah" type="DQ" additionnalData="{}"/>
 </xmi:XMI>
