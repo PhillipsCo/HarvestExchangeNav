@@ -1,0 +1,353 @@
+package routines;
+
+import java.io.File;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.List;
+
+import org.jibx.ws.WsException;
+import org.jibx.ws.soap.client.SoapClient;
+
+import com.movilitas.builder.MovilizerRequestBuilder;
+import com.movilitas.jaxbframework.MovilizerJaxbException;
+import com.movilitas.jaxbframework.dataaccess.jaxb.impl.JaxbDAOMovilizerImpl;
+import com.movilitas.jaxbframework.dataaccess.jaxb.v14.MovilizerMasterdataUpdate;
+import com.movilitas.jaxbframework.dataaccess.jaxb.v14.MoveletConstants;
+import com.movilitas.jaxbframework.dataaccess.jaxb.v14.MoveletType;
+import com.movilitas.jaxbframework.dataaccess.jaxb.v14.MovilizerAnswer;
+import com.movilitas.jaxbframework.dataaccess.jaxb.v14.MovilizerGenericDataContainer;
+import com.movilitas.jaxbframework.dataaccess.jaxb.v14.MovilizerGenericDataContainerEntry;
+import com.movilitas.jaxbframework.dataaccess.jaxb.v14.MovilizerMasterdataAck;
+import com.movilitas.jaxbframework.dataaccess.jaxb.v14.MovilizerMasterdataPoolUpdate;
+import com.movilitas.jaxbframework.dataaccess.jaxb.v14.MovilizerMovelet;
+import com.movilitas.jaxbframework.dataaccess.jaxb.v14.MovilizerMoveletSet;
+import com.movilitas.jaxbframework.dataaccess.jaxb.v14.MovilizerParticipant;
+import com.movilitas.jaxbframework.dataaccess.jaxb.v14.MovilizerQuestion;
+import com.movilitas.jaxbframework.dataaccess.jaxb.v14.MovilizerRequest;
+import com.movilitas.jaxbframework.dataaccess.jaxb.v14.MovilizerResponse;
+import com.movilitas.jaxbframework.dataaccess.jaxb.v14.MovilizerUploadDataContainer;
+import com.movilitas.sync.SyncConstants;
+
+
+public class my_routine {
+
+    private static final int            SYSTEM_ID                  = 51840021;
+    private static final String         SYSTEM_PASSWORD            = "peterson";
+    //    private static final String         PARTICIPANT_DEVICE_ADDRESS = "+999200";
+    //    private static final String         PARTICIPANT_NAME           = "HON";
+    //    private static final String         PARTICIPANT_KEY            = "HON";
+
+    private static JaxbDAOMovilizerImpl jaxbDAO;
+
+    public static void main(String[] args)
+    {
+        try
+        {
+            jaxbDAO = new JaxbDAOMovilizerImpl();
+            System.out.println("JAXDAO set");
+        }
+        catch (final MovilizerJaxbException e)
+        {
+            e.printStackTrace();
+        }
+
+        //sendMasterdata();
+        startServer();
+        //fireEmptyRequest(null);
+        //sendMovelet();
+        //deleteMovelet();
+
+    }
+
+    private static void startServer()
+    {
+        String ackKey = null;
+        while (true)
+        {
+            System.out.println("Polling run started.........");
+            try
+            {
+                Thread.sleep(2000L);
+            }
+            catch (final InterruptedException e1)
+            {
+                e1.printStackTrace();
+            }
+
+            final MovilizerResponse response = fireEmptyRequest(ackKey);
+
+            ackKey = response.getRequestAcknowledgeKey();
+
+            final List<MovilizerUploadDataContainer> containerList = response.getUploadContainerList();
+            final long currentTime = System.currentTimeMillis();
+            PrintWriter writer;
+            final int numResp = 0;
+
+            final List<MovilizerMasterdataAck> mdAckList = response.getMasterdataAckList();
+
+            if (containerList != null)
+            {
+                for (final MovilizerUploadDataContainer container : containerList)
+                {
+                    //File file = new File("./responses/containers/Response"+currentTime+"-"+numResp+".xml", "UTF-8");
+                    final File file = new File("C:\\Users\\useiberth\\Desktop\\" + currentTime + "-" + numResp + ".xml");
+                    System.out.println("Absolute path:" + file.getAbsolutePath());
+                    if (!file.exists())
+                    {
+                        try
+                        {
+                            if (file.createNewFile())
+                            {
+                                writer = new PrintWriter(file);
+                                writer.write(jaxbDAO.generateXML(container));
+                                writer.close();
+                            }
+                            System.out.println("Wrote container");
+                        }
+                        catch (final IOException e)
+                        {
+                            e.printStackTrace();
+                            ackKey = null;
+                        }
+                        catch (final MovilizerJaxbException e)
+                        {
+                            e.printStackTrace();
+                            ackKey = null;
+                        }
+                    }
+                }
+            }
+
+            if (mdAckList != null)
+            {
+                final File file = new File("C:\\Users\\useiberth\\Desktop\\" + currentTime + "-" + numResp + ".txt");
+                if (!file.exists())
+                {
+                    try
+                    {
+                        if (file.createNewFile())
+                        {
+                            writer = new PrintWriter(file);
+                            for (final MovilizerMasterdataAck ack : mdAckList)
+                            {
+                                writer.write(ack.getPool() + "-" + ack.getGroup() + "-" + ack.getKey() + "\n");
+                            }
+                            writer.close();
+                        }
+                    }
+                    catch (final IOException e)
+                    {
+                        e.printStackTrace();
+                    }
+                }
+                System.out.println("Wrote ack");
+            }
+        }
+    }
+
+    private static MovilizerResponse fireEmptyRequest(String ackKey)
+    {
+        try
+        {
+            final MovilizerRequest movilizerRequest = new MovilizerRequest();
+            movilizerRequest.setSystemId(SYSTEM_ID);
+            movilizerRequest.setSystemPassword(SYSTEM_PASSWORD);
+            if (ackKey != null)
+            {
+                movilizerRequest.setRequestAcknowledgeKey(ackKey);
+            }
+            movilizerRequest.setNumResponses(new Integer(100));
+
+            final MovilizerRequestBuilder requestBuilder = new MovilizerRequestBuilder(movilizerRequest);
+
+            final MovilizerRequest request = (MovilizerRequest) requestBuilder.getRequestObject();
+            System.out.println(jaxbDAO.generateXML(request));
+
+            final SoapClient soapClient = jaxbDAO.createWebServiceDispatcher("http://demo.movilizer.com/mds/WebService/", 14);
+            final MovilizerResponse response = (MovilizerResponse) soapClient.call(request);
+
+            System.out.println("Receiving-->" + jaxbDAO.generateXML(response));
+
+            return response;
+        }
+        catch (final MovilizerJaxbException e)
+        {
+            e.printStackTrace();
+        }
+        catch (final Exception e)
+        {
+            e.printStackTrace();
+        }
+
+        return null;
+    }
+    
+    private static void sendMasterdata()
+    {
+
+    		
+			try
+			{
+				final JaxbDAOMovilizerImpl jaxbDAO = new JaxbDAOMovilizerImpl();
+			
+		
+        
+                    final MovilizerRequest movilizerRequest = new MovilizerRequest();
+                    final MovilizerRequestBuilder requestBuilder = new MovilizerRequestBuilder(movilizerRequest);
+                    final MovilizerMasterdataPoolUpdate masterdataPoolUpdate = new MovilizerMasterdataPoolUpdate();
+                    final MovilizerMasterdataUpdate masterdataUpdate = new MovilizerMasterdataUpdate();
+                    MovilizerGenericDataContainer data = new MovilizerGenericDataContainer();
+                    MovilizerGenericDataContainerEntry outer = new MovilizerGenericDataContainerEntry();
+                    MovilizerGenericDataContainerEntry inner = new MovilizerGenericDataContainerEntry();
+					
+                    
+                    movilizerRequest.setSystemId(SYSTEM_ID);
+                    movilizerRequest.setSystemPassword(SYSTEM_PASSWORD);
+                    movilizerRequest.setSynchronousResponse(true);
+                    movilizerRequest.setNumResponses(new Integer(100));
+        
+                    masterdataPoolUpdate.setPool("myPool");
+                    
+                    masterdataUpdate.setGroup("myGroup");
+                    
+                    masterdataUpdate.setKey("myKey");
+                    masterdataUpdate.setFilter1("filter1");
+                    masterdataUpdate.setDescription("Some Description");
+                    
+                    inner.setName("innerName");
+                    inner.setValstr("myInnerValue");
+                    outer.setName("outerName");
+                    
+                    outer.addEntry(inner);
+                    data.addEntry(outer);
+					masterdataUpdate.setData(data);
+                    
+					masterdataPoolUpdate.addUpdate(masterdataUpdate);
+					
+					movilizerRequest.addMasterdataPoolUpdate(masterdataPoolUpdate);
+					requestBuilder.addRequest(movilizerRequest);
+					
+					 final MovilizerRequest request = (MovilizerRequest) requestBuilder.getRequestObject();
+		             System.out.println(jaxbDAO.generateXML(request));
+		    
+		             final SoapClient soapClient = jaxbDAO.createWebServiceDispatcher("https://demo.movilizer.com/mds/WebService/", 14);
+		             final MovilizerResponse response = (MovilizerResponse) soapClient.call(request);
+		             System.out.println(jaxbDAO.generateXML(response));
+                    
+			} catch (MovilizerJaxbException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (WsException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+    }
+                    
+                    
+
+        private static void sendMovelet()
+        {
+            try
+            {
+                final JaxbDAOMovilizerImpl jaxbDAO = new JaxbDAOMovilizerImpl();//("http://movilitas.com/movilizer/v14");
+    
+                final MovilizerRequest movilizerRequest = new MovilizerRequest();
+                movilizerRequest.setSystemId(SYSTEM_ID);
+                movilizerRequest.setSystemPassword(SYSTEM_PASSWORD);
+                movilizerRequest.setSynchronousResponse(true);
+                movilizerRequest.setNumResponses(new Integer(100));
+    
+                final MovilizerRequestBuilder requestBuilder = new MovilizerRequestBuilder(movilizerRequest);
+    
+                final MovilizerMoveletSet moveletSet = new MovilizerMoveletSet();
+                
+                final MoveletType moveletType = MoveletType.SINGLE;
+    
+                final MovilizerMovelet movelet = new MovilizerMovelet();
+                movelet.setMoveletKey("MyMoveletKey");
+                movelet.setMoveletType(moveletType);
+                movelet.setName("MyMovelet");
+                movelet.setInitialQuestionKey("Q1");;
+    
+                final MovilizerQuestion question = new MovilizerQuestion();
+                movelet.addQuestion(question);
+                question.setKey("Q1");
+                question.setType(SyncConstants.QTYPE_MESSAGE);
+                question.setTitle("MyMessageScreen");
+    
+                final MovilizerAnswer answer = new MovilizerAnswer();
+                question.addAnswer(answer);
+                answer.setKey("Q1_A1");
+                answer.setText("MyMessage");
+                answer.setNextQuestionKey(MoveletConstants.QNUM_END);
+    
+                final MovilizerParticipant participant = new MovilizerParticipant();
+                participant.setDeviceAddress("@ulf@movilizer.com");
+                participant.setParticipantKey("");
+                participant.setName("ulf");
+    
+                moveletSet.addMovelet(movelet);
+                moveletSet.addParticipant(participant);
+                movilizerRequest.addMoveletSet(moveletSet);
+    
+                final MovilizerRequest request = (MovilizerRequest) requestBuilder.getRequestObject();
+                System.out.println(jaxbDAO.generateXML(request));
+    
+                final SoapClient soapClient = jaxbDAO.createWebServiceDispatcher("https://d.movilizer.com/mds/WebService/", 14);
+                final MovilizerResponse response = (MovilizerResponse) soapClient.call(request);
+                System.out.println(jaxbDAO.generateXML(response));
+            }
+            catch (final MovilizerJaxbException e)
+            {
+                e.printStackTrace();
+            }
+            catch (final Exception e)
+            {
+                e.printStackTrace();
+            }
+        }
+    //
+    //    private static void deleteMovelet()
+    //    {
+    //        try
+    //        {
+    //            final JaxbDAOMovilizerImpl jaxbDAO = new JaxbDAOMovilizerImpl("http://d.movilitas.com/movilizer/v14");
+    //
+    //            final MovilizerRequest movilizerRequest = new MovilizerRequest();
+    //            movilizerRequest.setSystemId(SYSTEM_ID);
+    //            movilizerRequest.setSystemPassword(SYSTEM_PASSWORD);
+    //            movilizerRequest.setSynchronousResponse(true);
+    //            movilizerRequest.setNumResponses(new Integer(100));
+    //
+    //            final MovilizerMoveletDelete moveletDelete = new MovilizerMoveletDelete();
+    //            moveletDelete.setMoveletKey("MyMoveletKey");
+    //
+    //            movilizerRequest.addMoveletDelete(moveletDelete);
+    //
+    //            final MovilizerWebServiceV14 movilizerWebServiceV14 = getMovilizerWebServiceV14();
+    //            final MovilizerResponse response = movilizerWebServiceV14.movilizer(movilizerRequest);
+    //            System.out.println(jaxbDAO.generateXML(response));
+    //        }
+    //        catch (final MovilizerJaxbException e)
+    //        {
+    //            e.printStackTrace();
+    //        }
+    //        catch (final Exception e)
+    //        {
+    //            e.printStackTrace();
+    //        }
+    //    }
+    //
+    //    private static MovilizerWebServiceV14 getMovilizerWebServiceV14() throws Exception
+    //    {
+    //        final String wsdlLocation = new File(".").getCanonicalPath().concat(File.separator).concat("res").concat(File.separator).concat("V14DEMO.wsdl");
+    //
+    //        return new MovilizerWebServiceV14Service(new URL("file://" + wsdlLocation)).getMovilizerWebServiceV14Soap11();
+    //
+    //    }
+
+
+}

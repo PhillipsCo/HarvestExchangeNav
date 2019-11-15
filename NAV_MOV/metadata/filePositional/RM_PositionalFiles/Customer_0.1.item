@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><xmi:XMI xmlns:xmi="http://www.omg.org/XMI" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.record="http:///orgomg/cwm/resource/record.ecore" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmi:version="2.0">
+  <TalendMetadata:PositionalFileConnection ContextId="_1EcvMDc4Eea1Xeo0s3oKJA" ContextMode="true" Encoding="context.RM_Customer_Encoding" FieldSeparatorValue="context.RM_Customer_FieldSeparator" FilePath="context.RM_Customer_File" FooterValue="0" HeaderValue="0" LimitValue="0" RowSeparatorValue="context.RM_Customer_RowSeparator" Server="Localhost 127.0.0.1" contextName="Default" dataPackage="_MHHOEDQOEeaHsdlO4PR-xg" name="Customer" xmi:id="_MHBHcDQOEeaHsdlO4PR-xg"/>
+  <orgomg.cwm.resource.record:RecordFile dataManager="_MHBHcDQOEeaHsdlO4PR-xg" name="default" xmi:id="_MHHOEDQOEeaHsdlO4PR-xg">
+    <ownedElement id="_sijq4DP8EeaHsdlO4PR-xg" label="Customer" xmi:id="_MHHOETQOEeaHsdlO4PR-xg" xsi:type="TalendMetadata:MetadataTable">
+      <feature label="DB_CUST_CUST_NUMBER" length="9" name="DB_CUST_CUST_NUMBER" pattern="&quot;dd-MM-yyyy&quot;" sourceType="INT" talendType="id_Integer" xmi:id="_4K108DfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K108TfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_SHIP_NAME" length="30" name="DB_CUST_SHIP_NAME" pattern="&quot;dd-MM-yyyy&quot;" sourceType="VARCHAR" talendType="id_String" xmi:id="_4K108jfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K108zfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_SHIP_ADDR2" length="30" name="DB_CUST_SHIP_ADDR2" pattern="&quot;dd-MM-yyyy&quot;" sourceType="VARCHAR" talendType="id_String" xmi:id="_4K109DfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K109TfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_SHIP_ADDR3" length="30" name="DB_CUST_SHIP_ADDR3" pattern="&quot;dd-MM-yyyy&quot;" sourceType="VARCHAR" talendType="id_String" xmi:id="_4K109jfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K109zfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_SHIP_CITY" length="20" name="DB_CUST_SHIP_CITY" pattern="&quot;dd-MM-yyyy&quot;" sourceType="VARCHAR" talendType="id_String" xmi:id="_4K10-DfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K10-TfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_SHIP_STATE" length="2" name="DB_CUST_SHIP_STATE" pattern="&quot;dd-MM-yyyy&quot;" sourceType="VARCHAR" talendType="id_String" xmi:id="_4K10-jfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K10-zfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_SHIP_ZIP_CODE" length="10" name="DB_CUST_SHIP_ZIP_CODE" pattern="&quot;dd-MM-yyyy&quot;" sourceType="VARCHAR" talendType="id_String" xmi:id="_4K10_DfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K10_TfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_SHIP_AREA_CODE" length="3" name="DB_CUST_SHIP_AREA_CODE" pattern="&quot;dd-MM-yyyy&quot;" sourceType="INT" talendType="id_Integer" xmi:id="_4K10_jfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K10_zfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_SHIP_PHONE_3" length="3" name="DB_CUST_SHIP_PHONE_3" pattern="&quot;dd-MM-yyyy&quot;" sourceType="INT" talendType="id_Integer" xmi:id="_4K11ADfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11ATfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_SHIP_PHONE_4" length="4" name="DB_CUST_SHIP_PHONE_4" pattern="&quot;dd-MM-yyyy&quot;" sourceType="INT" talendType="id_Integer" xmi:id="_4K11AjfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11AzfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_ACCOUNT_TYPE" length="2" name="DB_CUST_ACCOUNT_TYPE" pattern="&quot;dd-MM-yyyy&quot;" sourceType="INT" talendType="id_Integer" xmi:id="_4K11BDfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11BTfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_ACTIVE_SWITCH" length="1" name="DB_CUST_ACTIVE_SWITCH" pattern="&quot;dd-MM-yyyy&quot;" sourceType="VARCHAR" talendType="id_String" xmi:id="_4K11BjfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11BzfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_PAYMENT_TYPE" length="1" name="DB_CUST_PAYMENT_TYPE" pattern="&quot;dd-MM-yyyy&quot;" sourceType="VARCHAR" talendType="id_String" xmi:id="_4K11CDfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11CTfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_WHOLESALE_PRICE_TAB" length="4" name="DB_CUST_WHOLESALE_PRICE_TAB" pattern="&quot;dd-MM-yyyy&quot;" sourceType="INT" talendType="id_Integer" xmi:id="_4K11CjfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11CzfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_RETAIL_PRICE_TABLE" length="4" name="DB_CUST_RETAIL_PRICE_TABLE" pattern="&quot;dd-MM-yyyy&quot;" sourceType="INT" talendType="id_Integer" xmi:id="_4K11DDfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11DTfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_DELIVERY_DAYS" length="7" name="DB_CUST_DELIVERY_DAYS" pattern="&quot;dd-MM-yyyy&quot;" sourceType="VARCHAR" talendType="id_String" xmi:id="_4K11DjfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11DzfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_CHAIN_NUMBER" length="9" name="DB_CUST_CHAIN_NUMBER" pattern="&quot;dd-MM-yyyy&quot;" sourceType="INT" talendType="id_Integer" xmi:id="_4K11EDfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11ETfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_AR_NUMBER" length="9" name="DB_CUST_AR_NUMBER" pattern="&quot;dd-MM-yyyy&quot;" sourceType="INT" talendType="id_Integer" xmi:id="_4K11EjfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11EzfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_GROUP_CODE" length="2" name="DB_CUST_GROUP_CODE" pattern="&quot;dd-MM-yyyy&quot;" sourceType="VARCHAR" talendType="id_String" xmi:id="_4K11FDfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11FTfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_COMM_TYPE" length="1" name="DB_CUST_COMM_TYPE" pattern="&quot;dd-MM-yyyy&quot;" sourceType="VARCHAR" talendType="id_String" xmi:id="_4K11FjfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11FzfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_COMP_BID_SHR_TABLE" length="4" name="DB_CUST_COMP_BID_SHR_TABLE" pattern="&quot;dd-MM-yyyy&quot;" sourceType="INT" talendType="id_Integer" xmi:id="_4K11GDfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11GTfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_DSTB_BID_SHR_TABLE" length="4" name="DB_CUST_DSTB_BID_SHR_TABLE" pattern="&quot;dd-MM-yyyy&quot;" sourceType="INT" talendType="id_Integer" xmi:id="_4K11GjfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11GzfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_LBS_PRICE_TABLE" length="4" name="DB_CUST_LBS_PRICE_TABLE" pattern="&quot;dd-MM-yyyy&quot;" sourceType="INT" talendType="id_Integer" xmi:id="_4K11HDfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11HTfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_STORE_NUMBER" length="10" name="DB_CUST_STORE_NUMBER" pattern="&quot;dd-MM-yyyy&quot;" sourceType="VARCHAR" talendType="id_String" xmi:id="_4K11HjfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11HzfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_ROUTE_NUMBER" length="9" name="DB_CUST_ROUTE_NUMBER" pattern="&quot;dd-MM-yyyy&quot;" sourceType="INT" talendType="id_Integer" xmi:id="_4K11IDfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11ITfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_BILL_NAME" length="30" name="DB_CUST_BILL_NAME" pattern="&quot;dd-MM-yyyy&quot;" sourceType="VARCHAR" talendType="id_String" xmi:id="_4K11IjfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11IzfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_BILL_ADDR2" length="30" name="DB_CUST_BILL_ADDR2" pattern="&quot;dd-MM-yyyy&quot;" sourceType="VARCHAR" talendType="id_String" xmi:id="_4K11JDfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11JTfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_BILL_ADDR3" length="30" name="DB_CUST_BILL_ADDR3" pattern="&quot;dd-MM-yyyy&quot;" sourceType="VARCHAR" talendType="id_String" xmi:id="_4K11JjfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11JzfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_BILL_CITY" length="20" name="DB_CUST_BILL_CITY" pattern="&quot;dd-MM-yyyy&quot;" sourceType="VARCHAR" talendType="id_String" xmi:id="_4K11KDfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11KTfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_BILL_STATE" length="2" name="DB_CUST_BILL_STATE" pattern="&quot;dd-MM-yyyy&quot;" sourceType="VARCHAR" talendType="id_String" xmi:id="_4K11KjfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11KzfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_BILL_ZIP_CODE" length="10" name="DB_CUST_BILL_ZIP_CODE" pattern="&quot;dd-MM-yyyy&quot;" sourceType="VARCHAR" talendType="id_String" xmi:id="_4K11LDfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11LTfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_BILL_AREA_CODE" length="3" name="DB_CUST_BILL_AREA_CODE" pattern="&quot;dd-MM-yyyy&quot;" sourceType="INT" talendType="id_Integer" xmi:id="_4K11LjfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11LzfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_BILL_PHONE_3" length="3" name="DB_CUST_BILL_PHONE_3" pattern="&quot;dd-MM-yyyy&quot;" sourceType="INT" talendType="id_Integer" xmi:id="_4K11MDfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11MTfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_BILL_PHONE_4" length="4" name="DB_CUST_BILL_PHONE_4" pattern="&quot;dd-MM-yyyy&quot;" sourceType="INT" talendType="id_Integer" xmi:id="_4K11MjfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11MzfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_PRINT_INVOICE" length="1" name="DB_CUST_PRINT_INVOICE" pattern="&quot;dd-MM-yyyy&quot;" sourceType="VARCHAR" talendType="id_String" xmi:id="_4K11NDfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11NTfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_NO_OF_INVOICE_COPIES" length="1" name="DB_CUST_NO_OF_INVOICE_COPIES" pattern="&quot;dd-MM-yyyy&quot;" sourceType="INT" talendType="id_Integer" xmi:id="_4K11NjfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11NzfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_PAGE_PER_CATG" length="1" name="DB_CUST_PAGE_PER_CATG" pattern="&quot;dd-MM-yyyy&quot;" sourceType="VARCHAR" talendType="id_String" xmi:id="_4K11ODfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11OTfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_SUBTOTAL_CATG" length="1" name="DB_CUST_SUBTOTAL_CATG" pattern="&quot;dd-MM-yyyy&quot;" sourceType="VARCHAR" talendType="id_String" xmi:id="_4K11OjfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11OzfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_PRINT_CREDIT_INVOICE" length="1" name="DB_CUST_PRINT_CREDIT_INVOICE" pattern="&quot;dd-MM-yyyy&quot;" sourceType="VARCHAR" talendType="id_String" xmi:id="_4K11PDfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11PTfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_MESSAGE_1" length="20" name="DB_CUST_MESSAGE_1" pattern="&quot;dd-MM-yyyy&quot;" sourceType="VARCHAR" talendType="id_String" xmi:id="_4K11PjfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11PzfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_MESSAGE_2" length="20" name="DB_CUST_MESSAGE_2" pattern="&quot;dd-MM-yyyy&quot;" sourceType="VARCHAR" talendType="id_String" xmi:id="_4K11QDfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11QTfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_CAT_DISC_1" length="7" name="DB_CUST_CAT_DISC_1" pattern="&quot;dd-MM-yyyy&quot;" precision="4" sourceType="FLOAT" talendType="id_Float" xmi:id="_4K11QjfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11QzfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_CAT_DISC_2" length="7" name="DB_CUST_CAT_DISC_2" pattern="&quot;dd-MM-yyyy&quot;" precision="4" sourceType="FLOAT" talendType="id_Float" xmi:id="_4K11RDfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11RTfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_CAT_DISC_3" length="7" name="DB_CUST_CAT_DISC_3" pattern="&quot;dd-MM-yyyy&quot;" precision="4" sourceType="FLOAT" talendType="id_Float" xmi:id="_4K11RjfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11RzfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_CAT_DISC_4" length="7" name="DB_CUST_CAT_DISC_4" pattern="&quot;dd-MM-yyyy&quot;" precision="4" sourceType="FLOAT" talendType="id_Float" xmi:id="_4K11SDfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11STfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_CAT_DISC_5" length="7" name="DB_CUST_CAT_DISC_5" pattern="&quot;dd-MM-yyyy&quot;" precision="4" sourceType="FLOAT" talendType="id_Float" xmi:id="_4K11SjfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11SzfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_CAT_DISC_6" length="7" name="DB_CUST_CAT_DISC_6" pattern="&quot;dd-MM-yyyy&quot;" precision="4" sourceType="FLOAT" talendType="id_Float" xmi:id="_4K11TDfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11TTfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_CAT_DISC_7" length="7" name="DB_CUST_CAT_DISC_7" pattern="&quot;dd-MM-yyyy&quot;" precision="4" sourceType="FLOAT" talendType="id_Float" xmi:id="_4K11TjfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11TzfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_CAT_DISC_8" length="7" name="DB_CUST_CAT_DISC_8" pattern="&quot;dd-MM-yyyy&quot;" precision="4" sourceType="FLOAT" talendType="id_Float" xmi:id="_4K11UDfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11UTfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_CAT_DISC_9" length="7" name="DB_CUST_CAT_DISC_9" pattern="&quot;dd-MM-yyyy&quot;" precision="4" sourceType="FLOAT" talendType="id_Float" xmi:id="_4K11UjfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11UzfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_CAT_DISC_10" length="7" name="DB_CUST_CAT_DISC_10" pattern="&quot;dd-MM-yyyy&quot;" precision="4" sourceType="FLOAT" talendType="id_Float" xmi:id="_4K11VDfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11VTfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_PRINT_WHSLE_PRICE" length="1" name="DB_CUST_PRINT_WHSLE_PRICE" pattern="&quot;dd-MM-yyyy&quot;" sourceType="VARCHAR" talendType="id_String" xmi:id="_4K11VjfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11VzfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_BALANCE_METHOD" length="1" name="DB_CUST_BALANCE_METHOD" pattern="&quot;dd-MM-yyyy&quot;" sourceType="VARCHAR" talendType="id_String" xmi:id="_4K11WDfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11WTfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_TERMS_DISC_PERCENT" length="7" name="DB_CUST_TERMS_DISC_PERCENT" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="FLOAT" talendType="id_Float" xmi:id="_4K11WjfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11WzfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_TERMS_DISC_DAYS" length="5" name="DB_CUST_TERMS_DISC_DAYS" pattern="&quot;dd-MM-yyyy&quot;" sourceType="INT" talendType="id_Integer" xmi:id="_4K11XDfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11XTfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_TERMS_NET_DAYS" length="5" name="DB_CUST_TERMS_NET_DAYS" pattern="&quot;dd-MM-yyyy&quot;" sourceType="INT" talendType="id_Integer" xmi:id="_4K11XjfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11XzfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_CREDIT_LIMIT" length="10" name="DB_CUST_CREDIT_LIMIT" pattern="&quot;dd-MM-yyyy&quot;" sourceType="INT" talendType="id_Integer" xmi:id="_4K11YDfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11YTfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_BILLING_FREQ" length="1" name="DB_CUST_BILLING_FREQ" pattern="&quot;dd-MM-yyyy&quot;" sourceType="VARCHAR" talendType="id_String" xmi:id="_4K11YjfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11YzfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_SALES_TAX_CODE" length="2" name="DB_CUST_SALES_TAX_CODE" pattern="&quot;dd-MM-yyyy&quot;" sourceType="VARCHAR" talendType="id_String" xmi:id="_4K11ZDfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11ZTfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_UNIT_BILLING" length="1" name="DB_CUST_UNIT_BILLING" pattern="&quot;dd-MM-yyyy&quot;" sourceType="VARCHAR" talendType="id_String" xmi:id="_4K11ZjfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11ZzfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_PRINT_STATEMENTS" length="1" name="DB_CUST_PRINT_STATEMENTS" pattern="&quot;dd-MM-yyyy&quot;" sourceType="VARCHAR" talendType="id_String" xmi:id="_4K11aDfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11aTfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_UNIT_HISTORY" length="1" name="DB_CUST_UNIT_HISTORY" pattern="&quot;dd-MM-yyyy&quot;" sourceType="VARCHAR" talendType="id_String" xmi:id="_4K11ajfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11azfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_ADDITIONAL_DISC" length="1" name="DB_CUST_ADDITIONAL_DISC" pattern="&quot;dd-MM-yyyy&quot;" sourceType="VARCHAR" talendType="id_String" xmi:id="_4K11bDfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11bTfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_LBS_BILLING" length="1" name="DB_CUST_LBS_BILLING" pattern="&quot;dd-MM-yyyy&quot;" sourceType="VARCHAR" talendType="id_String" xmi:id="_4K11bjfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11bzfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_LAST_PMT_DATE" length="8" name="DB_CUST_LAST_PMT_DATE" pattern="&quot;yyyyMMdd&quot;" sourceType="DATE" talendType="id_String" xmi:id="_4K11cDfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11cTfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_LAST_PMT_AMOUNT" length="11" name="DB_CUST_LAST_PMT_AMOUNT" pattern="&quot;dd-MM-yyyy&quot;" precision="4" sourceType="FLOAT" talendType="id_Float" xmi:id="_4K11cjfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11czfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_CHECK_AUTH_PROD_SW" length="1" name="DB_CUST_CHECK_AUTH_PROD_SW" pattern="&quot;dd-MM-yyyy&quot;" sourceType="VARCHAR" talendType="id_String" xmi:id="_4K11dDfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue body="" xmi:id="_4K11dTfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_STOP_NO" length="4" name="DB_CUST_STOP_NO" pattern="&quot;dd-MM-yyyy&quot;" sourceType="VARCHAR" talendType="id_String" xmi:id="_4K11djfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11dzfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_TAX_RATE" length="5" name="DB_CUST_TAX_RATE" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="FLOAT" talendType="id_Float" xmi:id="_4K11eDfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11eTfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_CONTRACT_POINTER" length="3" name="DB_CUST_CONTRACT_POINTER" pattern="&quot;dd-MM-yyyy&quot;" sourceType="VARCHAR" talendType="id_String" xmi:id="_4K11ejfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11ezfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_STOP_INV_DISC_PCT" length="5" name="DB_CUST_STOP_INV_DISC_PCT" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="FLOAT" talendType="id_Float" xmi:id="_4K11fDfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11fTfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_ONHAND_METHOD" length="1" name="DB_CUST_ONHAND_METHOD" pattern="&quot;dd-MM-yyyy&quot;" sourceType="INT" talendType="id_Integer" xmi:id="_4K11fjfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11fzfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_PRINT_UPC" length="1" name="DB_CUST_PRINT_UPC" pattern="&quot;dd-MM-yyyy&quot;" sourceType="VARCHAR" talendType="id_String" xmi:id="_4K11gDfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11gTfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_PRINT_PRICE_CTRL" length="1" name="DB_CUST_PRINT_PRICE_CTRL" pattern="&quot;dd-MM-yyyy&quot;" sourceType="INT" talendType="id_Integer" xmi:id="_4K11gjfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11gzfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_PRINT_RETAIL" length="1" name="DB_CUST_PRINT_RETAIL" pattern="&quot;dd-MM-yyyy&quot;" sourceType="VARCHAR" talendType="id_String" xmi:id="_4K11hDfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11hTfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_STAMP_SIG_SWITCH" length="1" name="DB_CUST_STAMP_SIG_SWITCH" pattern="&quot;dd-MM-yyyy&quot;" sourceType="INT" talendType="id_Integer" xmi:id="_4K11hjfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11hzfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_RETURN_CTRL" length="1" name="DB_CUST_RETURN_CTRL" pattern="&quot;dd-MM-yyyy&quot;" sourceType="INT" talendType="id_Integer" xmi:id="_4K11iDfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11iTfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_AUTH_PROD" length="2" name="DB_CUST_AUTH_PROD" pattern="&quot;dd-MM-yyyy&quot;" sourceType="INT" talendType="id_Integer" xmi:id="_4K11ijfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11izfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_INV_PRICE_GROUP" length="1" name="DB_CUST_INV_PRICE_GROUP" pattern="&quot;dd-MM-yyyy&quot;" sourceType="VARCHAR" talendType="id_String" xmi:id="_4K11jDfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11jTfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_BALANCE_CORRECTION" length="10" name="DB_CUST_BALANCE_CORRECTION" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="FLOAT" talendType="id_Float" xmi:id="_4K11jjfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11jzfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_REDIST_CTRL" length="1" name="DB_CUST_REDIST_CTRL" pattern="&quot;dd-MM-yyyy&quot;" sourceType="INT" talendType="id_Integer" xmi:id="_4K11kDfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11kTfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_PICK_LIST_FLAG" length="1" name="DB_CUST_PICK_LIST_FLAG" pattern="&quot;dd-MM-yyyy&quot;" sourceType="VARCHAR" talendType="id_String" xmi:id="_4K11kjfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue body="" xmi:id="_4K11kzfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_PREORDER_FLAG" length="1" name="DB_CUST_PREORDER_FLAG" pattern="&quot;dd-MM-yyyy&quot;" sourceType="VARCHAR" talendType="id_String" xmi:id="_4K11lDfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11lTfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_GST_EXEMPT_FLAG" length="1" name="DB_CUST_GST_EXEMPT_FLAG" pattern="&quot;dd-MM-yyyy&quot;" sourceType="VARCHAR" talendType="id_String" xmi:id="_4K11ljfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11lzfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_DEX_FLAG" length="1" name="DB_CUST_DEX_FLAG" pattern="&quot;dd-MM-yyyy&quot;" sourceType="VARCHAR" talendType="id_String" xmi:id="_4K11mDfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11mTfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_PRINT_MARGIN_CTRL" length="1" name="DB_CUST_PRINT_MARGIN_CTRL" pattern="&quot;dd-MM-yyyy&quot;" sourceType="INT" talendType="id_Integer" xmi:id="_4K11mjfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11mzfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_FAMILY_GROUP_CODE" length="2" name="DB_CUST_FAMILY_GROUP_CODE" pattern="&quot;dd-MM-yyyy&quot;" sourceType="VARCHAR" talendType="id_String" xmi:id="_4K11nDfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11nTfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_MASTER_CHAIN" length="9" name="DB_CUST_MASTER_CHAIN" pattern="&quot;dd-MM-yyyy&quot;" sourceType="INT" talendType="id_Integer" xmi:id="_4K11njfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11nzfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_COMM_TABLE" length="2" name="DB_CUST_COMM_TABLE" pattern="&quot;dd-MM-yyyy&quot;" sourceType="VARCHAR" talendType="id_String" xmi:id="_4K11oDfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11oTfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_FORECASTING_TABLE" length="3" name="DB_CUST_FORECASTING_TABLE" pattern="&quot;dd-MM-yyyy&quot;" sourceType="INT" talendType="id_Integer" xmi:id="_4K11ojfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11ozfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_ORDER_ADJ_CONTROL" length="1" name="DB_CUST_ORDER_ADJ_CONTROL" pattern="&quot;dd-MM-yyyy&quot;" sourceType="VARCHAR" talendType="id_String" xmi:id="_4K11pDfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11pTfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_BALANCE_TYPE" length="1" name="DB_CUST_BALANCE_TYPE" pattern="&quot;dd-MM-yyyy&quot;" sourceType="VARCHAR" talendType="id_String" xmi:id="_4K11pjfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11pzfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_AUTH_PROD_TBL" length="5" name="DB_CUST_AUTH_PROD_TBL" pattern="&quot;dd-MM-yyyy&quot;" sourceType="INT" talendType="id_Integer" xmi:id="_4K11qDfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11qTfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_STATEMENT_GROUP" length="1" name="DB_CUST_STATEMENT_GROUP" pattern="&quot;dd-MM-yyyy&quot;" sourceType="INT" talendType="id_Integer" xmi:id="_4K11qjfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11qzfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_AR_CUST_SW" length="1" name="DB_CUST_AR_CUST_SW" pattern="&quot;dd-MM-yyyy&quot;" sourceType="VARCHAR" talendType="id_String" xmi:id="_4K11rDfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11rTfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_CHAIN_CUST_SW" length="1" name="DB_CUST_CHAIN_CUST_SW" pattern="&quot;dd-MM-yyyy&quot;" sourceType="VARCHAR" talendType="id_String" xmi:id="_4K11rjfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11rzfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_MAST_CHAIN_CUST_SW" length="1" name="DB_CUST_MAST_CHAIN_CUST_SW" pattern="&quot;dd-MM-yyyy&quot;" sourceType="VARCHAR" talendType="id_String" xmi:id="_4K11sDfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11sTfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_CONTACT_PERSON" length="20" name="DB_CUST_CONTACT_PERSON" pattern="&quot;dd-MM-yyyy&quot;" sourceType="VARCHAR" talendType="id_String" xmi:id="_4K11sjfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11szfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_SH_FAX_AREA_CODE" length="3" name="DB_CUST_SH_FAX_AREA_CODE" pattern="&quot;dd-MM-yyyy&quot;" sourceType="INT" talendType="id_Integer" xmi:id="_4K11tDfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11tTfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_SH_FAX_PHONE_3" length="3" name="DB_CUST_SH_FAX_PHONE_3" pattern="&quot;dd-MM-yyyy&quot;" sourceType="INT" talendType="id_Integer" xmi:id="_4K11tjfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11tzfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_SH_FAX_PHONE_4" length="4" name="DB_CUST_SH_FAX_PHONE_4" pattern="&quot;dd-MM-yyyy&quot;" sourceType="INT" talendType="id_Integer" xmi:id="_4K11uDfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11uTfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_BL_FAX_AREA_CODE" length="3" name="DB_CUST_BL_FAX_AREA_CODE" pattern="&quot;dd-MM-yyyy&quot;" sourceType="INT" talendType="id_Integer" xmi:id="_4K11ujfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11uzfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_BL_FAX_PHONE_3" length="3" name="DB_CUST_BL_FAX_PHONE_3" pattern="&quot;dd-MM-yyyy&quot;" sourceType="INT" talendType="id_Integer" xmi:id="_4K11vDfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11vTfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_BL_FAX_PHONE_4" length="4" name="DB_CUST_BL_FAX_PHONE_4" pattern="&quot;dd-MM-yyyy&quot;" sourceType="INT" talendType="id_Integer" xmi:id="_4K11vjfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11vzfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_INACTIVE_DATE" length="8" name="DB_CUST_INACTIVE_DATE" pattern="&quot;yyyyMMdd&quot;" sourceType="DATE" talendType="id_String" xmi:id="_4K11wDfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11wTfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_ACCOUNT_DATE" length="8" name="DB_CUST_ACCOUNT_DATE" pattern="&quot;yyyyMMdd&quot;" sourceType="DATE" talendType="id_String" xmi:id="_4K11wjfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11wzfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="OCCURS_7_TIMES" length="21" name="OCCURS_7_TIMES" pattern="&quot;dd-MM-yyyy&quot;" sourceType="VARCHAR" talendType="id_String" xmi:id="_4K11xDfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11xTfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_SS_UNIT_CASE" length="1" name="DB_CUST_SS_UNIT_CASE" pattern="&quot;dd-MM-yyyy&quot;" sourceType="VARCHAR" talendType="id_String" xmi:id="_4K11xjfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11xzfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_STALE_PRICING_SW" length="1" name="DB_CUST_STALE_PRICING_SW" pattern="&quot;dd-MM-yyyy&quot;" sourceType="VARCHAR" talendType="id_String" xmi:id="_4K11yDfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11yTfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_PREVIOUS_LINK" length="9" name="DB_CUST_PREVIOUS_LINK" pattern="&quot;dd-MM-yyyy&quot;" sourceType="VARCHAR" talendType="id_String" xmi:id="_4K11yjfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11yzfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_LOAD_SEQUENCE" length="1" name="DB_CUST_LOAD_SEQUENCE" pattern="&quot;dd-MM-yyyy&quot;" sourceType="INT" talendType="id_Integer" xmi:id="_4K11zDfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11zTfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_INV_ACCNT_NUMBER" length="9" name="DB_CUST_INV_ACCNT_NUMBER" pattern="&quot;dd-MM-yyyy&quot;" sourceType="INT" talendType="id_Integer" xmi:id="_4K11zjfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11zzfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_ESCL_DISC_TYPE" length="2" name="DB_CUST_ESCL_DISC_TYPE" pattern="&quot;dd-MM-yyyy&quot;" sourceType="INT" talendType="id_Integer" xmi:id="_4K110DfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K110TfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_SETTL_COMM_RTE_NUM" length="4" name="DB_CUST_SETTL_COMM_RTE_NUM" pattern="&quot;dd-MM-yyyy&quot;" sourceType="INT" talendType="id_Integer" xmi:id="_4K110jfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K110zfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_IVR_FLAG" length="1" name="DB_CUST_IVR_FLAG" pattern="&quot;dd-MM-yyyy&quot;" sourceType="VARCHAR" talendType="id_String" xmi:id="_4K111DfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K111TfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_IVR_PASSWORD" length="7" name="DB_CUST_IVR_PASSWORD" pattern="&quot;dd-MM-yyyy&quot;" sourceType="VARCHAR" talendType="id_String" xmi:id="_4K111jfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K111zfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_SALES_MANAGER" length="3" name="DB_CUST_SALES_MANAGER" pattern="&quot;dd-MM-yyyy&quot;" sourceType="INT" talendType="id_Integer" xmi:id="_4K112DfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K112TfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_SALES_MANAGER_DESC" length="25" name="DB_CUST_SALES_MANAGER_DESC" pattern="&quot;dd-MM-yyyy&quot;" sourceType="VARCHAR" talendType="id_String" xmi:id="_4K112jfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K112zfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_SALES_REP" length="3" name="DB_CUST_SALES_REP" pattern="&quot;dd-MM-yyyy&quot;" sourceType="INT" talendType="id_Integer" xmi:id="_4K113DfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K113TfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_SALES_REP_DESC" length="25" name="DB_CUST_SALES_REP_DESC" pattern="&quot;dd-MM-yyyy&quot;" sourceType="VARCHAR" talendType="id_String" xmi:id="_4K113jfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K113zfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_BUYING_GROUP_CODE" length="3" name="DB_CUST_BUYING_GROUP_CODE" pattern="&quot;dd-MM-yyyy&quot;" sourceType="FLOAT" talendType="id_Integer" xmi:id="_4K114DfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K114TfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_STOP_RATE" length="8" name="DB_CUST_STOP_RATE" pattern="&quot;dd-MM-yyyy&quot;" sourceType="FLOAT" talendType="id_Float" xmi:id="_4K114jfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K114zfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_LITRE_RATE" length="11" name="DB_CUST_LITRE_RATE" pattern="&quot;dd-MM-yyyy&quot;" sourceType="FLOAT" talendType="id_Float" xmi:id="_4K115DfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K115TfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_DEPT_INVOICE" length="1" name="DB_CUST_DEPT_INVOICE" pattern="&quot;dd-MM-yyyy&quot;" sourceType="INT" talendType="id_Integer" xmi:id="_4K115jfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K115zfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_LBS_TABLE" length="4" name="DB_CUST_LBS_TABLE" pattern="&quot;dd-MM-yyyy&quot;" sourceType="INT" talendType="id_Integer" xmi:id="_4K116DfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K116TfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_COMM_TABLE_NEW" length="4" name="DB_CUST_COMM_TABLE_NEW" pattern="&quot;dd-MM-yyyy&quot;" sourceType="INT" talendType="id_Integer" xmi:id="_4K116jfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K116zfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_RET_CAP_TABLE" length="4" name="DB_CUST_RET_CAP_TABLE" pattern="&quot;dd-MM-yyyy&quot;" sourceType="INT" talendType="id_Integer" xmi:id="_4K117DfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K117TfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_SALES_MODE_FLAG" length="1" name="DB_SALES_MODE_FLAG" pattern="&quot;dd-MM-yyyy&quot;" sourceType="INT" talendType="id_Integer" xmi:id="_4K117jfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K117zfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_LAST_SERVICE_DATE" length="8" name="DB_CUST_LAST_SERVICE_DATE" pattern="&quot;yyyyMMdd&quot;" sourceType="INT" talendType="id_String" xmi:id="_4K118DfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K118TfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_LANGUAGE_CODE" length="1" name="DB_CUST_LANGUAGE_CODE" pattern="&quot;dd-MM-yyyy&quot;" sourceType="INT" talendType="id_Integer" xmi:id="_4K118jfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K118zfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_DEI_ACTIVE_SW" length="1" name="DB_CUST_DEI_ACTIVE_SW" pattern="&quot;dd-MM-yyyy&quot;" sourceType="INT" talendType="id_Integer" xmi:id="_4K119DfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K119TfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_EDI_TRANS_SET_1" length="3" name="DB_CUST_EDI_TRANS_SET_1" pattern="&quot;dd-MM-yyyy&quot;" sourceType="INT" talendType="id_Integer" xmi:id="_4K119jfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K119zfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_EDI_TRANS_SET_2" length="3" name="DB_CUST_EDI_TRANS_SET_2" pattern="&quot;dd-MM-yyyy&quot;" sourceType="INT" talendType="id_Integer" xmi:id="_4K11-DfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11-TfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_EDI_PARTNER_DUNS_NO" length="9" name="DB_CUST_EDI_PARTNER_DUNS_NO" pattern="&quot;dd-MM-yyyy&quot;" sourceType="INT" talendType="id_Integer" xmi:id="_4K11-jfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11-zfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_EDI_PARTNER_SUFFIX" length="4" name="DB_CUST_EDI_PARTNER_SUFFIX" pattern="&quot;dd-MM-yyyy&quot;" sourceType="INT" talendType="id_Integer" xmi:id="_4K11_DfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11_TfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_EDI_PARTNER_TRADING_ID" length="13" name="DB_CUST_EDI_PARTNER_TRADING_ID" pattern="&quot;dd-MM-yyyy&quot;" sourceType="INT" talendType="id_String" xmi:id="_4K11_jfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K11_zfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_EDI_PARTNER_ID_CODE" length="2" name="DB_CUST_EDI_PARTNER_ID_CODE" pattern="&quot;dd-MM-yyyy&quot;" sourceType="VARCHAR" talendType="id_String" xmi:id="_4K12ADfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K12ATfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_EDI_PARTNER_ID" length="15" name="DB_CUST_EDI_PARTNER_ID" pattern="&quot;dd-MM-yyyy&quot;" sourceType="VARCHAR" talendType="id_String" xmi:id="_4K12AjfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K12AzfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_RETAIL_DISC_TABLE" length="4" name="DB_RETAIL_DISC_TABLE" pattern="&quot;dd-MM-yyyy&quot;" sourceType="INT" talendType="id_Integer" xmi:id="_4K12BDfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K12BTfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_MERCHANDISER_ACCT" length="1" name="DB_MERCHANDISER_ACCT" pattern="&quot;dd-MM-yyyy&quot;" sourceType="VARCHAR" talendType="id_String" xmi:id="_4K12BjfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K12BzfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_DROP_ROUTE_NUMBER" length="4" name="DB_DROP_ROUTE_NUMBER" pattern="&quot;dd-MM-yyyy&quot;" sourceType="INT" talendType="id_Integer" xmi:id="_4K12CDfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K12CTfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_MIN_ORDER_CONTROL_TABLE" length="4" name="DB_MIN_ORDER_CONTROL_TABLE" pattern="&quot;dd-MM-yyyy&quot;" sourceType="INT" talendType="id_Integer" xmi:id="_4K12CjfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K12CzfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_INV_ALT_NUMBER" length="12" name="DB_CUST_INV_ALT_NUMBER" pattern="&quot;dd-MM-yyyy&quot;" sourceType="VARCHAR" talendType="id_String" xmi:id="_4K12DDfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K12DTfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_ANTI_DISC_TABLE" length="4" name="DB_CUST_ANTI_DISC_TABLE" pattern="&quot;dd-MM-yyyy&quot;" sourceType="INT" talendType="id_Integer" xmi:id="_4K12DjfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K12DzfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_CPART_PRICE_TABLE" length="4" name="DB_CUST_CPART_PRICE_TABLE" pattern="&quot;dd-MM-yyyy&quot;" sourceType="INT" talendType="id_Integer" xmi:id="_4K12EDfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K12ETfTEeaVMMBhVGa1Qg"/>
+      </feature>
+      <feature label="DB_CUST_END_OF_RECORD" length="1" name="DB_CUST_END_OF_RECORD" pattern="&quot;dd-MM-yyyy&quot;" sourceType="VARCHAR" talendType="id_String" xmi:id="_4K12FDfTEeaVMMBhVGa1Qg" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_4K12FTfTEeaVMMBhVGa1Qg"/>
+      </feature>
+    </ownedElement>
+  </orgomg.cwm.resource.record:RecordFile>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_395d39c5-1117-4bd3-be4f-29e1f4e57eca"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ygVtGKcuJhiFxrSNqNzjg11mPrYjEHiPJcYj/a5io3C9O4mXbeNPhsTP8DPB8DXW1/aaDAJMTnmx
+5MS4HCXoeg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_af4bdcb0-f341-40c2-8451-cf32637f829f"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>9JWT/eXhRDSHsf6OnYUHqJOp9LrhYORxUSsaffBSsxBlCt6yRNc3uc/6gG4hiFYtiIKdj77KwEpq
+x2E2lFcLdg==</DigestValue></Reference></SignedInfo><SignatureValue>hHjvjV4Oc41LWJDVAHEVMfzwYBdU6L+FHnCpoIYMkQ0mjeCADLixY5rruj0SRqcIAxiG2lFjzkBs
+4H+2iNFPHqglxYt8UzqNlugWtK0SRK4Nk60on88Hu830eCktXweeOj+2shAomrIBBaUPP/oTmvZX
+WhiTOvbIaO4exKgjJ/k9FKU0547ECu5SfYcRVUn9imL61Z7BQG5UDrhC4YL/dipl5Dnk+fnNT3G/
+89+guFIJEhucdRCeIpxtpqkbGiCNjbiPUmOoKuf4QWo13+6hggR+sL755UKvh3lg6+ywjDxJ8Wqi
+zizjAKog6cvqgvaFRLzL/3xA5uSNHFUtvNhWaw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
+RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
+LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
+VQQIDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1ImRDEpMCcGA1UEAwwg
+RGVmYXVsdCBjb2RlLXNpZ25pbmcgY2VydGlmaWNhdGUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAw
+ggEKAoIBAQDiCz1II/o6hDUWu/ygxTCT2o/fYxVzPW23AoONQC/Vuiqh0COyLIgaMTjBPmQdTQFq
+rmM5tD64gi4TEQF+Z3iYt3daLdQUfaW9SzaMlY+XVNz5xnMBVDuiSHJSFE9lKnhgbKAHvOeoJo46
+UgWwb1za0WpRckDtjKcntwEK1orZCgrcIo1nDvFXyB5n0KfpLyktEOa0bSHde50MPbvQeB66XlEb
+lhjfs5S9WnAUja9RgqdwqZoI0ss+x/pjkQygDT8f17MktM21HOtg09lJlhMGJckhgD7jUF5tfYGM
+sv/O27g5CToFhxOnutDtsrDw7AkEQIml8KJp97bQLAFlLnh1AgMBAAGjge0wgeowHQYDVR0OBBYE
+FFzdy6ZfpUX8JwkM/SUrqkwLNqWAMB8GA1UdIwQYMBaAFOd9C3L8tYGZxoAr2SzsgnMytaj3MAsG
+A1UdDwQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzAJBgNVHRMEAjAAMHsGCWCGSAGG+EIBDQRu
+FmxEZWZhdWx0IHRoaXJkIHBhcnR5IGNvZGUtc2lnbmluZyBjZXJ0aWZpY2F0ZS4gTm8gY29tbWl0
+bWVudCBpcyBtYWRlIG9uIHRoZSBjb250ZW50IHNpZ25lZCBieSB0aGUgdGhpcmQgcGFydHkwDQYJ
+KoZIhvcNAQELBQADggIBAKzYdnzoFgrRtDLSSzWtwuOrGo5+1RPoDHm/1dlbVnB7oZzUwfRGwZT5
+ser0V7OZyt9wWR8iQ2ka30fHWrNAosNtlIkF88s5YZw7OOIMxR+qYA99BnWLa79DZVIuukI2f5qJ
+Cr9nw6Oygo8CWeNMWhtXcvV4gqROhb2QMBrvWBw9QvNK1XMdtPShfWiXwyPzzRKgwqrN2meXtOY3
+S+MXu6u+RUD9EYeElp9M+9Yp+zRySl5/s+0sbvo7qz369dlsw8XhKXT+s4YQQe3Sx14Kg3SDFXKn
+QcVgycaZMOw4YUxOeP2hKOHnNuOMORfu3qlYkN/0RMGjn6r4PU4+yL276TiWI5b8J06y4leng2as
+r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
+EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
+BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
+6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_af4bdcb0-f341-40c2-8451-cf32637f829f" Target="#_395d39c5-1117-4bd3-be4f-29e1f4e57eca"><Timestamp>2019-11-15 18:10:47</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></xmi:XMI>

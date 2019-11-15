@@ -1,0 +1,90 @@
+package routines;
+import java.io.File;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Locale;
+
+
+
+
+
+
+public class Price {
+
+	public static int getDOW(Date dt){
+		
+		Calendar cal=Calendar.getInstance();
+		cal.setTime(dt);
+		int dow = cal.get(Calendar.DAY_OF_WEEK);
+	    return dow;
+	    	
+	}
+	public static int getDOWforDate(String dateInString) throws ParseException{
+		
+		DateFormat format = new SimpleDateFormat("yyyy-MM-dd", Locale.ENGLISH);
+		Date dt = format.parse(dateInString);
+		Calendar cal=Calendar.getInstance();
+		cal.setTime(dt);
+		int dow = cal.get(Calendar.DAY_OF_WEEK);
+		return dow;
+		
+	    
+	    	
+	}
+public static String getFreezecode(String inCode,int dow) throws ParseException{
+	String fCode1 = "SMTWHFAPPQQVVBBXXYYZZ";	
+	 
+     for(int i=0; i<7; i++)
+     {
+    	 
+     	if(dow== 1) fCode1= fCode1.replace("S",inCode.substring(i, i+1));
+     	if(dow== 2) fCode1= fCode1.replace("M",inCode.substring(i, i+1));
+     	if(dow== 3) fCode1= fCode1.replace("T",inCode.substring(i, i+1));
+     	if(dow== 4) fCode1= fCode1.replace("W",inCode.substring(i, i+1));
+     	if(dow== 5) fCode1= fCode1.replace("H",inCode.substring(i, i+1));
+     	if(dow== 6) fCode1= fCode1.replace("F",inCode.substring(i, i+1));
+     	if(dow== 7) fCode1= fCode1.replace("A",inCode.substring(i, i+1));
+     	int offset = (i*2)+7 ;
+     	if(dow== 1) fCode1= fCode1.replace("PP",inCode.substring(offset,offset+2));
+     	if(dow== 2) fCode1= fCode1.replace("QQ",inCode.substring(offset,offset+2));
+     	if(dow== 3) fCode1= fCode1.replace("VV",inCode.substring(offset,offset+2));
+     	if(dow== 4) fCode1= fCode1.replace("BB",inCode.substring(offset,offset+2));
+     	if(dow== 5) fCode1= fCode1.replace("XX",inCode.substring(offset,offset+2));
+     	if(dow== 6) fCode1= fCode1.replace("YY",inCode.substring(offset,offset+2));
+     	if(dow== 7) fCode1= fCode1.replace("ZZ",inCode.substring(offset,offset+2));
+     	dow +=1;
+     	if(dow > 7) dow =1;
+     }
+    return fCode1;
+		 
+		
+	    
+	    	
+	}
+	public static String getFilename(String filepath){
+		
+	    File priceFile = new File(filepath);
+	    return priceFile.getName();	
+	}
+    public static Date getFiscalDate(int week){
+		//SimpleDateFormat sdf = new SimpleDateFormat("yyyy.MM.dd");//Set Date Format
+		Calendar cal=Calendar.getInstance();
+		 
+		cal.add( Calendar.DAY_OF_YEAR, -(cal.get(Calendar.DAY_OF_YEAR) -1)); //set cal to the first day of the current year
+		cal.add( Calendar.DAY_OF_WEEK, -(cal.get(Calendar.DAY_OF_WEEK) -1)); //set cal
+		 
+		cal.add(Calendar.DAY_OF_MONTH, -1);
+		cal.add(cal.DATE, (week-1)*7 +1);
+		Date date =  cal.getTime();
+		//Date FiscalDate = sdf.format(date);
+		return date;
+	
+	}
+
+
+
+
+}

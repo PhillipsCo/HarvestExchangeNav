@@ -1,0 +1,220 @@
+
+
+package routines;
+ 
+import java.io.File;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.List;
+ 
+import org.jibx.ws.WsException;
+import org.jibx.ws.soap.client.SoapClient;
+ 
+import com.movilitas.builder.MovilizerRequestBuilder;
+import com.movilitas.jaxbframework.MovilizerJaxbException;
+import com.movilitas.jaxbframework.dataaccess.jaxb.impl.JaxbDAOMovilizerImpl;
+import com.movilitas.jaxbframework.dataaccess.jaxb.v14.MoveletConstants;
+import com.movilitas.jaxbframework.dataaccess.jaxb.v14.MoveletType;
+import com.movilitas.jaxbframework.dataaccess.jaxb.v14.MovilizerAnswer;
+import com.movilitas.jaxbframework.dataaccess.jaxb.v14.MovilizerGenericDataContainer;
+import com.movilitas.jaxbframework.dataaccess.jaxb.v14.MovilizerGenericDataContainerEntry;
+import com.movilitas.jaxbframework.dataaccess.jaxb.v14.MovilizerMasterdataAck;
+import com.movilitas.jaxbframework.dataaccess.jaxb.v14.MovilizerMasterdataPoolUpdate;
+import com.movilitas.jaxbframework.dataaccess.jaxb.v14.MovilizerMasterdataUpdate;
+import com.movilitas.jaxbframework.dataaccess.jaxb.v14.MovilizerMovelet;
+import com.movilitas.jaxbframework.dataaccess.jaxb.v14.MovilizerMoveletSet;
+import com.movilitas.jaxbframework.dataaccess.jaxb.v14.MovilizerParticipant;
+import com.movilitas.jaxbframework.dataaccess.jaxb.v14.MovilizerQuestion;
+import com.movilitas.jaxbframework.dataaccess.jaxb.v14.MovilizerRequest;
+import com.movilitas.jaxbframework.dataaccess.jaxb.v14.MovilizerResponse;
+import com.movilitas.jaxbframework.dataaccess.jaxb.v14.MovilizerUploadDataContainer;
+import com.movilitas.sync.SyncConstants;
+ 
+/*
+* user specification: the function's comment should contain keys as follows: 1. write about the function's comment.but
+* it must be before the "{talendTypes}" key.
+*
+ * 2. {talendTypes} 's value must be talend Type, it is required . its value should be one of: String, char | Character,
+* long | Long, int | Integer, boolean | Boolean, byte | Byte, Date, double | Double, float | Float, Object, short |
+* Short
+*
+ * 3. {Category} define a category for the Function. it is required. its value is user-defined .
+*
+ * 4. {param} 's format is: {param} <type>[(<default value or closed list values>)] <name>[ : <comment>]
+*
+ * <type> 's value should be one of: string, int, list, double, object, boolean, long, char, date. <name>'s value is the
+* Function's parameter name. the {param} is optional. so if you the Function without the parameters. the {param} don't
+* added. you can have many parameters for the Function.
+*
+ * 5. {example} gives a example for the Function. it is optional.
+*/
+public class PollUpdates {
+ 
+    private static final int            SYSTEM_ID                  = 30001;
+    private static final String         SYSTEM_PASSWORD            = "123";
+   // private static final String         POLLING_QUEUE              = "0000000035";
+    private static final String         POLLING_QUEUE              = "DEFAULT";
+ 
+    private static JaxbDAOMovilizerImpl jaxbDAO;
+    
+    public static void startServer(String SystemId, String SystemPassword, String movilizerURL, Integer movilizerVersion, String directory, String ProcessTimestamp) throws MovilizerJaxbException
+    {
+        jaxbDAO = new JaxbDAOMovilizerImpl();
+        String ackKey = null;
+         //System.out.println("system id: " + SystemId);
+        int containerEmptyCount = 0;
+      
+        while (true )
+        {
+            System.out.println("Polling run started.........");
+            try
+            {
+                Thread.sleep(2000L);
+            }
+            catch (final InterruptedException e1)
+            {
+                e1.printStackTrace();
+            }
+
+            //fire an empty request to get the Movilizer data container in the response
+            final MovilizerResponse response = fireEmptyRequest(ackKey, SystemId, SystemPassword, movilizerURL, movilizerVersion);
+            //store the ack key to send this back to the Movilizer cloud
+            //otherwise we will get the same containers again and again
+            ackKey = response.getRequestAcknowledgeKey();
+            
+            //all the containers of the response
+            final List<MovilizerUploadDataContainer> containerList = response.getUploadContainerList();
+            
+            //we take current time as part of the created filename
+            final long currentTime = System.currentTimeMillis();
+            
+            PrintWriter writer;
+            //how many containers
+            int numContainer = 0;
+ 
+            final List<MovilizerMasterdataAck> mdAckList = response.getMasterdataAckList();
+            //System.out.println("ACKLIST: " + mdAckList);
+            if (containerList == null)
+            {
+               containerEmptyCount++;
+            }
+            else
+           
+            {
+               System.out.println("containersize:" + containerList.size());
+              
+                for (final MovilizerUploadDataContainer container : containerList)
+                {
+                    if(container == null || container.getContainer() == null)
+                    {
+                        continue;
+                    }
+                    //create a new file with the container name in the beginning, the current time and the no of the container
+                    final File file = new File(directory + "\\" + container.getContainer().getKey() + "_" + currentTime + "-" + numContainer + ".xml");
+                    //System.out.println("Absolute path:" + file.getAbsolutePath());
+                    //if the file do not exists already, we did not have received the container yet
+                    if (!file.exists())
+                    {
+                        try
+                        {
+                            //write the container to the file
+                            if (file.createNewFile())
+                            {
+                                writer = new PrintWriter(file);
+                                writer.write(jaxbDAO.generateXML(container));
+                                writer.close();
+                            }
+                            
+                            //System.out.println("Wrote container");
+                        }
+                        catch (final IOException e)
+                        {
+                            e.printStackTrace();
+                            ackKey = null;
+                        }
+                        catch (final MovilizerJaxbException e)
+                        {
+                            e.printStackTrace();
+                            ackKey = null;
+                        }
+                    }
+                    numContainer++;
+                }
+            }
+ 
+            //send acks about receiving the containers to the cloud
+            if (mdAckList != null)
+            {
+                final File file = new File(directory + "\\" + "ACK_" + currentTime + "-" + numContainer + ".txt");
+                if (!file.exists())
+                {
+                    try
+                    {
+                        //write the ack file
+                        if (file.createNewFile())
+                        {
+                            writer = new PrintWriter(file);
+                            //write each ack into the file
+                            for (final MovilizerMasterdataAck ack : mdAckList)
+                            {
+                                writer.write(ack.getPool() + "-" + ack.getGroup() + "-" + ack.getKey() + "\n");
+                            }
+                            writer.close();
+                            
+                        }
+                    }
+                    catch (final IOException e)
+                    {
+                        e.printStackTrace();
+                    }
+                }
+                numContainer++;
+                System.out.println("Wrote ack");
+            }
+            if(containerEmptyCount == 5){
+                System.out.println("5 empty containers received, end polling");
+               break;
+            }
+       }
+    }
+ 
+    private static MovilizerResponse fireEmptyRequest(String ackKey, String SystemId, String SystemPassword, String movilizerURL, Integer movilizerVersion)
+    {
+        try
+        {
+            final MovilizerRequest movilizerRequest = new MovilizerRequest();
+            movilizerRequest.setResponseQueue(POLLING_QUEUE);
+            movilizerRequest.setSystemId(Long.parseLong(SystemId));
+            movilizerRequest.setSystemPassword(SystemPassword);
+            if (ackKey != null)
+            {
+                movilizerRequest.setRequestAcknowledgeKey(ackKey);
+            }
+            movilizerRequest.setNumResponses(new Integer(100));
+ 
+            final MovilizerRequestBuilder requestBuilder = new MovilizerRequestBuilder(movilizerRequest);
+ 
+            final MovilizerRequest request = (MovilizerRequest) requestBuilder.getRequestObject();
+            //System.out.println(jaxbDAO.generateXML(request));
+ 
+            final SoapClient soapClient = jaxbDAO.createWebServiceDispatcher(movilizerURL, movilizerVersion);
+            final MovilizerResponse response = (MovilizerResponse) soapClient.call(request);
+ 
+            //System.out.println("Receiving-->" + jaxbDAO.generateXML(response));
+ 
+            return response;
+        }
+        catch (final MovilizerJaxbException e)
+        {
+            e.printStackTrace();
+        }
+        catch (final Exception e)
+        {
+            e.printStackTrace();
+        }
+ 
+        return null;
+    }
+       
+}
+

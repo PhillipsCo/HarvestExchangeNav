@@ -1,0 +1,215 @@
+package routines;
+
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.time.Instant;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Locale;
+import java.util.TimeZone;
+
+/*
+ * user specification: the function's comment should contain keys as follows: 1. write about the function's comment.but
+ * it must be before the "{talendTypes}" key.
+ * 
+ * 2. {talendTypes} 's value must be talend Type, it is required . its value should be one of: String, char | Character,
+ * long | Long, int | Integer, boolean | Boolean, byte | Byte, Date, double | Double, float | Float, Object, short |
+ * Short
+ * 
+ * 3. {Category} define a category for the Function. it is required. its value is user-defined .
+ * 
+ * 4. {param} 's format is: {param} <type>[(<default value or closed list values>)] <name>[ : <comment>]
+ * 
+ * <type> 's value should be one of: string, int, list, double, object, boolean, long, char, date. <name>'s value is the
+ * Function's parameter name. the {param} is optional. so if you the Function without the parameters. the {param} don't
+ * added. you can have many parameters for the Function.
+ * 
+ * 5. {example} gives a example for the Function. it is optional.
+ */
+public class DateParser {
+
+    /**
+     * helloExample: not return value, only print "hello" + message.
+     * 
+     * 
+     * {talendTypes} String
+     * 
+     * {Category} User Defined
+     * 
+     * {param} string("world") input: The string need to be printed.
+     * 
+     * {example} helloExemple("world") # hello world !.
+     * @throws ParseException 
+     */
+    public static long convertUTCToMillis(String row_date) throws ParseException {
+        
+    	if(!row_date.contains("-"))row_date = row_date.substring(0,3) + "-" + row_date.substring(4,5) + "-" + row_date.substring(6,7);
+    	SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.US);
+    	format.setTimeZone(TimeZone.getTimeZone("UTC"));
+
+    	Date date = format.parse(row_date);
+    	long millis = date.getTime();
+      	
+       return millis;
+    }
+    
+ public static long convertPSTToUTCToMillis_BeginTime(String row_date) throws ParseException {
+	 //System.out.println(row_date);
+	 //System.out.println(row_date);
+	 if(!row_date.contains("-"))row_date = row_date.substring(0,4) + "-" + row_date.substring(4,6) + "-" + row_date.substring(6,8);
+	// System.out.println(row_date);
+    	String date_in_utc = convertPSTToUTC_BeginTime(row_date);
+        
+    	long time_in_millis = convertUTCToMillis(date_in_utc);
+    	
+    	//System.out.println(time_in_millis);
+    	
+       return time_in_millis;
+    }
+ 
+ public static long convertPSTToUTCToMillis_EndTime(String row_date) throws ParseException {
+	 //System.out.println(row_date);
+	 if(!row_date.contains("-"))row_date = row_date.substring(0,4) + "-" + row_date.substring(4,6) + "-" + row_date.substring(6,8);
+	// System.out.println(row_date);
+ 	String date_in_utc = convertPSTToUTC_EndTime(row_date);
+     
+ 	long time_in_millis = convertUTCToMillis(date_in_utc);
+ 	
+ 	//System.out.println(time_in_millis);
+ 	
+    return time_in_millis;
+ }
+    
+    
+public static String convertPSTToUTC_BeginTime(String input_date) throws ParseException {
+        
+    	
+	   String row_date = input_date + " 00:00:00 PDT";
+       SimpleDateFormat f = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss z");
+       Date parseDate = f.parse(row_date);
+       
+       String date_in_utc = formatDateToString(parseDate, "yyyy-MM-dd HH:mm:ss", "UTC");
+       
+       
+       //System.out.println(date_in_utc);
+       
+       return date_in_utc;
+       
+    }
+public static String convertPSTToUTC_atNoon(String input_date) throws ParseException {
+    
+	
+	   String row_date = input_date + " 12:00:00 UTC";
+    SimpleDateFormat f = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss z");
+    Date parseDate = f.parse(row_date);
+    
+    String date_in_utc = formatDateToString(parseDate, "yyyy-MM-dd HH:mm:ss", "UTC");
+    long time_in_millis = convertUTCToMillis(date_in_utc);
+    
+    //System.out.println(row_date);
+    String ts = Long.toString(parseDate.getTime());
+    //System.out.println(ts);
+    //return Long.toString(time_in_millis) ;
+    return ts ;
+    
+ }
+
+
+public static String convertPSTToUTC_EndTime(String input_date) throws ParseException {
+    
+	
+	   String row_date = input_date + " 23:59:59 PDT";
+    SimpleDateFormat f = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss z");
+    Date parseDate = f.parse(row_date);
+    
+    String date_in_utc = formatDateToString(parseDate, "yyyy-MM-dd HH:mm:ss", "UTC");
+    
+    
+    //System.out.println(date_in_utc);
+    
+    return date_in_utc;
+    
+ }
+
+public static String formatDateToString(Date date, String format,
+		String timeZone) {
+	// null check
+	if (date == null) return null;
+	// create SimpleDateFormat object with input format
+	SimpleDateFormat sdf = new SimpleDateFormat(format);
+	// default system timezone if passed null or empty
+	if (timeZone == null || "".equalsIgnoreCase(timeZone.trim())) {
+		timeZone = Calendar.getInstance().getTimeZone().getID();
+	}
+	// set timezone to SimpleDateFormat
+	sdf.setTimeZone(TimeZone.getTimeZone(timeZone));
+	// return Date in required format with timezone as String
+	return sdf.format(date);
+}
+
+//SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+//System.out.println("My date formatted is: " + sdf.format(currentDate ));
+public static String convertMillisToDate(long milliSeconds, String dateFormat)
+{
+    // Create a DateFormatter object for displaying date in specified format.
+    String convertedDate = "";
+	SimpleDateFormat formatter = new SimpleDateFormat(dateFormat);
+
+    // Create a calendar object that will convert the date and time value in milliseconds to date. 
+     Calendar calendar = Calendar.getInstance();
+     calendar.setTimeInMillis(milliSeconds);
+     calendar.setTimeInMillis(milliSeconds);
+     convertedDate = formatter.format(calendar.getTime());
+     
+     //System.out.println(milliSeconds +"--------"+convertedDate);
+     
+     return convertedDate;
+}
+public static String convertMillisToBeforeOrAfter1500(long milliSeconds)
+{
+    int noDays = 2;
+    String Process = "yes";
+	SimpleDateFormat formatter = new SimpleDateFormat("HH");     
+    Calendar calendar = Calendar.getInstance();
+    String timeNow = formatter.format(calendar.getTime());
+    if(Integer.valueOf(timeNow)>= 15)
+    	noDays = 3;
+    String thisDate = convertMillisToDate(milliSeconds, "MMddyyyy");
+    if(TalendDate.compareDate(TalendDate.parseDate("MMddyyyy",thisDate),TalendDate.addDate(TalendDate.getCurrentDate(),noDays,"dd")) > 0)
+    	Process = "no";	
+    return Process;
+}
+
+public static String convertUTCMillisToDate(long milliSeconds, String dateFormat)
+{
+    // Create a DateFormatter object for displaying date in specified format.
+	ZonedDateTime dateTime = Instant.ofEpochMilli(milliSeconds)
+            .atZone(ZoneId.of("UTC"));
+     
+	String formatted = dateTime.format(DateTimeFormatter.ofPattern(dateFormat));
+	
+	
+	//System.out.println(milliSeconds+"-----"+formatted);
+	
+     return formatted;
+}
+
+public static String convertUTCMillisToUTCDate(long milliSeconds, String dateFormat)
+{
+    // Create a DateFormatter object for displaying date in specified format.
+	ZonedDateTime dateTime = Instant.ofEpochMilli(milliSeconds)
+            .atZone(ZoneId.of("America/Los_Angeles"));
+     
+	String formatted = dateTime.format(DateTimeFormatter.ofPattern(dateFormat));
+	
+	//System.out.println(milliSeconds+"-----"+formatted);
+	
+     return formatted;
+}
+
+}
+

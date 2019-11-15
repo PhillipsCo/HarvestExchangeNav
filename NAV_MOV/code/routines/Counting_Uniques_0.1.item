@@ -1,0 +1,80 @@
+package routines;
+
+import java.util.*;
+
+public class Counting_Uniques {
+
+	public static java.util.HashMap hmDate = new java.util.HashMap();
+	public static java.util.HashMap hmDateRTE = new java.util.HashMap();
+	
+	   public static int countDateUniques(String s){
+		   int val = 1;
+		   if(hmDate.get(s) != null){
+			   val = 1+Integer.parseInt(hmDate.get(s)+"");
+		   }
+		   hmDate.put(s, val);
+		   return val;
+		   
+	   }
+	   
+	   public static int countDateRTEUniques(String s){
+		   int val = 1;
+		   if(hmDateRTE.get(s) != null){
+			   val = 1+Integer.parseInt(hmDateRTE.get(s)+"");
+		   }
+		   hmDateRTE.put(s, val);
+		   return val;
+		   
+	   }
+	   
+	   public static int getUniqueDateCount(){
+		   return hmDate.keySet().size();
+	   }
+	   
+	   public static int getUniqueDateRTECount(){
+		   return hmDateRTE.keySet().size();
+	   }
+	   
+	   public static void print(){
+		   Set keys = hmDate.keySet();
+		   Set keys1 = hmDateRTE.keySet();
+		   System.out.println("Date\tCount");
+	   	    for (Iterator i = keys.iterator(); i.hasNext(); ) {
+	        String key = (String) i.next();
+	        Integer value = Integer.parseInt(hmDate.get(key).toString()) ;
+	        System.out.println(key+"\t" +value);
+	    }
+	   	 System.out.println("Date|RTE\tCount");
+	   	 for (Iterator i = keys1.iterator(); i.hasNext(); ) {
+		        String key = (String) i.next();
+		        Integer value = Integer.parseInt(hmDateRTE.get(key).toString()) ;
+		        System.out.println(key+"\t" +value);
+		    }
+	   }
+
+// public static int hd_uniques(Object rowLink, Object rowLink1) throws IllegalArgumentException, IllegalAccessException {
+//    	
+//		String valstr = "";
+//		String valstr1 = "";
+//		Object objValue;
+//		Object objValue1;
+//		int a = 0;
+//
+//		for (java.lang.reflect.Field field : rowLink.getClass()
+//				.getDeclaredFields()) {
+//    	objValue = field.get(rowLink);
+//    	objValue1 = field.get(rowLink1);
+//    	valstr = objValue.toString();
+//    	valstr1 = objValue1.toString();
+//    	HashSet<String> noDupSet = new HashSet<String>();
+//    	noDupSet.add(valstr);
+//    	a= noDupSet.size();
+//    	System.out.println(a);
+//		}
+//		
+//    	
+//    	return a;	
+//    }
+    
+    
+}

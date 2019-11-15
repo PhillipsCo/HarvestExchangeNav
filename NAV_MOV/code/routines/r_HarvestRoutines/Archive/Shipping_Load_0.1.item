@@ -1,0 +1,358 @@
+package routines;
+
+import java.beans.Introspector;
+
+
+
+
+import java.io.IOException;
+import java.lang.reflect.Field;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+
+import org.apache.commons.beanutils.BeanUtils;
+import org.apache.commons.beanutils.PropertyUtils;
+import org.jibx.ws.WsException;
+import org.jibx.ws.soap.client.SoapClient;
+
+import com.movilitas.builder.MovilizerRequestBuilder;
+import com.movilitas.jaxbframework.MovilizerJaxbException;
+import com.movilitas.jaxbframework.dataaccess.jaxb.impl.JaxbDAOMovilizerImpl;
+import com.movilitas.jaxbframework.dataaccess.jaxb.v14.MovilizerGenericDataContainer;
+import com.movilitas.jaxbframework.dataaccess.jaxb.v14.MovilizerGenericDataContainerEntry;
+import com.movilitas.jaxbframework.dataaccess.jaxb.v14.MovilizerMasterdataPoolUpdate;
+import com.movilitas.jaxbframework.dataaccess.jaxb.v14.MovilizerMasterdataUpdate;
+import com.movilitas.jaxbframework.dataaccess.jaxb.v14.MovilizerRequest;
+import com.movilitas.jaxbframework.dataaccess.jaxb.v14.MovilizerResponse;
+
+
+public class Shipping_Load {
+
+	public static int SYSTEM_ID = 51840021;
+	public static String SYSTEM_PASSWORD = "peterson";
+	public static JaxbDAOMovilizerImpl jaxbDAO;
+	public static MovilizerGenericDataContainer data;
+	public static MovilizerRequest movilizerRequest;
+	public static MovilizerRequestBuilder requestBuilder;
+	public static MovilizerMasterdataPoolUpdate masterdataPoolUpdate;
+	public static MovilizerMasterdataUpdate masterdataUpdate;
+
+public static String generateErrorCode(String errorMessage) {
+    	
+    	String errorCode = "";
+    		if (errorMessage == null)
+    			errorCode = "0";
+    		else
+    			errorMessage = errorMessage.toLowerCase();
+    		
+    		if (errorMessage.contains("connection"))
+    			errorCode = "399";
+    		
+    		else if (errorMessage.contains("sql"))
+    			errorCode = "299";
+    		else
+    		if (errorMessage.contains("exceed max length"))
+				
+				errorCode="599";
+    		else
+    			if (errorMessage.contains("java"))
+        			errorCode = "199";
+    			else errorCode = "499";
+    		 
+    	return errorCode;
+}
+	public static void createAllObjects() throws MovilizerJaxbException {
+		movilizerRequest = createMovilizerRequestObject();
+		requestBuilder = createMovilizerRequestBuilderObject();
+		masterdataPoolUpdate = createMovilizerMasterdataPoolUpdateObject();
+		masterdataUpdate = createMovilizerMasterdataUpdateObject();
+		data = createMovilizerGenericDataContainerObject();
+		jaxbDAO = new JaxbDAOMovilizerImpl();
+
+	}
+
+	public static void populateMasterdataPoolUpdate()
+			throws MovilizerJaxbException {
+
+		movilizerRequest.setSystemId(SYSTEM_ID);
+		movilizerRequest.setSystemPassword(SYSTEM_PASSWORD);
+		movilizerRequest.setSynchronousResponse(true);
+		movilizerRequest.setNumResponses(new Integer(100));
+
+		masterdataPoolUpdate.setPool("myPool");
+
+		masterdataUpdate.setGroup("myGroup");
+		masterdataUpdate.setKey("myKey");
+		masterdataUpdate.setFilter1("filter1");
+		masterdataUpdate.setDescription("Some Description");
+
+	}
+
+	public static void populateMasterdataPoolUpdate(Object rowLink)
+			throws MovilizerJaxbException, IllegalArgumentException,
+			IllegalAccessException, InvocationTargetException,
+			NoSuchMethodException {
+
+		String entryName = "";
+		String valstr = "";
+		String columnName = null;
+		Object objValue;
+
+		movilizerRequest.setSynchronousResponse(true);
+		movilizerRequest.setNumResponses(new Integer(100));
+
+		for (java.lang.reflect.Field field : rowLink.getClass()
+				.getDeclaredFields()) {
+			columnName = field.getName();
+
+			if (!(columnName.contains("RmExport_010")||columnName.contains("NavExport_010")))
+
+			{
+
+				objValue = field.get(rowLink);
+
+				entryName = columnName;
+
+				if (objValue == null)
+					objValue = "";
+
+				valstr = objValue.toString();
+				// System.out.println(entryName +"-"+valstr);
+
+				if (columnName.equalsIgnoreCase("SystemId")
+						|| columnName.equalsIgnoreCase("SystemPassword")) {
+
+					BeanUtils.setProperty(movilizerRequest,
+							uncapitalize(entryName), objValue);
+
+					// System.out.println("---"+BeanUtils.getProperty(movilizerRequest,uncapitalize(entryName)));
+
+				} else if (columnName.equalsIgnoreCase("Pool")) {
+					BeanUtils.setProperty(masterdataPoolUpdate,
+							uncapitalize(entryName), objValue);
+					// System.out.println("---"+BeanUtils.getProperty(masterdataPoolUpdate,uncapitalize(entryName)));
+				}
+
+				else {
+					BeanUtils.setProperty(masterdataUpdate,
+							uncapitalize(entryName), objValue);
+					// System.out.println("---"+BeanUtils.getProperty(masterdataUpdate,uncapitalize(entryName)));
+				}
+
+			}
+
+		}
+
+		rowLink = null;
+
+	}
+
+	public static String uncapitalize(String string) {
+		return Character.toLowerCase(string.charAt(0)) + string.substring(1);
+	}
+
+	public static void populateDataContainerEntry(Object rowLink)
+			throws IllegalArgumentException, IllegalAccessException {
+
+		String entryName = "";
+		String valstr = "";
+		String outerName = "";
+		Object objValue;
+		
+		
+		
+		MovilizerGenericDataContainerEntry outer = new MovilizerGenericDataContainerEntry();
+		MovilizerGenericDataContainerEntry inner;
+		// data = createMovilizerGenericDataContainerObject();
+
+		outerName = rowLink.getClass().getSimpleName().replace("Struct", "");
+		// System.out.println(outerName);
+		outer.setName(outerName);
+		
+
+		String columnName = null;
+		for (java.lang.reflect.Field field : rowLink.getClass()
+				.getDeclaredFields()) {
+			columnName = field.getName();
+			System.out.println(columnName);
+
+			if (!(columnName.contains("RmExport_010")||columnName.contains("NavExport_010")))
+
+			{
+
+				objValue = field.get(rowLink);
+				entryName = columnName;
+
+				if (objValue == null)
+					objValue = "";
+				System.out.println("lnrrrrr :Outername ="+outerName+"  innerName = "+entryName);
+				valstr = objValue.toString();
+
+				inner = new MovilizerGenericDataContainerEntry();
+				inner.setName(entryName);
+				inner.setValstr(valstr);
+				outer.addEntry(inner);
+			}
+
+		}
+
+		data.addEntry(outer);
+		System.out.println(data.getEntryList());
+
+		rowLink = null;
+		inner = null;
+		outer = null;
+
+	}
+
+	public static void sendMasterData() throws MovilizerJaxbException,
+			IOException, WsException {
+
+		masterdataUpdate.setData(data);
+
+		masterdataPoolUpdate.addUpdate(masterdataUpdate);
+
+		movilizerRequest.addMasterdataPoolUpdate(masterdataPoolUpdate);
+
+		MovilizerRequest request = (MovilizerRequest) requestBuilder
+				.getRequestObject();
+
+		System.out.println(jaxbDAO.generateXML(request));
+
+		SoapClient soapClient = jaxbDAO.createWebServiceDispatcher(
+				//"https://epcis-test.movilizer.com/mds/WebService/", 14);
+				"https://demo.movilizer.com/mds/WebService/", 14);
+
+
+
+		MovilizerResponse response = (MovilizerResponse) soapClient
+				.call(request);
+		System.out.println(jaxbDAO.generateXML(response));
+
+	}
+
+	public static void linkNamePrint(Object outC)
+
+	{
+		System.out.println(outC);
+	}
+
+	public static MovilizerGenericDataContainer createMovilizerGenericDataContainerObject()
+
+	{
+
+		MovilizerGenericDataContainer data = new MovilizerGenericDataContainer();
+
+		return data;
+
+	}
+
+	public static MovilizerGenericDataContainerEntry createMovilizerGenericDataContainerEntryObject()
+
+	{
+
+		MovilizerGenericDataContainerEntry entry = new MovilizerGenericDataContainerEntry();
+
+		return entry;
+
+	}
+
+	public static MovilizerRequest createMovilizerRequestObject()
+
+	{
+
+		MovilizerRequest movilizerRequest = new MovilizerRequest();
+
+		return movilizerRequest;
+	}
+
+	public static MovilizerRequestBuilder createMovilizerRequestBuilderObject()
+
+	{
+		MovilizerRequestBuilder requestBuilder = new MovilizerRequestBuilder(
+				movilizerRequest);
+
+		return requestBuilder;
+	}
+
+	public static MovilizerMasterdataPoolUpdate createMovilizerMasterdataPoolUpdateObject()
+
+	{
+		MovilizerMasterdataPoolUpdate masterdataPoolUpdate = new MovilizerMasterdataPoolUpdate();
+
+		return masterdataPoolUpdate;
+	}
+
+	public static MovilizerMasterdataUpdate createMovilizerMasterdataUpdateObject()
+
+	{
+
+		MovilizerMasterdataUpdate masterdataUpdate = new MovilizerMasterdataUpdate();
+
+		return masterdataUpdate;
+	}
+
+	public static void extractMetaColumns(Object rowLink) {
+
+		String entryName = "";
+		String valstr = "";
+		String outerName = "";
+
+		MovilizerGenericDataContainerEntry outer = new MovilizerGenericDataContainerEntry();
+		MovilizerGenericDataContainerEntry inner = new MovilizerGenericDataContainerEntry();
+		// data = createMovilizerGenericDataContainerObject();
+
+		outerName = rowLink.getClass().getSimpleName().replace("Struct", "");
+		// System.out.println(outerName);
+		outer.setName(outerName);
+
+		String columnName = null;
+		for (java.lang.reflect.Field field : rowLink.getClass()
+				.getDeclaredFields()) {
+			columnName = field.getName().toLowerCase();
+			Object objValue;
+			try {
+				objValue = field.get(rowLink);
+
+				if (!(columnName.contains("RmExport_010")||columnName.contains("NavExport_010")))
+
+				{
+
+					entryName = columnName;
+
+					if (objValue == null)
+						objValue = "";
+
+					valstr = objValue.toString();
+
+					inner.setName(entryName);
+					inner.setValstr(valstr);
+					outer.addEntry(inner);
+				}
+
+			} catch (IllegalArgumentException e) {
+				// TODO Auto-generated catch block
+				// e.printStackTrace();
+			} catch (IllegalAccessException e) {
+				// TODO Auto-generated catch block
+				// e.printStackTrace();
+			}
+		}
+
+		data.addEntry(outer);
+		System.out.println(data.getEntryList());
+
+	}
+
+	public static void resetObjects()
+
+	{
+
+		movilizerRequest = null;
+		requestBuilder = null;
+		masterdataPoolUpdate = null;
+		masterdataUpdate = null;
+		data = null;
+		jaxbDAO = null;
+	}
+}

@@ -1,0 +1,1706 @@
+package routines;
+
+import java.beans.Introspector;
+
+
+
+import java.io.File;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.lang.reflect.Field;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.apache.commons.beanutils.BeanUtils;
+import org.apache.commons.beanutils.PropertyUtils;
+import org.jibx.ws.WsException;
+import org.jibx.ws.soap.client.SoapClient;
+
+import com.movilitas.builder.MovilizerRequestBuilder;
+import com.movilitas.jaxbframework.MovilizerJaxbException;
+import com.movilitas.jaxbframework.dataaccess.jaxb.impl.JaxbDAOMovilizerImpl;
+import com.movilitas.jaxbframework.dataaccess.jaxb.v14.MovilizerAttributeEntry;
+import com.movilitas.jaxbframework.dataaccess.jaxb.v14.MovilizerGenericDataContainer;
+import com.movilitas.jaxbframework.dataaccess.jaxb.v14.MovilizerGenericDataContainerEntry;
+import com.movilitas.jaxbframework.dataaccess.jaxb.v14.MovilizerMasterdataAck;
+import com.movilitas.jaxbframework.dataaccess.jaxb.v14.MovilizerMasterdataAttributeUpdate;
+import com.movilitas.jaxbframework.dataaccess.jaxb.v14.MovilizerMasterdataPoolUpdate;
+import com.movilitas.jaxbframework.dataaccess.jaxb.v14.MovilizerMasterdataUpdate;
+import com.movilitas.jaxbframework.dataaccess.jaxb.v14.MovilizerRequest;
+import com.movilitas.jaxbframework.dataaccess.jaxb.v14.MovilizerResponse;
+import com.movilitas.jaxbframework.dataaccess.jaxb.v14.MovilizerUploadDataContainer;
+import com.movilitas.sync.SyncConstants;
+import com.movilitas.jaxbframework.dataaccess.jaxb.v14.MoveletType;
+import com.movilitas.jaxbframework.dataaccess.jaxb.v14.MovilizerAnswer;
+import com.movilitas.jaxbframework.dataaccess.jaxb.v14.MovilizerMovelet;
+import com.movilitas.jaxbframework.dataaccess.jaxb.v14.MovilizerMoveletSet;
+import com.movilitas.jaxbframework.dataaccess.jaxb.v14.MovilizerParticipant;
+import com.movilitas.jaxbframework.dataaccess.jaxb.v14.MoveletConstants;
+import com.movilitas.jaxbframework.dataaccess.jaxb.v14.MovilizerQuestion;
+
+
+
+/*
+ * user specification: the function's comment should contain keys as follows: 1. write about the function's comment.but
+ * it must be before the "{talendTypes}" key.
+ * 
+ * 2. {talendTypes} 's value must be talend Type, it is required . its value should be one of: String, char | Character,
+ * long | Long, int | Integer, boolean | Boolean, byte | Byte, Date, double | Double, float | Float, Object, short |
+ * Short
+ * 
+ * 3. {Category} define a category for the Function. it is required. its value is user-defined .
+ * 
+ * 4. {param} 's format is: {param} <type>[(<default value or closed list values>)] <name>[ : <comment>]
+ * 
+ * <type> 's value should be one of: string, int, list, double, object, boolean, long, char, date. <name>'s value is the
+ * Function's parameter name. the {param} is optional. so if you the Function without the parameters. the {param} don't
+ * added. you can have many parameters for the Function.
+ * 
+ * 5. {example} gives a example for the Function. it is optional.
+ */
+public class Nav_Customer {
+
+	public static int SYSTEM_ID = 51840021;
+	public static String SYSTEM_PASSWORD = "peterson";
+	public static JaxbDAOMovilizerImpl jaxbDAO ;
+	public static MovilizerGenericDataContainer data;
+	public static MovilizerGenericDataContainer attributeData;
+	public static MovilizerRequest movilizerRequest = createMovilizerRequestObject();
+	public static MovilizerRequestBuilder requestBuilder = createMovilizerRequestBuilderObject();
+	public static MovilizerMasterdataPoolUpdate masterdataPoolUpdate= createMovilizerMasterdataPoolUpdateObject();
+	public static MovilizerMasterdataAttributeUpdate masterdataAttributeUpdate= createMovilizerMasterdataAttributeUpdateObject();
+	public static MovilizerMasterdataUpdate masterdataUpdate;
+	public static MovilizerAttributeEntry attributeUpdate;
+	public static MovilizerGenericDataContainerEntry parentOuter;	
+	public static java.util.HashMap hmcount = new java.util.HashMap();
+	public static java.util.HashMap hmITM = new java.util.HashMap();
+
+	
+	public static int getHMcount(String s){
+		int val =1;
+		if(!hmcount.containsKey(s)){
+			hmcount.put(s, 1);
+		}else{
+			hmcount.put(s,1+Integer.parseInt(hmcount.get(s).toString()));
+		}
+		return val;
+	}
+	
+	public static int getHMcountValue(String s){
+		return Integer.parseInt(hmcount.get(s).toString());
+	}
+
+	
+	
+public static boolean Boolean_Convert_String(String Value){
+
+ if (Value == null || Value.isEmpty() || Value.equalsIgnoreCase("N"))
+	 return false;
+ else
+	 return true;
+	
+}
+
+public static boolean Boolean_Convert_Integer(Integer Value){
+	if (Value == null || Value ==0 )
+		 return false;
+	 else
+		 return true;
+	
+	
+}
+
+public static String generateErrorCode(String errorMessage) {
+    	
+    	String errorCode = "";
+    		if (errorMessage == null)
+    			errorCode = "0";
+    		else
+    			errorMessage = errorMessage.toLowerCase();
+    		
+    		if (errorMessage.contains("connection"))
+    			errorCode = "399";
+    		
+    		else if (errorMessage.contains("sql"))
+    			errorCode = "299";
+    		else
+    		if (errorMessage.contains("exceed max length"))
+				
+				errorCode="599";
+    		else
+    			if (errorMessage.contains("java"))
+        			errorCode = "199";
+    			else errorCode = "499";
+    		 
+    	return errorCode;
+}
+	public static void createAllObjects() throws MovilizerJaxbException {
+	//	movilizerRequest = createMovilizerRequestObject();
+	//	requestBuilder = createMovilizerRequestBuilderObject();
+	//	masterdataPoolUpdate = createMovilizerMasterdataPoolUpdateObject();
+		masterdataUpdate = createMovilizerMasterdataUpdateObject();
+		masterdataAttributeUpdate = createMovilizerMasterdataAttributeUpdateObject();
+		attributeUpdate= createMovilizerAttributeEntryObject();
+		data = createMovilizerGenericDataContainerObject();
+		attributeData=createMovilizerGenericDataContainerObject();
+		jaxbDAO = new JaxbDAOMovilizerImpl();
+		
+	}
+	public static void createAllObjects_NotData() throws MovilizerJaxbException {
+		//	movilizerRequest = createMovilizerRequestObject();
+		//	requestBuilder = createMovilizerRequestBuilderObject();
+		//	masterdataPoolUpdate = createMovilizerMasterdataPoolUpdateObject();
+		masterdataAttributeUpdate = createMovilizerMasterdataAttributeUpdateObject();
+			masterdataUpdate = createMovilizerMasterdataUpdateObject();
+//			data = createMovilizerGenericDataContainerObject();
+			jaxbDAO = new JaxbDAOMovilizerImpl();
+			attributeUpdate= createMovilizerAttributeEntryObject();
+			attributeData=createMovilizerGenericDataContainerObject();
+			
+		}
+
+	
+	/*public static void populateMasterdataPoolUpdateTest()
+			throws MovilizerJaxbException {
+
+		movilizerRequest.setSystemId(SYSTEM_ID);
+		movilizerRequest.setSystemPassword(SYSTEM_PASSWORD);
+		movilizerRequest.setSynchronousResponse(true);
+		movilizerRequest.setNumResponses(new Integer(100));
+
+		masterdataPoolUpdate.setPool("myPool");
+
+		
+
+	}
+	
+	public static void populateMasterdataUpdateTest()
+			throws MovilizerJaxbException {
+
+		
+
+		masterdataUpdate.setGroup("myGroup");
+		masterdataUpdate.setKey("myKey");
+		masterdataUpdate.setFilter1("filter1");
+		masterdataUpdate.setDescription("Some Description");
+
+	}*/
+
+	public static void populateMasterdataPoolUpdate(Object rowLink)
+			throws MovilizerJaxbException, IllegalArgumentException,
+			IllegalAccessException, InvocationTargetException,
+			NoSuchMethodException {
+
+		String entryName = "";
+		String valstr = "";
+		String columnName = null;
+		Object objValue;
+
+		movilizerRequest.setSynchronousResponse(true);
+		movilizerRequest.setNumResponses(new Integer(100));
+
+		for (java.lang.reflect.Field field : rowLink.getClass()
+				.getDeclaredFields()) {
+			columnName = field.getName();
+
+			if (!(columnName.contains("RmExport_010")||columnName.contains("NavExport_010")))
+
+			{
+
+				objValue = field.get(rowLink);
+
+				entryName = columnName;
+
+				if (objValue == null)
+					objValue = "";
+
+				valstr = objValue.toString();
+				// System.out.println(entryName +"-"+valstr);
+
+				if (columnName.equalsIgnoreCase("SystemId")
+						|| columnName.equalsIgnoreCase("SystemPassword")) {
+
+					BeanUtils.setProperty(movilizerRequest,
+							uncapitalize(entryName), objValue);
+
+					// System.out.println("---"+BeanUtils.getProperty(movilizerRequest,uncapitalize(entryName)));
+
+				} else if (columnName.equalsIgnoreCase("Pool")) {
+					BeanUtils.setProperty(masterdataPoolUpdate,
+							uncapitalize(entryName), objValue);
+					// System.out.println("---"+BeanUtils.getProperty(masterdataPoolUpdate,uncapitalize(entryName)));
+				}
+
+				
+
+			}
+
+		}
+		
+		rowLink = null;
+
+	}
+	
+	public static void populateMasterdataAttributeUpdate(Object rowLink)
+			throws MovilizerJaxbException, IllegalArgumentException,
+			IllegalAccessException, InvocationTargetException,
+			NoSuchMethodException {
+
+		String entryName = "";
+		String valstr = "";
+		String columnName = null;
+		Object objValue;
+
+		
+
+		for (java.lang.reflect.Field field : rowLink.getClass()
+				.getDeclaredFields()) {
+			columnName = field.getName();
+
+			if (!(columnName.contains("RmExport_010")||columnName.contains("NavExport_010")))
+
+			{
+
+				objValue = field.get(rowLink);
+
+				entryName = columnName;
+
+				if (objValue == null)
+					objValue = "";
+
+				valstr = objValue.toString();
+				// System.out.println(entryName +"-"+valstr);
+
+				
+
+					BeanUtils.setProperty(masterdataAttributeUpdate,
+							uncapitalize(entryName), objValue);
+
+					// System.out.println("---"+BeanUtils.getProperty(movilizerRequest,uncapitalize(entryName)));
+
+				
+
+				
+
+			}
+
+		}
+		
+		rowLink = null;
+		movilizerRequest.addMasterdataAttributeUpdate(masterdataAttributeUpdate);
+
+	}
+
+	public static void populateMasterdataUpdate(Object rowLink)
+			throws MovilizerJaxbException, IllegalArgumentException,
+			IllegalAccessException, InvocationTargetException,
+			NoSuchMethodException {
+
+		String entryName = "";
+		String valstr = "";
+		String columnName = null;
+		Object objValue;
+
+		
+
+		for (java.lang.reflect.Field field : rowLink.getClass()
+				.getDeclaredFields()) {
+			columnName = field.getName();
+
+			if (!(columnName.contains("RmExport_010")||columnName.contains("NavExport_010")))
+
+			{
+
+				objValue = field.get(rowLink);
+
+				entryName = columnName;
+
+				if (objValue == null)
+					objValue = "";
+
+				valstr = objValue.toString();
+				// System.out.println(entryName +"-"+valstr);
+
+				
+					BeanUtils.setProperty(masterdataUpdate,
+							uncapitalize(entryName), objValue);
+					// System.out.println("---"+BeanUtils.getProperty(masterdataUpdate,uncapitalize(entryName)));
+				
+
+			}
+
+		}
+
+		rowLink = null;
+
+	}
+	
+	
+	
+	public static void populateAttributeUpdate(Object rowLink)
+			throws MovilizerJaxbException, IllegalArgumentException,
+			IllegalAccessException, InvocationTargetException,
+			NoSuchMethodException {
+
+		String entryName = "";
+		String valstr = "";
+		String columnName = null;
+		Object objValue;
+
+		
+
+		for (java.lang.reflect.Field field : rowLink.getClass()
+				.getDeclaredFields()) {
+			columnName = field.getName();
+
+			if (!(columnName.contains("RmExport_010")||columnName.contains("NavExport_010")))
+
+			{
+
+				objValue = field.get(rowLink);
+
+				entryName = columnName;
+
+				if (objValue == null)
+					objValue = "";
+
+				valstr = objValue.toString();
+				// System.out.println(entryName +"-"+valstr);
+
+				if(columnName.equalsIgnoreCase("name") ){
+					attributeUpdate.setName(valstr);
+				}else if(columnName.equalsIgnoreCase("useIndex") ){
+					attributeUpdate.setUseIndex(Boolean.parseBoolean(valstr));
+				}else if(columnName.equalsIgnoreCase("value") ){
+					attributeUpdate.setValue(valstr);
+				}
+				// System.out.println("---"+BeanUtils.getProperty(masterdataUpdate,uncapitalize(entryName)));
+				
+
+			}
+
+		}
+
+		rowLink = null;
+
+	}
+	
+
+	public static String uncapitalize(String string) {
+		return Character.toLowerCase(string.charAt(0)) + string.substring(1);
+	}
+	
+	public static void populateAttributeDataContainerEntryChildNode(Object rowLink)
+			throws IllegalArgumentException, IllegalAccessException {
+
+		String entryName = "";
+		String valstr = "";
+		String outerName = "";
+		String outerName10 = "";
+		String outerName20 = "";
+		Object objValue;
+		
+		
+		MovilizerGenericDataContainerEntry outer = new MovilizerGenericDataContainerEntry();
+		MovilizerGenericDataContainerEntry outer1 = new MovilizerGenericDataContainerEntry();
+		MovilizerGenericDataContainerEntry outer2 = new MovilizerGenericDataContainerEntry();
+	
+		MovilizerGenericDataContainerEntry inner;
+		// data = createMovilizerGenericDataContainerObject();
+
+		outerName = rowLink.getClass().getSimpleName().replace("Struct", "");
+		outerName10 = outerName+"10";
+		outerName20 = outerName+"20";
+		// System.out.println(outerName);
+		
+		if(attributeData == null)
+		{
+			attributeData=createMovilizerGenericDataContainerObject();
+			//attributeParentOuter.setName(outerName);
+		}
+
+
+		String columnName = null;
+		int count = 0;
+		for (java.lang.reflect.Field field : rowLink.getClass()
+				.getDeclaredFields()) {
+			columnName = field.getName();
+			//System.out.println(columnName);
+			
+
+			if (!(columnName.contains("RmExport_010")||columnName.contains("NavExport_010")))
+
+			{
+				count++;
+				
+				
+				objValue = field.get(rowLink);
+				if(count==1){
+					outer.setName(columnName);
+					if (objValue == null)
+						objValue = "";
+					valstr = objValue.toString();
+					outer.setValstr(valstr);
+				}else if(count==2){
+					outer1.setName(columnName);
+					if (objValue == null)
+						objValue = "";
+					valstr = objValue.toString();
+					outer1.setValstr(valstr);	
+					outer.addEntry(outer1);
+				}
+				else
+				{
+					
+				entryName = columnName;
+
+				if (objValue == null)
+					objValue = "";
+
+				valstr = objValue.toString();
+				
+				inner = new MovilizerGenericDataContainerEntry();
+				inner.setName(entryName);
+				inner.setValstr(valstr);
+				outer1.addEntry(inner);
+				outer1=inner;
+				inner=null;
+				}
+			}
+
+		}
+
+		attributeData.addEntry(outer);
+		
+		rowLink = null;
+		inner = null;
+		outer = null;
+		outer1=null;
+		outer2=null;
+		
+		
+	}
+	
+	public static void populateAttributeDataContainerEntryChildNode_1(Object rowLink)
+			throws IllegalArgumentException, IllegalAccessException {
+
+		String entryName = "";
+		String valstr = "";
+		String outerName = "";
+		String outerName10 = "";
+		String outerName20 = "";
+		Object objValue;
+		
+		
+		MovilizerGenericDataContainerEntry outer = new MovilizerGenericDataContainerEntry();
+		MovilizerGenericDataContainerEntry outer1 = new MovilizerGenericDataContainerEntry();
+		MovilizerGenericDataContainerEntry outer2 = new MovilizerGenericDataContainerEntry();
+	
+		MovilizerGenericDataContainerEntry inner;
+		// data = createMovilizerGenericDataContainerObject();
+
+		outerName = rowLink.getClass().getSimpleName().replace("Struct", "");
+		outerName10 = outerName+"10";
+		outerName20 = outerName+"20";
+		// System.out.println(outerName);
+		
+		if(attributeData == null)
+		{
+			attributeData=createMovilizerGenericDataContainerObject();
+			//attributeParentOuter.setName(outerName);
+		}
+
+
+		String columnName = null;
+		for (java.lang.reflect.Field field : rowLink.getClass()
+				.getDeclaredFields()) {
+			columnName = field.getName();
+			//System.out.println(columnName);
+			
+			
+
+			if (!(columnName.contains("RmExport_010")||columnName.contains("NavExport_010")))
+
+			{
+				
+				objValue = field.get(rowLink);
+				
+				if(columnName.equalsIgnoreCase(outerName))
+				{
+					outer.setName(objValue.toString());
+				}
+					else if(columnName.equalsIgnoreCase(outerName+"1"))
+					{
+						outer.setValstr(objValue.toString());
+					}
+					else
+						if(columnName.equalsIgnoreCase(outerName10))
+						{
+							outer1.setName(objValue.toString());
+						}
+						else if(columnName.equalsIgnoreCase(outerName+"11"))
+						{
+							outer1.setValstr(objValue.toString());
+						}
+						else if(columnName.equalsIgnoreCase(outerName20))
+						{
+							outer2.setName(objValue.toString());
+						}
+						else if(columnName.equalsIgnoreCase(outerName+"21"))
+						{
+							outer2.setValstr(objValue.toString());
+						}
+						else
+				{
+					
+				entryName = columnName;
+
+				if (objValue == null)
+					objValue = "";
+
+				valstr = objValue.toString();
+
+				inner = new MovilizerGenericDataContainerEntry();
+				inner.setName(entryName);
+				inner.setValstr(valstr);
+				outer2.addEntry(inner);
+				outer1.addEntry(outer2);
+				outer.addEntry(outer1);
+				}
+			}
+
+		}
+
+		attributeData.addEntry(outer);
+		
+		rowLink = null;
+		inner = null;
+		outer = null;
+		outer1=null;
+		outer2=null;
+		
+		
+	}
+	
+	public static void populateAttributeDataContainerEntryParentNode()
+			throws IllegalArgumentException, IllegalAccessException {
+
+		
+		if(attributeData != null){
+			attributeUpdate.setEntry(attributeData);
+		}
+		//attributeData.getEntryList();
+		masterdataAttributeUpdate.addAttributeUpdate(attributeUpdate);
+		
+		
+	}
+
+	
+
+
+	
+	public static void populateDataContainerEntryChildNode(Object rowLink)
+			throws IllegalArgumentException, IllegalAccessException {
+
+		String entryName = "";
+		String valstr = "";
+		String outerName = "";
+		Object objValue;
+		
+		
+		MovilizerGenericDataContainerEntry outer = new MovilizerGenericDataContainerEntry();
+	
+		MovilizerGenericDataContainerEntry inner;
+		// data = createMovilizerGenericDataContainerObject();
+		
+		outerName = rowLink.getClass().getSimpleName().replace("Struct", "");
+		// System.out.println(outerName);
+		
+		if(parentOuter == null || !parentOuter.getName().equalsIgnoreCase(outerName)				)
+			
+		{
+			parentOuter = createMovilizerGenericDataContainerEntry();
+			parentOuter.setName(outerName);
+		}
+
+
+		String columnName = null;
+		for (java.lang.reflect.Field field : rowLink.getClass()
+				.getDeclaredFields()) {
+			columnName = field.getName();
+			//System.out.println(columnName);
+			
+			
+
+			if (!(columnName.contains("RmExport_010")||columnName.contains("NavExport_010")))
+
+			{
+				
+				objValue = field.get(rowLink);
+				
+				if(columnName.equalsIgnoreCase(outerName))
+					outer.setName(objValue.toString());
+				else
+				{
+				entryName = columnName;
+
+				if (objValue == null)
+					objValue = "";
+
+				valstr = objValue.toString();
+
+				inner = new MovilizerGenericDataContainerEntry();
+				inner.setName(entryName);
+				inner.setValstr(valstr);
+				outer.addEntry(inner);
+				}
+			}
+
+		}
+
+		parentOuter.addEntry(outer);
+		
+		rowLink = null;
+		inner = null;
+		outer = null;
+		
+	}
+	
+	public static void populateDataContainerEntryChildNodeToChildNode(Object rowLink)
+			throws IllegalArgumentException, IllegalAccessException {
+
+		String entryName = "";
+		String valstr = "";
+		String outerName = "";
+		Object objValue;
+		
+		MovilizerGenericDataContainerEntry outer = new MovilizerGenericDataContainerEntry();
+		MovilizerGenericDataContainerEntry outer1 = new MovilizerGenericDataContainerEntry();
+	
+		MovilizerGenericDataContainerEntry inner;
+		// data = createMovilizerGenericDataContainerObject();
+
+		outerName = rowLink.getClass().getSimpleName().replace("Struct", "");
+		// System.out.println(outerName);
+		
+		if(parentOuter == null || !parentOuter.getName().equalsIgnoreCase(outerName)				)
+			
+		{
+			parentOuter = createMovilizerGenericDataContainerEntry();
+			//parentOuter.setName(outerName);
+		}
+
+
+		String columnName = null;
+		for (java.lang.reflect.Field field : rowLink.getClass()
+				.getDeclaredFields()) {
+			columnName = field.getName();
+			//System.out.println(columnName);
+			
+			
+
+			if (!(columnName.contains("RmExport_010")||columnName.contains("NavExport_010")))
+
+			{
+				
+				objValue = field.get(rowLink);
+				if(columnName.equalsIgnoreCase(outerName))
+					parentOuter.setName(objValue.toString());
+				else if(columnName.equalsIgnoreCase(outerName+"1"))
+					outer.setName(objValue.toString());
+				else
+				{
+				entryName = columnName;
+
+				if (objValue == null)
+					objValue = "";
+
+				valstr = objValue.toString();
+
+				inner = new MovilizerGenericDataContainerEntry();
+				inner.setName(entryName);
+				inner.setValstr(valstr);
+				outer.addEntry(inner);
+				}
+			}
+
+		}
+
+		parentOuter.addEntry(outer);
+		
+		rowLink = null;
+		inner = null;
+		outer = null;
+		
+	}
+	
+	public static void populateDataContainerEntryChildNode_Message(Object rowLink)
+			throws IllegalArgumentException, IllegalAccessException {
+
+		String entryName = "";
+		String valstr = "";
+		String outerName = "";
+		//String outerName1 = "";
+		Object objValue;
+		
+		MovilizerGenericDataContainerEntry outer1 = new MovilizerGenericDataContainerEntry();
+	
+		MovilizerGenericDataContainerEntry inner;
+		// data = createMovilizerGenericDataContainerObject();
+
+		outerName = rowLink.getClass().getSimpleName().replace("Struct", "");
+		//outerName1 = outerName+"1";
+//		 System.out.println("OuterName : " + outerName + " END");
+		if(parentOuter != null)
+			//System.out.println("ParentOuter : " + parentOuter.getName() + " END");
+		
+		if(parentOuter == null ) {
+			parentOuter = createMovilizerGenericDataContainerEntry();
+		}
+
+		String columnName = null;
+		for (java.lang.reflect.Field field : rowLink.getClass().getDeclaredFields()) {
+			columnName = field.getName();
+
+			if (!(columnName.contains("RmExport_010")||columnName.contains("NavExport_010"))) {
+				
+				objValue = field.get(rowLink);
+				
+				if(columnName.equalsIgnoreCase(outerName))
+					parentOuter.setName(objValue.toString());
+				else {
+						
+						//if(columnName.equalsIgnoreCase(outerName1)) {
+							//outer1.setName(objValue.toString());
+						//} else {
+							entryName = columnName;
+							if (objValue == null)
+								objValue = "";
+							valstr = objValue.toString();
+							inner = new MovilizerGenericDataContainerEntry();
+							inner.setName(entryName);
+							inner.setValstr(valstr);
+							outer1.addEntry(inner);
+								
+						//}
+				}
+			}
+			
+		}
+		if(hmITM.get(parentOuter.getName().toString())== null)
+		{
+			hmITM.put(parentOuter.getName().toString(), parentOuter);
+//			System.out.println("Unique Date = "+outer.getName().toString()+" "+hmITM.size());
+			parentOuter.addEntry(outer1);
+			
+		}
+		else{
+			parentOuter = (MovilizerGenericDataContainerEntry)hmITM.get(parentOuter.getName().toString());
+//			System.out.println("Not Unique Date = "+outer.getName().toString());
+			parentOuter.addEntry(outer1);
+		}
+		
+		rowLink = null;
+		inner = null;
+		
+		outer1 = null;
+	}
+	
+
+	
+	public static void populateDataContainerEntryChildNode_UserHeader(Object rowLink)
+			throws IllegalArgumentException, IllegalAccessException {
+
+		String entryName = "";
+		String valstr = "";
+		String outerName = "";
+		Object objValue;
+		
+		
+		//MovilizerGenericDataContainerEntry outer = new MovilizerGenericDataContainerEntry();
+	
+		MovilizerGenericDataContainerEntry inner;
+		// data = createMovilizerGenericDataContainerObject();
+
+		outerName = rowLink.getClass().getSimpleName().replace("Struct", "");
+		// System.out.println(outerName);
+		
+		if(parentOuter == null || !parentOuter.getName().equalsIgnoreCase(outerName)				)
+			
+		{
+			parentOuter = createMovilizerGenericDataContainerEntry();
+			//parentOuter.setName(outerName);
+		}
+
+
+		String columnName = null;
+		for (java.lang.reflect.Field field : rowLink.getClass()
+				.getDeclaredFields()) {
+			columnName = field.getName();
+			//System.out.println(columnName);
+			
+			
+
+			if (!(columnName.contains("RmExport_010")||columnName.contains("NavExport_010")))
+
+			{
+				
+				objValue = field.get(rowLink);
+				
+				entryName = columnName;
+
+				if (objValue == null)
+					objValue = "";
+
+				valstr = objValue.toString();
+				
+				if(columnName.equalsIgnoreCase(outerName))
+					parentOuter.setName(valstr);
+				else{
+				inner = new MovilizerGenericDataContainerEntry();
+				inner.setName(entryName);
+				inner.setValstr(valstr);
+				parentOuter.addEntry(inner);
+				}
+			}
+
+		}
+
+		
+		rowLink = null;
+		inner = null;
+		
+	}
+
+	
+	public static void populateDataContainerEntryParentNode()
+			throws IllegalArgumentException, IllegalAccessException {
+
+		if(parentOuter != null){
+			data.addEntry(parentOuter);
+		}
+
+	parentOuter = null;
+	data.getEntryList();
+
+			
+	}
+	public static void populateDataContainerEntry_Product(Object rowLink)
+			throws IllegalArgumentException, IllegalAccessException {
+
+		String entryName = "";
+		String valstr = "";
+		//String outerName = "";
+		Object objValue;
+
+		MovilizerGenericDataContainerEntry outerMarm = new MovilizerGenericDataContainerEntry();
+		MovilizerGenericDataContainerEntry outerCS = new MovilizerGenericDataContainerEntry();
+		MovilizerGenericDataContainerEntry inner;
+		// data = createMovilizerGenericDataContainerObject();
+
+		
+		
+		String columnName = null;
+		for (java.lang.reflect.Field field : rowLink.getClass()
+				.getDeclaredFields()) {
+			columnName = field.getName();
+			//System.out.println(columnName);
+
+			if (!(columnName.contains("RmExport_010")||columnName.contains("NavExport_010")))
+
+			{
+
+				objValue = field.get(rowLink);
+				entryName = columnName;
+
+				if (objValue == null)
+					objValue = "";
+
+				valstr = objValue.toString();
+				if(columnName.equalsIgnoreCase("MARM")){
+					outerMarm.setName(entryName);
+					outerMarm.setName(entryName);
+					outerMarm.setValstr(valstr);
+					data.addEntry(outerMarm);
+				}
+				else if(columnName.equalsIgnoreCase("CS")){
+					outerCS.setName(entryName);
+					outerCS.setName(entryName);
+					outerCS.setValstr(valstr);
+					outerMarm.addEntry(outerCS);
+				}
+				else if(columnName.equalsIgnoreCase("DENOMINATOR") || columnName.equalsIgnoreCase("NOMINATOR")){
+					inner = new MovilizerGenericDataContainerEntry();
+					inner.setName(entryName);
+					inner.setValstr(valstr);
+				outerCS.addEntry(inner);
+					
+				}
+				else{
+				inner = new MovilizerGenericDataContainerEntry();
+				inner.setName(entryName);
+				inner.setValstr(valstr);
+				data.addEntry(inner);
+				}
+			}
+
+		}
+
+		if(parentOuter != null)
+			data.addEntry(parentOuter);
+		
+		parentOuter = null;
+		
+		data.getEntryList();
+		
+		rowLink = null;
+		inner = null;
+		//outer = null;
+	
+	}
+	public static void populateDataContainerEntryvalstr(Object rowLink)
+			throws IllegalArgumentException, IllegalAccessException {
+
+		String entryName = "";
+		String valstr = "";
+		String outerName = "";
+		Object objValue;
+
+		MovilizerGenericDataContainerEntry outer = new MovilizerGenericDataContainerEntry();
+		MovilizerGenericDataContainerEntry inner;
+		// data = createMovilizerGenericDataContainerObject();
+
+		outerName = rowLink.getClass().getSimpleName().replace("Struct", "");
+		// System.out.println(outerName);
+		outer.setName(outerName);
+		
+		String columnName = null;
+		for (java.lang.reflect.Field field : rowLink.getClass()
+				.getDeclaredFields()) {
+			columnName = field.getName();
+//			System.out.println(columnName);
+
+			if (!(columnName.contains("RmExport_010")||columnName.contains("NavExport_010")))
+
+			{
+
+				objValue = field.get(rowLink);
+				entryName = columnName;
+
+				if (objValue == null)
+					objValue = "";
+
+				valstr = objValue.toString();
+
+				//inner = new MovilizerGenericDataContainerEntry();
+				//inner.setName(entryName);
+				outer.setValstr(valstr);
+				//outer.addEntry(inner);
+			}
+
+		}
+
+		
+		
+		
+		data.addEntry(outer);
+		
+		if(parentOuter != null)
+			data.addEntry(parentOuter);
+		
+		parentOuter = null;
+		
+		data.getEntryList();
+		
+		rowLink = null;
+		inner = null;
+		outer = null;
+	
+	}
+	
+	public static void populateDataContainerEntry(Object rowLink)
+			throws IllegalArgumentException, IllegalAccessException {
+
+		String entryName = "";
+		String valstr = "";
+		String outerName = "";
+		Object objValue;
+
+		MovilizerGenericDataContainerEntry outer = new MovilizerGenericDataContainerEntry();
+		MovilizerGenericDataContainerEntry inner;
+		// data = createMovilizerGenericDataContainerObject();
+
+		outerName = rowLink.getClass().getSimpleName().replace("Struct", "");
+		// System.out.println(outerName);
+		outer.setName(outerName);
+		
+		String columnName = null;
+		for (java.lang.reflect.Field field : rowLink.getClass()
+				.getDeclaredFields()) {
+			columnName = field.getName();
+//			System.out.println(columnName);
+
+			if (!(columnName.contains("RmExport_010")||columnName.contains("NavExport_010")))
+
+			{
+
+				objValue = field.get(rowLink);
+				entryName = columnName;
+
+				if (objValue == null)
+					objValue = "";
+
+				valstr = objValue.toString();
+
+				inner = new MovilizerGenericDataContainerEntry();
+				inner.setName(entryName);
+				inner.setValstr(valstr);
+				outer.addEntry(inner);
+			}
+
+		}
+
+		
+		
+		
+		data.addEntry(outer);
+		
+		if(parentOuter != null)
+			data.addEntry(parentOuter);
+		
+		parentOuter = null;
+		
+		data.getEntryList();
+		
+		rowLink = null;
+		inner = null;
+		outer = null;
+	
+	}
+
+		
+	public static void populateDataContainerEntry_No_Header(Object rowLink)
+			throws IllegalArgumentException, IllegalAccessException {
+
+		String entryName = "";
+		String valstr = "";
+		//String outerName = "";
+		Object objValue;
+
+		//MovilizerGenericDataContainerEntry outer = new MovilizerGenericDataContainerEntry();
+		MovilizerGenericDataContainerEntry inner;
+		// data = createMovilizerGenericDataContainerObject();
+
+		
+		
+		String columnName = null;
+		for (java.lang.reflect.Field field : rowLink.getClass()
+				.getDeclaredFields()) {
+			columnName = field.getName();
+			//System.out.println(columnName);
+
+			if (!(columnName.contains("RmExport_010")||columnName.contains("NavExport_010")))
+
+			{
+
+				objValue = field.get(rowLink);
+				entryName = columnName;
+
+				if (objValue == null)
+					objValue = "";
+
+				valstr = objValue.toString();
+
+				inner = new MovilizerGenericDataContainerEntry();
+				inner.setName(entryName);
+				inner.setValstr(valstr);
+				data.addEntry(inner);
+			}
+
+		}
+
+		if(parentOuter != null)
+			data.addEntry(parentOuter);
+		
+		parentOuter = null;
+		
+		data.getEntryList();
+		
+		rowLink = null;
+		inner = null;
+		//outer = null;
+	
+	}
+	
+		
+	public static void populateUpdateContainerEntry()
+	{
+		masterdataUpdate.setData(data);
+
+		masterdataPoolUpdate.addUpdate(masterdataUpdate);
+	}
+	
+	public static void populateUpdateContainerEntryBalFwd()
+	{
+		
+		data.clearEntryList();
+		masterdataUpdate.setData(data);
+		
+		masterdataPoolUpdate.addUpdate(masterdataUpdate);
+	}
+
+	public static String sendMasterData(String movilizerURL, int movilizerVersion) throws MovilizerJaxbException,
+			IOException, WsException {
+
+		String responseXML = "";
+	//	System.out.println("*****"+masterdataPoolUpdate.getPool());
+		movilizerRequest.addMasterdataPoolUpdate(masterdataPoolUpdate);
+
+		MovilizerRequest request = (MovilizerRequest) requestBuilder
+				.getRequestObject();
+
+		//System.out.println(jaxbDAO.generateXML(request));
+
+		SoapClient soapClient = jaxbDAO.createWebServiceDispatcher(
+			movilizerURL, movilizerVersion);  // UAT url
+				 // "https://demo.movilizer.com/mds/WebService/", 14);    // demo url
+		MovilizerResponse response = (MovilizerResponse) soapClient
+				.call(request);
+		responseXML =jaxbDAO.generateXML(response);/**/
+		//System.out.println(responseXML);
+		
+		movilizerRequest=null;
+		requestBuilder=null;
+		masterdataPoolUpdate=null;
+		masterdataAttributeUpdate = null;
+		
+		movilizerRequest = createMovilizerRequestObject();
+		requestBuilder = createMovilizerRequestBuilderObject();
+		masterdataPoolUpdate= createMovilizerMasterdataPoolUpdateObject();
+		masterdataAttributeUpdate = createMovilizerMasterdataAttributeUpdateObject();
+		return responseXML;
+		
+		
+
+	}
+	
+	
+
+	public static void linkNamePrint(Object outC)
+
+	{
+		//System.out.println(outC);
+	}
+	
+	public static MovilizerGenericDataContainerEntry createMovilizerGenericDataContainerEntry() {
+		
+		MovilizerGenericDataContainerEntry parentOuter = new MovilizerGenericDataContainerEntry();
+		
+		return parentOuter;
+	}
+
+	public static MovilizerGenericDataContainer createMovilizerGenericDataContainerObject()
+
+	{
+
+		MovilizerGenericDataContainer data = new MovilizerGenericDataContainer();
+
+		return data;
+
+	}
+	
+
+	public static MovilizerGenericDataContainerEntry createMovilizerGenericDataContainerEntryObject()
+
+	{
+
+		MovilizerGenericDataContainerEntry entry = new MovilizerGenericDataContainerEntry();
+
+		return entry;
+
+	}
+
+	public static MovilizerRequest createMovilizerRequestObject()
+
+	{
+
+		MovilizerRequest movilizerRequest = new MovilizerRequest();
+
+		return movilizerRequest;
+	}
+
+	public static MovilizerRequestBuilder createMovilizerRequestBuilderObject()
+
+	{
+		MovilizerRequestBuilder requestBuilder = new MovilizerRequestBuilder(
+				movilizerRequest);
+
+		return requestBuilder;
+	}
+
+	public static MovilizerMasterdataPoolUpdate createMovilizerMasterdataPoolUpdateObject()
+
+	{
+		MovilizerMasterdataPoolUpdate masterdataPoolUpdate = new MovilizerMasterdataPoolUpdate();
+
+		return masterdataPoolUpdate;
+	}
+	
+	private static MovilizerMasterdataAttributeUpdate createMovilizerMasterdataAttributeUpdateObject() {
+		MovilizerMasterdataAttributeUpdate masterdataAttributeUpdate = new MovilizerMasterdataAttributeUpdate();
+
+		return masterdataAttributeUpdate;
+		
+	}
+
+	public static MovilizerMasterdataUpdate createMovilizerMasterdataUpdateObject()
+
+	{
+
+		MovilizerMasterdataUpdate masterdataUpdate = new MovilizerMasterdataUpdate();
+
+		return masterdataUpdate;
+	}
+	public static MovilizerAttributeEntry createMovilizerAttributeEntryObject(){
+		MovilizerAttributeEntry attributeUpdate = new MovilizerAttributeEntry();
+		return attributeUpdate;
+	}
+
+	public static void extractMetaColumns(Object rowLink) {
+
+		String entryName = "";
+		String valstr = "";
+		String outerName = "";
+
+		MovilizerGenericDataContainerEntry outer = new MovilizerGenericDataContainerEntry();
+		MovilizerGenericDataContainerEntry inner = new MovilizerGenericDataContainerEntry();
+		// data = createMovilizerGenericDataContainerObject();
+
+		outerName = rowLink.getClass().getSimpleName().replace("Struct", "");
+		// System.out.println(outerName);
+		outer.setName(outerName);
+
+		String columnName = null;
+		for (java.lang.reflect.Field field : rowLink.getClass()
+				.getDeclaredFields()) {
+			columnName = field.getName().toLowerCase();
+			Object objValue;
+			try {
+				objValue = field.get(rowLink);
+
+				if (!(columnName.contains("RmExport_010")||columnName.contains("NavExport_010")))
+
+				{
+
+					entryName = columnName;
+
+					if (objValue == null)
+						objValue = "";
+
+					valstr = objValue.toString();
+
+					inner.setName(entryName);
+					inner.setValstr(valstr);
+					outer.addEntry(inner);
+				}
+
+			} catch (IllegalArgumentException e) {
+				// TODO Auto-generated catch block
+				// e.printStackTrace();
+			} catch (IllegalAccessException e) {
+				// TODO Auto-generated catch block
+				// e.printStackTrace();
+			}
+		}
+
+		data.addEntry(outer);
+		data.getEntryList();
+
+	}
+
+	public static void resetObjects()
+
+	{
+
+		
+		//masterdataPoolUpdate = null;
+		masterdataUpdate = null;
+		data = null;
+		jaxbDAO = null;
+		parentOuter = null;
+		attributeUpdate=null;
+		attributeData = null;
+	}
+	public static void resetObjects_NotData()
+
+	{
+
+		
+		//masterdataPoolUpdate = null;
+		masterdataUpdate = null;
+//		data = null;
+		jaxbDAO = null;
+		parentOuter = null;
+		attributeUpdate=null;
+		attributeData = null;
+	}	
+	/////////////////////////////original
+	/*
+	public static void startServer()
+    {
+        String ackKey = null;
+        while (true)
+        {
+            System.out.println("Polling run started.........");
+            try
+            {
+                Thread.sleep(2000L);
+            }
+            catch (final InterruptedException e1)
+            {
+                e1.printStackTrace();
+            }
+
+            final MovilizerResponse response = fireEmptyRequest(ackKey);//new  MovilizerResponse()   ;//fireEmptyRequest(ackKey);
+
+            ackKey = response.getRequestAcknowledgeKey();
+            System.out.println("ack Key"+ackKey);
+            final List<MovilizerUploadDataContainer> containerList = response.getUploadContainerList();
+            final long currentTime = System.currentTimeMillis();
+            PrintWriter writer;
+            final int numResp = 0;
+
+            final List<MovilizerMasterdataAck> mdAckList = response.getMasterdataAckList();
+
+            if (containerList != null)
+            {
+                for (final MovilizerUploadDataContainer container : containerList)
+                {
+                    //File file = new File("./responses/containers/Response"+currentTime+"-"+numResp+".xml", "UTF-8");
+                    //final File file = new File("D:\\Movilizer\\" + currentTime + "-" + numResp + ".xml");
+                	System.out.println("Show_Name "+container.getContainer().getData().getEntry(0).getName());
+                	final File file = new File("D:\\Movilizer\\" + currentTime + "-" + numResp + ".xml");
+                    System.out.println("Absolute path:" + file.getAbsolutePath());
+                    if (!file.exists())
+                    {
+                        try
+                        {
+                            if (file.createNewFile())
+                            {
+                                writer = new PrintWriter(file);
+                                writer.write(jaxbDAO.generateXML(container));
+                                writer.close();
+                            }
+                            System.out.println("Wrote container");
+                        }
+                        catch (final IOException e)
+                        {
+                            e.printStackTrace();
+                            ackKey = null;
+                        }
+                        catch (final MovilizerJaxbException e)
+                        {
+                            e.printStackTrace();
+                            ackKey = null;
+                        }
+                    }
+                }
+            }
+            else{ System.out.println("Container is null");}
+
+            if (mdAckList != null)
+            {
+                final File file = new File("D:\\Movilizer\\" + currentTime + "-" + numResp + ".txt");
+                if (!file.exists())
+                {
+                    try
+                    {
+                        if (file.createNewFile())
+                        {
+                            writer = new PrintWriter(file);
+                            for (final MovilizerMasterdataAck ack : mdAckList)
+                            {
+                                writer.write(ack.getPool() + "-" + ack.getGroup() + "-" + ack.getKey() + "\n");
+                            }
+                            writer.close();
+                        }
+                    }
+                    catch (final IOException e)
+                    {
+                        e.printStackTrace();
+                    }
+                }
+                System.out.println("Wrote ack");
+            }
+            else{System.out.println("mdAckList is null");}
+            
+        }
+    }
+	
+	private static MovilizerResponse fireEmptyRequest(String ackKey)
+    {
+        try
+        {
+            final MovilizerRequest movilizerRequest = new MovilizerRequest();
+            movilizerRequest.setSystemId(SYSTEM_ID);
+            movilizerRequest.setSystemPassword(SYSTEM_PASSWORD);
+            if (ackKey != null)
+            {
+                movilizerRequest.setRequestAcknowledgeKey(ackKey);
+            }
+            movilizerRequest.setNumResponses(new Integer(100));
+
+            final MovilizerRequestBuilder requestBuilder = new MovilizerRequestBuilder(movilizerRequest);
+
+            final MovilizerRequest request = (MovilizerRequest) requestBuilder.getRequestObject();
+            System.out.println(jaxbDAO.generateXML(request));
+
+            final SoapClient soapClient = jaxbDAO.createWebServiceDispatcher("http://demo.movilizer.com/mds/WebService/", 14);
+            final MovilizerResponse response = (MovilizerResponse) soapClient.call(request);
+
+            System.out.println("Receiving-->" + jaxbDAO.generateXML(response));
+
+            return response;
+        }
+        catch (final MovilizerJaxbException e)
+        {
+            e.printStackTrace();
+        }
+        catch (final Exception e)
+        {
+            e.printStackTrace();
+        }
+
+        return null;
+    }
+	*/
+	///////////////////////////////////////Duplicate
+
+    public static void startServer()
+    {
+        String ackKey = null;
+        while (true)
+        {
+            System.out.println("Polling run started.........");
+            try
+            {
+                Thread.sleep(2000L);
+            }
+            catch (final InterruptedException e1)
+            {
+                e1.printStackTrace();
+            }
+
+            final MovilizerResponse response = fireEmptyRequest(ackKey);
+
+            ackKey = response.getRequestAcknowledgeKey();
+
+            final List<MovilizerUploadDataContainer> containerList = response.getUploadContainerList();
+            final long currentTime = System.currentTimeMillis();
+            PrintWriter writer;
+            final int numResp = 0;
+
+            final List<MovilizerMasterdataAck> mdAckList = response.getMasterdataAckList();
+
+            if (containerList != null)
+            {
+                for (final MovilizerUploadDataContainer container : containerList)
+                {
+                    //File file = new File("./responses/containers/Response"+currentTime+"-"+numResp+".xml", "UTF-8");
+                    final File file = new File("C:\\MovilizerResponse\\" + currentTime + "-" + numResp + ".xml");
+                   // System.out.println("Absolute path:" + file.getAbsolutePath());
+                    if (!file.exists())
+                    {
+                        try
+                        {
+                            if (file.createNewFile())
+                            {
+                                writer = new PrintWriter(file);
+                                writer.write(jaxbDAO.generateXML(container));
+                                writer.close();
+                            }
+                            //System.out.println("Wrote container");
+                        }
+                        catch (final IOException e)
+                        {
+                            e.printStackTrace();
+                            ackKey = null;
+                        }
+                        catch (final MovilizerJaxbException e)
+                        {
+                            e.printStackTrace();
+                            ackKey = null;
+                        }
+                    }
+                }
+            }
+
+            if (mdAckList != null)
+            {
+                final File file = new File("C:\\MovilizerResponse\\" + currentTime + "-" + numResp + ".txt");
+                if (!file.exists())
+                {
+                    try
+                    {
+                        if (file.createNewFile())
+                        {
+                            writer = new PrintWriter(file);
+                            for (final MovilizerMasterdataAck ack : mdAckList)
+                            {
+                                writer.write(ack.getPool() + "-" + ack.getGroup() + "-" + ack.getKey() + "\n");
+                            }
+                            writer.close();
+                        }
+                    }
+                    catch (final IOException e)
+                    {
+                        e.printStackTrace();
+                    }
+                }
+               // System.out.println("Wrote ack");
+            }
+        }
+    }
+
+    private static MovilizerResponse fireEmptyRequest(String ackKey)
+    {
+        try
+        {
+            final MovilizerRequest movilizerRequest = new MovilizerRequest();
+            movilizerRequest.setSystemId(SYSTEM_ID);
+            movilizerRequest.setSystemPassword(SYSTEM_PASSWORD);
+            if (ackKey != null)
+            {
+                movilizerRequest.setRequestAcknowledgeKey(ackKey);
+            }
+            movilizerRequest.setNumResponses(new Integer(100));
+            final MovilizerRequestBuilder requestBuilder = new MovilizerRequestBuilder(movilizerRequest);
+
+            final MovilizerRequest request = (MovilizerRequest) requestBuilder.getRequestObject();
+           // System.out.println(jaxbDAO.generateXML(request));
+
+            final SoapClient soapClient = jaxbDAO.createWebServiceDispatcher("http://dsd-test.movilizer.com/", 14);
+            final MovilizerResponse response = (MovilizerResponse) soapClient.call(request);
+
+        //    System.out.println("Receiving-->" + jaxbDAO.generateXML(response));
+
+            return response;
+        }
+        catch (final MovilizerJaxbException e)
+        {
+            e.printStackTrace();
+        }
+        catch (final Exception e)
+        {
+            e.printStackTrace();
+        }
+
+        return null;
+    }
+
+
+    public static void sendMovelet()
+    {
+        try
+        {
+            final JaxbDAOMovilizerImpl jaxbDAO = new JaxbDAOMovilizerImpl();//("http://movilitas.com/movilizer/v14");
+
+            final MovilizerRequest movilizerRequest = new MovilizerRequest();
+            movilizerRequest.setSystemId(SYSTEM_ID);
+            movilizerRequest.setSystemPassword(SYSTEM_PASSWORD);
+            movilizerRequest.setSynchronousResponse(true);
+            movilizerRequest.setNumResponses(new Integer(100));
+
+            final MovilizerRequestBuilder requestBuilder = new MovilizerRequestBuilder(movilizerRequest);
+
+            final MovilizerMoveletSet moveletSet = new MovilizerMoveletSet();
+            
+            final MoveletType moveletType = MoveletType.SINGLE;
+
+            final MovilizerMovelet movelet = new MovilizerMovelet();
+            movelet.setMoveletKey("MyMoveletKey");
+            movelet.setMoveletType(moveletType);
+            movelet.setName("MyMovelet");
+            movelet.setInitialQuestionKey("Q1");;
+
+            final MovilizerQuestion question = new MovilizerQuestion();
+            movelet.addQuestion(question);
+            question.setKey("Q1");
+            question.setType(SyncConstants.QTYPE_MESSAGE);
+            question.setTitle("MyMessageScreen");
+
+            final MovilizerAnswer answer = new MovilizerAnswer();
+            question.addAnswer(answer);
+            answer.setKey("Q1_A1");
+            answer.setText("MyMessage");
+            answer.setNextQuestionKey(MoveletConstants.QNUM_END);
+
+            final MovilizerParticipant participant = new MovilizerParticipant();
+            participant.setDeviceAddress("@ulf@movilizer.com");
+            participant.setParticipantKey("");
+            participant.setName("ulf");
+
+            moveletSet.addMovelet(movelet);
+            moveletSet.addParticipant(participant);
+            movilizerRequest.addMoveletSet(moveletSet);
+
+            final MovilizerRequest request = (MovilizerRequest) requestBuilder.getRequestObject();
+            //System.out.println(jaxbDAO.generateXML(request));
+
+            final SoapClient soapClient = jaxbDAO.createWebServiceDispatcher("http://dsd-test.movilizer.com/", 14);//"https://d.movilizer.com/mds/WebService/", 14);
+            final MovilizerResponse response = (MovilizerResponse) soapClient.call(request);
+            //System.out.println(jaxbDAO.generateXML(response));
+        }
+        catch (final MovilizerJaxbException e)
+        {
+            e.printStackTrace();
+        }
+        catch (final Exception e)
+        {
+            e.printStackTrace();
+        }
+    }
+//
+//    private static void deleteMovelet()
+//    {
+//        try
+//        {
+//            final JaxbDAOMovilizerImpl jaxbDAO = new JaxbDAOMovilizerImpl("http://d.movilitas.com/movilizer/v14");
+//
+//            final MovilizerRequest movilizerRequest = new MovilizerRequest();
+//            movilizerRequest.setSystemId(SYSTEM_ID);
+//            movilizerRequest.setSystemPassword(SYSTEM_PASSWORD);
+//            movilizerRequest.setSynchronousResponse(true);
+//            movilizerRequest.setNumResponses(new Integer(100));
+//
+//            final MovilizerMoveletDelete moveletDelete = new MovilizerMoveletDelete();
+//            moveletDelete.setMoveletKey("MyMoveletKey");
+//
+//            movilizerRequest.addMoveletDelete(moveletDelete);
+//
+//            final MovilizerWebServiceV14 movilizerWebServiceV14 = getMovilizerWebServiceV14();
+//            final MovilizerResponse response = movilizerWebServiceV14.movilizer(movilizerRequest);
+//            System.out.println(jaxbDAO.generateXML(response));
+//        }
+//        catch (final MovilizerJaxbException e)
+//        {
+//            e.printStackTrace();
+//        }
+//        catch (final Exception e)
+//        {
+//            e.printStackTrace();
+//        }
+//    }
+//
+//    private static MovilizerWebServiceV14 getMovilizerWebServiceV14() throws Exception
+//    {
+//        final String wsdlLocation = new File(".").getCanonicalPath().concat(File.separator).concat("res").concat(File.separator).concat("V14DEMO.wsdl");
+//
+//        return new MovilizerWebServiceV14Service(new URL("file://" + wsdlLocation)).getMovilizerWebServiceV14Soap11();
+//
+//    }
+
+	
+}

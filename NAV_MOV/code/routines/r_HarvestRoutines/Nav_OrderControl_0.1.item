@@ -1,0 +1,695 @@
+package routines;
+import java.io.File;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Locale;
+
+import com.movilitas.builder.MovilizerRequestBuilder;
+import com.movilitas.jaxbframework.dataaccess.jaxb.impl.JaxbDAOMovilizerImpl;
+import com.movilitas.jaxbframework.dataaccess.jaxb.v14.MovilizerAttributeEntry;
+import com.movilitas.jaxbframework.dataaccess.jaxb.v14.MovilizerGenericDataContainer;
+import com.movilitas.jaxbframework.dataaccess.jaxb.v14.MovilizerGenericDataContainerEntry;
+import com.movilitas.jaxbframework.dataaccess.jaxb.v14.MovilizerMasterdataAttributeUpdate;
+import com.movilitas.jaxbframework.dataaccess.jaxb.v14.MovilizerMasterdataPoolUpdate;
+import com.movilitas.jaxbframework.dataaccess.jaxb.v14.MovilizerMasterdataUpdate;
+import com.movilitas.jaxbframework.dataaccess.jaxb.v14.MovilizerRequest;
+
+import java.beans.Introspector;
+
+
+
+import java.io.File;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.lang.reflect.Field;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.apache.commons.beanutils.BeanUtils;
+import org.apache.commons.beanutils.PropertyUtils;
+import org.jibx.ws.WsException;
+import org.jibx.ws.soap.client.SoapClient;
+
+import com.movilitas.builder.MovilizerRequestBuilder;
+import com.movilitas.jaxbframework.MovilizerJaxbException;
+import com.movilitas.jaxbframework.dataaccess.jaxb.impl.JaxbDAOMovilizerImpl;
+import com.movilitas.jaxbframework.dataaccess.jaxb.v14.MovilizerAttributeEntry;
+import com.movilitas.jaxbframework.dataaccess.jaxb.v14.MovilizerGenericDataContainer;
+import com.movilitas.jaxbframework.dataaccess.jaxb.v14.MovilizerGenericDataContainerEntry;
+import com.movilitas.jaxbframework.dataaccess.jaxb.v14.MovilizerMasterdataAck;
+import com.movilitas.jaxbframework.dataaccess.jaxb.v14.MovilizerMasterdataAttributeUpdate;
+import com.movilitas.jaxbframework.dataaccess.jaxb.v14.MovilizerMasterdataPoolUpdate;
+import com.movilitas.jaxbframework.dataaccess.jaxb.v14.MovilizerMasterdataUpdate;
+import com.movilitas.jaxbframework.dataaccess.jaxb.v14.MovilizerRequest;
+import com.movilitas.jaxbframework.dataaccess.jaxb.v14.MovilizerResponse;
+import com.movilitas.jaxbframework.dataaccess.jaxb.v14.MovilizerUploadDataContainer;
+import com.movilitas.sync.SyncConstants;
+import com.movilitas.jaxbframework.dataaccess.jaxb.v14.MoveletType;
+import com.movilitas.jaxbframework.dataaccess.jaxb.v14.MovilizerAnswer;
+import com.movilitas.jaxbframework.dataaccess.jaxb.v14.MovilizerMovelet;
+import com.movilitas.jaxbframework.dataaccess.jaxb.v14.MovilizerMoveletSet;
+import com.movilitas.jaxbframework.dataaccess.jaxb.v14.MovilizerParticipant;
+import com.movilitas.jaxbframework.dataaccess.jaxb.v14.MoveletConstants;
+import com.movilitas.jaxbframework.dataaccess.jaxb.v14.MovilizerQuestion;
+
+public class Nav_OrderControl {
+
+    
+	public static int SYSTEM_ID = 51840021;
+	public static String SYSTEM_PASSWORD = "peterson";
+	public static JaxbDAOMovilizerImpl jaxbDAO ;
+	public static MovilizerGenericDataContainer data;
+	public static MovilizerGenericDataContainer attributeData;
+	public static MovilizerRequest movilizerRequest = createMovilizerRequestObject();
+	public static MovilizerRequestBuilder requestBuilder = createMovilizerRequestBuilderObject();
+	public static MovilizerMasterdataPoolUpdate masterdataPoolUpdate= createMovilizerMasterdataPoolUpdateObject();
+	public static MovilizerMasterdataAttributeUpdate masterdataAttributeUpdate= createMovilizerMasterdataAttributeUpdateObject();
+	public static MovilizerMasterdataUpdate masterdataUpdate;
+	public static MovilizerAttributeEntry attributeUpdate;
+	public static MovilizerGenericDataContainerEntry parentOuter;	
+	public static java.util.HashMap hmcount = new java.util.HashMap();
+	public static java.util.HashMap hmITM = new java.util.HashMap();
+	
+	
+public static int getDOWforDate(String dateInString) throws ParseException{
+		
+		DateFormat format = new SimpleDateFormat("yyyyMMdd", Locale.ENGLISH);
+		Date dt = format.parse(dateInString);
+		Calendar cal=Calendar.getInstance();
+		cal.setTime(dt);
+		int dow = cal.get(Calendar.DAY_OF_WEEK);
+		return dow;
+		
+	    
+	    	
+	}
+public static String GetDOWWord(int dow) throws ParseException{
+	String fCode1 = "";	
+	 
+	//System.out.println("this is incode: "+inCode);
+	 switch(dow)
+     {
+	 case 1:
+	   fCode1 = "SUN";
+	   break;
+	 case 2:
+		 fCode1 = "MON";
+	   break;
+	 case 3:
+		 fCode1 = "TUE";
+	   break;
+	 case 4:
+		 fCode1 = "WED";
+          break;
+	 case 5:
+		 fCode1 = "THU";
+	   break;
+	 case 6:
+		 fCode1 = "FRI";
+	   break;
+	 case 7:
+		 fCode1 = "SAT";
+          break;
+	 
+     }
+
+     
+    return fCode1;
+		 
+		
+	    
+	    	
+	}
+	
+public static String getFreezecode(String inCode,int dow) throws ParseException{
+	String fCode1 = "SMTWHFAPPQQVVBBXXYYZZ";	
+	 
+	//System.out.println("this is incode: "+inCode);
+	
+     for(int i=0; i<7; i++)
+     {
+    	 
+     	if(dow== 1) fCode1= fCode1.replace("S",inCode.substring(i, i+1));
+     	if(dow== 2) fCode1= fCode1.replace("M",inCode.substring(i, i+1));
+     	if(dow== 3) fCode1= fCode1.replace("T",inCode.substring(i, i+1));
+     	if(dow== 4) fCode1= fCode1.replace("W",inCode.substring(i, i+1));
+     	if(dow== 5) fCode1= fCode1.replace("H",inCode.substring(i, i+1));
+     	if(dow== 6) fCode1= fCode1.replace("F",inCode.substring(i, i+1));
+     	if(dow== 7) fCode1= fCode1.replace("A",inCode.substring(i, i+1));
+     	int offset = (i*2)+7 ;
+     	if(dow== 1) fCode1= fCode1.replace("PP",inCode.substring(offset,offset+2));
+     	if(dow== 2) fCode1= fCode1.replace("QQ",inCode.substring(offset,offset+2));
+     	if(dow== 3) fCode1= fCode1.replace("VV",inCode.substring(offset,offset+2));
+     	if(dow== 4) fCode1= fCode1.replace("BB",inCode.substring(offset,offset+2));
+     	if(dow== 5) fCode1= fCode1.replace("XX",inCode.substring(offset,offset+2));
+     	if(dow== 6) fCode1= fCode1.replace("YY",inCode.substring(offset,offset+2));
+     	if(dow== 7) fCode1= fCode1.replace("ZZ",inCode.substring(offset,offset+2));
+     	dow +=1;
+     	if(dow > 7) dow =1;
+     }
+    return fCode1;
+		 
+		
+	    
+	    	
+	}
+
+
+
+
+public static boolean Boolean_Convert_String(String Value){
+
+	 if (Value == null || Value.isEmpty() || Value.equalsIgnoreCase("N"))
+		 return false;
+	 else
+		 return true;
+		
+	}
+
+	public static boolean Boolean_Convert_Integer(Integer Value){
+		if (Value == null || Value ==0 )
+			 return false;
+		 else
+			 return true;
+		
+		
+	}
+
+	public static String generateErrorCode(String errorMessage) {
+	    	
+	    	String errorCode = "";
+	    		if (errorMessage == null)
+	    			errorCode = "0";
+	    		else
+	    			errorMessage = errorMessage.toLowerCase();
+	    		
+	    		if (errorMessage.contains("connection"))
+	    			errorCode = "399";
+	    		
+	    		else if (errorMessage.contains("sql"))
+	    			errorCode = "299";
+	    		else
+	    		if (errorMessage.contains("exceed max length"))
+					
+					errorCode="599";
+	    		else
+	    			if (errorMessage.contains("java"))
+	        			errorCode = "199";
+	    			else errorCode = "499";
+	    		 
+	    	return errorCode;
+	}
+		public static void createAllObjects() throws MovilizerJaxbException {
+		//	movilizerRequest = createMovilizerRequestObject();
+		//	requestBuilder = createMovilizerRequestBuilderObject();
+		//	masterdataPoolUpdate = createMovilizerMasterdataPoolUpdateObject();
+			masterdataUpdate = createMovilizerMasterdataUpdateObject();
+			masterdataAttributeUpdate = createMovilizerMasterdataAttributeUpdateObject();
+			attributeUpdate= createMovilizerAttributeEntryObject();
+			data = createMovilizerGenericDataContainerObject();
+			attributeData=createMovilizerGenericDataContainerObject();
+			jaxbDAO = new JaxbDAOMovilizerImpl();
+			
+		}
+		public static void createAllObjects_NotData() throws MovilizerJaxbException {
+			//	movilizerRequest = createMovilizerRequestObject();
+			//	requestBuilder = createMovilizerRequestBuilderObject();
+			//	masterdataPoolUpdate = createMovilizerMasterdataPoolUpdateObject();
+			masterdataAttributeUpdate = createMovilizerMasterdataAttributeUpdateObject();
+				masterdataUpdate = createMovilizerMasterdataUpdateObject();
+//				data = createMovilizerGenericDataContainerObject();
+				jaxbDAO = new JaxbDAOMovilizerImpl();
+				attributeUpdate= createMovilizerAttributeEntryObject();
+				attributeData=createMovilizerGenericDataContainerObject();
+				
+			}
+
+		
+		
+
+		public static void populateMasterdataPoolUpdate(Object rowLink)
+				throws MovilizerJaxbException, IllegalArgumentException,
+				IllegalAccessException, InvocationTargetException,
+				NoSuchMethodException {
+
+			String entryName = "";
+			String valstr = "";
+			String columnName = null;
+			Object objValue;
+
+			movilizerRequest.setSynchronousResponse(true);
+			movilizerRequest.setNumResponses(new Integer(100));
+
+			for (java.lang.reflect.Field field : rowLink.getClass()
+					.getDeclaredFields()) {
+				columnName = field.getName();
+
+				if (!(columnName.contains("RmExport_010")||columnName.contains("NavExport_010")))
+
+				{
+
+					objValue = field.get(rowLink);
+
+					entryName = columnName;
+
+					if (objValue == null)
+						objValue = "";
+
+					valstr = objValue.toString();
+					// System.out.println(entryName +"-"+valstr);
+
+					if (columnName.equalsIgnoreCase("SystemId")
+							|| columnName.equalsIgnoreCase("SystemPassword")) {
+
+						BeanUtils.setProperty(movilizerRequest,
+								uncapitalize(entryName), objValue);
+
+						// System.out.println("---"+BeanUtils.getProperty(movilizerRequest,uncapitalize(entryName)));
+
+					} else if (columnName.equalsIgnoreCase("Pool")) {
+						BeanUtils.setProperty(masterdataPoolUpdate,
+								uncapitalize(entryName), objValue);
+						// System.out.println("---"+BeanUtils.getProperty(masterdataPoolUpdate,uncapitalize(entryName)));
+					}
+
+					
+
+				}
+
+			}
+			
+			rowLink = null;
+
+		}
+		
+		
+
+		public static void populateMasterdataUpdate(Object rowLink)
+				throws MovilizerJaxbException, IllegalArgumentException,
+				IllegalAccessException, InvocationTargetException,
+				NoSuchMethodException {
+
+			String entryName = "";
+			String valstr = "";
+			String columnName = null;
+			Object objValue;
+
+			
+
+			for (java.lang.reflect.Field field : rowLink.getClass()
+					.getDeclaredFields()) {
+				columnName = field.getName();
+
+				if (!(columnName.contains("RmExport_010")||columnName.contains("NavExport_010")))
+
+				{
+
+					objValue = field.get(rowLink);
+
+					entryName = columnName;
+
+					if (objValue == null)
+						objValue = "";
+
+					valstr = objValue.toString();
+					// System.out.println(entryName +"-"+valstr);
+
+					
+						BeanUtils.setProperty(masterdataUpdate,
+								uncapitalize(entryName), objValue);
+						// System.out.println("---"+BeanUtils.getProperty(masterdataUpdate,uncapitalize(entryName)));
+					
+
+				}
+
+			}
+
+			rowLink = null;
+
+		}
+		
+		
+		
+		
+		
+
+		public static String uncapitalize(String string) {
+			return Character.toLowerCase(string.charAt(0)) + string.substring(1);
+		}
+		
+		public static void populateDataContainerEntryLoop(Object rowLink)
+				throws IllegalArgumentException, IllegalAccessException {
+
+			String entryName = "";
+			String valstr = "";
+			String outerName = "";
+			Object objValue;
+
+			MovilizerGenericDataContainerEntry outer;
+			MovilizerGenericDataContainerEntry inner;
+			// data = createMovilizerGenericDataContainerObject();
+
+			outerName = rowLink.getClass().getSimpleName().replace("Struct", "");
+			// System.out.println(outerName);
+			
+			for(int i=1; i<=14;i++)
+			{
+			
+			outer = new MovilizerGenericDataContainerEntry();
+			
+			String columnName = null;
+			for (java.lang.reflect.Field field : rowLink.getClass()
+					.getDeclaredFields()) {
+				columnName = field.getName();
+//				System.out.println(columnName);
+				
+
+				if (!(columnName.contains("RmExport_010")||columnName.contains("NavExport_010")) && columnName.endsWith("_"+i))
+
+				{
+					
+					objValue = field.get(rowLink);
+					entryName = columnName;
+
+					if (objValue == null)
+						objValue = "";
+
+					valstr = objValue.toString();
+					
+					if(entryName.contains("FILEDATE") && entryName.endsWith("_"+i))
+						{
+						outer.setName(valstr);
+						}
+					else if (entryName.endsWith("_"+i))
+					{
+					inner = new MovilizerGenericDataContainerEntry();
+					inner.setName(entryName.replace("_"+i,""));
+					inner.setValstr(valstr);
+					outer.addEntry(inner);
+					}
+				}
+
+			}
+
+			
+			
+			
+			data.addEntry(outer);
+			}
+			
+			if(parentOuter != null)
+				data.addEntry(parentOuter);
+			
+			parentOuter = null;
+			
+			data.getEntryList();
+			
+			
+			
+			rowLink = null;
+			inner = null;
+			outer = null;
+			
+		
+		}
+		
+		public static void populateDataContainerInnerEntry(Object rowLink)
+				throws IllegalArgumentException, IllegalAccessException {
+
+			String entryName = "";
+			String valstr = "";
+			
+			Object objValue;
+
+		
+			MovilizerGenericDataContainerEntry inner;
+			// data = createMovilizerGenericDataContainerObject();
+
+			String columnName = null;
+			for (java.lang.reflect.Field field : rowLink.getClass()
+					.getDeclaredFields()) {
+				columnName = field.getName();
+//				System.out.println(columnName);
+
+				if (!(columnName.contains("RmExport_010")||columnName.contains("NavExport_010")))
+
+				{
+
+					objValue = field.get(rowLink);
+					entryName = columnName;
+
+					if (objValue == null)
+						objValue = "";
+
+					valstr = objValue.toString();
+
+					inner = new MovilizerGenericDataContainerEntry();
+					inner.setName(entryName);
+					inner.setValstr(valstr);
+					data.addEntry(inner);
+				}
+
+			}
+
+			
+			
+			
+			
+			
+			
+			
+			data.getEntryList();
+			
+			rowLink = null;
+			inner = null;
+			
+		
+		}
+
+			
+		
+		
+			
+		public static void populateUpdateContainerEntry()
+		{
+			masterdataUpdate.setData(data);
+
+			masterdataPoolUpdate.addUpdate(masterdataUpdate);
+		}
+		
+		public static void populateUpdateContainerEntryBalFwd()
+		{
+			
+			data.clearEntryList();
+			masterdataUpdate.setData(data);
+			
+			masterdataPoolUpdate.addUpdate(masterdataUpdate);
+		}
+
+		public static String sendMasterData(String movilizerURL, int movilizerVersion) throws MovilizerJaxbException,
+				IOException, WsException {
+
+			String responseXML = "";
+			//System.out.println(masterdataPoolUpdate.getPool());
+			movilizerRequest.addMasterdataPoolUpdate(masterdataPoolUpdate);
+
+			MovilizerRequest request = (MovilizerRequest) requestBuilder
+					.getRequestObject();
+
+//			System.out.println(jaxbDAO.generateXML(request));
+
+			SoapClient soapClient = jaxbDAO.createWebServiceDispatcher(
+					movilizerURL, movilizerVersion);  // UAT url
+					 // "https://demo.movilizer.com/mds/WebService/", 14);    // demo url
+			MovilizerResponse response = (MovilizerResponse) soapClient
+					.call(request);
+			responseXML =jaxbDAO.generateXML(response);
+			/**/
+			//System.out.println(responseXML);
+			
+			movilizerRequest=null;
+			requestBuilder=null;
+			masterdataPoolUpdate=null;
+			masterdataAttributeUpdate = null;
+			
+			movilizerRequest = createMovilizerRequestObject();
+			requestBuilder = createMovilizerRequestBuilderObject();
+			masterdataPoolUpdate= createMovilizerMasterdataPoolUpdateObject();
+			masterdataAttributeUpdate = createMovilizerMasterdataAttributeUpdateObject();
+			return responseXML;
+			
+			
+
+		}
+		
+		
+
+		public static void linkNamePrint(Object outC)
+
+		{
+			//System.out.println(outC);
+		}
+		
+		public static MovilizerGenericDataContainerEntry createMovilizerGenericDataContainerEntry() {
+			
+			MovilizerGenericDataContainerEntry parentOuter = new MovilizerGenericDataContainerEntry();
+			
+			return parentOuter;
+		}
+
+		public static MovilizerGenericDataContainer createMovilizerGenericDataContainerObject()
+
+		{
+
+			MovilizerGenericDataContainer data = new MovilizerGenericDataContainer();
+
+			return data;
+
+		}
+		
+
+		public static MovilizerGenericDataContainerEntry createMovilizerGenericDataContainerEntryObject()
+
+		{
+
+			MovilizerGenericDataContainerEntry entry = new MovilizerGenericDataContainerEntry();
+
+			return entry;
+
+		}
+
+		public static MovilizerRequest createMovilizerRequestObject()
+
+		{
+
+			MovilizerRequest movilizerRequest = new MovilizerRequest();
+
+			return movilizerRequest;
+		}
+
+		public static MovilizerRequestBuilder createMovilizerRequestBuilderObject()
+
+		{
+			MovilizerRequestBuilder requestBuilder = new MovilizerRequestBuilder(
+					movilizerRequest);
+
+			return requestBuilder;
+		}
+
+		public static MovilizerMasterdataPoolUpdate createMovilizerMasterdataPoolUpdateObject()
+
+		{
+			MovilizerMasterdataPoolUpdate masterdataPoolUpdate = new MovilizerMasterdataPoolUpdate();
+
+			return masterdataPoolUpdate;
+		}
+		
+		private static MovilizerMasterdataAttributeUpdate createMovilizerMasterdataAttributeUpdateObject() {
+			MovilizerMasterdataAttributeUpdate masterdataAttributeUpdate = new MovilizerMasterdataAttributeUpdate();
+
+			return masterdataAttributeUpdate;
+			
+		}
+
+		public static MovilizerMasterdataUpdate createMovilizerMasterdataUpdateObject()
+
+		{
+
+			MovilizerMasterdataUpdate masterdataUpdate = new MovilizerMasterdataUpdate();
+
+			return masterdataUpdate;
+		}
+		public static MovilizerAttributeEntry createMovilizerAttributeEntryObject(){
+			MovilizerAttributeEntry attributeUpdate = new MovilizerAttributeEntry();
+			return attributeUpdate;
+		}
+
+		public static void extractMetaColumns(Object rowLink) {
+
+			String entryName = "";
+			String valstr = "";
+			String outerName = "";
+
+			MovilizerGenericDataContainerEntry outer = new MovilizerGenericDataContainerEntry();
+			MovilizerGenericDataContainerEntry inner = new MovilizerGenericDataContainerEntry();
+			// data = createMovilizerGenericDataContainerObject();
+
+			outerName = rowLink.getClass().getSimpleName().replace("Struct", "");
+			// System.out.println(outerName);
+			outer.setName(outerName);
+
+			String columnName = null;
+			for (java.lang.reflect.Field field : rowLink.getClass()
+					.getDeclaredFields()) {
+				columnName = field.getName().toLowerCase();
+				Object objValue;
+				try {
+					objValue = field.get(rowLink);
+
+					if (!(columnName.contains("RmExport_010")||columnName.contains("NavExport_010")))
+
+					{
+
+						entryName = columnName;
+
+						if (objValue == null)
+							objValue = "";
+
+						valstr = objValue.toString();
+
+						inner.setName(entryName);
+						inner.setValstr(valstr);
+						outer.addEntry(inner);
+					}
+
+				} catch (IllegalArgumentException e) {
+					// TODO Auto-generated catch block
+					// e.printStackTrace();
+				} catch (IllegalAccessException e) {
+					// TODO Auto-generated catch block
+					// e.printStackTrace();
+				}
+			}
+
+			data.addEntry(outer);
+			data.getEntryList();
+
+		}
+
+		public static void resetObjects()
+
+		{
+
+			
+			//masterdataPoolUpdate = null;
+			masterdataUpdate = null;
+			data = null;
+			jaxbDAO = null;
+			parentOuter = null;
+			attributeUpdate=null;
+			attributeData = null;
+		}
+		public static void resetObjects_NotData()
+
+		{
+
+			
+			//masterdataPoolUpdate = null;
+			masterdataUpdate = null;
+//			data = null;
+			jaxbDAO = null;
+			parentOuter = null;
+			attributeUpdate=null;
+			attributeData = null;
+		}	
+		
+
+
+
+
+}
