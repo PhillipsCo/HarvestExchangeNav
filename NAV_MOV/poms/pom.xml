@@ -28,6 +28,7 @@
     <module>jobs/process/ERP_TO_DSD/j_navexport_010_product_0.1</module>
     <module>jobs/process/ERP_TO_DSD/j_navexport_010_user_0.1</module>
     <module>jobs/process/ERP_TO_DSD/j_navexport_010_shipment_0.1</module>
+    <module>jobs/process/ERP_TO_DSD/j_navexport_010_order_0.1</module>
   </modules>
   <properties>
     <talend.project.name>NAV_MOV</talend.project.name>
