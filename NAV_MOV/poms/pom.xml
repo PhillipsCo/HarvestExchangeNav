@@ -23,6 +23,7 @@
     <module>jobs/process/DSD_TO_ERP/not_sure_what_this_isj_dsdtonav_010_invoice_0.1</module>
     <module>jobs/process/ERP_TO_DSD/j_navexport_010_customer_0.1</module>
     <module>jobs/process/ERP_TO_DSD/j_navexport_010_customer_ref_20190529_0.1</module>
+    <module>jobs/process/ERP_TO_DSD/j_navexport_010_delivery_0.1</module>
   </modules>
   <properties>
     <talend.project.name>NAV_MOV</talend.project.name>
