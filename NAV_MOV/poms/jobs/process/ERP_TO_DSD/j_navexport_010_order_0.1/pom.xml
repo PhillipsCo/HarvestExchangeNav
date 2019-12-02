@@ -87,6 +87,11 @@
     </dependency>
     <dependency>
       <groupId>org.talend.libraries</groupId>
+      <artifactId>jaxen-1.1.1</artifactId>
+      <version>6.0.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.talend.libraries</groupId>
       <artifactId>jibx-run-1.2.7-MOVILIZER</artifactId>
       <version>6.0.0-SNAPSHOT</version>
     </dependency>
