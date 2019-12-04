@@ -884,10 +884,10 @@
     <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tJavaFlex_1">
-      <column comment="" key="false" length="-1" name="key" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="key" nullable="false" originalDbColumnName="orderkey" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="orderDate" nullable="false" originalLength="20" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="4" name="routeNo" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="9" name="customerNo" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="9" name="customerNo" nullable="true" originalDbColumnName="custno" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="order" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
@@ -917,8 +917,8 @@
     <metadata connector="FLOW" name="tAggregateRow_1">
       <column comment="" key="false" length="-1" name="key" nullable="false" originalDbColumnName="orderkey" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="orderDate" nullable="false" originalLength="20" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="4" name="routeNo" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="9" name="customerNo" nullable="true" originalDbColumnName="custno" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="4" name="routeNo" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="9" name="customerNo" nullable="true" originalDbColumnName="custno" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="order" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
@@ -943,8 +943,8 @@
     <metadata connector="FLOW" name="tAddCRCRow_1">
       <column comment="" key="false" length="-1" name="key" nullable="false" originalDbColumnName="orderkey" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="orderDate" nullable="false" originalLength="20" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="4" name="routeNo" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="9" name="customerNo" nullable="true" originalDbColumnName="custno" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="4" name="routeNo" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="9" name="customerNo" nullable="true" originalDbColumnName="custno" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="order" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="CRC" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Long" usefulColumn="true"/>
     </metadata>
@@ -966,14 +966,14 @@
     <metadata connector="FLOW" name="row8">
       <column comment="" key="false" length="-1" name="key" nullable="false" originalDbColumnName="orderkey" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="orderDate" nullable="false" originalLength="20" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="4" name="routeNo" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="9" name="customerNo" nullable="true" originalDbColumnName="custno" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="4" name="routeNo" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="9" name="customerNo" nullable="true" originalDbColumnName="custno" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="order" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="CRC" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Long" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="sendYN" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables name="Var" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="Relational.ISNULL(row7.crc) ? &quot;Y&quot;&#13;&#10;: row6.CRC.equals(row7.crc) ? &quot;N&quot;&#13;&#10;:&quot;Y&quot; " name="sendYN" type="id_String"/>
         <mapperTableEntries expression="" name="var1" type="id_String"/>
@@ -981,8 +981,8 @@
       <outputTables name="row8" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="row6.key " name="key" type="id_String"/>
         <mapperTableEntries expression="row6.orderDate " name="orderDate" type="id_String"/>
-        <mapperTableEntries expression="row6.routeNo " name="routeNo" nullable="true" type="id_Integer"/>
-        <mapperTableEntries expression="row6.customerNo " name="customerNo" nullable="true" type="id_Integer"/>
+        <mapperTableEntries expression="row6.routeNo " name="routeNo" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row6.customerNo " name="customerNo" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row6.order " name="order" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row6.CRC " name="CRC" nullable="true" type="id_Long"/>
         <mapperTableEntries expression="Var.sendYN " name="sendYN" type="id_String"/>
@@ -990,8 +990,8 @@
       <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row6" sizeState="INTERMEDIATE">
         <mapperTableEntries name="key" type="id_String"/>
         <mapperTableEntries name="orderDate" type="id_String"/>
-        <mapperTableEntries name="routeNo" nullable="true" type="id_Integer"/>
-        <mapperTableEntries name="customerNo" nullable="true" type="id_Integer"/>
+        <mapperTableEntries name="routeNo" nullable="true" type="id_String"/>
+        <mapperTableEntries name="customerNo" nullable="true" type="id_String"/>
         <mapperTableEntries name="order" nullable="true" type="id_String"/>
         <mapperTableEntries name="CRC" nullable="true" type="id_Long"/>
       </inputTables>
@@ -1115,19 +1115,19 @@
     <elementParameter field="TEXT" name="BATCH_SIZE" show="false" value="10000"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBOutput_1">
-      <column comment="" key="true" length="-1" name="key" nullable="false" originalDbColumnName="orderkey" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="key" nullable="false" originalDbColumnName="orderkey" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="orderDate" nullable="false" originalLength="20" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="4" name="routeNo" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="9" name="customerNo" nullable="true" originalDbColumnName="custno" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="4" name="routeNo" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="9" name="customerNo" nullable="true" originalDbColumnName="custno" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="order" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="CRC" nullable="true" originalLength="-1" precision="0" sourceType="BIGINT" type="id_Long" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="sendYN" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" name="REJECT">
-      <column comment="" key="true" length="-1" name="key" nullable="false" originalDbColumnName="orderkey" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="key" nullable="false" originalDbColumnName="orderkey" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="orderDate" nullable="false" originalLength="20" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="4" name="routeNo" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="9" name="customerNo" nullable="true" originalDbColumnName="custno" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="4" name="routeNo" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="9" name="customerNo" nullable="true" originalDbColumnName="custno" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="order" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="CRC" nullable="true" originalLength="-1" precision="0" sourceType="BIGINT" type="id_Long" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="sendYN" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
@@ -1307,13 +1307,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_29b44cd4-e113-49c5-a89e-07c6e6c21c54"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>mrsAW8hvJYw1shsv6kRfvDrqK2CM++FdmNcckIVAC5xPbqsXHo30Muq5/1WYEf5vgfkCn6kFLjJ9
-atsZDnlx0A==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_1fa24cf3-3355-457f-a505-0f2ce92138b4"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>sfXtjY0/r3KwAn6hsJX//Co4cf/x2JaJfV4KCg66WDEihlGOnLrDFDg+Nha383TajWe+oJfTHOG4
-lWZTEfKKnQ==</DigestValue></Reference></SignedInfo><SignatureValue>EY59QF2l9NtyFd1fyfeDaHV2gd2OOhV8FRE/zkljsKRVuDDD9dPwsjREc3SLIpcIj6ruYM5lrKx1
-J2T2O4tEdJ/UVPonZzt/c9mJt/5jAfHPMOEFgUL277PGdRIEZ5k9GIkyLtFNbzAPsvW5ILAcV5eM
-Fw1B+prWnPrcrT5e40ww9FMqxd3a91eX0/eo7N42FUmbq6GcMEsIiW7IrSidkI+m7fWsTG5Bn+Ra
-G1BInE9LLCKLCYVTfIA5VyuBcEoYMPsgUpRQD0gFSJm9FZvOCOCmvJ6m9Iv8f/VGxgc4Cp8cgZEa
-H/4nHStReJg6RCaQzH2jcmktN8C+JsjwMLvSCw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_f4b8ccc5-087c-4f13-ac42-17c6035becbf"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>+hfr6V8y+io57gmi7Ie3deKWlJK9pvpH6XqBW5C4dK930XFtUOQwr3jV8L7KC0VrHIorb0p9gvKh
+UUc32VVU0w==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_103ea04d-7f96-4ea0-8685-126f47350c9d"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>htbCnOl3MGltJD24tgXvJ8KjRp6iAiQhFtctWRCK0oL9PWA32dIpve9+gUyCXfhe8TjIos+8ifwE
+iACVEwHCrg==</DigestValue></Reference></SignedInfo><SignatureValue>bKtfZFUQVMAQ7AMjT9JYEO3coK9xcVy+1h52Hd8Hk5wO8OjxiowSNJTlS9Sx/LAh5j7U4+BI1Vid
+IiCRZcYnrWBvLmAlR6V3qyOtCI0R/YZYZRKX+6pA4kA6TUYlp0CGOPSSphhRDLO9tU71ub0z0Osy
+BtNI+a0SGOHDc6+4Eu9f0ktUN8NJPkmRe7gxs1ScrcwGU9/yMueIvs4IM64Mz4i4CzIRYzaknq2q
+R694WQNPu7eaCxhGhRHkT6meGQcd3K+q3jM4MvxIPoUxRlm7ZFmmsDQfPpRrRtJl/NZn7mFLPpjG
+Pm/MJTDKbkIXodju/n3gJXew8QIpol/wBnuYHA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -1337,4 +1337,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_1fa24cf3-3355-457f-a505-0f2ce92138b4" Target="#_29b44cd4-e113-49c5-a89e-07c6e6c21c54"><Timestamp>2019-12-04 19:58:07</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_103ea04d-7f96-4ea0-8685-126f47350c9d" Target="#_f4b8ccc5-087c-4f13-ac42-17c6035becbf"><Timestamp>2019-12-04 20:01:37</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
