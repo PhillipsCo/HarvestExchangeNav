@@ -36,6 +36,8 @@
     <module>jobs/process/ERP_TO_DSD/j_navexport_order_020_bulkload_1.0</module>
     <module>jobs/process/ERP_TO_DSD/j_navexport_order_030_timeout_1.0</module>
     <module>jobs/process/ERP_TO_DSD/j_navexport_order_040_bundler_1.0</module>
+    <module>jobs/process/ERP_TO_DSD/j_portal_md_order_1.0</module>
+    <module>jobs/process/ERP_TO_DSD/j_rmexport_010_order_sql_0.1</module>
   </modules>
   <properties>
     <talend.project.name>NAV_MOV</talend.project.name>
