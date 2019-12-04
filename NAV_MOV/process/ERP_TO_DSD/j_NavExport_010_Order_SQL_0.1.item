@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><talendfile:ProcessType xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" defaultContext="Default" jobType="Standard" xmi:version="2.0">
   <context confirmationNeeded="false" name="Default">
+    <contextParameter comment="" name="RM_Price_FieldSeparator" prompt="RM_Price_FieldSeparator?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="ProcessDate" prompt="ProcessDate?" promptNeeded="false" type="id_String" value=""/>
     <contextParameter comment="" name="mom_Host" prompt="mom_Host?" promptNeeded="false" repositoryContextId="__0oFgDc-Eea1Xeo0s3oKJA" type="id_String" value=""/>
     <contextParameter comment="" name="mom_Password" prompt="mom_Password?" promptNeeded="false" repositoryContextId="__0oFgDc-Eea1Xeo0s3oKJA" type="id_String" value=""/>
     <contextParameter comment="" name="mom_Port" prompt="mom_Port?" promptNeeded="false" repositoryContextId="__0oFgDc-Eea1Xeo0s3oKJA" type="id_Integer" value=""/>
@@ -63,6 +65,13 @@
     <contextParameter comment="" name="DB_ERP_DSD_Integration_Port" prompt="DB_ERP_DSD_Integration_Port?" promptNeeded="false" repositoryContextId="_-v_zwEGGEeazMKeZhCw-4Q" type="id_String" value="1433"/>
     <contextParameter comment="" name="DB_ERP_DSD_Integration_Schema" prompt="DB_ERP_DSD_Integration_Schema?" promptNeeded="false" repositoryContextId="_-v_zwEGGEeazMKeZhCw-4Q" type="id_String" value="dbo"/>
     <contextParameter comment="" name="DB_ERP_DSD_Integration_Server" prompt="DB_ERP_DSD_Integration_Server?" promptNeeded="false" repositoryContextId="_-v_zwEGGEeazMKeZhCw-4Q" type="id_String" value="srvrsql200.harvestfoodsolutions.com"/>
+    <contextParameter comment="" name="DB_Navision_AdditionalParams" prompt="DB_Navision_AdditionalParams?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value=""/>
+    <contextParameter comment="" name="DB_Navision_Database" prompt="DB_Navision_Database?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="TEST-USB-2013"/>
+    <contextParameter comment="" name="DB_Navision_Login" prompt="DB_Navision_Login?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="talend_hfs2"/>
+    <contextParameter comment="" name="DB_Navision_Password" prompt="DB_Navision_Password?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_Password" value="PrT+NDdqPMBr/HtJWqzj6w=="/>
+    <contextParameter comment="" name="DB_Navision_Port" prompt="DB_Navision_Port?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="1433"/>
+    <contextParameter comment="" name="DB_Navision_Schema" prompt="DB_Navision_Schema?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="dbo"/>
+    <contextParameter comment="" name="DB_Navision_Server" prompt="DB_Navision_Server?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="testnav10.corp.usbakery.com"/>
     <contextParameter comment="" name="DB_Talend_Context_AdditionalParams" prompt="DB_Talend_Context_AdditionalParams?" promptNeeded="false" repositoryContextId="_ypE2UFnREeaCBrSnOG5XMg" type="id_String" value=""/>
     <contextParameter comment="" name="DB_Talend_Context_Database" prompt="DB_Talend_Context_Database?" promptNeeded="false" repositoryContextId="_ypE2UFnREeaCBrSnOG5XMg" type="id_String" value="talend_context"/>
     <contextParameter comment="" name="DB_Talend_Context_Login" prompt="DB_Talend_Context_Login?" promptNeeded="false" repositoryContextId="_ypE2UFnREeaCBrSnOG5XMg" type="id_String" value="talend"/>
@@ -70,21 +79,32 @@
     <contextParameter comment="" name="DB_Talend_Context_Port" prompt="DB_Talend_Context_Port?" promptNeeded="false" repositoryContextId="_ypE2UFnREeaCBrSnOG5XMg" type="id_String" value="1433"/>
     <contextParameter comment="" name="DB_Talend_Context_Schema" prompt="DB_Talend_Context_Schema?" promptNeeded="false" repositoryContextId="_ypE2UFnREeaCBrSnOG5XMg" type="id_String" value="dbo"/>
     <contextParameter comment="" name="DB_Talend_Context_Server" prompt="DB_Talend_Context_Server?" promptNeeded="false" repositoryContextId="_ypE2UFnREeaCBrSnOG5XMg" type="id_String" value="SRVRSQL200.harvestfoodsolutions.com"/>
-    <contextParameter comment="" name="RM_Price_FieldSeparator" prompt="RM_Price_FieldSeparator?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="NAV_Company" prompt="NAV_Company?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value=""/>
+    <contextParameter comment="" name="NAV_Contact" prompt="NAV_Contact?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="NAV_DSD_Contacts"/>
+    <contextParameter comment="" name="NAV_Customer" prompt="NAV_Customer?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="Nav_DSD_Customer Download"/>
+    <contextParameter comment="" name="NAV_CustomerAROpenItem" prompt="NAV_CustomerAROpenItem?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value=""/>
+    <contextParameter comment="" name="NAV_Delivery" prompt="NAV_Delivery?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="Nav_DSD_Delivery"/>
+    <contextParameter comment="" name="NAV_DescriptionTable" prompt="NAV_DescriptionTable?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="Nav_DSD_Description Table"/>
+    <contextParameter comment="" name="NAV_Events" prompt="NAV_Events?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value=""/>
+    <contextParameter comment="" name="NAV_Item" prompt="NAV_Item?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value=""/>
+    <contextParameter comment="" name="NAV_Itinerary" prompt="NAV_Itinerary?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="Nav_DSD_Itinerary"/>
+    <contextParameter comment="" name="NAV_Order" prompt="NAV_Order?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="NAV_DSD_Order"/>
+    <contextParameter comment="" name="NAV_OrderControl" prompt="NAV_OrderControl?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="Nav_DSD_Order_Control_Group"/>
+    <contextParameter comment="" name="NAV_Price" prompt="NAV_Price?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value=""/>
+    <contextParameter comment="" name="NAV_Route" prompt="NAV_Route?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value=""/>
+    <contextParameter comment="" name="NAV_SalesDate" prompt="NAV_SalesDate?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="DSD_Sales_Download_Date"/>
+    <contextParameter comment="" name="NAV_Shipment" prompt="NAV_Shipment?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="NAV_DSD_Shipment"/>
+    <contextParameter comment="" name="NAV_Tax" prompt="NAV_Tax?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value=""/>
+    <contextParameter comment="" name="NAV_User" prompt="NAV_User?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="Nav_DSD_User"/>
+    <contextParameter comment="" name="NAV_Vehicle" prompt="NAV_Vehicle?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value=""/>
     <contextParameter comment="" name="RM_Order_Encoding" prompt="RM_Order_Encoding?" promptNeeded="false" repositoryContextId="_hIrjIDceEeaqN-Jziuqx3w" type="id_String" value=""/>
     <contextParameter comment="" name="RM_Order_FieldSeparator" prompt="RM_Order_FieldSeparator?" promptNeeded="false" repositoryContextId="_hIrjIDceEeaqN-Jziuqx3w" type="id_String" value=""/>
     <contextParameter comment="" name="RM_Order_File" prompt="RM_Order_File?" promptNeeded="false" repositoryContextId="_hIrjIDceEeaqN-Jziuqx3w" type="id_String" value=""/>
     <contextParameter comment="" name="RM_Order_RowSeparator" prompt="RM_Order_RowSeparator?" promptNeeded="false" repositoryContextId="_hIrjIDceEeaqN-Jziuqx3w" type="id_String" value=""/>
-    <contextParameter comment="" name="ProcessDate" prompt="ProcessDate?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="" name="DB_Navision_Port" prompt="DB_Navision_Port?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="1433"/>
-    <contextParameter comment="" name="DB_Navision_Server" prompt="DB_Navision_Server?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="testnav10.corp.usbakery.com"/>
-    <contextParameter comment="" name="DB_Navision_Schema" prompt="DB_Navision_Schema?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="dbo"/>
-    <contextParameter comment="" name="DB_Navision_AdditionalParams" prompt="DB_Navision_AdditionalParams?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value=""/>
-    <contextParameter comment="" name="DB_Navision_Password" prompt="DB_Navision_Password?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_Password" value="PrT+NDdqPMBr/HtJWqzj6w=="/>
-    <contextParameter comment="" name="DB_Navision_Database" prompt="DB_Navision_Database?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="TEST-USB-2013"/>
-    <contextParameter comment="" name="DB_Navision_Login" prompt="DB_Navision_Login?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="talend_hfs2"/>
   </context>
   <context confirmationNeeded="false" name="QA">
+    <contextParameter comment="" name="RM_Price_FieldSeparator" prompt="RM_Price_FieldSeparator?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="ProcessDate" prompt="ProcessDate?" promptNeeded="false" type="id_String" value=""/>
     <contextParameter comment="" name="mom_Host" prompt="mom_Host?" promptNeeded="false" repositoryContextId="__0oFgDc-Eea1Xeo0s3oKJA" type="id_String" value=""/>
     <contextParameter comment="" name="mom_Password" prompt="mom_Password?" promptNeeded="false" repositoryContextId="__0oFgDc-Eea1Xeo0s3oKJA" type="id_String" value=""/>
     <contextParameter comment="" name="mom_Port" prompt="mom_Port?" promptNeeded="false" repositoryContextId="__0oFgDc-Eea1Xeo0s3oKJA" type="id_Integer" value=""/>
@@ -148,6 +168,13 @@
     <contextParameter comment="" name="DB_ERP_DSD_Integration_Port" prompt="DB_ERP_DSD_Integration_Port?" promptNeeded="false" repositoryContextId="_-v_zwEGGEeazMKeZhCw-4Q" type="id_String" value="1433"/>
     <contextParameter comment="" name="DB_ERP_DSD_Integration_Schema" prompt="DB_ERP_DSD_Integration_Schema?" promptNeeded="false" repositoryContextId="_-v_zwEGGEeazMKeZhCw-4Q" type="id_String" value="dbo"/>
     <contextParameter comment="" name="DB_ERP_DSD_Integration_Server" prompt="DB_ERP_DSD_Integration_Server?" promptNeeded="false" repositoryContextId="_-v_zwEGGEeazMKeZhCw-4Q" type="id_String" value="srvrsql200.harvestfoodsolutions.com"/>
+    <contextParameter comment="" name="DB_Navision_AdditionalParams" prompt="DB_Navision_AdditionalParams?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value=""/>
+    <contextParameter comment="" name="DB_Navision_Database" prompt="DB_Navision_Database?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="TEST-USB-2013"/>
+    <contextParameter comment="" name="DB_Navision_Login" prompt="DB_Navision_Login?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="talend_hfs2"/>
+    <contextParameter comment="" name="DB_Navision_Password" prompt="DB_Navision_Password?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_Password" value="PrT+NDdqPMBr/HtJWqzj6w=="/>
+    <contextParameter comment="" name="DB_Navision_Port" prompt="DB_Navision_Port?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="1433"/>
+    <contextParameter comment="" name="DB_Navision_Schema" prompt="DB_Navision_Schema?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="dbo"/>
+    <contextParameter comment="" name="DB_Navision_Server" prompt="DB_Navision_Server?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="testnav10.corp.usbakery.com"/>
     <contextParameter comment="" name="DB_Talend_Context_AdditionalParams" prompt="DB_Talend_Context_AdditionalParams?" promptNeeded="false" repositoryContextId="_ypE2UFnREeaCBrSnOG5XMg" type="id_String" value=""/>
     <contextParameter comment="" name="DB_Talend_Context_Database" prompt="DB_Talend_Context_Database?" promptNeeded="false" repositoryContextId="_ypE2UFnREeaCBrSnOG5XMg" type="id_String" value="talend_context"/>
     <contextParameter comment="" name="DB_Talend_Context_Login" prompt="DB_Talend_Context_Login?" promptNeeded="false" repositoryContextId="_ypE2UFnREeaCBrSnOG5XMg" type="id_String" value="talend"/>
@@ -155,21 +182,32 @@
     <contextParameter comment="" name="DB_Talend_Context_Port" prompt="DB_Talend_Context_Port?" promptNeeded="false" repositoryContextId="_ypE2UFnREeaCBrSnOG5XMg" type="id_String" value="1433"/>
     <contextParameter comment="" name="DB_Talend_Context_Schema" prompt="DB_Talend_Context_Schema?" promptNeeded="false" repositoryContextId="_ypE2UFnREeaCBrSnOG5XMg" type="id_String" value="dbo"/>
     <contextParameter comment="" name="DB_Talend_Context_Server" prompt="DB_Talend_Context_Server?" promptNeeded="false" repositoryContextId="_ypE2UFnREeaCBrSnOG5XMg" type="id_String" value="SRVRSQL200.harvestfoodsolutions.com"/>
-    <contextParameter comment="" name="RM_Price_FieldSeparator" prompt="RM_Price_FieldSeparator?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="NAV_Company" prompt="NAV_Company?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value=""/>
+    <contextParameter comment="" name="NAV_Contact" prompt="NAV_Contact?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="NAV_DSD_Contacts"/>
+    <contextParameter comment="" name="NAV_Customer" prompt="NAV_Customer?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="Nav_DSD_Customer Download"/>
+    <contextParameter comment="" name="NAV_CustomerAROpenItem" prompt="NAV_CustomerAROpenItem?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value=""/>
+    <contextParameter comment="" name="NAV_Delivery" prompt="NAV_Delivery?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="Nav_DSD_Delivery"/>
+    <contextParameter comment="" name="NAV_DescriptionTable" prompt="NAV_DescriptionTable?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="Nav_DSD_Description Table"/>
+    <contextParameter comment="" name="NAV_Events" prompt="NAV_Events?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value=""/>
+    <contextParameter comment="" name="NAV_Item" prompt="NAV_Item?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value=""/>
+    <contextParameter comment="" name="NAV_Itinerary" prompt="NAV_Itinerary?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="Nav_DSD_Itinerary"/>
+    <contextParameter comment="" name="NAV_Order" prompt="NAV_Order?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="NAV_DSD_Order"/>
+    <contextParameter comment="" name="NAV_OrderControl" prompt="NAV_OrderControl?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="Nav_DSD_Order_Control_Group"/>
+    <contextParameter comment="" name="NAV_Price" prompt="NAV_Price?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value=""/>
+    <contextParameter comment="" name="NAV_Route" prompt="NAV_Route?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value=""/>
+    <contextParameter comment="" name="NAV_SalesDate" prompt="NAV_SalesDate?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="DSD_Sales_Download_Date"/>
+    <contextParameter comment="" name="NAV_Shipment" prompt="NAV_Shipment?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="NAV_DSD_Shipment"/>
+    <contextParameter comment="" name="NAV_Tax" prompt="NAV_Tax?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value=""/>
+    <contextParameter comment="" name="NAV_User" prompt="NAV_User?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="Nav_DSD_User"/>
+    <contextParameter comment="" name="NAV_Vehicle" prompt="NAV_Vehicle?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value=""/>
     <contextParameter comment="" name="RM_Order_Encoding" prompt="RM_Order_Encoding?" promptNeeded="false" repositoryContextId="_hIrjIDceEeaqN-Jziuqx3w" type="id_String" value=""/>
     <contextParameter comment="" name="RM_Order_FieldSeparator" prompt="RM_Order_FieldSeparator?" promptNeeded="false" repositoryContextId="_hIrjIDceEeaqN-Jziuqx3w" type="id_String" value=""/>
     <contextParameter comment="" name="RM_Order_File" prompt="RM_Order_File?" promptNeeded="false" repositoryContextId="_hIrjIDceEeaqN-Jziuqx3w" type="id_String" value=""/>
     <contextParameter comment="" name="RM_Order_RowSeparator" prompt="RM_Order_RowSeparator?" promptNeeded="false" repositoryContextId="_hIrjIDceEeaqN-Jziuqx3w" type="id_String" value=""/>
-    <contextParameter comment="" name="ProcessDate" prompt="ProcessDate?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="" name="DB_Navision_Port" prompt="DB_Navision_Port?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="1433"/>
-    <contextParameter comment="" name="DB_Navision_Server" prompt="DB_Navision_Server?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="testnav10.corp.usbakery.com"/>
-    <contextParameter comment="" name="DB_Navision_Schema" prompt="DB_Navision_Schema?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="dbo"/>
-    <contextParameter comment="" name="DB_Navision_AdditionalParams" prompt="DB_Navision_AdditionalParams?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value=""/>
-    <contextParameter comment="" name="DB_Navision_Password" prompt="DB_Navision_Password?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_Password" value="PrT+NDdqPMBr/HtJWqzj6w=="/>
-    <contextParameter comment="" name="DB_Navision_Database" prompt="DB_Navision_Database?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="TEST-USB-2013"/>
-    <contextParameter comment="" name="DB_Navision_Login" prompt="DB_Navision_Login?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="talend_hfs2"/>
   </context>
   <context confirmationNeeded="false" name="PROD">
+    <contextParameter comment="" name="RM_Price_FieldSeparator" prompt="RM_Price_FieldSeparator?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="ProcessDate" prompt="ProcessDate?" promptNeeded="false" type="id_String" value=""/>
     <contextParameter comment="" name="mom_Host" prompt="mom_Host?" promptNeeded="false" repositoryContextId="__0oFgDc-Eea1Xeo0s3oKJA" type="id_String" value=""/>
     <contextParameter comment="" name="mom_Password" prompt="mom_Password?" promptNeeded="false" repositoryContextId="__0oFgDc-Eea1Xeo0s3oKJA" type="id_String" value=""/>
     <contextParameter comment="" name="mom_Port" prompt="mom_Port?" promptNeeded="false" repositoryContextId="__0oFgDc-Eea1Xeo0s3oKJA" type="id_Integer" value=""/>
@@ -233,6 +271,13 @@
     <contextParameter comment="" name="DB_ERP_DSD_Integration_Port" prompt="DB_ERP_DSD_Integration_Port?" promptNeeded="false" repositoryContextId="_-v_zwEGGEeazMKeZhCw-4Q" type="id_String" value="1433"/>
     <contextParameter comment="" name="DB_ERP_DSD_Integration_Schema" prompt="DB_ERP_DSD_Integration_Schema?" promptNeeded="false" repositoryContextId="_-v_zwEGGEeazMKeZhCw-4Q" type="id_String" value="dbo"/>
     <contextParameter comment="" name="DB_ERP_DSD_Integration_Server" prompt="DB_ERP_DSD_Integration_Server?" promptNeeded="false" repositoryContextId="_-v_zwEGGEeazMKeZhCw-4Q" type="id_String" value="srvrsql200.harvestfoodsolutions.com"/>
+    <contextParameter comment="" name="DB_Navision_AdditionalParams" prompt="DB_Navision_AdditionalParams?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value=""/>
+    <contextParameter comment="" name="DB_Navision_Database" prompt="DB_Navision_Database?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="TEST-USB-2013"/>
+    <contextParameter comment="" name="DB_Navision_Login" prompt="DB_Navision_Login?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="talend_hfs2"/>
+    <contextParameter comment="" name="DB_Navision_Password" prompt="DB_Navision_Password?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_Password" value="PrT+NDdqPMBr/HtJWqzj6w=="/>
+    <contextParameter comment="" name="DB_Navision_Port" prompt="DB_Navision_Port?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="1433"/>
+    <contextParameter comment="" name="DB_Navision_Schema" prompt="DB_Navision_Schema?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="dbo"/>
+    <contextParameter comment="" name="DB_Navision_Server" prompt="DB_Navision_Server?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="testnav10.corp.usbakery.com"/>
     <contextParameter comment="" name="DB_Talend_Context_AdditionalParams" prompt="DB_Talend_Context_AdditionalParams?" promptNeeded="false" repositoryContextId="_ypE2UFnREeaCBrSnOG5XMg" type="id_String" value=""/>
     <contextParameter comment="" name="DB_Talend_Context_Database" prompt="DB_Talend_Context_Database?" promptNeeded="false" repositoryContextId="_ypE2UFnREeaCBrSnOG5XMg" type="id_String" value="talend_context"/>
     <contextParameter comment="" name="DB_Talend_Context_Login" prompt="DB_Talend_Context_Login?" promptNeeded="false" repositoryContextId="_ypE2UFnREeaCBrSnOG5XMg" type="id_String" value="talend"/>
@@ -240,21 +285,32 @@
     <contextParameter comment="" name="DB_Talend_Context_Port" prompt="DB_Talend_Context_Port?" promptNeeded="false" repositoryContextId="_ypE2UFnREeaCBrSnOG5XMg" type="id_String" value="1433"/>
     <contextParameter comment="" name="DB_Talend_Context_Schema" prompt="DB_Talend_Context_Schema?" promptNeeded="false" repositoryContextId="_ypE2UFnREeaCBrSnOG5XMg" type="id_String" value="dbo"/>
     <contextParameter comment="" name="DB_Talend_Context_Server" prompt="DB_Talend_Context_Server?" promptNeeded="false" repositoryContextId="_ypE2UFnREeaCBrSnOG5XMg" type="id_String" value="SRVRSQL200.harvestfoodsolutions.com"/>
-    <contextParameter comment="" name="RM_Price_FieldSeparator" prompt="RM_Price_FieldSeparator?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="NAV_Company" prompt="NAV_Company?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value=""/>
+    <contextParameter comment="" name="NAV_Contact" prompt="NAV_Contact?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="NAV_DSD_Contacts"/>
+    <contextParameter comment="" name="NAV_Customer" prompt="NAV_Customer?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="Nav_DSD_Customer Download"/>
+    <contextParameter comment="" name="NAV_CustomerAROpenItem" prompt="NAV_CustomerAROpenItem?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value=""/>
+    <contextParameter comment="" name="NAV_Delivery" prompt="NAV_Delivery?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="Nav_DSD_Delivery"/>
+    <contextParameter comment="" name="NAV_DescriptionTable" prompt="NAV_DescriptionTable?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="Nav_DSD_Description Table"/>
+    <contextParameter comment="" name="NAV_Events" prompt="NAV_Events?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value=""/>
+    <contextParameter comment="" name="NAV_Item" prompt="NAV_Item?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value=""/>
+    <contextParameter comment="" name="NAV_Itinerary" prompt="NAV_Itinerary?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="Nav_DSD_Itinerary"/>
+    <contextParameter comment="" name="NAV_Order" prompt="NAV_Order?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="NAV_DSD_Order"/>
+    <contextParameter comment="" name="NAV_OrderControl" prompt="NAV_OrderControl?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="Nav_DSD_Order_Control_Group"/>
+    <contextParameter comment="" name="NAV_Price" prompt="NAV_Price?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value=""/>
+    <contextParameter comment="" name="NAV_Route" prompt="NAV_Route?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value=""/>
+    <contextParameter comment="" name="NAV_SalesDate" prompt="NAV_SalesDate?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="DSD_Sales_Download_Date"/>
+    <contextParameter comment="" name="NAV_Shipment" prompt="NAV_Shipment?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="NAV_DSD_Shipment"/>
+    <contextParameter comment="" name="NAV_Tax" prompt="NAV_Tax?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value=""/>
+    <contextParameter comment="" name="NAV_User" prompt="NAV_User?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="Nav_DSD_User"/>
+    <contextParameter comment="" name="NAV_Vehicle" prompt="NAV_Vehicle?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value=""/>
     <contextParameter comment="" name="RM_Order_Encoding" prompt="RM_Order_Encoding?" promptNeeded="false" repositoryContextId="_hIrjIDceEeaqN-Jziuqx3w" type="id_String" value=""/>
     <contextParameter comment="" name="RM_Order_FieldSeparator" prompt="RM_Order_FieldSeparator?" promptNeeded="false" repositoryContextId="_hIrjIDceEeaqN-Jziuqx3w" type="id_String" value=""/>
     <contextParameter comment="" name="RM_Order_File" prompt="RM_Order_File?" promptNeeded="false" repositoryContextId="_hIrjIDceEeaqN-Jziuqx3w" type="id_String" value=""/>
     <contextParameter comment="" name="RM_Order_RowSeparator" prompt="RM_Order_RowSeparator?" promptNeeded="false" repositoryContextId="_hIrjIDceEeaqN-Jziuqx3w" type="id_String" value=""/>
-    <contextParameter comment="" name="ProcessDate" prompt="ProcessDate?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="" name="DB_Navision_Port" prompt="DB_Navision_Port?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="1433"/>
-    <contextParameter comment="" name="DB_Navision_Server" prompt="DB_Navision_Server?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="testnav10.corp.usbakery.com"/>
-    <contextParameter comment="" name="DB_Navision_Schema" prompt="DB_Navision_Schema?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="dbo"/>
-    <contextParameter comment="" name="DB_Navision_AdditionalParams" prompt="DB_Navision_AdditionalParams?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value=""/>
-    <contextParameter comment="" name="DB_Navision_Password" prompt="DB_Navision_Password?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_Password" value="PrT+NDdqPMBr/HtJWqzj6w=="/>
-    <contextParameter comment="" name="DB_Navision_Database" prompt="DB_Navision_Database?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="TEST-USB-2013"/>
-    <contextParameter comment="" name="DB_Navision_Login" prompt="DB_Navision_Login?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="talend_hfs2"/>
   </context>
   <context confirmationNeeded="false" name="PREPROD">
+    <contextParameter comment="" name="RM_Price_FieldSeparator" prompt="RM_Price_FieldSeparator?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="ProcessDate" prompt="ProcessDate?" promptNeeded="false" type="id_String" value=""/>
     <contextParameter comment="" name="mom_Host" prompt="mom_Host?" promptNeeded="false" repositoryContextId="__0oFgDc-Eea1Xeo0s3oKJA" type="id_String" value=""/>
     <contextParameter comment="" name="mom_Password" prompt="mom_Password?" promptNeeded="false" repositoryContextId="__0oFgDc-Eea1Xeo0s3oKJA" type="id_String" value=""/>
     <contextParameter comment="" name="mom_Port" prompt="mom_Port?" promptNeeded="false" repositoryContextId="__0oFgDc-Eea1Xeo0s3oKJA" type="id_Integer" value=""/>
@@ -318,6 +374,13 @@
     <contextParameter comment="" name="DB_ERP_DSD_Integration_Port" prompt="DB_ERP_DSD_Integration_Port?" promptNeeded="false" repositoryContextId="_-v_zwEGGEeazMKeZhCw-4Q" type="id_String" value="1433"/>
     <contextParameter comment="" name="DB_ERP_DSD_Integration_Schema" prompt="DB_ERP_DSD_Integration_Schema?" promptNeeded="false" repositoryContextId="_-v_zwEGGEeazMKeZhCw-4Q" type="id_String" value="dbo"/>
     <contextParameter comment="" name="DB_ERP_DSD_Integration_Server" prompt="DB_ERP_DSD_Integration_Server?" promptNeeded="false" repositoryContextId="_-v_zwEGGEeazMKeZhCw-4Q" type="id_String" value="srvrsql200.harvestfoodsolutions.com"/>
+    <contextParameter comment="" name="DB_Navision_AdditionalParams" prompt="DB_Navision_AdditionalParams?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value=""/>
+    <contextParameter comment="" name="DB_Navision_Database" prompt="DB_Navision_Database?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="TEST-USB-2013"/>
+    <contextParameter comment="" name="DB_Navision_Login" prompt="DB_Navision_Login?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="talend_hfs2"/>
+    <contextParameter comment="" name="DB_Navision_Password" prompt="DB_Navision_Password?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_Password" value="PrT+NDdqPMBr/HtJWqzj6w=="/>
+    <contextParameter comment="" name="DB_Navision_Port" prompt="DB_Navision_Port?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="1433"/>
+    <contextParameter comment="" name="DB_Navision_Schema" prompt="DB_Navision_Schema?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="dbo"/>
+    <contextParameter comment="" name="DB_Navision_Server" prompt="DB_Navision_Server?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="testnav10.corp.usbakery.com"/>
     <contextParameter comment="" name="DB_Talend_Context_AdditionalParams" prompt="DB_Talend_Context_AdditionalParams?" promptNeeded="false" repositoryContextId="_ypE2UFnREeaCBrSnOG5XMg" type="id_String" value=""/>
     <contextParameter comment="" name="DB_Talend_Context_Database" prompt="DB_Talend_Context_Database?" promptNeeded="false" repositoryContextId="_ypE2UFnREeaCBrSnOG5XMg" type="id_String" value="talend_context"/>
     <contextParameter comment="" name="DB_Talend_Context_Login" prompt="DB_Talend_Context_Login?" promptNeeded="false" repositoryContextId="_ypE2UFnREeaCBrSnOG5XMg" type="id_String" value="talend"/>
@@ -325,19 +388,28 @@
     <contextParameter comment="" name="DB_Talend_Context_Port" prompt="DB_Talend_Context_Port?" promptNeeded="false" repositoryContextId="_ypE2UFnREeaCBrSnOG5XMg" type="id_String" value="1433"/>
     <contextParameter comment="" name="DB_Talend_Context_Schema" prompt="DB_Talend_Context_Schema?" promptNeeded="false" repositoryContextId="_ypE2UFnREeaCBrSnOG5XMg" type="id_String" value="dbo"/>
     <contextParameter comment="" name="DB_Talend_Context_Server" prompt="DB_Talend_Context_Server?" promptNeeded="false" repositoryContextId="_ypE2UFnREeaCBrSnOG5XMg" type="id_String" value="SRVRSQL200.harvestfoodsolutions.com"/>
-    <contextParameter comment="" name="RM_Price_FieldSeparator" prompt="RM_Price_FieldSeparator?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="NAV_Company" prompt="NAV_Company?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value=""/>
+    <contextParameter comment="" name="NAV_Contact" prompt="NAV_Contact?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="NAV_DSD_Contacts"/>
+    <contextParameter comment="" name="NAV_Customer" prompt="NAV_Customer?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="Nav_DSD_Customer Download"/>
+    <contextParameter comment="" name="NAV_CustomerAROpenItem" prompt="NAV_CustomerAROpenItem?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value=""/>
+    <contextParameter comment="" name="NAV_Delivery" prompt="NAV_Delivery?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="Nav_DSD_Delivery"/>
+    <contextParameter comment="" name="NAV_DescriptionTable" prompt="NAV_DescriptionTable?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="Nav_DSD_Description Table"/>
+    <contextParameter comment="" name="NAV_Events" prompt="NAV_Events?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value=""/>
+    <contextParameter comment="" name="NAV_Item" prompt="NAV_Item?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value=""/>
+    <contextParameter comment="" name="NAV_Itinerary" prompt="NAV_Itinerary?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="Nav_DSD_Itinerary"/>
+    <contextParameter comment="" name="NAV_Order" prompt="NAV_Order?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="NAV_DSD_Order"/>
+    <contextParameter comment="" name="NAV_OrderControl" prompt="NAV_OrderControl?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="Nav_DSD_Order_Control_Group"/>
+    <contextParameter comment="" name="NAV_Price" prompt="NAV_Price?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value=""/>
+    <contextParameter comment="" name="NAV_Route" prompt="NAV_Route?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value=""/>
+    <contextParameter comment="" name="NAV_SalesDate" prompt="NAV_SalesDate?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="DSD_Sales_Download_Date"/>
+    <contextParameter comment="" name="NAV_Shipment" prompt="NAV_Shipment?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="NAV_DSD_Shipment"/>
+    <contextParameter comment="" name="NAV_Tax" prompt="NAV_Tax?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value=""/>
+    <contextParameter comment="" name="NAV_User" prompt="NAV_User?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="Nav_DSD_User"/>
+    <contextParameter comment="" name="NAV_Vehicle" prompt="NAV_Vehicle?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value=""/>
     <contextParameter comment="" name="RM_Order_Encoding" prompt="RM_Order_Encoding?" promptNeeded="false" repositoryContextId="_hIrjIDceEeaqN-Jziuqx3w" type="id_String" value=""/>
     <contextParameter comment="" name="RM_Order_FieldSeparator" prompt="RM_Order_FieldSeparator?" promptNeeded="false" repositoryContextId="_hIrjIDceEeaqN-Jziuqx3w" type="id_String" value=""/>
     <contextParameter comment="" name="RM_Order_File" prompt="RM_Order_File?" promptNeeded="false" repositoryContextId="_hIrjIDceEeaqN-Jziuqx3w" type="id_String" value=""/>
     <contextParameter comment="" name="RM_Order_RowSeparator" prompt="RM_Order_RowSeparator?" promptNeeded="false" repositoryContextId="_hIrjIDceEeaqN-Jziuqx3w" type="id_String" value=""/>
-    <contextParameter comment="" name="ProcessDate" prompt="ProcessDate?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="" name="DB_Navision_Port" prompt="DB_Navision_Port?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="1433"/>
-    <contextParameter comment="" name="DB_Navision_Server" prompt="DB_Navision_Server?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="testnav10.corp.usbakery.com"/>
-    <contextParameter comment="" name="DB_Navision_Schema" prompt="DB_Navision_Schema?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="dbo"/>
-    <contextParameter comment="" name="DB_Navision_AdditionalParams" prompt="DB_Navision_AdditionalParams?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value=""/>
-    <contextParameter comment="" name="DB_Navision_Password" prompt="DB_Navision_Password?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_Password" value="PrT+NDdqPMBr/HtJWqzj6w=="/>
-    <contextParameter comment="" name="DB_Navision_Database" prompt="DB_Navision_Database?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="TEST-USB-2013"/>
-    <contextParameter comment="" name="DB_Navision_Login" prompt="DB_Navision_Login?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="talend_hfs2"/>
   </context>
   <parameters>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" show="false" value="0"/>
@@ -1297,13 +1369,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_abc9ddd2-4775-49e0-90b6-a046c315f9bd"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>9wNCKQdPzQz96H2RO0J9R5yBZDrcNFbv9g1jTUWQ+KH0LluOc93FHiHzJQqC0CySNtr5iCzcfY1f
-szPDstyFoQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_4321827e-fe30-4169-932c-8f9d5943d78a"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>YEASCuv9QJTuUwPb+aQ5Jyjc6ziEeukrFbEwu6YBnlAqmargNU5N4eHSrmJBmVj5fubBGYUFOJH1
-Dd0uQ9dOvw==</DigestValue></Reference></SignedInfo><SignatureValue>nrDPq7L/xwW1hFFJkWHyuoU77e1MS5HujSxzrRvEGKwgmSJ13Q+yOnEhd7J/Hy6NMDdKoEF+iX1x
-HuB8BVodeNXwuuWmYrbF4cvqb/AFlsdU4pRhxrAKjS6rMT4ct/wes/kTH91U8UQpRwpxsXlxfulK
-lq8Q2ENwOP5fh/CcnN2PPWe1KT7Rf99VpJf0Ue0t0ZMPal2oSMkgS0hAbJUtYWarbPc1/1Qxp2YM
-pfGUaJyoO5rTOzfrbzv/VNZNxVmGV9D2DyldqUi8o9lNZsfCsIG/ouR/KHFkTmgRUFdcPIPsyalY
-gf4iQU0hXO3yXqS/INtpp1mpsunsa6UFMJlu9A==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_5788d2dd-7cde-4cb5-9b2f-33d37c6a0b7c"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>uVVd01xH/Gk3GuVwmkXe9a9qtub3kp37jnSZEA8n2TzO56txc1Yz2D8N5gUjapiAo5qlG9E9fRDa
+8LUvjNnMkA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_6a83e89a-a765-45ef-a9c0-1cca9e6bd546"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>tvfs3ujVHZVQsUv6X3ALzvYx+JOLFU2aGKAtw77Ds0w1HzVxUB80rT8wtOLsGN3sc0QrldN20U8f
+O0MdjTjqsA==</DigestValue></Reference></SignedInfo><SignatureValue>4X6N6n9NpUipL+Z5xvzRvgA/eJrbhBq4O2oDKY904OznTqbPHONLDJBthwj4sd1MiImZ1YSKX+5y
+waklaZq1iJJeDpJdE7sagmabDOzbyMQLtH7n1U14fIb3J41C/+I6M1LIS0UzKNy5uMLvNmMlPMmN
+WxVtraguia1BOhT2bio+AKuvp4pOYX5g31y/EDezSymMSk7eo2YuMGqufhhVCHZzdHa+Js6zORsh
+2Fprvl1SuK59F2TWaju99zrAlWs0uKDI+fbtiCeUSqYC0HiZl8KmGVxjPs+yVGTf9Rl9uiGJyg/S
+xEmiOPG63x6tiau4b5Y5C+SWzcQWIVo34KkVHw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -1327,4 +1399,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_4321827e-fe30-4169-932c-8f9d5943d78a" Target="#_abc9ddd2-4775-49e0-90b6-a046c315f9bd"><Timestamp>2019-12-04 18:42:54</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_6a83e89a-a765-45ef-a9c0-1cca9e6bd546" Target="#_5788d2dd-7cde-4cb5-9b2f-33d37c6a0b7c"><Timestamp>2019-12-04 18:57:48</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
