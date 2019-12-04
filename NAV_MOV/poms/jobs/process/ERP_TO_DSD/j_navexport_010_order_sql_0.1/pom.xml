@@ -42,11 +42,6 @@
   <dependencies>
     <dependency>
       <groupId>org.talend.libraries</groupId>
-      <artifactId>OneWireAPI</artifactId>
-      <version>6.0.0</version>
-    </dependency>
-    <dependency>
-      <groupId>org.talend.libraries</groupId>
       <artifactId>advancedPersistentLookupLib-1.2</artifactId>
       <version>6.0.0</version>
     </dependency>
@@ -63,11 +58,6 @@
     <dependency>
       <groupId>org.talend.libraries</groupId>
       <artifactId>external_sort</artifactId>
-      <version>6.0.0</version>
-    </dependency>
-    <dependency>
-      <groupId>org.talend.libraries</groupId>
-      <artifactId>jakarta-oro-2.0.8</artifactId>
       <version>6.0.0</version>
     </dependency>
     <dependency>
@@ -92,17 +82,17 @@
     </dependency>
     <dependency>
       <groupId>org.talend.libraries</groupId>
+      <artifactId>mssql-jdbc</artifactId>
+      <version>6.0.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.talend.libraries</groupId>
       <artifactId>talend_DB_mssqlUtil-1.2-20171017</artifactId>
       <version>6.0.0</version>
     </dependency>
     <dependency>
       <groupId>org.talend.libraries</groupId>
       <artifactId>talend_file_enhanced_20070724</artifactId>
-      <version>6.0.0</version>
-    </dependency>
-    <dependency>
-      <groupId>org.talend.libraries</groupId>
-      <artifactId>talendcsv</artifactId>
       <version>6.0.0</version>
     </dependency>
     <dependency>
