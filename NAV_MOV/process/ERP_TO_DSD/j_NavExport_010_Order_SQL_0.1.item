@@ -717,7 +717,7 @@
       <varTables name="Var" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="/*row1.RTE_NUMBER == 101 ? &quot;SEND&quot; :&#13;&#10;row1.RTE_NUMBER == 515 ? &quot;SEND&quot; :&#13;&#10;row1.RTE_NUMBER == 511 ? &quot;SEND&quot; :&#13;&#10;row1.RTE_NUMBER == 516 ? &quot;SEND&quot; :*/&#13;&#10;row1.RTE_NUMBER == 32 ? &quot;SEND&quot; :&#13;&#10;row1.RTE_NUMBER == 35 ? &quot;SEND&quot; :&#10;row1.RTE_NUMBER == 3238 ? &quot;SEND&quot; :&#13;&#10;&quot;noSEND&quot; " name="SendThisRoute" type="id_String"/>
         <mapperTableEntries expression="TalendDate.parseDate(&quot;yyyy-MM-dd&quot;,row1.REFERENCEDATE,true) " name="orderDate" type="id_Date"/>
-        <mapperTableEntries expression="TalendDate.formatDate(&quot;yyyyMMdd&quot;,row1.REFERENCEDATE) " name="strOrderDate" type="id_String"/>
+        <mapperTableEntries expression="TalendDate.parseDate(&quot;yyyyMMdd&quot;,TalendDate.formatDate(&quot;yyyyMMdd&quot;,row1.REFERENCEDATE) ,true) " name="strOrderDate" type="id_String"/>
         <mapperTableEntries expression="routines.DateParser.convertPSTToUTC_atNoon(TalendDate.formatDate(&quot;yyyy-MM-dd&quot;,Var.orderDate)) " name="dateMils" type="id_String"/>
         <mapperTableEntries expression="&quot;000&quot; + row1.SHIPTO +&quot;_&quot;+Var.dateMils " name="key" type="id_String"/>
         <mapperTableEntries expression="row1.QTYPERM.intValueExact()  &#13;&#10; &lt;0 ? 0:row1.QTYPERM.intValueExact() " name="perm" type="id_Integer"/>
@@ -1369,13 +1369,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_e6bc1a15-f274-4c9f-a529-910ba03111ff"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>iGyRg3wVl0SYlTzxug+t0wQ+8z0FRN+yQWL+f4mF7N1jQprWC0+4MLbS+LANFdAR4SXdyUlASCs2
-h9hWihQdGg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_55b5ddda-4de3-4fc6-ad29-9c34156b456d"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ZDzoPD4ZHAwMxMJ21PqGv39QPRdue+mRu4jPFwLKRsDYuvbKBGamVEBuMlIiroGdAk+/adkvG0Mk
-QnSAr5SxEw==</DigestValue></Reference></SignedInfo><SignatureValue>kSKdr/MI8vD7drIt5gxsMZStslKW+x1bEKP2GUODOw/nYVWFsrwu5rtRF0GE5fpPOBuUqok7V5UB
-dSAwrO2y91qk1clUjRjxdT7cveMi8uofQi5XWKi7D76yXovXyXMCVu/6EoJm2hn7i5Aw24G2equC
-cLS9dkAybI5404TA7gjExtbbqUxDea/2xZDA46Wd36EvArV6QtV9k1qDFu+V7cvafsfU+L2tcQtU
-JElskEEjLz6Txb1JwIFYKWEE1QTn2K4DDuSEhTEIhfvdF6Paqg5zGmX63LN6q7DTmvql/m2Er9VD
-DEGA76iMnYQvPuI2wSx1X07Ze2NbSFt4YvgBow==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_3fbf8558-fc8b-46e5-9b67-490cea44f089"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>+a/ktUzpknxqpkTB+zTMVKjGk0A6XSUvdLCaEuQdG3HrFrctKT7oWUUf32l9gPc7+DhkEPuFwQAj
+6CH2Gx4PFg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_34d3f54b-c749-4b14-b5c0-95ecff3f9bad"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>J8X+Q+tgpIG0pNCXY06OIirUTqbHhVwY/I0QnGwkZfXSoYOEwzDr8WlCWtobHP6TiVX+xw+Ci7ce
+jCRONLGX5w==</DigestValue></Reference></SignedInfo><SignatureValue>HM3HYe68bfAaFvn2QOyJSmw+WXdPgHxX43DNu8ABDMuXrJ+Im5NtiJrkJAP2/7Df5OTevx9gzSfy
+af1eGe9+UgOJ98gCGHqGWDnJajpJyCMRFjGvWzBTd2lpUhGHj546R8rSDai8SL3RBM27cnh7mErt
+eTEFwOTwnsqfCxB3r5UKaCtuDsBLqW2Cecd36eHSxSvQGCIEPOcSQb+2Mf4ULcVsz49T2vvf9v8J
+dN2RPXlq3fZXWrzrULI+1UQlSOKCQIlHgKjapV0NSf8vTzLJ6/kBcA+6WuAJLmT5x5E7dlV+1Xfe
+JfAC2eOottCPs6SGizBr8ks9l3yLfbdxsnIFSg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -1399,4 +1399,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_55b5ddda-4de3-4fc6-ad29-9c34156b456d" Target="#_e6bc1a15-f274-4c9f-a529-910ba03111ff"><Timestamp>2019-12-04 19:00:32</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_34d3f54b-c749-4b14-b5c0-95ecff3f9bad" Target="#_3fbf8558-fc8b-46e5-9b67-490cea44f089"><Timestamp>2019-12-04 19:05:20</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
