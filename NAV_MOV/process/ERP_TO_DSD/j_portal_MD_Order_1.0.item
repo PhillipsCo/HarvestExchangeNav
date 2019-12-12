@@ -25,7 +25,7 @@
     <contextParameter comment="" name="batch" prompt="batch?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value=""/>
     <contextParameter comment="" name="CRC" prompt="CRC?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_Long" value=""/>
     <contextParameter comment="" name="Customer_Process_Queue" prompt="Customer_Process_Queue?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value=""/>
-    <contextParameter comment="" name="directory" prompt="directory?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_Directory" value="//Srvretlfs100.harvestfoodsolutions.com/Shared/root/dev/cust04/OutBound/"/>
+    <contextParameter comment="" name="directory" prompt="directory?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_Directory" value="//Srvretlfs100.harvestfoodsolutions.com/Shared/root/dev/CUST04/OutBound/"/>
     <contextParameter comment="" name="environment" prompt="environment?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value=""/>
     <contextParameter comment="" name="ErrorMsg" prompt="ErrorMsg?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value=""/>
     <contextParameter comment="" name="implicit_db_environment" prompt="implicit_db_environment?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value="DEV"/>
@@ -403,7 +403,7 @@
     <elementParameter field="CHECK" name="ON_METERCATCHER_FLAG" value="false"/>
     <elementParameter field="CHECK" name="ON_CONSOLE_FLAG" show="false" value="false"/>
     <elementParameter field="CHECK" name="ON_FILES_FLAG" show="false" value="false"/>
-    <elementParameter field="DIRECTORY" name="FILE_PATH" show="false" value="&quot;C:/Talend/7.0.1/studio/Workspace_DEV/.metadata&quot;"/>
+    <elementParameter field="DIRECTORY" name="FILE_PATH" show="false" value="&quot;C:/Talend/7.0.1/studio/Workspace_GIT/.metadata&quot;"/>
     <elementParameter field="TEXT" name="FILENAME_STATS" show="false" value="&quot;stats_file.txt&quot;"/>
     <elementParameter field="TEXT" name="FILENAME_LOGS" show="false" value="&quot;logs_file.txt&quot;"/>
     <elementParameter field="TEXT" name="FILENAME_METTER" show="false" value="&quot;meter_file.txt&quot;"/>
@@ -569,16 +569,16 @@
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_-uKbAEF2EeazMKeZhCw-4Q"/>
     <elementParameter field="CLOSED_LIST" name="DRIVER" value="JTDS"/>
-    <elementParameter field="TEXT" name="HOST" value="context.DB_ERP_DSD_Integration_Server"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;srvrsql200.harvestfoodsolutions.com&quot;"/>
     <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
-    <elementParameter field="TEXT" name="PORT" value="context.DB_ERP_DSD_Integration_Port"/>
-    <elementParameter field="TEXT" name="SCHEMA_DB" value="context.DB_ERP_DSD_Integration_Schema"/>
-    <elementParameter field="TEXT" name="DBNAME" value="context.DB_ERP_DSD_Integration_Database"/>
-    <elementParameter field="TEXT" name="USER" value="context.DB_ERP_DSD_Integration_Login"/>
-    <elementParameter field="PASSWORD" name="PASS" value="8pW6Nmy2kucqfsDz9kx+JD4fCX5XMuLYBrRSpMZbhzTKJD0WltAbBg=="/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;1433&quot;"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;dbo&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;ERP_DSD_Integration_PREPROD&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;talend&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="7s6v49ZcklfgvLhdBCEhjQ=="/>
     <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
-    <elementParameter field="TEXT" name="PROPERTIES" value="context.DB_ERP_DSD_Integration_AdditionalParams"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
     <elementParameter field="CHECK" name="USE_SHARED_CONNECTION" value="true"/>
     <elementParameter field="TEXT" name="SHARED_CONNECTION_NAME" value="&quot;Order_Conn&quot;"/>
     <elementParameter field="LABEL" name="NOTE" show="false" value="This option only applies when deploying and running in the Talend Runtime"/>
@@ -597,14 +597,14 @@
     <elementParameter field="CLOSED_LIST" name="TABLEACTION" value="CREATE_IF_NOT_EXIST"/>
     <elementParameter field="CHECK" name="CASESENSITIVE" show="false" value="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="HOST" value="context.DB_ERP_DSD_Integration_Server"/>
-    <elementParameter field="TEXT" name="DBNAME" value="context.DB_ERP_DSD_Integration_Database"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;srvrsql200.harvestfoodsolutions.com&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;ERP_DSD_Integration_PREPROD&quot;"/>
     <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" show="false" value="context.DB_ERP_DSD_Integration_Database"/>
     <elementParameter field="TEXT" name="JDBC_URL" show="false" value="&quot;jdbc:oracle:oci:/@db10g_test&quot;"/>
-    <elementParameter field="TEXT" name="USER" value="context.DB_ERP_DSD_Integration_Login"/>
-    <elementParameter field="PASSWORD" name="PASS" value="8pW6Nmy2kucqfsDz9kx+JD4fCX5XMuLYBrRSpMZbhzTKJD0WltAbBg=="/>
-    <elementParameter field="TEXT" name="PORT" value="context.DB_ERP_DSD_Integration_Port"/>
-    <elementParameter field="TEXT" name="SCHEMA_DB" value="context.DB_ERP_DSD_Integration_Schema"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;talend&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="7s6v49ZcklfgvLhdBCEhjQ=="/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;1433&quot;"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;dbo&quot;"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION_ACCESS" show="false" value=""/>
     <elementParameter field="FILE" name="DBFILE_ACCESS" show="false" value="&quot;&quot;"/>
     <elementParameter field="CLOSED_LIST" name="DB_AS400_VERSION" show="false" value="jtds-1.3.1-patch.jar;jtds-1.3.1-patch.jar"/>
@@ -654,7 +654,7 @@
     <elementParameter field="TEXT" name="TABLE" value="&quot;RM_Order&quot;"/>
     <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="id_MSSQL"/>
     <elementParameter field="CLOSED_LIST" name="CREATE_TABLE_TYPE" show="false" value="SET"/>
-    <elementParameter field="TEXT" name="PROPERTIES" value="context.DB_ERP_DSD_Integration_AdditionalParams"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
     <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
     <elementParameter field="CHECK" name="VERTICA_CREATE_PROJECTION" show="false" value="true"/>
@@ -1041,7 +1041,7 @@
       <column comment="" key="false" length="-1" name="responseXML" nullable="true" originalDbColumnName="ACK" originalLength="5000" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables name="Var" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="TalendDate.parseDate(&quot;yyyyMMdd&quot;,row6.ORDERDATE) " name="orderDate" type="id_Date"/>
         <mapperTableEntries expression="routines.DateParser.convertPSTToUTC_atNoon(TalendDate.formatDate(&quot;yyyy-MM-dd&quot;,Var.orderDate)) " name="Filter1" type="id_String"/>
@@ -1433,7 +1433,7 @@
       <column comment="" key="false" length="-1" name="Message" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables name="Var" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="(row30.Timestamp.length()&gt;1&amp;&amp;row30.Timestamp.indexOf(&quot;T&quot;)&gt;=0&amp;&amp;row30.Timestamp.indexOf(&quot;Z&quot;)&gt;=0)?TalendDate.parseDate(&quot;yyyy-MM-dd HH:mm:ss.SSS&quot;,row30.Timestamp.substring(0,row30.Timestamp.indexOf(&quot;T&quot;))+&quot; &quot;+row30.Timestamp.substring(row30.Timestamp.indexOf(&quot;T&quot;)+1,row30.Timestamp.indexOf(&quot;Z&quot;))): TalendDate.parseDate(&quot;yyyy-MM-dd HH:mm:ss&quot;,&quot;9999-01-01 00:00:00&quot;,false) " name="Timestamp" type="id_Date"/>
         <mapperTableEntries expression="(row30.ValidationErrorCode==null  &amp;&amp; row30.Message==null )?&quot;Movilizer Acknowledgement&quot;:&quot;Movilizer Error Response&quot; " name="type" type="id_String"/>
@@ -1915,13 +1915,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_e66a96a7-7986-4924-9599-078b4b543292"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>OIvqdLsEmPMzBsGhkmG/kX53B0g0r1zYKgtIXHRgmgnrlcn9A2uDKiHQpitmIL7J9rymYu906NID
-B57qvtJQtw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_455bd1d1-db49-44c4-8778-55e7b1856b96"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>AI8kGOG+kISfBhhG+XWzRCkIQ0aY9VfimOuaQlp67mJrcANn0eDwLcQHnOdhk7FdQgB6x5eNER4d
-6c427I+jzw==</DigestValue></Reference></SignedInfo><SignatureValue>ieIdRkonIW1+RkqSiu4XSUoYRwTghK46GpDP6z7eoDZ6twlLQL0SY8aqBIq3bOLo11a+Q0W/slOM
-tWnOFDLTTF6oQIX3ZihZDIwJBmmgIy/M/MFdbREqo6e5nEqLEBFXU6ENEjwrrcbJGUALKzDu50jn
-Rfc1xvCpgoJivGCvv+F42y3sKmAfLy6LAT3grrB95hV243Jk/QSTFOxfrRy+LUcvYWpfp9v4ttzr
-ufE7lNLsP0SS+objMQAZdSlAxeGLNRKi7kwv9FT9DDBUSWhqCanF2dd0k+p5w3QuXJX9LoHhrVEe
-pOVCBpjy5ubcEHPe/wiZBOh5mQwtqig2j0O8EA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_5aa7192c-1725-4890-b3f0-b3966f2071ca"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>JfjqQ5a1GXqYbT5xM+GDdp9PSgit7+Cgi6TsWLSFp1d+yzowR7TbQRh5CpsFB82oLYgk14z93Ogy
+/ZaCzMQtwA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_3da67f7f-c512-4c8c-a6f4-1fd524ccefec"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>pTGpWTPZA+VmJBHHPEdxUvR26Esfhd199o751wa8Ux4WIanBv42hD6h2nAjhVQ4LIprspBBjaI6W
+dNeMhIprpg==</DigestValue></Reference></SignedInfo><SignatureValue>Qlac9BI06hgHW+f7rpVmd0kqLEOhfAdva664anwx2pQ8RlguJS1M5CW+wJmsOazvvglhZtmqgNBo
+JEyafw2uiX8heL9coTCuJhJctTr7RNmkdieVCDI0nldpH1DwWmeRggm4o6uj7qnm4Dx3fLNaQOdv
+eQodVubRp9U8yxIvZsE8X/b3EfVwrdFA82aXA/CoxERV0EDhj1TeR5CHe5hyo/pWJt4R4vyjDoQh
+gAMc4hAvalgowsaci7l9HfExV6AotY1/GIVKKDSXgj+e1L49upNoVIJb0KhpovcOP/7pkV6o3gJN
+ke15K5Fw1RuzidubXwbUpRi2GqEDWHe6nK/LoQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -1945,4 +1945,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_455bd1d1-db49-44c4-8778-55e7b1856b96" Target="#_e66a96a7-7986-4924-9599-078b4b543292"><Timestamp>2019-12-04 17:48:07</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_3da67f7f-c512-4c8c-a6f4-1fd524ccefec" Target="#_5aa7192c-1725-4890-b3f0-b3966f2071ca"><Timestamp>2019-12-12 21:24:05</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
