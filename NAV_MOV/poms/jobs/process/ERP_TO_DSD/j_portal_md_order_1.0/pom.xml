@@ -137,6 +137,11 @@
     </dependency>
     <dependency>
       <groupId>org.talend.libraries</groupId>
+      <artifactId>mssql-jdbc</artifactId>
+      <version>6.0.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.talend.libraries</groupId>
       <artifactId>talend_DB_mssqlUtil-1.2-20171017</artifactId>
       <version>6.0.0</version>
     </dependency>
