@@ -39,6 +39,7 @@
     <module>jobs/process/ERP_TO_DSD/j_portal_md_order_1.0</module>
     <module>jobs/process/ERP_TO_DSD/j_navexport_010_order_sql_0.1</module>
     <module>jobs/process/ERP_TO_DSD/j_navexport_010_itinerary2_1.1</module>
+    <module>jobs/process/j_navexport_010_customer_git_0.1</module>
   </modules>
   <properties>
     <talend.project.name>NAV_MOV</talend.project.name>
