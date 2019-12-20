@@ -670,32 +670,6 @@
     <elementParameter field="TEXT" name="LABEL" value="ERP_DSD_Integration"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
   </node>
-  <node componentName="tMSSqlConnection" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="768" posY="-896">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBConnection_2"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_BbudkE3lEeaYYuHJp6GolQ"/>
-    <elementParameter field="CLOSED_LIST" name="DRIVER" value="MSSQL_PROP"/>
-    <elementParameter field="TEXT" name="HOST" value="context.DB_Navision_Server"/>
-    <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
-    <elementParameter field="TEXT" name="PORT" value="context.DB_Navision_Port"/>
-    <elementParameter field="TEXT" name="SCHEMA_DB" value="context.DB_Navision_Schema"/>
-    <elementParameter field="TEXT" name="DBNAME" value="context.DB_Navision_Database"/>
-    <elementParameter field="TEXT" name="USER" value="context.DB_Navision_Login"/>
-    <elementParameter field="PASSWORD" name="PASS" value="8pW6Nmy2kudjruFRcwAihsBT1Er3Hu3qE2w729Tj3Vw="/>
-    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
-    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
-    <elementParameter field="TEXT" name="PROPERTIES" value="context.DB_Navision_AdditionalParams"/>
-    <elementParameter field="CHECK" name="USE_SHARED_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="SHARED_CONNECTION_NAME" show="false" value=""/>
-    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
-    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
-    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
-    <elementParameter field="CHECK" name="AUTO_COMMIT" value="false"/>
-    <elementParameter field="CHECK" name="SHARE_IDENTITY_SETTING" value="false"/>
-    <elementParameter field="TEXT" name="LABEL" value="DB_Navision"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-  </node>
   <node componentName="tSetKeystore" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="896" posY="-896">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSetKeystore_1"/>
     <elementParameter field="CLOSED_LIST" name="TRUSTSTORE_TYPE" value="JKS"/>
@@ -2676,11 +2650,6 @@
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
   <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBConnection_2"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
-  </subjob>
-  <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSetKeystore_1"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
@@ -2700,13 +2669,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_3132e92d-ced2-40e9-a168-165609a0c7c5"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>tKVzh258WnHJL0yX25THtdu+M++rSEDq6jylbuRn/+O8Tu0oGFSyp54CmSfGDEcvMB8fZdd/B7yf
-d9wrU71s8w==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_b5732634-c7a4-49f6-ac44-abbee3607481"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>hivmZfgQOf/gOWDYrQ2iLFOcbZWWa/MBocMDaYFh8jNYDHpqI0+rPe6U1qT0aVVe7IR8JQICgq3I
-kgFqA/PoqA==</DigestValue></Reference></SignedInfo><SignatureValue>wTENJQxBB+6uKYapVffpL4uiHQ/FhG3oF4AIezfoIBFhptLBEtT9VEcwRP/hhce+guIQkDbJk3dF
-mGAPn/gqXeV8CbPneHjwaqEVy7cB5cd0yLsCx5CUYnRJKVrA7KoHAmd8ys2hGjURas6ns8Z3a1hQ
-F+isenYq5RnXHMCJYZf4Chyk4zpa3eZWi8wT2bVcv8Q8nWXwZvfywvUwS7xkbSX6s2mHINYEuE67
-FryJlVIEPHEbk9kLH3XIGmmL5zUFE4cuPTVDFlL9Yhpvs0h0VFH8a++XV62RRIOCVxhmqTIeFQE4
-QJgiGSGQV9Pa4rbDMrOQlPlgDYNGpD5k72+83Q==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_a3a124d7-6ca2-47f4-a795-971af63560a4"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>b/fhL7Jx5LscpPv9ycmG/wvcXuWz0HUw2qtugFiasJ1Wc0uKhxtma+lEgB/Ig89srQDFjqxB49T9
+EWioh/4+bw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_fc024a21-7a65-43e3-8b78-7fb12c1ab25a"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>MjVjg/coYeLXv46wAPN3MsiNIEtUBhe05cZolQ0KQVWS4qH6ksWYI/n2xLPiB5OfY8fR5fkvsZwb
+xszR4sYbAg==</DigestValue></Reference></SignedInfo><SignatureValue>GWhvgpBVGvArcwirwXEeV99NGJfGCzNBwm4bW/NqV09KXHLenU5ynLZK05x9HVWTw7CxpDSGn4nf
+cd6QvxTfFh/lY4nfLUv773YVIv7DIYRADvtzAxoqquUEwFvOYFRDvIZp2l9nD31wGDz8gAqsXgdW
+r8yW3uEO3E7SBtZNHJG0/rVhDh0EpfPkgxpOymXSc5MAQ5KNnKP3R5BRpbiA1pVvjGYNn4qpxZOC
+fO40yNa/fyvK+w7/SaTnTxwRX0VCogVxPR/zvBhr46El5o7lF7vtW+n4hofx+UaCOsJepAT+U9PX
+Qapqf8Vyb29DrSJOK4WtkRc2IE/CmXJsAWfEsA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -2730,4 +2699,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_b5732634-c7a4-49f6-ac44-abbee3607481" Target="#_3132e92d-ced2-40e9-a168-165609a0c7c5"><Timestamp>2019-12-20 16:14:41</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_fc024a21-7a65-43e3-8b78-7fb12c1ab25a" Target="#_a3a124d7-6ca2-47f4-a795-971af63560a4"><Timestamp>2019-12-20 16:15:43</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
