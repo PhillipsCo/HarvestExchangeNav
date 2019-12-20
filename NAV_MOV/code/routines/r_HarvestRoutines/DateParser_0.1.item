@@ -104,6 +104,7 @@ public static String convertPSTToUTC_atNoon(String input_date) throws ParseExcep
     
 	if(input_date.length() > 10)
 		input_date = input_date.replace("-", "").substring(0, 10);
+	System.out.println(input_date);
 	   String row_date = input_date + " 12:00:00 UTC";
     SimpleDateFormat f = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss z");
     Date parseDate = f.parse(row_date);
