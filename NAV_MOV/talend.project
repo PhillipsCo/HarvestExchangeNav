@@ -1544,8 +1544,6 @@
       <relatedItems xmi:id="_QHLPswfTEeqqn_wI9dbZVA" id="_-v_zwEGGEeazMKeZhCw-4Q" version="Latest" type="context"/>
       <relatedItems xmi:id="_QHLPtAfTEeqqn_wI9dbZVA" id="_CJyp8EJfEeae0cO5bkhd8A" version="Latest" type="context"/>
       <relatedItems xmi:id="_QHLPtQfTEeqqn_wI9dbZVA" id="_jR2goFkAEeaP16Jdpyukmw" version="Latest" type="context"/>
-      <relatedItems xmi:id="_QHLPtgfTEeqqn_wI9dbZVA" id="_XxwsMD5tEemuNcX3n9amWg" version="Latest" type="joblet"/>
-      <relatedItems xmi:id="_QHLPtwfTEeqqn_wI9dbZVA" id="_BMI9cD5dEemuNcX3n9amWg" version="Latest" type="joblet"/>
       <relatedItems xmi:id="_QHLPuAfTEeqqn_wI9dbZVA" id="_-uKbAEF2EeazMKeZhCw-4Q" version="Latest" type="property"/>
       <relatedItems xmi:id="_QHLPuQfTEeqqn_wI9dbZVA" id="_BbudkE3lEeaYYuHJp6GolQ" version="Latest" type="property"/>
       <relatedItems xmi:id="_QHLPugfTEeqqn_wI9dbZVA" id="_pwEOQFnREeaCBrSnOG5XMg" version="Latest" type="property"/>
@@ -1590,6 +1588,7 @@
       <relatedItems xmi:id="_QHLP4QfTEeqqn_wI9dbZVA" id="Relational" version="Latest" type="routine"/>
       <relatedItems xmi:id="_QHLP4gfTEeqqn_wI9dbZVA" id="Delivery" version="Latest" type="routine"/>
       <relatedItems xmi:id="_QHLP4wfTEeqqn_wI9dbZVA" id="DataQualityDependencies" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_1H2LwCNDEeqF07nStKv9fA" id="_33ZrUHQTEee9WILlOtUH_A - metadata" version="Latest" type="schema"/>
     </ItemsRelations>
     <ItemsRelations xmi:id="_QHLP5AfTEeqqn_wI9dbZVA">
       <baseItem xmi:id="_QHLP5QfTEeqqn_wI9dbZVA" id="_EA0nwIMKEem03cJ6aknsMQ" version="0.1" type="job"/>

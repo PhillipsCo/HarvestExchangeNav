@@ -145,18 +145,6 @@
       <artifactId>routines</artifactId>
       <version>7.0.1</version>
     </dependency>
-    <dependency>
-      <groupId>org.example.nav_mov.joblet</groupId>
-      <artifactId>jlet_CustomLogging_NAV</artifactId>
-      <version>0.1.0</version>
-      <type>pom</type>
-    </dependency>
-    <dependency>
-      <groupId>org.example.nav_mov.joblet</groupId>
-      <artifactId>jlet_NAV_ResponseLogging</artifactId>
-      <version>0.1.0</version>
-      <type>pom</type>
-    </dependency>
   </dependencies>
   <build>
     <finalName>${talend.job.finalName}</finalName>
