@@ -8,10 +8,10 @@
     <version>7.0.1</version>
     <relativePath>../../../../</relativePath>
   </parent>
-  <groupId>com.harvestfoodsolutions.klo</groupId>
+  <groupId>com.harvestfoodsolutions.nav</groupId>
   <artifactId>j_portal_MD_Order</artifactId>
-  <version>1.1.1-SNAPSHOT</version>
-  <name>NAV_MOV j_portal_MD_Order-1.1.1-SNAPSHOT (1.0,Job Designs)</name>
+  <version>1.0.0-SNAPSHOT</version>
+  <name>NAV_MOV j_portal_MD_Order-1.0.0-SNAPSHOT (1.0,Job Designs)</name>
   <properties>
     <output.resources.dir>${talend.job.name}/src/main/resources</output.resources.dir>
     <talend.job.applyContextToChildren>false</talend.job.applyContextToChildren>
