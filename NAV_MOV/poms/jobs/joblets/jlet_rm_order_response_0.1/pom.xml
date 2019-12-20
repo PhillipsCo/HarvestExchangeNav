@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.example.nav_mov</groupId>
+    <artifactId>code.Master</artifactId>
+    <version>7.0.1</version>
+    <relativePath>../../../</relativePath>
+  </parent>
+  <groupId>org.example.nav_mov.joblet</groupId>
+  <artifactId>jlet_RM_Order_Response</artifactId>
+  <version>0.1.0</version>
+  <packaging>pom</packaging>
+  <name>NAV_MOV jlet_RM_Order_Response</name>
+  <properties>
+    <talend.joblet.id>_9cVNoN6SEeiv5slp1mX9YA</talend.joblet.id>
+    <talend.joblet.version>0.1</talend.joblet.version>
+  </properties>
+  <dependencies>
+    <dependency>
+      <groupId>org.talend.libraries</groupId>
+      <artifactId>dom4j-1.6.1</artifactId>
+      <version>6.0.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.talend.libraries</groupId>
+      <artifactId>jaxen-1.1.1</artifactId>
+      <version>6.0.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.talend.libraries</groupId>
+      <artifactId>log4j-1.2.16</artifactId>
+      <version>6.0.0</version>
+    </dependency>
+  </dependencies>
+  <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <artifactId>maven-deploy-plugin</artifactId>
+          <configuration>
+            <skip>true</skip>
+          </configuration>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+</project>
