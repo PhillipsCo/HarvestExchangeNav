@@ -1882,22 +1882,18 @@
     <elementParameter field="TEXT" name="LABEL" value="tMap_3"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" label="loginfo" name="responseXML">
-      <column comment="" key="false" length="255" name="Pool" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="255" name="Group" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="Key" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="255" name="ResponseTimestamp" nullable="true" originalLength="255" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="-1" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="type" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="ResponseTimestamp" nullable="true" originalDbColumnName="ACK_DATE" originalLength="255" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="-1" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="type" nullable="false" originalDbColumnName="MESSAGE" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables name="Var" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="(row12.Timestamp.length()&gt;1&amp;&amp;row12.Timestamp.indexOf(&quot;T&quot;)&gt;=0&amp;&amp;row12.Timestamp.indexOf(&quot;Z&quot;)&gt;=0)?TalendDate.parseDate(&quot;yyyy-MM-dd HH:mm:ss.SSS&quot;,row12.Timestamp.substring(0,row12.Timestamp.indexOf(&quot;T&quot;))+&quot; &quot;+row12.Timestamp.substring(row12.Timestamp.indexOf(&quot;T&quot;)+1,row12.Timestamp.indexOf(&quot;Z&quot;))): TalendDate.parseDate(&quot;yyyy-MM-dd HH:mm:ss&quot;,&quot;9999-01-01 00:00:00&quot;,false) " name="Timestamp" type="id_Date"/>
         <mapperTableEntries expression="(row12.ValidationErrorCode==null  &amp;&amp; row12.Message==null )?&quot;Movilizer Acknowledgement&quot;:&quot;Movilizer Error Response&quot; " name="type" type="id_String"/>
         <mapperTableEntries expression="context.ProcessTimeStamp.length()&gt;1?TalendDate.parseDate(&quot;yyyy-MM-dd HH:mm:ss&quot;,context.ProcessTimeStamp,false):TalendDate.parseDate(&quot;yyyy-MM-dd HH:mm:ss&quot;,&quot;9999-01-01 00:00:00&quot;,false) " name="ProcessTimeStamp" type="id_Date"/>
       </varTables>
       <outputTables name="responseXML" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="row12.Pool" name="Pool" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row12.Group" name="Group" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row12.Key" name="Key" nullable="true" type="id_String"/>
         <mapperTableEntries expression="Var.Timestamp " name="ResponseTimestamp" nullable="true" type="id_Date"/>
         <mapperTableEntries expression="Var.type " name="type" type="id_String"/>
@@ -1928,12 +1924,12 @@
     <elementParameter field="TEXT" name="USER" show="false" value="context.DB_ERP_DSD_Integration_Login"/>
     <elementParameter field="PASSWORD" name="PASS" show="false" value="8pW6Nmy2kucqfsDz9kx+JD4fCX5XMuLYBrRSpMZbhzTKJD0WltAbBg=="/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;NAV_OrderControl_ACK&quot;"/>
-    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="CREATE_IF_NOT_EXISTS"/>
+    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="NONE"/>
     <elementParameter field="CHECK" name="IDENTITY_INSERT" value="false"/>
     <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
     <elementParameter field="LABEL" name="NOTE" show="false" value="NOTE: batch size must be less than or equal to total number of parameter markers divided by number of columns"/>
-    <elementParameter field="CHECK" name="SPECIFY_IDENTITY_FIELD" value="false"/>
-    <elementParameter field="COLUMN_LIST" name="IDENTITY_FIELD" show="false" value="Pool"/>
+    <elementParameter field="CHECK" name="SPECIFY_IDENTITY_FIELD" show="false" value="false"/>
+    <elementParameter field="COLUMN_LIST" name="IDENTITY_FIELD" show="false" value="Key"/>
     <elementParameter field="TEXT" name="START_VALUE" show="false" value="1"/>
     <elementParameter field="TEXT" name="STEP" show="false" value="1"/>
     <elementParameter field="LABEL" name="NOTE" show="false" value="This option only applies when deploying and running in the Talend Runtime"/>
@@ -1948,16 +1944,6 @@
     <elementParameter field="TABLE" name="ADD_COLS"/>
     <elementParameter field="CHECK" name="USE_FIELD_OPTIONS" value="false"/>
     <elementParameter field="TABLE" name="FIELD_OPTIONS" show="false">
-      <elementValue elementRef="SCHEMA_COLUMN" value="Pool"/>
-      <elementValue elementRef="UPDATE_KEY" value="false"/>
-      <elementValue elementRef="DELETE_KEY" value="false"/>
-      <elementValue elementRef="UPDATABLE" value="true"/>
-      <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="Group"/>
-      <elementValue elementRef="UPDATE_KEY" value="false"/>
-      <elementValue elementRef="DELETE_KEY" value="false"/>
-      <elementValue elementRef="UPDATABLE" value="true"/>
-      <elementValue elementRef="INSERTABLE" value="true"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="Key"/>
       <elementValue elementRef="UPDATE_KEY" value="false"/>
       <elementValue elementRef="DELETE_KEY" value="false"/>
@@ -1982,18 +1968,14 @@
     <elementParameter field="TEXT" name="LABEL" value="tMSSqlOutput_4"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" label="loginfo" name="tDBOutput_1">
-      <column comment="" key="false" length="255" name="Pool" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="255" name="Group" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="Key" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="255" name="ResponseTimestamp" nullable="true" originalLength="255" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="-1" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="type" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="ResponseTimestamp" nullable="true" originalDbColumnName="ACK_DATE" originalLength="255" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="-1" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="type" nullable="false" originalDbColumnName="MESSAGE" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" label="loginfo" name="REJECT">
-      <column comment="" key="false" length="255" name="Pool" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="255" name="Group" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="Key" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="255" name="ResponseTimestamp" nullable="true" originalLength="255" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="-1" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="type" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="ResponseTimestamp" nullable="true" originalDbColumnName="ACK_DATE" originalLength="255" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="-1" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="type" nullable="false" originalDbColumnName="MESSAGE" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
@@ -2669,13 +2651,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_2715cb71-50fa-4987-a849-048772ab6ac4"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>AeeF2k2oyF/oEL2PKS904ELxqTmQEFwo/KhyXsIXauSmWYFWOg2l68VoaVTReLy0LP2YxQjbxgW3
-Bve24w6kWQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_f2b70370-c9e2-4b9a-8c5f-690f001220c7"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>nB5oJTjhgwX+Fe7y3LLTrahIU6hvXC49If0K2CrxPsXyLR/jVcGvNKAsIUxqnFaBBAWcYxV3TgRO
-64TIwE3sxg==</DigestValue></Reference></SignedInfo><SignatureValue>3/ubVIN6UYX27zFlGDBJJB+FAXMqmGWAmBC5dMEZdh2ruWTPgJQZ+f5SlAKe9n/Y8OPUuWDfnn8f
-t5TaSYMjMwhk1yH3fRN8FFYyOr/GMrDQEtzNFs43fXDXy6lmwpzhxRvoVOkec/2h8UZQMa0o9RnY
-vhk6Jw49tKZjelAgthTF8NfJAfoa3O28bY95+UDhGiOmsCazE5xKCerXrypyyPkF4kRtsO00uCJR
-PIE0J3dB4ja6V/jHmPeMgZg6DyYHAHl17/UsESV3VTrXXPIWgaTxtjh6nMniJDJA5aM3oPHqMtky
-M1vY5ZcM5Ed/4IshIIxuSr0Na+1wySPavNVBSg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_cdd690f0-3f59-4f25-b0e6-b99d4c978474"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>yqiTnZiEefEG1JuV8bUvoKg34/0TiOFRa5PTPRCRzzg77Lq5tx/7iUutDIa61nTeqZeJ0Ky1gTWH
+/v5O0Nr/bg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_cc68a5a3-5d11-4108-a685-c79ba2c0c476"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>fw+oziZrYRuLatU8aayxtaMj+rT4AK86pWWIZuF1gtfeZ7Ual9sTcMiXkluypciiMBb2oyHdFKKb
+yP4ML9sasQ==</DigestValue></Reference></SignedInfo><SignatureValue>lyCcySoUsnyCLDn8lUKtv02VR9vgSY2TWUKBF9M69VSzeh5/ezuN4QfokLaQiIZTD8B4UQjydZEW
+ZrpP+5VGnruCX2Or7rKUcrtB8tSaWXwoOYkSuRpJJZzJsjYk53v14Yg0iaUqB19NpZmO5IAEGaON
+ZG+J7BaG8iYHbPHMb4qw3kyVHZ3M5T+EsUhAR1kMDcdSifBcIXwVUmKTlkK8yFvvEKnxI4cRm8nf
+1W0ABRHuuQYX+7ddNlw+ay4GLdeePaqHuVPT+VB6S+7ijhB3NZwFaxtaSXd44CYNP9Md7+EtUT8/
+lZhCfT8BhzNl7+ZT+GcKkV+lXSypee5o5TlPEQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -2699,4 +2681,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_f2b70370-c9e2-4b9a-8c5f-690f001220c7" Target="#_2715cb71-50fa-4987-a849-048772ab6ac4"><Timestamp>2019-12-20 16:20:24</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_cc68a5a3-5d11-4108-a685-c79ba2c0c476" Target="#_cdd690f0-3f59-4f25-b0e6-b99d4c978474"><Timestamp>2019-12-20 16:25:17</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
