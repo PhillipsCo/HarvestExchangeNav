@@ -8,7 +8,7 @@
     <version>7.0.1</version>
     <relativePath>../../../../</relativePath>
   </parent>
-  <groupId>com.harvestfoodsolutions.dsd</groupId>
+  <groupId>com.harvestfoodsolutions.nav</groupId>
   <artifactId>j_NavExport_010_OrderControl_</artifactId>
   <version>0.1.0-SNAPSHOT</version>
   <name>NAV_MOV j_NavExport_010_OrderControl_-0.1.0-SNAPSHOT (0.1,Job Designs)</name>
