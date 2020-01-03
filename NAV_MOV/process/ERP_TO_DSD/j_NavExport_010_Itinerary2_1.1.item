@@ -1069,7 +1069,7 @@
     </metadata>
     <metadata connector="FLOW" name="Stop">
       <column comment="" key="false" length="-1" name="SHIPTO" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="255" name="STOPNO" nullable="false" originalLength="255" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="STOPNO" nullable="false" originalLength="255" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <metadata connector="FLOW" name="sendMasterData">
       <column comment="" key="false" length="-1" name="responseXML" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
@@ -1080,7 +1080,7 @@
         <mapperTableEntries expression="TalendDate.formatDate(&quot;yyyy-MM-dd&quot;, row6.DOWNLOAD_DATE) " name="DATE" type="id_String"/>
         <mapperTableEntries expression="routines.DateParser.convertPSTToUTC_atNoon(TalendDate.formatDate(&quot;yyyy-MM-dd&quot;, row6.DOWNLOAD_DATE) ) " name="LONGDATE" type="id_String"/>
         <mapperTableEntries expression="&quot;00000&quot; + row6.ROUTENO   +&quot;-&quot;+Var.LONGDATE " name="Key" type="id_String"/>
-        <mapperTableEntries expression="row6.STOPNO " name="STOPNO" type="id_Integer"/>
+        <mapperTableEntries expression=" String.format(&quot;%03d&quot; , row6.STOPNO)" name="STOPNO" type="id_String"/>
         <mapperTableEntries expression="&quot;00000&quot; + row6.ROUTENO " name="Group" type="id_String"/>
         <mapperTableEntries expression="TalendDate.parseDate(&quot;yyyy-MM-dd'T17:00:00.000Z'&quot;,TalendDate.addDate(TalendDate.formatDate(&quot;yyyy-MM-dd'T17:00:00.000Z'&quot;,row6.DOWNLOAD_DATE),&quot;yyyy-MM-dd'T17:00:00.000Z'&quot;,10,&quot;dd&quot;)) " name="TillDate" type="id_Date"/>
         <mapperTableEntries expression="Var.LONGDATE " name="filter4" type="id_String"/>
@@ -1105,7 +1105,7 @@
       </outputTables>
       <outputTables name="Stop" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="&quot;000&quot; +row6.SHIPTO" name="SHIPTO" type="id_String"/>
-        <mapperTableEntries expression="Var.STOPNO " name="STOPNO" type="id_Integer"/>
+        <mapperTableEntries expression="Var.STOPNO " name="STOPNO" type="id_String"/>
       </outputTables>
       <outputTables name="sendMasterData" sizeState="INTERMEDIATE">
         <mapperTableEntries name="responseXML" nullable="true" type="id_String"/>
@@ -1274,13 +1274,13 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row10"/>
   </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tContextLoad_1" offsetLabelX="0" offsetLabelY="0" source="tContextLoad_1" target="tDBConnection_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk15"/>
+  </connection>
   <connection connectorName="FLOW" label="row12" lineStyle="0" metaname="tContextLoad_1" offsetLabelX="0" offsetLabelY="0" source="tContextLoad_1" target="tLogRow_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row12"/>
-  </connection>
-  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tContextLoad_1" offsetLabelX="0" offsetLabelY="0" source="tContextLoad_1" target="tDBConnection_1">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk15"/>
   </connection>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tDBConnection_1" offsetLabelX="0" offsetLabelY="0" source="tDBConnection_1" target="tDBConnection_2">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk16"/>
@@ -1457,13 +1457,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_2c04290e-fa13-41c4-a260-22977208141f"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>0ml7w1L2MyKWDROxRnyYODsjJ4DL9bJUtHb3ZeuQ3gRB5Iqkn2aSbNrad7T/V7zD5An646OUsfLf
-O6k+TI2ITg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_9e44ddc1-a714-4e16-b675-f4b233bd6902"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>K/UIweeY8azErKTuu2DS/Ouhctf1ygCyaNT+9bfV6oDMdOg8qbgfgZymY/jWsJSZnkwwZDTWCUIS
-uRCJg8YUjA==</DigestValue></Reference></SignedInfo><SignatureValue>0UwmTnuRnjxvRnezQa8IRHTLbI3sSfDG/eS/JLQw7C5+H5z0gvuw4srWGod7lJan00Oe1nr5xkkk
-8HzMB9niyijCrMri6Ie6LbvJssE4Mn93pWsQGSlkDoxFeAGCQloU1WxPJcUzNVMA8CXOstAxhe2Z
-a5zhwdI3BSZqF6dLGXeEPKfnVb+n/+aXJqBfAyv8QzlzV6ehXVp135+8rmSTVqWp4wOv3KHlsXeT
-pSiX4rxX+Cz5so0LQlzwF6R6vncQ+HPu2V5SZztvcDn3j5nweJLdc3llWfI0ilpKSCpUECnO120N
-rvHJuNcqcPKD6YKgtXbm7tQrWRyF9Z5VqleMWg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_d9c8be75-f28a-4cc5-a688-92083c6e1414"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>WHljO6x7WERUDPcC2WGjOjx1tX9DZy/fblI7UGBd77DfZWgZ65T1U00/6FFWaSvqoMkiyZ+sktBI
+SWQ7Gv3xVg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_338abb8c-4837-493a-a0de-d06dd25922de"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>VXLAgQ9NZg0wm6Pgy4ABImbBSEE9YRMrqxh1JmzqHu/E1dmFOa6tA32VZQxO03yv0U8Dn+LDbIgX
+2n/5WSpc7A==</DigestValue></Reference></SignedInfo><SignatureValue>LCGvk12lR3zJ/fr3Vjj+RQ71kEmdN+SC7WfpG5IY+BkJ3eBRAnzgPZCPS3NTRtAcpTdyUqg2e1iR
+Q3cB2tQhSVAhNREQwh0yCSHbhRaOwpzchckeBv9+ewKgP7GVhvwd0tdkQys2yi+Y0LwBaQQ8NRHo
+zPdUmeRGJNCWVPNqSLSu7vu+ci56TyjYi96eu0zXuyBif9zizJlpJbmgskeOg1S/7X8+xNkt1bWv
+3KsjVNCUzSeFTz+SAp3V6VTy5HFGfQyn2hpghccaILvONlBtieIqv6S/HhdtjUKbVFSsGZjmWjCC
+BCIQJXomVkc7R9bSfNPZ/bTOCboJ1/6rtRs9SQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -1487,4 +1487,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_9e44ddc1-a714-4e16-b675-f4b233bd6902" Target="#_2c04290e-fa13-41c4-a260-22977208141f"><Timestamp>2019-12-20 15:50:47</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_338abb8c-4837-493a-a0de-d06dd25922de" Target="#_d9c8be75-f28a-4cc5-a688-92083c6e1414"><Timestamp>2020-01-03 13:46:06</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
