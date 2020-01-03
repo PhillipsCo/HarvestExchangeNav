@@ -44,6 +44,7 @@
     <module>jobs/joblets/jlet_rm_order_response_0.1</module>
     <module>jobs/joblets/jlet_responselogging_nav_0.1</module>
     <module>jobs/joblets/jlet_rm_order_response_logging_0.1</module>
+    <module>jobs/process/ERP_TO_DSD/j_navexport_010_price_0.1</module>
   </modules>
   <properties>
     <talend.project.name>NAV_MOV</talend.project.name>
