@@ -719,7 +719,7 @@
       <column comment="" defaultValue="" key="false" length="30" name="STOPNO" nullable="false" originalLength="30" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables expressionFilter="row9.ROUTENO.equals(&quot;40035&quot;)" name="row1" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="row9.DOWNLOAD_DATE " name="DOWNLOAD_DATE" nullable="true" type="id_Date"/>
@@ -733,8 +733,8 @@
         <mapperTableEntries name="SHIPTO" type="id_String"/>
         <mapperTableEntries name="STOPNO" type="id_Integer"/>
       </inputTables>
-      <inputTables lookupMode="LOAD_ONCE" matchingMode="ALL_ROWS" name="row15" sizeState="INTERMEDIATE">
-        <mapperTableEntries name="REFERENCEDATE" type="id_Date"/>
+      <inputTables activateCondensedTool="true" innerJoin="true" lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row15" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="row9.DOWNLOAD_DATE " name="REFERENCEDATE" operator="=" type="id_Date"/>
         <mapperTableEntries name="SHIPTO" type="id_String"/>
         <mapperTableEntries name="orderDate1" type="id_String"/>
         <mapperTableEntries name="var1" type="id_Date"/>
@@ -1395,13 +1395,13 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row10"/>
   </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tContextLoad_1" offsetLabelX="0" offsetLabelY="0" source="tContextLoad_1" target="tDBConnection_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk15"/>
+  </connection>
   <connection connectorName="FLOW" label="row12" lineStyle="0" metaname="tContextLoad_1" offsetLabelX="0" offsetLabelY="0" source="tContextLoad_1" target="tLogRow_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row12"/>
-  </connection>
-  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tContextLoad_1" offsetLabelX="0" offsetLabelY="0" source="tContextLoad_1" target="tDBConnection_1">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk15"/>
   </connection>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tDBConnection_1" offsetLabelX="0" offsetLabelY="0" source="tDBConnection_1" target="tDBConnection_2">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk16"/>
@@ -1444,13 +1444,13 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row5"/>
   </connection>
-  <connection connectorName="REJECT" label="row3" lineStyle="0" metaname="REJECT" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tSchemaComplianceCheck_1" target="tJavaRow_1">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row3"/>
-  </connection>
-  <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tSchemaComplianceCheck_1" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tSchemaComplianceCheck_1" target="tMap_1">
+  <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tSchemaComplianceCheck_1" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tSchemaComplianceCheck_1" target="tMap_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row2"/>
+  </connection>
+  <connection connectorName="REJECT" label="row3" lineStyle="0" metaname="REJECT" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tSchemaComplianceCheck_1" target="tJavaRow_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row3"/>
   </connection>
   <connection connectorName="FLOW" label="output_stop" lineStyle="0" metaname="output_stop" offsetLabelX="0" offsetLabelY="0" source="tMap_1" target="tMSSqlOutput_1">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
@@ -1492,25 +1492,25 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row6"/>
   </connection>
-  <connection connectorName="FLOW" label="sendMasterData" lineStyle="0" metaname="sendMasterData" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tMap_2" target="tJavaFlex_6">
+  <connection connectorName="FLOW" label="masterdataPoolUpdate" lineStyle="0" metaname="masterdataPoolUpdate" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tMap_2" target="tJavaFlex_2">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="sendMasterData"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="masterdataPoolUpdate"/>
   </connection>
-  <connection connectorName="FLOW" label="Stop" lineStyle="0" metaname="Stop" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tMap_2" target="tJavaFlex_5">
+  <connection connectorName="FLOW" label="DATE" lineStyle="0" metaname="DATE" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tMap_2" target="tJavaFlex_3">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="Stop"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="DATE"/>
   </connection>
   <connection connectorName="FLOW" label="MasterdataUpdate" lineStyle="0" metaname="MasterdataUpdate" offsetLabelX="0" offsetLabelY="0" outputId="3" source="tMap_2" target="tJavaFlex_4">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="MasterdataUpdate"/>
   </connection>
-  <connection connectorName="FLOW" label="DATE" lineStyle="0" metaname="DATE" offsetLabelX="0" offsetLabelY="0" outputId="4" source="tMap_2" target="tJavaFlex_3">
+  <connection connectorName="FLOW" label="Stop" lineStyle="0" metaname="Stop" offsetLabelX="0" offsetLabelY="0" outputId="4" source="tMap_2" target="tJavaFlex_5">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="DATE"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="Stop"/>
   </connection>
-  <connection connectorName="FLOW" label="masterdataPoolUpdate" lineStyle="0" metaname="masterdataPoolUpdate" offsetLabelX="0" offsetLabelY="0" outputId="5" source="tMap_2" target="tJavaFlex_2">
+  <connection connectorName="FLOW" label="sendMasterData" lineStyle="0" metaname="sendMasterData" offsetLabelX="0" offsetLabelY="0" outputId="5" source="tMap_2" target="tJavaFlex_6">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="masterdataPoolUpdate"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="sendMasterData"/>
   </connection>
   <connection connectorName="FLOW" label="row7" lineStyle="8" metaname="tDBInput_1" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="tMap_2">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
@@ -1598,13 +1598,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_0feba45f-b306-4e7a-9d12-314ebb09f975"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>0oxra/9BpYGi+yuBlcOJLGGVYa9slim7xehj6nvw1PGYT+uETBWOaCYeLXY0HEk7sKIq2sfYLOms
-bcoXq4hcdA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_78091723-cf46-47c9-88f0-b64e07ad3d2f"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>XoM/idYtMRohMZK/X6c7b59/VECdY0C4MpasounPy1AIF86AQSmzCgj2iXW26g0anrMJ5ahRHlk3
-pQQEdQHlsg==</DigestValue></Reference></SignedInfo><SignatureValue>lNVwZZHRxQMviMb0ZI2M29AAe0ANiiBC00CxMOBvi9mG+6kfolWxoCH+9buLzqifN1jy5DCGMNlr
-qX1tnMs5o9hwtL34nbgYO7cWruVijEPH4YOI142HXZYHbUfQOeceWe5xAeAMyVbGNQ4t0rAy+6Up
-GiZrzBoOUaoKXlQXlW1p3ofQsmAewB6eaClR6AYHGXmOfTZYb95SZulOR7EiJ1f7sXEJTxV8l0qb
-reaIHeLsG3yXOCMjgGfwOd/6iDlSNeII+Vsx0A0GJ423G8YHo7Qw1zIPB9ZPPeCZubnOgwXUH2uZ
-HH1Abdx1G24Cwmf0qMe9sPbFgeGPo2G6onH33Q==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_94e2868f-2e8a-4c86-bda2-32542fa80e56"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>hh/LoxnySKiYzkBorjTtzGPyOq23GCRPdmnwzDFnYxHMFo0znUplKoP6vdQ5mCfZ3ZiWNvsl1oUv
+dKOJZPbnDw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_7e38916a-2e18-4e61-9180-50bde09f7c6b"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>jrPWR7I2gzVvM0YwrgGAV+dNMcL59DT8xMh7QqOyYMgCwSiaWhelg5w0sgiIYVRjwKIK0zgjshvo
+TWs/qWcKrg==</DigestValue></Reference></SignedInfo><SignatureValue>K+P0xlsUGAoWcCrBB0bJ2iVYctHep+sLfngTiSlbMOPa6UwtMiWaCfQyTJAzL5h7GbUV2LinNXuA
+G7LxK4cCbyggSCbtPWXIIIRAhNEsRZUKIMhcXHFNVN/s1F1jWhkzb99xO2H1cwNXvxPhCccU61JG
+Waj6fLyegQ2zLkwGxBfdxbLNULvjICONzJAeOvcTp7pLSje7bT2GxPXhX9/TdWARt9RHgL1Al4tK
+X65FE9/5OiaYDzshpkMI5g7UF5yo4RlIoGgZt5sYHc0AihnrGcAAP8aXN2/fW9Ar7MWI8V2XhmS2
+nc1YBINfCkjjV+Ep63zSkoW5MrNA24sXIiq3IQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -1628,4 +1628,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_78091723-cf46-47c9-88f0-b64e07ad3d2f" Target="#_0feba45f-b306-4e7a-9d12-314ebb09f975"><Timestamp>2020-01-03 20:27:59</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_7e38916a-2e18-4e61-9180-50bde09f7c6b" Target="#_94e2868f-2e8a-4c86-bda2-32542fa80e56"><Timestamp>2020-01-03 20:31:01</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
