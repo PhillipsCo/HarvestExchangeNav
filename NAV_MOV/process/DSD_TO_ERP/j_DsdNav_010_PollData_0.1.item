@@ -16,7 +16,7 @@
     <contextParameter comment="" name="filepath" prompt="filepath?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value=""/>
     <contextParameter comment="" name="group" prompt="group?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value=""/>
     <contextParameter comment="" name="implicit_db_environment" prompt="implicit_db_environment?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value="DEV"/>
-    <contextParameter comment="" name="instance" prompt="instance?" promptNeeded="true" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value="CUST04"/>
+    <contextParameter comment="" name="instance" prompt="instance?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value="CUST04"/>
     <contextParameter comment="" name="key" prompt="key?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value=""/>
     <contextParameter comment="" name="keystore" prompt="keystore?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value=""/>
     <contextParameter comment="" name="Location" prompt="Location?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value="007"/>
@@ -81,7 +81,7 @@
     <contextParameter comment="" name="filepath" prompt="filepath?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value=""/>
     <contextParameter comment="" name="group" prompt="group?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value=""/>
     <contextParameter comment="" name="implicit_db_environment" prompt="implicit_db_environment?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value="QA"/>
-    <contextParameter comment="" name="instance" prompt="instance?" promptNeeded="true" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value="CUST04"/>
+    <contextParameter comment="" name="instance" prompt="instance?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value="CUST04"/>
     <contextParameter comment="" name="key" prompt="key?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value=""/>
     <contextParameter comment="" name="keystore" prompt="keystore?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value=""/>
     <contextParameter comment="" name="Location" prompt="Location?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value="007"/>
@@ -146,7 +146,7 @@
     <contextParameter comment="" name="filepath" prompt="filepath?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value=""/>
     <contextParameter comment="" name="group" prompt="group?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value=""/>
     <contextParameter comment="" name="implicit_db_environment" prompt="implicit_db_environment?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value="PROD"/>
-    <contextParameter comment="" name="instance" prompt="instance?" promptNeeded="true" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value="CUST04"/>
+    <contextParameter comment="" name="instance" prompt="instance?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value="CUST04"/>
     <contextParameter comment="" name="key" prompt="key?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value=""/>
     <contextParameter comment="" name="keystore" prompt="keystore?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value=""/>
     <contextParameter comment="" name="Location" prompt="Location?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value="007"/>
@@ -211,7 +211,7 @@
     <contextParameter comment="" name="filepath" prompt="filepath?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value=""/>
     <contextParameter comment="" name="group" prompt="group?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value=""/>
     <contextParameter comment="" name="implicit_db_environment" prompt="implicit_db_environment?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value="PREPROD"/>
-    <contextParameter comment="" name="instance" prompt="instance?" promptNeeded="true" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value="CUST04"/>
+    <contextParameter comment="" name="instance" prompt="instance?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value="CUST04"/>
     <contextParameter comment="" name="key" prompt="key?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value=""/>
     <contextParameter comment="" name="keystore" prompt="keystore?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value=""/>
     <contextParameter comment="" name="Location" prompt="Location?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value="007"/>
@@ -253,7 +253,7 @@
     <contextParameter comment="" name="DB_Talend_Context_Server" prompt="DB_Talend_Context_Server?" promptNeeded="false" repositoryContextId="_ypE2UFnREeaCBrSnOG5XMg" type="id_String" value="SRVRSQL200.harvestfoodsolutions.com"/>
     <contextParameter comment="" name="DB_ERP_DSD_Integration_Login" prompt="DB_ERP_DSD_Integration_Login?" promptNeeded="false" repositoryContextId="_-v_zwEGGEeazMKeZhCw-4Q" type="id_String" value="talend"/>
     <contextParameter comment="" name="DB_ERP_DSD_Integration_Port" prompt="DB_ERP_DSD_Integration_Port?" promptNeeded="false" repositoryContextId="_-v_zwEGGEeazMKeZhCw-4Q" type="id_String" value="1433"/>
-    <contextParameter comment="" name="DB_ERP_DSD_Integration_Database" prompt="DB_ERP_DSD_Integration_Database?" promptNeeded="false" repositoryContextId="_-v_zwEGGEeazMKeZhCw-4Q" type="id_String" value="ERP_DSD_Integration_PREPROD_04"/>
+    <contextParameter comment="" name="DB_ERP_DSD_Integration_Database" prompt="DB_ERP_DSD_Integration_Database?" promptNeeded="false" repositoryContextId="_-v_zwEGGEeazMKeZhCw-4Q" type="id_String" value="ERP_DSD_Integration_PREPROD"/>
     <contextParameter comment="" name="DB_ERP_DSD_Integration_Password" prompt="DB_ERP_DSD_Integration_Password?" promptNeeded="false" repositoryContextId="_-v_zwEGGEeazMKeZhCw-4Q" type="id_Password" value="YdTnhbqBAdo="/>
     <contextParameter comment="" name="DB_ERP_DSD_Integration_Schema" prompt="DB_ERP_DSD_Integration_Schema?" promptNeeded="false" repositoryContextId="_-v_zwEGGEeazMKeZhCw-4Q" type="id_String" value="dbo"/>
     <contextParameter comment="" name="DB_ERP_DSD_Integration_Server" prompt="DB_ERP_DSD_Integration_Server?" promptNeeded="false" repositoryContextId="_-v_zwEGGEeazMKeZhCw-4Q" type="id_String" value="srvrsql200.harvestfoodsolutions.com"/>
@@ -315,7 +315,7 @@
     <elementParameter field="CHECK" name="ON_METERCATCHER_FLAG" value="false"/>
     <elementParameter field="CHECK" name="ON_CONSOLE_FLAG" show="false" value="false"/>
     <elementParameter field="CHECK" name="ON_FILES_FLAG" show="false" value="false"/>
-    <elementParameter field="DIRECTORY" name="FILE_PATH" show="false" value="&quot;C:/Talend641/workspace_QA_641/.metadata&quot;"/>
+    <elementParameter field="DIRECTORY" name="FILE_PATH" show="false" value="&quot;C:/Talend/7.0.1/studio/Workspace_GIT/.metadata&quot;"/>
     <elementParameter field="TEXT" name="FILENAME_STATS" show="false" value="&quot;stats_file.txt&quot;"/>
     <elementParameter field="TEXT" name="FILENAME_LOGS" show="false" value="&quot;logs_file.txt&quot;"/>
     <elementParameter field="TEXT" name="FILENAME_METTER" show="false" value="&quot;meter_file.txt&quot;"/>
@@ -460,16 +460,16 @@
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_-uKbAEF2EeazMKeZhCw-4Q"/>
     <elementParameter field="CLOSED_LIST" name="DRIVER" value="JTDS"/>
-    <elementParameter field="TEXT" name="HOST" value="context.DB_ERP_DSD_Integration_Server"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;srvrsql200.harvestfoodsolutions.com&quot;"/>
     <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
-    <elementParameter field="TEXT" name="PORT" value="context.DB_ERP_DSD_Integration_Port"/>
-    <elementParameter field="TEXT" name="SCHEMA_DB" value="context.DB_ERP_DSD_Integration_Schema"/>
-    <elementParameter field="TEXT" name="DBNAME" value="context.DB_ERP_DSD_Integration_Database"/>
-    <elementParameter field="TEXT" name="USER" value="context.DB_ERP_DSD_Integration_Login"/>
-    <elementParameter field="PASSWORD" name="PASS" value="8pW6Nmy2kucqfsDz9kx+JD4fCX5XMuLYBrRSpMZbhzTKJD0WltAbBg=="/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;1433&quot;"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;dbo&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;ERP_DSD_Integration_PREPROD&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;talend&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="7s6v49ZcklfgvLhdBCEhjQ=="/>
     <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
-    <elementParameter field="TEXT" name="PROPERTIES" value="context.DB_ERP_DSD_Integration_AdditionalParams"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
     <elementParameter field="CHECK" name="USE_SHARED_CONNECTION" value="true"/>
     <elementParameter field="TEXT" name="SHARED_CONNECTION_NAME" value="&quot;DB_ERP_DSD_Integration&quot;"/>
     <elementParameter field="LABEL" name="NOTE" show="false" value="This option only applies when deploying and running in the Talend Runtime"/>
@@ -650,13 +650,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_0928953e-c76c-4bef-b7b5-d0c4fec6bd52"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>47r1hV+H79r8QmqEubWSb0fmXlDBTOPTGNWnD4YMiJJogI00h7W14Gz/RF8V2uI9hh0nz9jf8noJ
-xpVZvonfFA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_4cca0538-e5ad-4642-b377-03f1fc9ae388"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>DAWGstSiFu58WE76Ishbby98v7FceF3+fk8+N1btZEB19PCMhRutFkEiAyRSR+lWykt4jNo22JGA
-c+wcXUzwzQ==</DigestValue></Reference></SignedInfo><SignatureValue>nx7lhtuF7vy9k8x2Xr/EOo1PhHFouRZ9ue2DOAxCNoAggHMz4tiVQMcgGt9dOep1HIziNtNzXsXx
-TKuFIOXSOBdqUAlax9L75RRM850Ml/Jb2v5FpTjKOCKixr9Gjd2Ss3WA7Bmfum6oW6tySemq7jAa
-jwjnUfuEiDrZL2xT7vlRvbceAxHmRZjFVHvH29+6lyhyBRuraNkGbvtSZ8EIry8yNZYKGsJxsM5w
-3z2glQGNKdTg3yD2/LpEMk0sjQZeZOIdx76pZJXPm0eIAg8h/iRlSGCtV+8h56QpD6pVFyVl/8Pz
-c6V+fmBwAXgn404tcVFOKyxFsCdpGT6gtxLLjQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_60ed2e37-f924-46ca-a2ec-88aeb63b4d3f"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>CUG3Ve85F3elQmKK1voZbfOz0b3LSotu5l9aDoy3CacEa/7Le2St2Ap42NNhARSpB/ZdDtvaUdvP
+kh+P559G2A==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_ae5683a8-83c9-481c-ae4c-f1a716824d5f"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>b1xYotmKfBJYcXN5+7RHCDIW5SG3KYQk2NoQwmy3swTYplIKHmNV2AM73wELyexOd7pM4P4gJ6n/
+6gQgPs2Ewg==</DigestValue></Reference></SignedInfo><SignatureValue>W6x4a24d4uBqycfMHdTYiyeMfPqPTVNTfzA8cSkay/7CcOTNEw5Sj5K1kvP5b9p32VTGVQBoxVXN
+0OMn9p4Z0wKQxnFkh4tpkTw4Br8CoG+aqDyq/hoznilbb+9Mticu17HqDspHGZt4JHnnhDX793k4
+shdHYgrdKgi7bWJrKjONQV1zISutn92idNgO2KQlEFMk+iIWfh6LBZfIBfjAedSXZ6/5AsG5a1N3
+pvpIQyIHKEc5FoO3mdXwRH2zGiXAk2fQSz1aFAOmwvhXWqriawRfLN1nItlIa6XakMpyFit4uinL
+yKYNghvxxYEtyAkNxufbAbg2H3gHl3t2tX9lyQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -680,4 +680,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_4cca0538-e5ad-4642-b377-03f1fc9ae388" Target="#_0928953e-c76c-4bef-b7b5-d0c4fec6bd52"><Timestamp>2019-11-15 18:14:45</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_ae5683a8-83c9-481c-ae4c-f1a716824d5f" Target="#_60ed2e37-f924-46ca-a2ec-88aeb63b4d3f"><Timestamp>2020-01-09 08:26:16</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
