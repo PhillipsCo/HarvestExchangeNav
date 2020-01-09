@@ -569,7 +569,7 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tPostjob_1"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
   </node>
-  <node componentName="tFileInputXML" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="192" posY="352">
+  <node componentName="tFileInputXML" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="32" posY="384">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputXML_4"/>
     <elementParameter field="FILE" name="FILENAME" value="((String)globalMap.get(&quot;tFileList_2_CURRENT_FILEPATH&quot;))"/>
     <elementParameter field="TEXT" name="LOOP_QUERY" value="&quot;/MovilizerUploadDataContainer/container/data/entry[@name='ITM']/entry[@name='DSD_OBJECT_ORDER_SOURCE_DRIVER']/entry&quot;"/>
@@ -614,6 +614,23 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
+  <node componentName="tJavaFlex" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="160" posY="352">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJavaFlex_1"/>
+    <elementParameter field="CHECK" name="DATA_AUTO_PROPAGATE" value="true"/>
+    <elementParameter field="MEMO_JAVA" name="CODE_START" value="// start part of your Java code&#10;      "/>
+    <elementParameter field="MEMO_JAVA" name="CODE_MAIN" value="if(row11.DR_MATNO.contains(&quot;_&quot;))&#10;{&#10;String[] matnoparts = row11.DR_MATNO.split(&quot;_&quot;);&#10;row1.DR_MATNO = matnoparts[1];&#10;}"/>
+    <elementParameter field="MEMO_JAVA" name="CODE_END" value="// end of the component, outside/closing the loop&#10;      "/>
+    <elementParameter field="CHECK" name="Version_V2_0" show="false" value="false"/>
+    <elementParameter field="CHECK" name="Version_V3_2" show="false" value="false"/>
+    <elementParameter field="CHECK" name="Version_V4.0" show="false" value="true"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJavaFlex_1">
+      <column comment="" key="false" length="-1" name="DR_MATNO" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="DR_QTY" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="DR_PERMQTY" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+    </metadata>
+  </node>
   <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="288" posY="352">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_3"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
@@ -640,7 +657,7 @@
       <column comment="" key="false" length="-1" name="orderChanged" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables name="Var" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="&quot;EA&quot; " name="UOM" type="id_String"/>
         <mapperTableEntries expression="row1.DR_PERMQTY == null ? 0 :&#13;&#10;row1.DR_PERMQTY " name="PERMQTY" type="id_Integer"/>
@@ -792,7 +809,7 @@
       <column comment="" key="false" length="4" name="ROUTENO" nullable="true" originalLength="12" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables name="Var" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="row7.RM_PERMQTY == null ? 0: row7.RM_PERMQTY " name="RM_PERMQTY" type="id_Integer"/>
         <mapperTableEntries expression="out1.PERMQTY &lt; 0 ? 0:&#13;&#10;out1.PERMQTY == 0 ? Var.RM_PERMQTY :&#13;&#10;out1.PERMQTY " name="PERMQTY" type="id_Integer"/>
@@ -820,8 +837,8 @@
         <mapperTableEntries name="orderChanged" type="id_String"/>
       </inputTables>
       <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row7" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="Integer.valueOf(out1.MATNO)" name="MATNO" nullable="true" type="id_Integer"/>
-        <mapperTableEntries expression="Integer.valueOf(out1.CUSTOMERNO)" name="CUSTOMERNO" nullable="true" type="id_Integer"/>
+        <mapperTableEntries expression="out1.MATNO" name="MATNO" nullable="true" type="id_Integer"/>
+        <mapperTableEntries expression="out1.CUSTOMERNO" name="CUSTOMERNO" nullable="true" type="id_Integer"/>
         <mapperTableEntries expression="TalendDate.parseDate(&quot;yyyyMMdd&quot;,out1.ORDERDATE) " name="ORDERDATE" nullable="true" type="id_Date"/>
         <mapperTableEntries name="DOW" nullable="true" type="id_Integer"/>
         <mapperTableEntries name="RM_PERMQTY" nullable="true" type="id_Integer"/>
@@ -1317,7 +1334,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select &#13;&#10;product_number as MATNO,&#13;&#10;CUSTOMER_NUMBER as CUSTOMERNO,&#13;&#10;max(Order_date) as ORDERDATE,&#13;&#10;datepart(dw,Order_date) as DOW,&#13;&#10;PERM_QUANTITY as PERMQTY&#13;&#10;from rm_order&#13;&#10;group by&#13;&#10;product_number ,&#13;&#10;CUSTOMER_NUMBER  ,&#13;&#10;datepart(dw,Order_date),&#13;&#10;PERM_QUANTITY&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select &#13;&#10;'0000000' + cast(product_number as varchar)  as MATNO,&#13;&#10;'000D' + cast(CUSTOMER_NUMBER as varchar) as CUSTOMERNO,&#13;&#10;max(Order_date) as ORDERDATE,&#13;&#10;datepart(dw,Order_date) as DOW,&#13;&#10;PERM_QUANTITY as PERMQTY&#13;&#10;from rm_order&#13;&#10;group by&#13;&#10;'0000000' + cast(product_number as varchar)  ,&#13;&#10;'000D' + cast(CUSTOMER_NUMBER as varchar)  ,&#13;&#10;datepart(dw,Order_date),&#13;&#10;PERM_QUANTITY&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -1335,17 +1352,17 @@
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="DOW"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="RM_PERMQTY"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PERMQTY"/>
       <elementValue elementRef="TRIM" value="false"/>
     </elementParameter>
     <elementParameter field="TEXT" name="LABEL" value="PERMQTY"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBInput_3">
-      <column comment="" key="false" length="10" name="MATNO" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="11" name="CUSTOMERNO" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="38" name="ORDERDATE" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="VARCHAR" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="37" name="MATNO" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="34" name="CUSTOMERNO" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="ORDERDATE" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="10" name="DOW" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="10" name="RM_PERMQTY" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="PERMQTY" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tHashOutput" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="896" posY="128">
@@ -1360,11 +1377,11 @@
     <elementParameter field="CHECK" name="HASH_KEY_FROM_INPUT_CONNECTOR" show="false" value="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tHashOutput_1">
-      <column comment="" key="false" length="10" name="MATNO" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="11" name="CUSTOMERNO" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="38" name="ORDERDATE" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="VARCHAR" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="37" name="MATNO" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="34" name="CUSTOMERNO" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="ORDERDATE" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="10" name="DOW" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="10" name="RM_PERMQTY" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="PERMQTY" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="-50" offsetLabelY="-32" posX="480" posY="576">
@@ -1474,17 +1491,32 @@
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPostjob_1" offsetLabelX="0" offsetLabelY="0" source="tPostjob_1" target="tMSSqlCommit_2">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk4"/>
   </connection>
-  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tFileInputXML_4" offsetLabelX="0" offsetLabelY="0" source="tFileInputXML_4" target="tMap_3">
+  <connection connectorName="FLOW" label="row11" lineStyle="0" metaname="tFileInputXML_4" offsetLabelX="0" offsetLabelY="0" source="tFileInputXML_4" target="tJavaFlex_1">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
       <elementValue elementRef="TRACE_COLUMN" value="DR_PERMQTY"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row11"/>
   </connection>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFileInputXML_4" offsetLabelX="0" offsetLabelY="0" source="tFileInputXML_4" target="tMSSqlCommit_1">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk4"/>
+  </connection>
+  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tJavaFlex_1" offsetLabelX="0" offsetLabelY="0" source="tJavaFlex_1" target="tMap_3">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="DR_PERMQTY"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="DR_MATNO"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="DR_QTY"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
   </connection>
   <connection connectorName="FLOW" label="out1" lineStyle="0" metaname="out1" offsetLabelX="0" offsetLabelY="0" source="tMap_3" target="tMap_4">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
@@ -1622,13 +1654,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_28187fef-4f9f-4787-8b84-915ccc6862f9"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>yCa639sipAQB5pfm9z/C8rhjaMzXpNANoxR7G2yMVYdTbX93oRATkgwJYD1yPubFEqamW8ujcdxs
-4zVXYlbXew==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_d0aa4ad0-ab04-4088-bc48-e270ed3b7f28"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>trVqlF6hP5nGiF3f2laKUEOSwEJLMyqLBcfuZ0HfYvbcvb4Q7wQTgdSGJ/VP9Kj9CGFHX6ZRdp15
-RakP5nNjxA==</DigestValue></Reference></SignedInfo><SignatureValue>fdlo0+dT/9e3NiAc3TfZXurOYFi+M8n9Pr18HSyryKXUGqkXZizTmlnMTVpHGcNyEuwevO3EQzCy
-N+/pYTGSd6ysO6LyzbnDKC+To8XTHBwQEx1bBTTNeF0lfda87zW6QOLDhYo9pfgIAG5/4bXAAgQy
-9Z+gCFAM7/a4hsTwWR8hnZv/IGo7qY8Zi9Kcw1XkfctyDJOvc7S6kiZl8K6hyoPmtjHypc9FjXtu
-CJhYGTRvaBW8Rmr+hQepveBwJ1ZlFTMm/NlEbvmsS49eFxIcbTE5Zryy8luCfpdHl1be+Y0ePUtd
-unkWdSmB0KmWvzSdPJzKlyX377oHoghtU5O2yg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_03c93f2d-9109-436d-95ea-527a7a7595f9"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ep2FqOVO0MbkgrYnfw27UzWH9O914SgLLqny8T/d0mLLbC+9SzzT/NW/eTMraNFuJCeBOlfim4jn
+VeWjUXF9vQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_8cd40358-3f5c-4ce1-ac4f-672014e53981"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>0eRID3rHF0t2rW3YhQKGSXYrH4+X7DMWoMU3/Q34yJq+9AHpCZSKgIs7I/w7rX8znkMkvw2TYcvs
+QA6tgGE7iw==</DigestValue></Reference></SignedInfo><SignatureValue>fOkt2ccn1RlbpPrLCvXy9T3gkyIyANmrnZw4EvfrBAez6qpQ3ECj5AOT/QcbHut7TMD3nmZo6rMq
+9+V5O8Q95wEtpb8ROeI8CHzALlJvgrMvUdDYk6IbbTmBwP5uZgMyI3kYrRQuFE1PYS9kFKlnBiF8
+7f7woRKbpMwKhS9YrPuxKU6/thRbPjuuw4L2uUIM0bTOvA1ed2Se3SAz7et76Gwora70+/SW7Zew
+WVjO0TC8bQfVVtM0p50ME4yqvXYpNawZnLyZwT28WUHmFovftp654HXsK7eO4V86bbn+DQKB9dRb
+MW0jLB0gRUQyczbVy8MB8k4y05N36jHfEBkjRg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -1652,4 +1684,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_d0aa4ad0-ab04-4088-bc48-e270ed3b7f28" Target="#_28187fef-4f9f-4787-8b84-915ccc6862f9"><Timestamp>2020-01-09 09:53:46</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_8cd40358-3f5c-4ce1-ac4f-672014e53981" Target="#_03c93f2d-9109-436d-95ea-527a7a7595f9"><Timestamp>2020-01-09 10:43:47</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
