@@ -2672,7 +2672,7 @@
       <column comment="" key="false" length="-1" name="RETURNFLAG" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Boolean" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="AUTHPRODUCTTABLE" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="SHIPCONDITION" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="PRINTWHOLESALEPRICE" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Boolean" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="PRINTWHOLESALEPRICE" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="38" name="CREDITLIMIT" nullable="true" originalLength="38" pattern="" precision="6" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="MINSALESAMOUNT" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="DAYOFDELIVERY" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
@@ -2815,7 +2815,7 @@
         <mapperTableEntries expression="" name="RETURNFLAG" nullable="true" type="id_Boolean"/>
         <mapperTableEntries expression="row90.Order_Rule_Group " name="AUTHPRODUCTTABLE" nullable="true" type="id_String"/>
         <mapperTableEntries name="SHIPCONDITION" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="&quot;true&quot;" name="PRINTWHOLESALEPRICE" nullable="true" type="id_Boolean"/>
+        <mapperTableEntries expression="&quot;true&quot;" name="PRINTWHOLESALEPRICE" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row90.Credit_Limit_LCY " name="CREDITLIMIT" nullable="true" type="id_BigDecimal"/>
         <mapperTableEntries expression="row90.Minimum_Sales_Order_Amount+&quot;&quot; " name="MINSALESAMOUNT" nullable="true" type="id_String"/>
         <mapperTableEntries expression="&quot;Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday&quot; " name="DAYOFDELIVERY" nullable="true" type="id_String"/>
@@ -5887,13 +5887,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_ef4861b4-f65d-4479-bc84-36ea9a0d8402"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>24EGPHirDey2S/20nNATnoTLmz0ckUq4UjHaqWB10apvC2KR5T9QZ05lA+HRkX5w1mwdjODcxKEd
-dc49Rn1hwQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_07a23322-13fe-4e89-a275-420ef4ceca1b"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>/eAq5jorXV3OySV/Es646J+/jM4suZiYgKwkow5OZ24SgYrGZsdTB9RXqRNRKYXilcVXxnNNIBWG
-q/BUrlR02Q==</DigestValue></Reference></SignedInfo><SignatureValue>3egrEBbZT19q5pCX8CYHDDQ+sWpP+2Xx8MXnIuo19QPtLrxavirW7FYKpgslozVbhiKato57vFdf
-NuePoJPXcOO0DW3OphX9Ikdme0qiqt8cz+vQyCjnQtVz6ClFvOu4eUlhtGfOR4f3fLmLgm9Kv9sy
-xaskY9/WQNSUaNs5OxrOW8muje38zAcbte5Ljabo4IHBOFRs/ooi7A+gOjP8R3H/MY6hhWTu5tMo
-vfRCjglRoaVTdjjzrgtJxsauz+zysZogmR/kD63+K6b90ZsFV1oj4pEzQVwX8gKJAg908cVI0dy0
-IhQTc1lVn9alfMuwBa3UfhdTnMcU/zJcsA+XSw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_9ab53b49-46be-43e4-ade5-b531de949469"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>WmmjHXKcJHIpLEIS3jOXDkxY4999oWKupMurDb5I37p0nWQTvoogMLk2xYAZHJ/YSh2RpSJZdm+V
+PEzCzVOlqA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_980dbb2e-b2fc-41b0-8d80-9cceed680705"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ADO7oJVFsELAj7365aSCQBTxwtbUNraBVgMcBmwSGccj+MjSWP4mUP3yCBDCPSybfXVatYTxcK02
+ufUknAAhIQ==</DigestValue></Reference></SignedInfo><SignatureValue>w+C6g4FPIgQEYk1kFRsV1Bm4vPtGlrTxgjX8iSpXJzhP1KqIKSakrBa8pfWDeX0gqxPrjZ0ZAVT0
+I1U3KMJJPb271v7XoZut+LrT85OPm4/Ei/RE/0a1VZ6iHajdfYTB1Q32mw97Y9JNli1di6uRlTt+
+lUVDHLcpfEAsw/fwrlYg4fp03M3zMadWsiK9T+7fBvzRDMkN/fp5g2te6a2bIF3rgbu8xt4jZ4PO
+aqcnOqyGRh7YS9J6dEx/wAQduxryTZ8t1h1uv0a4xeti/t86Ebe/8EYEawymt+sBb2GWATSpZXbJ
+8vMRNYOKCRCUezuuPqMm/NnFXSAcJH04qDcPZQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -5917,4 +5917,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_07a23322-13fe-4e89-a275-420ef4ceca1b" Target="#_ef4861b4-f65d-4479-bc84-36ea9a0d8402"><Timestamp>2020-01-10 18:42:32</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_980dbb2e-b2fc-41b0-8d80-9cceed680705" Target="#_9ab53b49-46be-43e4-ade5-b531de949469"><Timestamp>2020-01-10 18:46:42</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
