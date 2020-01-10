@@ -10,8 +10,8 @@
   </parent>
   <groupId>com.harvestfoodsolutions.nav</groupId>
   <artifactId>j_NavExport_010_Customer</artifactId>
-  <version>0.1.1-SNAPSHOT</version>
-  <name>NAV_MOV j_NavExport_010_Customer-0.1.1-SNAPSHOT (0.1,Job Designs)</name>
+  <version>0.1.2-SNAPSHOT</version>
+  <name>NAV_MOV j_NavExport_010_Customer-0.1.2-SNAPSHOT (0.1,Job Designs)</name>
   <properties>
     <output.resources.dir>${talend.job.name}/src/main/resources</output.resources.dir>
     <talend.job.applyContextToChildren>false</talend.job.applyContextToChildren>
