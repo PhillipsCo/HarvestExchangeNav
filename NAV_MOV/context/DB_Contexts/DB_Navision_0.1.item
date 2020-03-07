@@ -1,19 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><talendfile:ContextType xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmlns:xmi="http://www.omg.org/XMI" confirmationNeeded="false" name="Default" xmi:id="_tyduUAfTEeqqn_wI9dbZVA" xmi:version="2.0">
-  <contextParameter comment="" name="DB_Navision_Login" prompt="DB_Navision_Login?" promptNeeded="false" type="id_String" value="talend_hfs2" xmi:id="_tyduUQfTEeqqn_wI9dbZVA"/>
-  <contextParameter comment="" name="DB_Navision_Password" prompt="DB_Navision_Password?" promptNeeded="false" type="id_Password" value="PrT+NDdqPMBr/HtJWqzj6w==" xmi:id="_tyduUgfTEeqqn_wI9dbZVA"/>
-  <contextParameter comment="" name="DB_Navision_Schema" prompt="DB_Navision_Schema?" promptNeeded="false" type="id_String" value="dbo" xmi:id="_tyduUwfTEeqqn_wI9dbZVA"/>
-  <contextParameter comment="" name="DB_Navision_Database" prompt="DB_Navision_Database?" promptNeeded="false" type="id_String" value="TEST-USB-2013" xmi:id="_tyduVAfTEeqqn_wI9dbZVA"/>
-  <contextParameter comment="" name="DB_Navision_Server" prompt="DB_Navision_Server?" promptNeeded="false" type="id_String" value="testnav10.corp.usbakery.com" xmi:id="_tyduVQfTEeqqn_wI9dbZVA"/>
-  <contextParameter comment="" name="DB_Navision_Port" prompt="DB_Navision_Port?" promptNeeded="false" type="id_String" value="1433" xmi:id="_tyduVgfTEeqqn_wI9dbZVA"/>
-  <contextParameter comment="" name="DB_Navision_AdditionalParams" prompt="DB_Navision_AdditionalParams?" promptNeeded="false" type="id_String" value="" xmi:id="_tyduVwfTEeqqn_wI9dbZVA"/>
-  <contextParameter comment="" name="DB_Navision_Target_Staging" prompt="DB_Navision_Target_Staging?" promptNeeded="false" type="id_String" value="" xmi:id="_tyduWAfTEeqqn_wI9dbZVA"/>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_fd17eddc-430f-4f6c-85d2-4147d37535d4"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>3Daj3Rl2KqKTEI8peHxyMh6EkVEYboW6tJjfzHRZSeKVflaUtHo6u8zL0FHvAJ4gT0LB0nqAtWCM
-Xi8QsSz7Rg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_5976669e-9d6b-4d95-8b3d-0665293a5c13"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>gjtI3ltSoeAG5ndaZ4PDYOPtpiYxgSc+UImsoNejHqyszzP4mOS/iTHF8JPvrzY/wFCqcUSr6IgG
-l4PrVsVjLQ==</DigestValue></Reference></SignedInfo><SignatureValue>OcQvDs7hUfxs//0Zf6Ab0O95p8MOQVsPymgpVBJLY40r57kCpfiLb/xsSIrNvXZ0dyI4trSdic8x
-jhSjpRuFWfY3YtocMSAGAb/X19ti7JkGhUwd9Q5OpqTKsy/DvM1uKV3RV67vRbhUuoUg93SutsA2
-RC2Xvqa9bLrY9GpQOld1d+Du3EJNv/BP9PVRqFj1wVkPjgAxsdTReknOz/BraEQvdvB2ukLo29C2
-l8gUG1uYuiP+Fwh3Zw14Ii2OSDrWSOk9WaI8uC6QBU5CwmX/1D3DCR/SxJOoUDcWNnmfjSiF9XNZ
-Ku2ElnJT9d+tMLY/qgXJgGdH8zFIk7llbH8jAw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><talendfile:ContextType xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmlns:xmi="http://www.omg.org/XMI" confirmationNeeded="false" name="Default" xmi:id="_bWNscGAaEeq3rorDc_eU3A" xmi:version="2.0">
+  <contextParameter comment="" name="DB_Navision_Login" prompt="DB_Navision_Login?" promptNeeded="false" type="id_String" value="talend_hfs2" xmi:id="_bWNscWAaEeq3rorDc_eU3A"/>
+  <contextParameter comment="" name="DB_Navision_Password" prompt="DB_Navision_Password?" promptNeeded="false" type="id_Password" value="PrT+NDdqPMBr/HtJWqzj6w==" xmi:id="_bWNscmAaEeq3rorDc_eU3A"/>
+  <contextParameter comment="" name="DB_Navision_Schema" prompt="DB_Navision_Schema?" promptNeeded="false" type="id_String" value="EXPORT" xmi:id="_bWNsc2AaEeq3rorDc_eU3A"/>
+  <contextParameter comment="" name="DB_Navision_Database" prompt="DB_Navision_Database?" promptNeeded="false" type="id_String" value="DSD-NAV_Interface" xmi:id="_bWNsdGAaEeq3rorDc_eU3A"/>
+  <contextParameter comment="" name="DB_Navision_Server" prompt="DB_Navision_Server?" promptNeeded="false" type="id_String" value="testnav10.corp.usbakery.com" xmi:id="_bWNsdWAaEeq3rorDc_eU3A"/>
+  <contextParameter comment="" name="DB_Navision_Port" prompt="DB_Navision_Port?" promptNeeded="false" type="id_String" value="1433" xmi:id="_bWNsdmAaEeq3rorDc_eU3A"/>
+  <contextParameter comment="" name="DB_Navision_AdditionalParams" prompt="DB_Navision_AdditionalParams?" promptNeeded="false" type="id_String" value="" xmi:id="_bWNsd2AaEeq3rorDc_eU3A"/>
+  <contextParameter comment="" name="DB_Navision_Target_Staging" prompt="DB_Navision_Target_Staging?" promptNeeded="false" type="id_String" value="" xmi:id="_bWNseGAaEeq3rorDc_eU3A"/>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_551bf45d-7e77-4931-98b3-613cb6634c2e"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>hRNxO7K4Ybexk1Fcn7c+4ypJOparUHPXBvv3456Fx6pUuAA9Uo/25oCXlmW81Fj8n2AsAW6P+D2I
+x4TOvEgSOQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_beef2cca-fd2c-4b72-b2f4-4f62d8005946"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>a4uakS5LdW5sHxk6VzkvjpXBKvsLkE54V/MeV4a5df9X9iH9GaenTAShlzT9n7i+UjNnX8uDwOA9
+yKwu5h0Etw==</DigestValue></Reference></SignedInfo><SignatureValue>KtgGwH2VRHOQVlnRb5jNfj/f/u8OlhURGl/NgWazhfEYmQL5Aq4D6qULQ8TfL0EcdTdFWeuq689A
+z2BR78lC1yo7wf/P08Q1x1VJ/Du0MvXsqj8q3YQf19H3MDU0ieN1ODWt8SZm7+G+FrpVkwGgA3hF
+L2UdE2mntincGLqOvzhdqfWs3E6wkQzopS4JUsCmoTJRFYdNJTpIzCiW1BZ2BCLZl8vwTP5PUfud
+6BOYeXWGmwhSMGY1WfKzwvQqcdTJKv28Av33hRnLuZbi7jGvYBIU4fnu8JbQjLzly+5TgVaGvSPF
+CigWjWRoPuDHVw6enT1qRxcpprCMWmX7+YDfGw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -37,4 +37,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_5976669e-9d6b-4d95-8b3d-0665293a5c13" Target="#_fd17eddc-430f-4f6c-85d2-4147d37535d4"><Timestamp>2019-11-15 18:14:08</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ContextType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_beef2cca-fd2c-4b72-b2f4-4f62d8005946" Target="#_551bf45d-7e77-4931-98b3-613cb6634c2e"><Timestamp>2020-03-07 02:22:00</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ContextType>
