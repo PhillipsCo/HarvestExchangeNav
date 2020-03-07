@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<recyclebin:RecycleBin xmlns:recyclebin="http://www.talend.org/recyclebin" lastUpdate="2020-03-06T21:13:46.120-0800">
+<recyclebin:RecycleBin xmlns:recyclebin="http://www.talend.org/recyclebin" lastUpdate="2020-03-06T21:14:10.355-0800">
   <deletedItems id="_7ip3sIMAEem03cJ6aknsMQ" path="ERP_TO_DSD" type="PROCESS"/>
   <deletedItems id="_7ip3sIMAEem03cJ6aknsMQdoc" path="ERP_TO_DSD" type="JOB_DOC"/>
-  <deletedItems id="_63R9wJG_Eea5X9GWXk3D9Q" path="ERP_TO_DSD" type="PROCESS"/>
-  <deletedItems id="_63R9wJG_Eea5X9GWXk3D9Qdoc" path="ERP_TO_DSD" type="JOB_DOC"/>
 </recyclebin:RecycleBin>
