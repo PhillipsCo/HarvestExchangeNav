@@ -64,6 +64,7 @@
     <contextParameter comment="" name="DB_Talend_Context_Server" prompt="DB_Talend_Context_Server?" promptNeeded="false" repositoryContextId="_ypE2UFnREeaCBrSnOG5XMg" type="id_String" value="SRVRSQL200.harvestfoodsolutions.com"/>
     <contextParameter comment="" name="NAV_Contact" prompt="NAV_Contact?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="NAV_DSD_Contacts"/>
     <contextParameter comment="" name="NAV_Customer" prompt="NAV_Customer?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="Nav_DSD_Customer Download"/>
+    <contextParameter comment="" name="NAV_Order" prompt="NAV_Order?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="vw_Nav_DSD_Order"/>
     <contextParameter comment="" name="NAV_Shipment" prompt="NAV_Shipment?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="vw_Nav_DSD_Shipment"/>
     <contextParameter comment="" name="NAV_User" prompt="NAV_User?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="vw_Nav_DSD_User"/>
   </context>
@@ -132,6 +133,7 @@
     <contextParameter comment="" name="DB_Talend_Context_Server" prompt="DB_Talend_Context_Server?" promptNeeded="false" repositoryContextId="_ypE2UFnREeaCBrSnOG5XMg" type="id_String" value="SRVRSQL200.harvestfoodsolutions.com"/>
     <contextParameter comment="" name="NAV_Contact" prompt="NAV_Contact?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="NAV_DSD_Contacts"/>
     <contextParameter comment="" name="NAV_Customer" prompt="NAV_Customer?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="Nav_DSD_Customer Download"/>
+    <contextParameter comment="" name="NAV_Order" prompt="NAV_Order?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="vw_Nav_DSD_Order"/>
     <contextParameter comment="" name="NAV_Shipment" prompt="NAV_Shipment?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="vw_Nav_DSD_Shipment"/>
     <contextParameter comment="" name="NAV_User" prompt="NAV_User?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="vw_Nav_DSD_User"/>
   </context>
@@ -200,6 +202,7 @@
     <contextParameter comment="" name="DB_Talend_Context_Server" prompt="DB_Talend_Context_Server?" promptNeeded="false" repositoryContextId="_ypE2UFnREeaCBrSnOG5XMg" type="id_String" value="SRVRSQL200.harvestfoodsolutions.com"/>
     <contextParameter comment="" name="NAV_Contact" prompt="NAV_Contact?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="NAV_DSD_Contacts"/>
     <contextParameter comment="" name="NAV_Customer" prompt="NAV_Customer?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="Nav_DSD_Customer Download"/>
+    <contextParameter comment="" name="NAV_Order" prompt="NAV_Order?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="vw_Nav_DSD_Order"/>
     <contextParameter comment="" name="NAV_Shipment" prompt="NAV_Shipment?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="vw_Nav_DSD_Shipment"/>
     <contextParameter comment="" name="NAV_User" prompt="NAV_User?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="vw_Nav_DSD_User"/>
   </context>
@@ -268,6 +271,7 @@
     <contextParameter comment="" name="DB_Talend_Context_Server" prompt="DB_Talend_Context_Server?" promptNeeded="false" repositoryContextId="_ypE2UFnREeaCBrSnOG5XMg" type="id_String" value="SRVRSQL200.harvestfoodsolutions.com"/>
     <contextParameter comment="" name="NAV_Contact" prompt="NAV_Contact?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="NAV_DSD_Contacts"/>
     <contextParameter comment="" name="NAV_Customer" prompt="NAV_Customer?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="Nav_DSD_Customer Download"/>
+    <contextParameter comment="" name="NAV_Order" prompt="NAV_Order?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="vw_Nav_DSD_Order"/>
     <contextParameter comment="" name="NAV_Shipment" prompt="NAV_Shipment?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="vw_Nav_DSD_Shipment"/>
     <contextParameter comment="" name="NAV_User" prompt="NAV_User?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="vw_Nav_DSD_User"/>
   </context>
@@ -1644,13 +1648,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_e3effc03-e1ad-4afe-8c75-9ae62e542413"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>75Qu4dweXJaDAwFlczyKLfOpMk9ezvuciRqM477Lcn8Mwz8e4P5z0iY/ahWW8R3m30ntW8zYJKVc
-PG+yD9n3Mw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_3a2a2be0-c7fd-4d8c-bd35-f572f21acfea"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>fR+utsgPZ2MOd7/l4cQ1HTsVz9x6/OIjJMrcOzK48tX6qHTk5O59dN0JFttOcDLQb5fQe5fCJXzQ
-1qVhjMYiYA==</DigestValue></Reference></SignedInfo><SignatureValue>iZ8EZlkNf5/RyeoP6AN6v5mZWSM4ahqbV1rmQlCqhT76dFAJXQuxKqVcclmSdHoecAeHsSMigNVr
-kP8GAzCklC7aoH8xxL+1OYo5XMR4rgYbk/hxxw7ierXbkdb4oyAsiyfl9x6I6ULbAiLF/PDVxUbr
-VghVytjrgRI3NnV08VDkyX8ttqBXz245w0JGSEYcIrUsMBL6ADwIYvLsvl3b9ZykfWbyOHfs8aMT
-cAwFtkXO3mzRDdU6OmCuiECKMDQnLSRlz6mghMVEnqJnTsz79+AtyLfGwh1u6vsacdPpxcpGUa93
-VLn9cTWn0qFwJ91jokTXPiak88uEHYkScBuYFQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_3c1fb389-d36f-4629-84ba-c0967d07e286"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>0MztR8QmcBlchV6nwpMQbjmBRWgy6wZP6H+BkFQeeD/EJUO2xZoq4QIkiJYMp4cRzEXQGU46Wqxp
+TTaNwep+tA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_0a971236-a532-4581-80af-da9200247f79"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>fj14M4GyFOVC6lHFlqUo0sKeDcPLwKQXonwr8fVAbBJdajAge8yYl02T/APMEvCZEGdOu9OYBVaB
+mQLPgckbvA==</DigestValue></Reference></SignedInfo><SignatureValue>AHsrqXoO1O49kYk9zApX+fSTENKsEu00/0obvk4LeZ8mcsOUhrs1YgVNUs93y4l4p8SWY+C36svP
+7kipj8NB0E2wKyC8gRGB/jt5FjsUo4l6dMS07QiAH+NQsOO3DnavNkQIqeVgRuG5V3WvHldp4eTO
+kt0u98dqkoAb7ilw7LJdbkXvs+YWqcOOBfSwolWpvf2Q++oDvkO9VIHpBfoxsE+RnyGSM3NVicB5
+Nxmevp7bsuCt0MPzxjwb8QqAXY/zwbnX+UQuH3kFzDVUaVjK/imuMCuyphTtfEAM8HDsS/lkwsFW
+prPah+U1JIRkFmefcU4O4uh7KMbFrVYlOUHasw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -1674,4 +1678,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_3a2a2be0-c7fd-4d8c-bd35-f572f21acfea" Target="#_e3effc03-e1ad-4afe-8c75-9ae62e542413"><Timestamp>2020-03-07 04:55:44</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_0a971236-a532-4581-80af-da9200247f79" Target="#_3c1fb389-d36f-4629-84ba-c0967d07e286"><Timestamp>2020-03-07 04:56:27</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
