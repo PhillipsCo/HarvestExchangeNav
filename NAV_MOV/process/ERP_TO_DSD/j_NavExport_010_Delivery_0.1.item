@@ -80,8 +80,10 @@
     <contextParameter comment="" name="DB_Talend_Context_Server" prompt="DB_Talend_Context_Server?" promptNeeded="false" repositoryContextId="_ypE2UFnREeaCBrSnOG5XMg" type="id_String" value="SRVRSQL200.harvestfoodsolutions.com"/>
     <contextParameter comment="" name="NAV_Contact" prompt="NAV_Contact?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="NAV_DSD_Contacts"/>
     <contextParameter comment="" name="NAV_Customer" prompt="NAV_Customer?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="Nav_DSD_Customer Download"/>
+    <contextParameter comment="" name="NAV_Itinerary" prompt="NAV_Itinerary?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="vw_Nav_DSD_Itinerary"/>
     <contextParameter comment="" name="NAV_Order" prompt="NAV_Order?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="vw_Nav_DSD_Order"/>
     <contextParameter comment="" name="NAV_Shipment" prompt="NAV_Shipment?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="vw_Nav_DSD_Shipment"/>
+    <contextParameter comment="" name="NAV_User" prompt="NAV_User?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="vw_Nav_DSD_User"/>
     <contextParameter comment="" name="RM_Order_Encoding" prompt="RM_Order_Encoding?" promptNeeded="false" repositoryContextId="_hIrjIDceEeaqN-Jziuqx3w" type="id_String" value=""/>
     <contextParameter comment="" name="RM_Order_FieldSeparator" prompt="RM_Order_FieldSeparator?" promptNeeded="false" repositoryContextId="_hIrjIDceEeaqN-Jziuqx3w" type="id_String" value=""/>
     <contextParameter comment="" name="RM_Order_File" prompt="RM_Order_File?" promptNeeded="false" repositoryContextId="_hIrjIDceEeaqN-Jziuqx3w" type="id_String" value=""/>
@@ -168,8 +170,10 @@
     <contextParameter comment="" name="DB_Talend_Context_Server" prompt="DB_Talend_Context_Server?" promptNeeded="false" repositoryContextId="_ypE2UFnREeaCBrSnOG5XMg" type="id_String" value="SRVRSQL200.harvestfoodsolutions.com"/>
     <contextParameter comment="" name="NAV_Contact" prompt="NAV_Contact?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="NAV_DSD_Contacts"/>
     <contextParameter comment="" name="NAV_Customer" prompt="NAV_Customer?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="Nav_DSD_Customer Download"/>
+    <contextParameter comment="" name="NAV_Itinerary" prompt="NAV_Itinerary?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="vw_Nav_DSD_Itinerary"/>
     <contextParameter comment="" name="NAV_Order" prompt="NAV_Order?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="vw_Nav_DSD_Order"/>
     <contextParameter comment="" name="NAV_Shipment" prompt="NAV_Shipment?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="vw_Nav_DSD_Shipment"/>
+    <contextParameter comment="" name="NAV_User" prompt="NAV_User?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="vw_Nav_DSD_User"/>
     <contextParameter comment="" name="RM_Order_Encoding" prompt="RM_Order_Encoding?" promptNeeded="false" repositoryContextId="_hIrjIDceEeaqN-Jziuqx3w" type="id_String" value=""/>
     <contextParameter comment="" name="RM_Order_FieldSeparator" prompt="RM_Order_FieldSeparator?" promptNeeded="false" repositoryContextId="_hIrjIDceEeaqN-Jziuqx3w" type="id_String" value=""/>
     <contextParameter comment="" name="RM_Order_File" prompt="RM_Order_File?" promptNeeded="false" repositoryContextId="_hIrjIDceEeaqN-Jziuqx3w" type="id_String" value=""/>
@@ -256,8 +260,10 @@
     <contextParameter comment="" name="DB_Talend_Context_Server" prompt="DB_Talend_Context_Server?" promptNeeded="false" repositoryContextId="_ypE2UFnREeaCBrSnOG5XMg" type="id_String" value="SRVRSQL200.harvestfoodsolutions.com"/>
     <contextParameter comment="" name="NAV_Contact" prompt="NAV_Contact?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="NAV_DSD_Contacts"/>
     <contextParameter comment="" name="NAV_Customer" prompt="NAV_Customer?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="Nav_DSD_Customer Download"/>
+    <contextParameter comment="" name="NAV_Itinerary" prompt="NAV_Itinerary?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="vw_Nav_DSD_Itinerary"/>
     <contextParameter comment="" name="NAV_Order" prompt="NAV_Order?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="vw_Nav_DSD_Order"/>
     <contextParameter comment="" name="NAV_Shipment" prompt="NAV_Shipment?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="vw_Nav_DSD_Shipment"/>
+    <contextParameter comment="" name="NAV_User" prompt="NAV_User?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="vw_Nav_DSD_User"/>
     <contextParameter comment="" name="RM_Order_Encoding" prompt="RM_Order_Encoding?" promptNeeded="false" repositoryContextId="_hIrjIDceEeaqN-Jziuqx3w" type="id_String" value=""/>
     <contextParameter comment="" name="RM_Order_FieldSeparator" prompt="RM_Order_FieldSeparator?" promptNeeded="false" repositoryContextId="_hIrjIDceEeaqN-Jziuqx3w" type="id_String" value=""/>
     <contextParameter comment="" name="RM_Order_File" prompt="RM_Order_File?" promptNeeded="false" repositoryContextId="_hIrjIDceEeaqN-Jziuqx3w" type="id_String" value=""/>
@@ -344,8 +350,10 @@
     <contextParameter comment="" name="DB_Talend_Context_Server" prompt="DB_Talend_Context_Server?" promptNeeded="false" repositoryContextId="_ypE2UFnREeaCBrSnOG5XMg" type="id_String" value="SRVRSQL200.harvestfoodsolutions.com"/>
     <contextParameter comment="" name="NAV_Contact" prompt="NAV_Contact?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="NAV_DSD_Contacts"/>
     <contextParameter comment="" name="NAV_Customer" prompt="NAV_Customer?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="Nav_DSD_Customer Download"/>
+    <contextParameter comment="" name="NAV_Itinerary" prompt="NAV_Itinerary?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="vw_Nav_DSD_Itinerary"/>
     <contextParameter comment="" name="NAV_Order" prompt="NAV_Order?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="vw_Nav_DSD_Order"/>
     <contextParameter comment="" name="NAV_Shipment" prompt="NAV_Shipment?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="vw_Nav_DSD_Shipment"/>
+    <contextParameter comment="" name="NAV_User" prompt="NAV_User?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="vw_Nav_DSD_User"/>
     <contextParameter comment="" name="RM_Order_Encoding" prompt="RM_Order_Encoding?" promptNeeded="false" repositoryContextId="_hIrjIDceEeaqN-Jziuqx3w" type="id_String" value=""/>
     <contextParameter comment="" name="RM_Order_FieldSeparator" prompt="RM_Order_FieldSeparator?" promptNeeded="false" repositoryContextId="_hIrjIDceEeaqN-Jziuqx3w" type="id_String" value=""/>
     <contextParameter comment="" name="RM_Order_File" prompt="RM_Order_File?" promptNeeded="false" repositoryContextId="_hIrjIDceEeaqN-Jziuqx3w" type="id_String" value=""/>
@@ -1497,13 +1505,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_96e9e1df-a76c-4690-8da8-ec1b20d49ecd"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>P1caPnEpM5b0ufisLt6G0eAToUq2OyV6QOGhhGdNTPShQmbKqj9gvAz3B0QQ8OJy2UNEQfibGB+y
-oxAod7h/5g==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_9e6af9a4-ffec-4fdb-93c2-b575c249c024"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>FCbpo0dU2x2DGWJVHCpBEw8H9tCUts437Sg08er8R/dLtz2I1wytVI6JKMgYhQoRAnPZ1D0C0/e0
-BRDOkXq77g==</DigestValue></Reference></SignedInfo><SignatureValue>Xc0qTvwWWQunUpuAt1HM0cyju/wsh+VUqCGGrzCmu5gx1ztUZGXvl0XLBWQxTczDOhK0VQ+P+2GM
-0gxF5/ysegBlFhlBvDjUQOKPYOdeNxrpKHsrKLdAUuICPgvn74len5oyPHxu9jMHXojUOwmdX08D
-n80uYwMGGfWmvamW/3QqSMo355d14oeuROLYQ0E93LwBOl2uZvXtBwZ69Aa4vYW5ynoTeVln5tYz
-I1b0GIkKkdtsyG2lz2m/uKNbYdNkv42Jvy0IdATWm+94/UFBNQ5OhWNC8rU0GEVR42NlCWov9/2v
-bF2yV8oJMX77zfD99RFhxqZK6doG4PK5s+CZcQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_3d97892e-2330-4ab8-83a3-15bad9798aa5"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>vWOhi2Paze6SMB/B7ajlNiB6ipNbYCk0rVqyejqgaFKpAvOiBKb0iP68Uvy8q/8/b4bh2nn+semq
+69VBGcotLQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_86895396-dd6f-47de-8c28-a36d13184707"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>iGK2PS/opdKlLwiEbTJWKoQyxry9ZGKoB3FvWeX/Y1gH1bX0I3FwLHK3S+3xC257fO566/sLKxWB
+V5LdFNEkvA==</DigestValue></Reference></SignedInfo><SignatureValue>zeKfoT06oPzkhlU6NzFifbgnY2gr3ed/mdSyPnMWdMDDuIuYTy1zDLl3lqKThXjxCXhNJoPqC3lv
+4DeYYzu/cdKi3d8qLaKHVhU/ddbuE9t8orBnawxUv8F1B6zS0rKy0VUJIdXIde0jRaKLfIOjfvni
+oAJHrMvys3ZMhgo3Q3QpP4zkQSSW8W92EWxyYgyRijj3QlhfDqRxa1gRXgLqiKbBya/OAAYuFj67
+9kpihTmTIf4P2aFiXbSXGYV0wfE0Uqac+nzbiN4zssJ0sNRIgSesfpT5y2LK7HIvlOQ1qG+JSa7J
+D8Okx/j4nTvlF1Oe8bBfGnq8NgvSNDJKpGQThw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -1527,4 +1535,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_9e6af9a4-ffec-4fdb-93c2-b575c249c024" Target="#_96e9e1df-a76c-4690-8da8-ec1b20d49ecd"><Timestamp>2020-03-07 04:44:21</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_86895396-dd6f-47de-8c28-a36d13184707" Target="#_3d97892e-2330-4ab8-83a3-15bad9798aa5"><Timestamp>2020-03-07 04:46:01</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
