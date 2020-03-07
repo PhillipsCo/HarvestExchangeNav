@@ -33,6 +33,11 @@
     </dependency>
     <dependency>
       <groupId>org.talend.libraries</groupId>
+      <artifactId>antlr-runtime-3.5.2</artifactId>
+      <version>6.0.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.talend.libraries</groupId>
       <artifactId>commons-logging-1.2</artifactId>
       <version>6.1.0</version>
     </dependency>
@@ -48,6 +53,16 @@
     </dependency>
     <dependency>
       <groupId>org.talend.libraries</groupId>
+      <artifactId>commons-lang3-3.3.2</artifactId>
+      <version>6.0.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.talend.libraries</groupId>
+      <artifactId>org.talend.dataquality.parser</artifactId>
+      <version>6.0.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.talend.libraries</groupId>
       <artifactId>commons-beanutils-1.9.2</artifactId>
       <version>6.0.0-SNAPSHOT</version>
     </dependency>
@@ -55,11 +70,6 @@
       <groupId>org.talend.libraries</groupId>
       <artifactId>jibx-run-1.2.7-MOVILIZER</artifactId>
       <version>6.0.0-SNAPSHOT</version>
-    </dependency>
-    <dependency>
-      <groupId>org.talend.libraries</groupId>
-      <artifactId>commons-lang3-3.3.2</artifactId>
-      <version>6.0.0</version>
     </dependency>
     <dependency>
       <groupId>org.talend.libraries</groupId>
