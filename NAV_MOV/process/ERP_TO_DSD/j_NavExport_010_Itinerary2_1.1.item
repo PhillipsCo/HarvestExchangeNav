@@ -56,11 +56,11 @@
     <contextParameter comment="" name="DB_ERP_DSD_Integration_Schema" prompt="DB_ERP_DSD_Integration_Schema?" promptNeeded="false" repositoryContextId="_-v_zwEGGEeazMKeZhCw-4Q" type="id_String" value="dbo"/>
     <contextParameter comment="" name="DB_ERP_DSD_Integration_Server" prompt="DB_ERP_DSD_Integration_Server?" promptNeeded="false" repositoryContextId="_-v_zwEGGEeazMKeZhCw-4Q" type="id_String" value="srvrsql200.harvestfoodsolutions.com"/>
     <contextParameter comment="" name="DB_Navision_AdditionalParams" prompt="DB_Navision_AdditionalParams?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value=""/>
-    <contextParameter comment="" name="DB_Navision_Database" prompt="DB_Navision_Database?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="TEST-USB-2013"/>
+    <contextParameter comment="" name="DB_Navision_Database" prompt="DB_Navision_Database?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="DSD-NAV_Interface"/>
     <contextParameter comment="" name="DB_Navision_Login" prompt="DB_Navision_Login?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="talend_hfs2"/>
     <contextParameter comment="" name="DB_Navision_Password" prompt="DB_Navision_Password?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_Password" value="PrT+NDdqPMBr/HtJWqzj6w=="/>
     <contextParameter comment="" name="DB_Navision_Port" prompt="DB_Navision_Port?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="1433"/>
-    <contextParameter comment="" name="DB_Navision_Schema" prompt="DB_Navision_Schema?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="dbo"/>
+    <contextParameter comment="" name="DB_Navision_Schema" prompt="DB_Navision_Schema?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="EXPORT"/>
     <contextParameter comment="" name="DB_Navision_Server" prompt="DB_Navision_Server?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="testnav10.corp.usbakery.com"/>
     <contextParameter comment="" name="DB_Navision_Target_Staging" prompt="DB_Navision_Target_Staging?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value=""/>
     <contextParameter comment="" name="DB_Talend_Context_AdditionalParams" prompt="DB_Talend_Context_AdditionalParams?" promptNeeded="false" repositoryContextId="_ypE2UFnREeaCBrSnOG5XMg" type="id_String" value=""/>
@@ -78,15 +78,15 @@
     <contextParameter comment="" name="NAV_DescriptionTable" prompt="NAV_DescriptionTable?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="Nav_DSD_Description Table"/>
     <contextParameter comment="" name="NAV_Events" prompt="NAV_Events?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value=""/>
     <contextParameter comment="" name="NAV_Item" prompt="NAV_Item?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value=""/>
-    <contextParameter comment="" name="NAV_Itinerary" prompt="NAV_Itinerary?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="Nav_DSD_Itinerary"/>
-    <contextParameter comment="" name="NAV_Order" prompt="NAV_Order?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="NAV_DSD_Order"/>
+    <contextParameter comment="" name="NAV_Itinerary" prompt="NAV_Itinerary?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="vw_Nav_DSD_Itinerary"/>
+    <contextParameter comment="" name="NAV_Order" prompt="NAV_Order?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="vw_Nav_DSD_Order"/>
     <contextParameter comment="" name="NAV_OrderControl" prompt="NAV_OrderControl?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="Nav_DSD_Order_Control_Group"/>
     <contextParameter comment="" name="NAV_Price" prompt="NAV_Price?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value=""/>
     <contextParameter comment="" name="NAV_Route" prompt="NAV_Route?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value=""/>
     <contextParameter comment="" name="NAV_SalesDate" prompt="NAV_SalesDate?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="DSD_Sales_Download_Date"/>
-    <contextParameter comment="" name="NAV_Shipment" prompt="NAV_Shipment?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="NAV_DSD_Shipment"/>
+    <contextParameter comment="" name="NAV_Shipment" prompt="NAV_Shipment?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="vw_Nav_DSD_Shipment"/>
     <contextParameter comment="" name="NAV_Tax" prompt="NAV_Tax?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value=""/>
-    <contextParameter comment="" name="NAV_User" prompt="NAV_User?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="Nav_DSD_User"/>
+    <contextParameter comment="" name="NAV_User" prompt="NAV_User?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="vw_Nav_DSD_User"/>
     <contextParameter comment="" name="NAV_Vehicle" prompt="NAV_Vehicle?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value=""/>
     <contextParameter comment="" name="routeNo" prompt="routeNo?" promptNeeded="false" type="id_String" value=""/>
   </context>
@@ -147,11 +147,11 @@
     <contextParameter comment="" name="DB_ERP_DSD_Integration_Schema" prompt="DB_ERP_DSD_Integration_Schema?" promptNeeded="false" repositoryContextId="_-v_zwEGGEeazMKeZhCw-4Q" type="id_String" value="dbo"/>
     <contextParameter comment="" name="DB_ERP_DSD_Integration_Server" prompt="DB_ERP_DSD_Integration_Server?" promptNeeded="false" repositoryContextId="_-v_zwEGGEeazMKeZhCw-4Q" type="id_String" value="srvrsql200.harvestfoodsolutions.com"/>
     <contextParameter comment="" name="DB_Navision_AdditionalParams" prompt="DB_Navision_AdditionalParams?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value=""/>
-    <contextParameter comment="" name="DB_Navision_Database" prompt="DB_Navision_Database?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="TEST-USB-2013"/>
+    <contextParameter comment="" name="DB_Navision_Database" prompt="DB_Navision_Database?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="DSD-NAV_Interface"/>
     <contextParameter comment="" name="DB_Navision_Login" prompt="DB_Navision_Login?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="talend_hfs2"/>
     <contextParameter comment="" name="DB_Navision_Password" prompt="DB_Navision_Password?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_Password" value="PrT+NDdqPMBr/HtJWqzj6w=="/>
     <contextParameter comment="" name="DB_Navision_Port" prompt="DB_Navision_Port?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="1433"/>
-    <contextParameter comment="" name="DB_Navision_Schema" prompt="DB_Navision_Schema?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="dbo"/>
+    <contextParameter comment="" name="DB_Navision_Schema" prompt="DB_Navision_Schema?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="EXPORT"/>
     <contextParameter comment="" name="DB_Navision_Server" prompt="DB_Navision_Server?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="testnav10.corp.usbakery.com"/>
     <contextParameter comment="" name="DB_Navision_Target_Staging" prompt="DB_Navision_Target_Staging?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value=""/>
     <contextParameter comment="" name="DB_Talend_Context_AdditionalParams" prompt="DB_Talend_Context_AdditionalParams?" promptNeeded="false" repositoryContextId="_ypE2UFnREeaCBrSnOG5XMg" type="id_String" value=""/>
@@ -169,15 +169,15 @@
     <contextParameter comment="" name="NAV_DescriptionTable" prompt="NAV_DescriptionTable?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="Nav_DSD_Description Table"/>
     <contextParameter comment="" name="NAV_Events" prompt="NAV_Events?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value=""/>
     <contextParameter comment="" name="NAV_Item" prompt="NAV_Item?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value=""/>
-    <contextParameter comment="" name="NAV_Itinerary" prompt="NAV_Itinerary?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="Nav_DSD_Itinerary"/>
-    <contextParameter comment="" name="NAV_Order" prompt="NAV_Order?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="NAV_DSD_Order"/>
+    <contextParameter comment="" name="NAV_Itinerary" prompt="NAV_Itinerary?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="vw_Nav_DSD_Itinerary"/>
+    <contextParameter comment="" name="NAV_Order" prompt="NAV_Order?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="vw_Nav_DSD_Order"/>
     <contextParameter comment="" name="NAV_OrderControl" prompt="NAV_OrderControl?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="Nav_DSD_Order_Control_Group"/>
     <contextParameter comment="" name="NAV_Price" prompt="NAV_Price?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value=""/>
     <contextParameter comment="" name="NAV_Route" prompt="NAV_Route?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value=""/>
     <contextParameter comment="" name="NAV_SalesDate" prompt="NAV_SalesDate?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="DSD_Sales_Download_Date"/>
-    <contextParameter comment="" name="NAV_Shipment" prompt="NAV_Shipment?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="NAV_DSD_Shipment"/>
+    <contextParameter comment="" name="NAV_Shipment" prompt="NAV_Shipment?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="vw_Nav_DSD_Shipment"/>
     <contextParameter comment="" name="NAV_Tax" prompt="NAV_Tax?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value=""/>
-    <contextParameter comment="" name="NAV_User" prompt="NAV_User?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="Nav_DSD_User"/>
+    <contextParameter comment="" name="NAV_User" prompt="NAV_User?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="vw_Nav_DSD_User"/>
     <contextParameter comment="" name="NAV_Vehicle" prompt="NAV_Vehicle?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value=""/>
     <contextParameter comment="" name="routeNo" prompt="routeNo?" promptNeeded="false" type="id_String" value=""/>
   </context>
@@ -238,11 +238,11 @@
     <contextParameter comment="" name="DB_ERP_DSD_Integration_Schema" prompt="DB_ERP_DSD_Integration_Schema?" promptNeeded="false" repositoryContextId="_-v_zwEGGEeazMKeZhCw-4Q" type="id_String" value="dbo"/>
     <contextParameter comment="" name="DB_ERP_DSD_Integration_Server" prompt="DB_ERP_DSD_Integration_Server?" promptNeeded="false" repositoryContextId="_-v_zwEGGEeazMKeZhCw-4Q" type="id_String" value="srvrsql200.harvestfoodsolutions.com"/>
     <contextParameter comment="" name="DB_Navision_AdditionalParams" prompt="DB_Navision_AdditionalParams?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value=""/>
-    <contextParameter comment="" name="DB_Navision_Database" prompt="DB_Navision_Database?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="TEST-USB-2013"/>
+    <contextParameter comment="" name="DB_Navision_Database" prompt="DB_Navision_Database?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="DSD-NAV_Interface"/>
     <contextParameter comment="" name="DB_Navision_Login" prompt="DB_Navision_Login?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="talend_hfs2"/>
     <contextParameter comment="" name="DB_Navision_Password" prompt="DB_Navision_Password?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_Password" value="PrT+NDdqPMBr/HtJWqzj6w=="/>
     <contextParameter comment="" name="DB_Navision_Port" prompt="DB_Navision_Port?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="1433"/>
-    <contextParameter comment="" name="DB_Navision_Schema" prompt="DB_Navision_Schema?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="dbo"/>
+    <contextParameter comment="" name="DB_Navision_Schema" prompt="DB_Navision_Schema?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="EXPORT"/>
     <contextParameter comment="" name="DB_Navision_Server" prompt="DB_Navision_Server?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="testnav10.corp.usbakery.com"/>
     <contextParameter comment="" name="DB_Navision_Target_Staging" prompt="DB_Navision_Target_Staging?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value=""/>
     <contextParameter comment="" name="DB_Talend_Context_AdditionalParams" prompt="DB_Talend_Context_AdditionalParams?" promptNeeded="false" repositoryContextId="_ypE2UFnREeaCBrSnOG5XMg" type="id_String" value=""/>
@@ -260,15 +260,15 @@
     <contextParameter comment="" name="NAV_DescriptionTable" prompt="NAV_DescriptionTable?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="Nav_DSD_Description Table"/>
     <contextParameter comment="" name="NAV_Events" prompt="NAV_Events?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value=""/>
     <contextParameter comment="" name="NAV_Item" prompt="NAV_Item?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value=""/>
-    <contextParameter comment="" name="NAV_Itinerary" prompt="NAV_Itinerary?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="Nav_DSD_Itinerary"/>
-    <contextParameter comment="" name="NAV_Order" prompt="NAV_Order?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="NAV_DSD_Order"/>
+    <contextParameter comment="" name="NAV_Itinerary" prompt="NAV_Itinerary?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="vw_Nav_DSD_Itinerary"/>
+    <contextParameter comment="" name="NAV_Order" prompt="NAV_Order?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="vw_Nav_DSD_Order"/>
     <contextParameter comment="" name="NAV_OrderControl" prompt="NAV_OrderControl?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="Nav_DSD_Order_Control_Group"/>
     <contextParameter comment="" name="NAV_Price" prompt="NAV_Price?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value=""/>
     <contextParameter comment="" name="NAV_Route" prompt="NAV_Route?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value=""/>
     <contextParameter comment="" name="NAV_SalesDate" prompt="NAV_SalesDate?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="DSD_Sales_Download_Date"/>
-    <contextParameter comment="" name="NAV_Shipment" prompt="NAV_Shipment?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="NAV_DSD_Shipment"/>
+    <contextParameter comment="" name="NAV_Shipment" prompt="NAV_Shipment?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="vw_Nav_DSD_Shipment"/>
     <contextParameter comment="" name="NAV_Tax" prompt="NAV_Tax?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value=""/>
-    <contextParameter comment="" name="NAV_User" prompt="NAV_User?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="Nav_DSD_User"/>
+    <contextParameter comment="" name="NAV_User" prompt="NAV_User?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="vw_Nav_DSD_User"/>
     <contextParameter comment="" name="NAV_Vehicle" prompt="NAV_Vehicle?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value=""/>
     <contextParameter comment="" name="routeNo" prompt="routeNo?" promptNeeded="false" type="id_String" value=""/>
   </context>
@@ -329,11 +329,11 @@
     <contextParameter comment="" name="DB_ERP_DSD_Integration_Schema" prompt="DB_ERP_DSD_Integration_Schema?" promptNeeded="false" repositoryContextId="_-v_zwEGGEeazMKeZhCw-4Q" type="id_String" value="dbo"/>
     <contextParameter comment="" name="DB_ERP_DSD_Integration_Server" prompt="DB_ERP_DSD_Integration_Server?" promptNeeded="false" repositoryContextId="_-v_zwEGGEeazMKeZhCw-4Q" type="id_String" value="srvrsql200.harvestfoodsolutions.com"/>
     <contextParameter comment="" name="DB_Navision_AdditionalParams" prompt="DB_Navision_AdditionalParams?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value=""/>
-    <contextParameter comment="" name="DB_Navision_Database" prompt="DB_Navision_Database?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="TEST-USB-2013"/>
+    <contextParameter comment="" name="DB_Navision_Database" prompt="DB_Navision_Database?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="DSD-NAV_Interface"/>
     <contextParameter comment="" name="DB_Navision_Login" prompt="DB_Navision_Login?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="talend_hfs2"/>
     <contextParameter comment="" name="DB_Navision_Password" prompt="DB_Navision_Password?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_Password" value="PrT+NDdqPMBr/HtJWqzj6w=="/>
     <contextParameter comment="" name="DB_Navision_Port" prompt="DB_Navision_Port?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="1433"/>
-    <contextParameter comment="" name="DB_Navision_Schema" prompt="DB_Navision_Schema?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="dbo"/>
+    <contextParameter comment="" name="DB_Navision_Schema" prompt="DB_Navision_Schema?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="EXPORT"/>
     <contextParameter comment="" name="DB_Navision_Server" prompt="DB_Navision_Server?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="testnav10.corp.usbakery.com"/>
     <contextParameter comment="" name="DB_Navision_Target_Staging" prompt="DB_Navision_Target_Staging?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value=""/>
     <contextParameter comment="" name="DB_Talend_Context_AdditionalParams" prompt="DB_Talend_Context_AdditionalParams?" promptNeeded="false" repositoryContextId="_ypE2UFnREeaCBrSnOG5XMg" type="id_String" value=""/>
@@ -351,15 +351,15 @@
     <contextParameter comment="" name="NAV_DescriptionTable" prompt="NAV_DescriptionTable?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="Nav_DSD_Description Table"/>
     <contextParameter comment="" name="NAV_Events" prompt="NAV_Events?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value=""/>
     <contextParameter comment="" name="NAV_Item" prompt="NAV_Item?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value=""/>
-    <contextParameter comment="" name="NAV_Itinerary" prompt="NAV_Itinerary?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="Nav_DSD_Itinerary"/>
-    <contextParameter comment="" name="NAV_Order" prompt="NAV_Order?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="NAV_DSD_Order"/>
+    <contextParameter comment="" name="NAV_Itinerary" prompt="NAV_Itinerary?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="vw_Nav_DSD_Itinerary"/>
+    <contextParameter comment="" name="NAV_Order" prompt="NAV_Order?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="vw_Nav_DSD_Order"/>
     <contextParameter comment="" name="NAV_OrderControl" prompt="NAV_OrderControl?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="Nav_DSD_Order_Control_Group"/>
     <contextParameter comment="" name="NAV_Price" prompt="NAV_Price?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value=""/>
     <contextParameter comment="" name="NAV_Route" prompt="NAV_Route?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value=""/>
     <contextParameter comment="" name="NAV_SalesDate" prompt="NAV_SalesDate?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="DSD_Sales_Download_Date"/>
-    <contextParameter comment="" name="NAV_Shipment" prompt="NAV_Shipment?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="NAV_DSD_Shipment"/>
+    <contextParameter comment="" name="NAV_Shipment" prompt="NAV_Shipment?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="vw_Nav_DSD_Shipment"/>
     <contextParameter comment="" name="NAV_Tax" prompt="NAV_Tax?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value=""/>
-    <contextParameter comment="" name="NAV_User" prompt="NAV_User?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="Nav_DSD_User"/>
+    <contextParameter comment="" name="NAV_User" prompt="NAV_User?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value="vw_Nav_DSD_User"/>
     <contextParameter comment="" name="NAV_Vehicle" prompt="NAV_Vehicle?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value=""/>
     <contextParameter comment="" name="routeNo" prompt="routeNo?" promptNeeded="false" type="id_String" value=""/>
   </context>
@@ -566,54 +566,6 @@
       <column defaultValue="" key="false" length="255" name="value" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tMSSqlConnection" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="576" posY="-416">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBConnection_1"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_-uKbAEF2EeazMKeZhCw-4Q"/>
-    <elementParameter field="CLOSED_LIST" name="DRIVER" value="JTDS"/>
-    <elementParameter field="TEXT" name="HOST" value="&quot;srvrsql200.harvestfoodsolutions.com&quot;"/>
-    <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
-    <elementParameter field="TEXT" name="PORT" value="&quot;1433&quot;"/>
-    <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;dbo&quot;"/>
-    <elementParameter field="TEXT" name="DBNAME" value="&quot;ERP_DSD_Integration_PREPROD&quot;"/>
-    <elementParameter field="TEXT" name="USER" value="&quot;talend&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="7s6v49ZcklfgvLhdBCEhjQ=="/>
-    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
-    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
-    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
-    <elementParameter field="CHECK" name="USE_SHARED_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="SHARED_CONNECTION_NAME" show="false" value=""/>
-    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
-    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
-    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
-    <elementParameter field="CHECK" name="AUTO_COMMIT" value="false"/>
-    <elementParameter field="CHECK" name="SHARE_IDENTITY_SETTING" value="false"/>
-    <elementParameter field="TEXT" name="LABEL" value="ERP_DSD_Integration"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-  </node>
-  <node componentName="tMSSqlConnection" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="736" posY="-416">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBConnection_2"/>
-    <elementParameter field="CLOSED_LIST" name="DRIVER" value="MSSQL_PROP"/>
-    <elementParameter field="TEXT" name="HOST" value="&quot;testnav10.corp.usbakery.com&quot;"/>
-    <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
-    <elementParameter field="TEXT" name="PORT" value="&quot;1433&quot;"/>
-    <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;dbo&quot;"/>
-    <elementParameter field="TEXT" name="DBNAME" value="&quot;TEST-USB-2013&quot;"/>
-    <elementParameter field="TEXT" name="USER" value="&quot;talend_hfs2&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="iGTTaeaaaAsbd+wn3RR9UQ=="/>
-    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
-    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
-    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
-    <elementParameter field="CHECK" name="USE_SHARED_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="SHARED_CONNECTION_NAME" show="false" value=""/>
-    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
-    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
-    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
-    <elementParameter field="CHECK" name="AUTO_COMMIT" value="false"/>
-    <elementParameter field="CHECK" name="SHARE_IDENTITY_SETTING" value="false"/>
-    <elementParameter field="TEXT" name="LABEL" value="DB_Navision"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-  </node>
   <node componentName="tSetKeystore" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="864" posY="-416">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSetKeystore_1"/>
     <elementParameter field="CLOSED_LIST" name="TRUSTSTORE_TYPE" value="JKS"/>
@@ -653,6 +605,7 @@
   </node>
   <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="-256" posY="320">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_3"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_2"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" show="false" value="REPOSITORY"/>
@@ -670,7 +623,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#13;&#10;&#9;&#9;[DOWNLOAD DATE]&#13;&#10;      ,Substring([Key],2,100) as ROUTENO&#13;&#10;      ,[SHIPTO]&#13;&#10;      ,[STOPNO] from&#13;&#10;[&quot;+context.NAV_Itinerary+&quot;]&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#13;&#10;&#9;&#9;[DOWNLOAD DATE]&#13;&#10;      ,Substring([Key],2,100) as ROUTENO&#13;&#10;      ,[SHIPTO]&#13;&#10;      ,[STOPNO] from [&quot; + context.DB_Navision_Schema + &quot;].[&quot; + context.NAV_Itinerary + &quot;]&quot;"/>
     <elementParameter field="LABEL" name="NOTE" show="false" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" show="false" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -700,6 +653,7 @@
   </node>
   <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="-128" posY="320">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_4"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
     <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
@@ -719,7 +673,7 @@
       <column comment="" defaultValue="" key="false" length="30" name="STOPNO" nullable="false" originalLength="30" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables expressionFilter="row9.ROUTENO.equals(&quot;40035&quot;)" name="row1" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="row9.DOWNLOAD_DATE " name="DOWNLOAD_DATE" nullable="true" type="id_Date"/>
@@ -743,6 +697,7 @@
   </node>
   <node componentName="tJavaFlex" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="64" posY="320">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJavaFlex_1"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="DATA_AUTO_PROPAGATE" value="true"/>
     <elementParameter field="MEMO_JAVA" name="CODE_START" value=" int i =1;&#10; &#10; "/>
     <elementParameter field="MEMO_JAVA" name="CODE_MAIN" value="&#10;context.objectId=row1.STOPNO+&quot; - &quot;+row1.SHIPTO;&#10;context.objectName=&quot;&quot;;&#10;&#10;&#10;&#10;&#10;&#10;if( i%5000 == 0)&#10;{&#10;System.out.println(i+&quot;-----5000 Records Have Processed - Itinerary Object&quot;);&#10;}&#10;i++;&#10;"/>
@@ -761,6 +716,7 @@
   </node>
   <node componentName="tSchemaComplianceCheck" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="192" posY="320">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSchemaComplianceCheck_1"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="RADIO" name="CHECK_ALL" value="false"/>
     <elementParameter field="RADIO" name="CUSTOMER" value="true"/>
     <elementParameter field="TABLE" name="CHECKCOLS">
@@ -825,6 +781,7 @@
   </node>
   <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="352" posY="320">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_1"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
     <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
@@ -867,6 +824,7 @@
   </node>
   <node componentName="tMSSqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="512" posY="320">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMSSqlOutput_1"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" show="false" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_-uKbAEF2EeazMKeZhCw-4Q"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
@@ -951,6 +909,7 @@
   </node>
   <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="192" posY="448">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJavaRow_1"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="MEMO_JAVA" name="CODE" value="//Code generated according to input schema and output schema&#13;&#10;context.ErrorMsg = input_row.errorMessage;&#13;&#10;"/>
     <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
@@ -967,6 +926,7 @@
   </node>
   <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="480" posY="448">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tWarn_1"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="TEXT" name="MESSAGE" value="context.ErrorMsg"/>
     <elementParameter field="TEXT" name="CODE" value="599"/>
     <elementParameter field="CLOSED_LIST" name="PRIORITY" value="5"/>
@@ -984,6 +944,7 @@
   </node>
   <node componentName="tSortRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="608" posY="320">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSortRow_1"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="TABLE" name="CRITERIA">
       <elementValue elementRef="COLNAME" value="DOWNLOAD_DATE"/>
       <elementValue elementRef="SORT" value="date"/>
@@ -1010,6 +971,7 @@
   </node>
   <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="800" posY="320">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_2"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="RADIO" name="BASIC_MODE" value="true"/>
     <elementParameter field="RADIO" name="TABLE_PRINT" value="false"/>
     <elementParameter field="RADIO" name="VERTICAL" value="false"/>
@@ -1046,6 +1008,7 @@
   </node>
   <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="1216" posY="384">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_2"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
     <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
@@ -1132,6 +1095,7 @@
   </node>
   <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="992" posY="256">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_1"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_2"/>
     <elementParameter field="TEXT" name="HOST" show="false" value="&quot;&quot;"/>
@@ -1147,7 +1111,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select Substring([Key],2,100) as routeNo, count([Key]) as stopCount from [dbo].[Nav_DSD_Itinerary]&#13;&#10;where [DOWNLOAD DATE] = &#13;&#10;(SELECT isnull([Manual_SalesDate],DSD_SalesDate) FROM [TEST-USB-2013].[dbo].[DSD_Sales_Download_Date])&#13;&#10; group by Substring([Key],2,100)&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select Substring([Key],2,100) as routeNo, count([Key]) as stopCount from [dbo].[Nav_DSD_Itinerary]"/>
     <elementParameter field="LABEL" name="NOTE" show="false" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" show="false" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -1170,6 +1134,7 @@
   </node>
   <node componentName="tJavaFlex" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1120" posY="96">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJavaFlex_2"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="DATA_AUTO_PROPAGATE" value="true"/>
     <elementParameter field="MEMO_JAVA" name="CODE_START" value="// start part of your Java code&#10; int b =1; "/>
     <elementParameter field="MEMO_JAVA" name="CODE_MAIN" value="&#10;routines.Nav_Itinerary.createAllObjects();&#10;System.out.println(&quot;b &quot; + b );&#10;if(b==1){&#10;routines.Nav_Itinerary.populateMasterdataPoolUpdate(masterdataPoolUpdate);     &#10;}&#10;b++;"/>
@@ -1183,6 +1148,7 @@
   </node>
   <node componentName="tJavaFlex" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1344" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJavaFlex_3"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="DATA_AUTO_PROPAGATE" value="true"/>
     <elementParameter field="MEMO_JAVA" name="CODE_START" value="// start part of your Java code&#10;      "/>
     <elementParameter field="MEMO_JAVA" name="CODE_MAIN" value="// here is the main part of the component,&#10;// a piece of code executed in the row&#10;// loop&#10;&#10;context.Date=DATE.DATE;&#10;//System.out.println(&quot;context.Date = &quot; + context.Date);"/>
@@ -1196,6 +1162,7 @@
   </node>
   <node componentName="tJavaFlex" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1440" posY="192">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJavaFlex_4"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="DATA_AUTO_PROPAGATE" value="true"/>
     <elementParameter field="MEMO_JAVA" name="CODE_START" value="// start part of your Java code&#10;  int row_num=0;    "/>
     <elementParameter field="MEMO_JAVA" name="CODE_MAIN" value="row_num++;&#10;context.do_populate = false;&#10;//int chk = routines.Nav_Itinerary.getRTE_DATEcount(MasterdataUpdate.Key);&#10; &#10;System.out.println(MasterdataUpdate.filter4 + &quot;  &quot;+context.routeCount );&#10;if(context.routeCount ==row_num){&#10;routines.Nav_Itinerary.populateMasterdataUpdate(MasterdataUpdate);&#10;context.group = MasterdataUpdate.Group;&#10;context.key=MasterdataUpdate.Key;&#10;context.do_populate = true;&#10;System.out.println(MasterdataUpdate.Key + &quot;  &quot;+context.routeCount +&quot; &quot;+row_num);&#10;&#10;row_num=0;&#10;}&#10;"/>
@@ -1209,6 +1176,7 @@
   </node>
   <node componentName="tJavaFlex" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1408" posY="384">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJavaFlex_5"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="DATA_AUTO_PROPAGATE" value="true"/>
     <elementParameter field="MEMO_JAVA" name="CODE_START" value="// start part of your Java code&#10;String prevRouteNo = &quot;XXX&quot;;&#10;      &#10;      "/>
     <elementParameter field="MEMO_JAVA" name="CODE_MAIN" value="&#10;if(!context.routeNo.equals(prevRouteNo)){&#10;routines.Nav_Itinerary.createData(context.Date);&#10;}&#9;&#10;prevRouteNo = context.routeNo; &#9;&#9;  &#9;&#9;&#9; &#10;routines.Nav_Itinerary.populateDataContainerEntry(Stop);&#10;&#10;if(context.do_populate == true){&#10;routines.Nav_Itinerary.populateUpdateContainerEntry();&#10;//context.do_populate = false;&#10;}"/>
@@ -1222,6 +1190,7 @@
   </node>
   <node componentName="tJavaFlex" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1408" posY="480">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJavaFlex_6"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="DATA_AUTO_PROPAGATE" value="true"/>
     <elementParameter field="MEMO_JAVA" name="CODE_START" value="// start part of your Java code&#10;  int a=1;    "/>
     <elementParameter field="MEMO_JAVA" name="CODE_MAIN" value="if(context.do_populate == true){&#10;context.responseXML = routines.Nav_Itinerary.sendMasterData(context.movilizerURL, context.movilizerVersion);&#10;   routines.Nav_Itinerary.resetObjects(); &#10;context.do_populate = false;&#10;b=1;&#10;}&#10;&#10;&#10;"/>
@@ -1235,83 +1204,9 @@
       <column comment="" key="false" length="-1" name="responseXML" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="-160" posY="192">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_4"/>
-    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_2"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" show="false" value="REPOSITORY"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_BbudkE3lEeaYYuHJp6GolQ"/>
-    <elementParameter field="TEXT" name="HOST" show="false" value="context.DB_Navision_Server"/>
-    <elementParameter field="CLOSED_LIST" name="DRIVER" show="false" value="MSSQL_PROP"/>
-    <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
-    <elementParameter field="TEXT" name="PORT" show="false" value="context.DB_Navision_Port"/>
-    <elementParameter field="TEXT" name="DB_SCHEMA" show="false" value="context.DB_Navision_Schema"/>
-    <elementParameter field="TEXT" name="DBNAME" show="false" value="context.DB_Navision_Database"/>
-    <elementParameter field="TEXT" name="USER" show="false" value="context.DB_Navision_Login"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="8pW6Nmy2kudjruFRcwAihsBT1Er3Hu3qE2w729Tj3Vw="/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
-    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
-    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
-    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
-    <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT  [REFERENCEDATE]&#13;&#10;      ,[SHIPTO]&#13;&#10;      ,[Item No_]&#13;&#10;      ,[QTYTEMP]&#13;&#10;      , [QTYPERM]&#13;&#10;      ,[QTYORDER]&#13;&#10;      ,[UOM]&#10;FROM&#9;[&quot;+context.NAV_Order+&quot;]&quot;"/>
-    <elementParameter field="LABEL" name="NOTE" show="false" value="This option only applies when deploying and running in the Talend Runtime"/>
-    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" show="false" value="false"/>
-    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
-    <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="id_MSSQL"/>
-    <elementParameter field="TEXT" name="PROPERTIES" show="false" value="context.DB_Navision_AdditionalParams"/>
-    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
-    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
-    <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
-    <elementParameter field="TABLE" name="TRIM_COLUMN">
-      <elementValue elementRef="SCHEMA_COLUMN" value="REFERENCEDATE"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="SHIPTO"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="Item_No_"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="QTYTEMP"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="QTYPERM"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="QTYORDER"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="UOM"/>
-      <elementValue elementRef="TRIM" value="false"/>
-    </elementParameter>
-    <elementParameter field="TEXT" name="LABEL" value="Nav_DSD_Order"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tDBInput_4">
-      <column comment="" key="false" length="50" name="REFERENCEDATE" nullable="false" originalLength="30" pattern="&quot;yyyy-MM-dd&quot;" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="255" name="SHIPTO" nullable="false" originalLength="255" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="30" name="Item_No_" nullable="false" originalDbColumnName="Item No_" originalLength="30" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="38" name="QTYTEMP" nullable="false" originalLength="-1" pattern="" precision="6" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="38" name="QTYPERM" nullable="false" originalLength="-1" pattern="" precision="6" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="38" name="QTYORDER" nullable="false" originalLength="-1" pattern="" precision="6" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="UOM" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="tAggregateRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="0" posY="192">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tAggregateRow_1"/>
-    <elementParameter field="TABLE" name="GROUPBYS">
-      <elementValue elementRef="OUTPUT_COLUMN" value="REFERENCEDATE"/>
-      <elementValue elementRef="INPUT_COLUMN" value="REFERENCEDATE"/>
-      <elementValue elementRef="OUTPUT_COLUMN" value="SHIPTO"/>
-      <elementValue elementRef="INPUT_COLUMN" value="SHIPTO"/>
-    </elementParameter>
-    <elementParameter field="TABLE" name="OPERATIONS"/>
-    <elementParameter field="TEXT" name="LIST_DELIMITER" value="&quot;,&quot;"/>
-    <elementParameter field="CHECK" name="USE_FINANCIAL_PRECISION" value="true"/>
-    <elementParameter field="CHECK" name="CHECK_TYPE_OVERFLOW" value="false"/>
-    <elementParameter field="CHECK" name="CHECK_ULP" value="false"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tAggregateRow_1">
-      <column comment="" key="false" length="50" name="REFERENCEDATE" nullable="false" originalLength="30" pattern="&quot;yyyy-MM-dd&quot;" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="255" name="SHIPTO" nullable="false" originalLength="255" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-    </metadata>
-  </node>
   <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="128" posY="192">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_3"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
     <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
@@ -1377,6 +1272,159 @@
       <column defaultValue="" key="false" length="255" name="value" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
+  <node componentName="tMSSqlConnection" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="544" posY="-416">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBConnection_1"/>
+    <elementParameter field="CLOSED_LIST" name="DRIVER" value="JTDS"/>
+    <elementParameter field="TEXT" name="HOST" value="context.DB_ERP_DSD_Integration_Server"/>
+    <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
+    <elementParameter field="TEXT" name="PORT" value="context.DB_ERP_DSD_Integration_Port"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="context.DB_ERP_DSD_Integration_Schema"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.DB_ERP_DSD_Integration_Database"/>
+    <elementParameter field="TEXT" name="USER" value="context.DB_ERP_DSD_Integration_Login"/>
+    <elementParameter field="PASSWORD" name="PASS" value="8pW6Nmy2kucqfsDz9kx+JD4fCX5XMuLYBrRSpMZbhzTKJD0WltAbBg=="/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="USE_SHARED_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="SHARED_CONNECTION_NAME" show="false" value="&quot;Order_Conn&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="AUTO_COMMIT" value="false"/>
+    <elementParameter field="CHECK" name="SHARE_IDENTITY_SETTING" value="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="ERP_DSD_Integration"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="tMSSqlConnection" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="768" posY="-416">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBConnection_2"/>
+    <elementParameter field="CLOSED_LIST" name="DRIVER" value="MSSQL_PROP"/>
+    <elementParameter field="TEXT" name="HOST" value="context.DB_Navision_Server"/>
+    <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
+    <elementParameter field="TEXT" name="PORT" value="context.DB_Navision_Port"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="context.DB_Navision_Schema"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.DB_Navision_Database"/>
+    <elementParameter field="TEXT" name="USER" value="context.DB_Navision_Login"/>
+    <elementParameter field="PASSWORD" name="PASS" value="8pW6Nmy2kudjruFRcwAihsBT1Er3Hu3qE2w729Tj3Vw="/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="context.DB_Navision_AdditionalParams"/>
+    <elementParameter field="CHECK" name="USE_SHARED_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="SHARED_CONNECTION_NAME" show="false" value=""/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="AUTO_COMMIT" value="false"/>
+    <elementParameter field="CHECK" name="SHARE_IDENTITY_SETTING" value="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="DB_Navision"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="-160" posY="192">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_4"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_2"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" show="false" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_BbudkE3lEeaYYuHJp6GolQ"/>
+    <elementParameter field="TEXT" name="HOST" show="false" value="context.DB_Navision_Server"/>
+    <elementParameter field="CLOSED_LIST" name="DRIVER" show="false" value="MSSQL_PROP"/>
+    <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
+    <elementParameter field="TEXT" name="PORT" show="false" value="context.DB_Navision_Port"/>
+    <elementParameter field="TEXT" name="DB_SCHEMA" show="false" value="context.DB_Navision_Schema"/>
+    <elementParameter field="TEXT" name="DBNAME" show="false" value="context.DB_Navision_Database"/>
+    <elementParameter field="TEXT" name="USER" show="false" value="context.DB_Navision_Login"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="8pW6Nmy2kudjruFRcwAihsBT1Er3Hu3qE2w729Tj3Vw="/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT  [REFERENCEDATE]&#13;&#10;      ,[SHIPTO]&#13;&#10;      ,[Item No_]&#13;&#10;      ,[QTYTEMP]&#13;&#10;      , [QTYPERM]&#13;&#10;      ,[QTYORDER]&#13;&#10;      ,[UOM]&#10;FROM&#9; [&quot; + context.DB_Navision_Schema + &quot;].[&quot;+context.NAV_Order+&quot;]&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" show="false" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" show="false" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="id_MSSQL"/>
+    <elementParameter field="TEXT" name="PROPERTIES" show="false" value="context.DB_Navision_AdditionalParams"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
+    <elementParameter field="TABLE" name="TRIM_COLUMN">
+      <elementValue elementRef="SCHEMA_COLUMN" value="REFERENCEDATE"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="SHIPTO"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Item_No_"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="QTYTEMP"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="QTYPERM"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="QTYORDER"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="UOM"/>
+      <elementValue elementRef="TRIM" value="false"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="LABEL" value="Nav_DSD_Order"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tDBInput_4">
+      <column comment="" key="false" length="50" name="REFERENCEDATE" nullable="false" originalLength="30" pattern="&quot;yyyy-MM-dd&quot;" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="SHIPTO" nullable="false" originalLength="255" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="30" name="Item_No_" nullable="false" originalDbColumnName="Item No_" originalLength="30" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="38" name="QTYTEMP" nullable="false" originalLength="-1" pattern="" precision="6" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="38" name="QTYPERM" nullable="false" originalLength="-1" pattern="" precision="6" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="38" name="QTYORDER" nullable="false" originalLength="-1" pattern="" precision="6" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="UOM" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tAggregateRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="0" posY="192">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tAggregateRow_1"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
+    <elementParameter field="TABLE" name="GROUPBYS">
+      <elementValue elementRef="OUTPUT_COLUMN" value="REFERENCEDATE"/>
+      <elementValue elementRef="INPUT_COLUMN" value="REFERENCEDATE"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="SHIPTO"/>
+      <elementValue elementRef="INPUT_COLUMN" value="SHIPTO"/>
+    </elementParameter>
+    <elementParameter field="TABLE" name="OPERATIONS"/>
+    <elementParameter field="TEXT" name="LIST_DELIMITER" value="&quot;,&quot;"/>
+    <elementParameter field="CHECK" name="USE_FINANCIAL_PRECISION" value="true"/>
+    <elementParameter field="CHECK" name="CHECK_TYPE_OVERFLOW" value="false"/>
+    <elementParameter field="CHECK" name="CHECK_ULP" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tAggregateRow_1">
+      <column comment="" key="false" length="50" name="REFERENCEDATE" nullable="false" originalLength="30" pattern="&quot;yyyy-MM-dd&quot;" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="SHIPTO" nullable="false" originalLength="255" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="768" posY="-256">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_5"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_2"/>
+    <elementParameter field="TEXT" name="HOST" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="DRIVER" show="false" value="JTDS"/>
+    <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
+    <elementParameter field="TEXT" name="PORT" show="false" value="&quot;1433&quot;"/>
+    <elementParameter field="TEXT" name="DB_SCHEMA" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="0RMsyjmybrE="/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT TOP 1000 [DSD_SalesDate]&#13;&#10;      ,[Manual_SalesDate]&#13;&#10;  FROM [TEST-USB-2013].[dbo].[DSD_Sales_Download_Date]&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" show="false" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" show="false" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="id_MSSQL"/>
+    <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;noDatetimeStringSync=true&quot;"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
+    <elementParameter field="TABLE" name="TRIM_COLUMN"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tDBInput_5"/>
+  </node>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPrejob_1" offsetLabelX="0" offsetLabelY="0" source="tPrejob_1" target="tJava_1">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk13"/>
   </connection>
@@ -1395,19 +1443,16 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row10"/>
   </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tContextLoad_1" offsetLabelX="0" offsetLabelY="0" source="tContextLoad_1" target="tDBConnection_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk8"/>
+  </connection>
   <connection connectorName="FLOW" label="row12" lineStyle="0" metaname="tContextLoad_1" offsetLabelX="0" offsetLabelY="0" source="tContextLoad_1" target="tLogRow_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row12"/>
   </connection>
-  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tContextLoad_1" offsetLabelX="0" offsetLabelY="0" source="tContextLoad_1" target="tDBConnection_1">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk15"/>
-  </connection>
-  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tDBConnection_1" offsetLabelX="0" offsetLabelY="0" source="tDBConnection_1" target="tDBConnection_2">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk16"/>
-  </connection>
-  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tDBConnection_2" offsetLabelX="0" offsetLabelY="0" source="tDBConnection_2" target="tSetKeystore_1">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk17"/>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tSetKeystore_1" offsetLabelX="0" offsetLabelY="0" source="tSetKeystore_1" target="tDBInput_5">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk11"/>
   </connection>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPostjob_1" offsetLabelX="0" offsetLabelY="0" source="tPostjob_1" target="tJava_2">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk18"/>
@@ -1420,6 +1465,7 @@
   </connection>
   <connection connectorName="FLOW" label="row9" lineStyle="0" metaname="tDBInput_3" offsetLabelX="0" offsetLabelY="0" source="tDBInput_3" target="tMap_4">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row9"/>
   </connection>
   <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="row1" offsetLabelX="0" offsetLabelY="0" source="tMap_4" target="tJavaFlex_1">
@@ -1438,18 +1484,22 @@
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
   </connection>
   <connection connectorName="FLOW" label="row5" lineStyle="0" metaname="tJavaFlex_1" offsetLabelX="0" offsetLabelY="0" source="tJavaFlex_1" target="tSchemaComplianceCheck_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row5"/>
   </connection>
   <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tSchemaComplianceCheck_1" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tSchemaComplianceCheck_1" target="tMap_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row2"/>
   </connection>
   <connection connectorName="REJECT" label="row3" lineStyle="0" metaname="REJECT" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tSchemaComplianceCheck_1" target="tJavaRow_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row3"/>
   </connection>
   <connection connectorName="FLOW" label="output_stop" lineStyle="0" metaname="output_stop" offsetLabelX="0" offsetLabelY="0" source="tMap_1" target="tMSSqlOutput_1">
@@ -1474,55 +1524,58 @@
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="output_stop"/>
   </connection>
   <connection connectorName="FLOW" label="row4" lineStyle="0" metaname="tMSSqlOutput_1" offsetLabelX="0" offsetLabelY="0" source="tMSSqlOutput_1" target="tSortRow_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row4"/>
   </connection>
   <connection connectorName="FLOW" label="row8" lineStyle="0" metaname="tJavaRow_1" offsetLabelX="0" offsetLabelY="0" source="tJavaRow_1" target="tWarn_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row8"/>
   </connection>
   <connection connectorName="FLOW" label="row11" lineStyle="0" metaname="tSortRow_1" offsetLabelX="0" offsetLabelY="0" source="tSortRow_1" target="tLogRow_2">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row11"/>
   </connection>
   <connection connectorName="FLOW" label="row6" lineStyle="0" metaname="tLogRow_2" offsetLabelX="0" offsetLabelY="0" source="tLogRow_2" target="tMap_2">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row6"/>
   </connection>
   <connection connectorName="FLOW" label="masterdataPoolUpdate" lineStyle="0" metaname="masterdataPoolUpdate" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tMap_2" target="tJavaFlex_2">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="masterdataPoolUpdate"/>
   </connection>
   <connection connectorName="FLOW" label="DATE" lineStyle="0" metaname="DATE" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tMap_2" target="tJavaFlex_3">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="DATE"/>
   </connection>
   <connection connectorName="FLOW" label="MasterdataUpdate" lineStyle="0" metaname="MasterdataUpdate" offsetLabelX="0" offsetLabelY="0" outputId="3" source="tMap_2" target="tJavaFlex_4">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="MasterdataUpdate"/>
   </connection>
   <connection connectorName="FLOW" label="Stop" lineStyle="0" metaname="Stop" offsetLabelX="0" offsetLabelY="0" outputId="4" source="tMap_2" target="tJavaFlex_5">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="Stop"/>
   </connection>
   <connection connectorName="FLOW" label="sendMasterData" lineStyle="0" metaname="sendMasterData" offsetLabelX="0" offsetLabelY="0" outputId="5" source="tMap_2" target="tJavaFlex_6">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="sendMasterData"/>
   </connection>
   <connection connectorName="FLOW" label="row7" lineStyle="8" metaname="tDBInput_1" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="tMap_2">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row7"/>
-  </connection>
-  <connection connectorName="FLOW" label="row13" lineStyle="0" metaname="tDBInput_4" offsetLabelX="0" offsetLabelY="0" source="tDBInput_4" target="tAggregateRow_1">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row13"/>
-  </connection>
-  <connection connectorName="FLOW" label="row14" lineStyle="0" metaname="tAggregateRow_1" offsetLabelX="0" offsetLabelY="0" source="tAggregateRow_1" target="tMap_3">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row14"/>
   </connection>
   <connection connectorName="FLOW" label="row15" lineStyle="8" metaname="row15" offsetLabelX="0" offsetLabelY="0" source="tMap_3" target="tMap_4">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
@@ -1534,7 +1587,24 @@
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row15"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tDBConnection_1" offsetLabelX="0" offsetLabelY="0" source="tDBConnection_1" target="tDBConnection_2">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk9"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tDBConnection_2" offsetLabelX="0" offsetLabelY="0" source="tDBConnection_2" target="tSetKeystore_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk10"/>
+  </connection>
+  <connection connectorName="FLOW" label="row13" lineStyle="0" metaname="tDBInput_4" offsetLabelX="0" offsetLabelY="0" source="tDBInput_4" target="tAggregateRow_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row13"/>
+  </connection>
+  <connection connectorName="FLOW" label="row14" lineStyle="0" metaname="tAggregateRow_1" offsetLabelX="0" offsetLabelY="0" source="tAggregateRow_1" target="tMap_3">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row14"/>
   </connection>
   <subjob>
     <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" show="false" value="true"/>
@@ -1549,16 +1619,6 @@
   </subjob>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_2"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
-  </subjob>
-  <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBConnection_1"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
-  </subjob>
-  <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBConnection_2"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
@@ -1598,13 +1658,33 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_5c5a9ccd-1e4b-45ae-856d-42422a6e5c2b"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>5Addji2NabE1nebuEH0Qm52PwxgXcib8bTTfcXeH05BHRcNjK0p4Mb/se9bBbvj8j/pQw9EGJWIz
-q79Gu4kLEA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_0af81cd4-e471-4698-8677-551f6747a4e8"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>f/wSdwQTyvL1FenuBnehciyEE3WWVBBRmFKwrMolqPirAvk84bD/X6XEiFizzKinvCZMFopW64KS
-3PJH9tx+pQ==</DigestValue></Reference></SignedInfo><SignatureValue>vkWZXj5fd9q250WAtBBbzkJWMygEX2MzR0zq6o/I6XAZw6dsFDH7npOu64VlXPGb7xGAmjhoIGm/
-e3flHKMILkULmN1XK6tOOlNJyFrDFSv5qA9sF8/t8Dbv5dnYM4ja/t4zZJB1ipav5Dk4VTQBE1JO
-TM5UXaYKDpn6ROwAAarAmsHgfSHCN54C0SyZnkbAuEOdLhIxU0dFnAoYbnDwMGYZdgH+MJ0nANsr
-23fucSYNQ1zmWWBuPDVIYQWbs/Iba4x/OBC5CiwLF9oNpHx86gJHxXpP8rL92qdUWE+ibZ8nytCf
-DTs9UHzRgJBT5KlbgZhNQMKNv9GBv/wqbkNgBA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBConnection_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBConnection_2"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_4"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_5"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_51e66925-1a45-4806-a435-c13ca4eb4d51"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>v8aEkRce9oCfXXByejGOK+brWLvYXb1tKrIYNzdR/8f1oqldC2qxYmPibpdRLrYPOrAh7RYH8P0Z
+wdf3mlSjMw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_48fe2d4a-91ab-45cd-869f-c5700528a5e0"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>quGFIR8i8OLqSFqfckhLoJHBs2ztw8CFxa+omcbbrKJlWWys5G+o1slib3QeAkCioLJOT1Y+j+DN
+DpcJYDiHow==</DigestValue></Reference></SignedInfo><SignatureValue>Ry9ax3r8YFQPq3H69NGeXd5TvTCf7aGT1FsVYSIwH4tTcnDFxLup3IsDGXkxnKOEBIG5qjLZj+KX
+2IgSxf2qS6znJFhkBtGbMhsOG+p2TdjJxUG9dDmYT1x532Cu6oTqDyqxoRQMSYvHdhL3V3MYYOTR
+vxE+ZRaBv8Zmi1AIHsCfMkpga2j0589/GgSQGF+jZcJPnH0S4dGSDglxm5WZouBJIPFZXKPCFkcH
+5WkwjCTrenIRXsT4hWpRM3FubHSdJ7SIvU6/0Dze9e0066MIrP0tdcKSs9rxjFA3xTD2VhwgDJlw
+JtpkBSYH5sDZHuQm1rtGRX+QH0AvGCONk7YwKg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -1628,4 +1708,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_0af81cd4-e471-4698-8677-551f6747a4e8" Target="#_5c5a9ccd-1e4b-45ae-856d-42422a6e5c2b"><Timestamp>2020-01-06 10:44:17</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_48fe2d4a-91ab-45cd-869f-c5700528a5e0" Target="#_51e66925-1a45-4806-a435-c13ca4eb4d51"><Timestamp>2020-03-07 03:34:57</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
