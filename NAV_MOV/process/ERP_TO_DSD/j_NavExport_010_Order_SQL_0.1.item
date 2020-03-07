@@ -713,7 +713,7 @@
       <column comment="" key="false" length="-1" name="qty" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables name="Var" sizeState="INTERMEDIATE">
         <mapperTableEntries expression=" " name="SendThisRoute" type="id_String"/>
         <mapperTableEntries expression="TalendDate.parseDate(&quot;yyyyMMdd&quot;,row1.REFERENCEDATE) " name="orderDate" type="id_Date"/>
@@ -774,7 +774,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT  [DSD_SalesDate]&#10;FROM&#9;[&quot;+context.NAV_SalesDate+&quot;]&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT  '01-01-2020'"/>
     <elementParameter field="LABEL" name="NOTE" show="false" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" show="false" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -812,7 +812,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;&#13;&#10;select cust.Customer# CustomerNo,cust.Name,iter.[Key] ROUTE,usr.FACILITY,usr.LOCATION,usr.ROUTEGROUP from [dbo].[Nav_DSD_Customer Download_Details] cust&#13;&#10;join Nav_DSD_Itinerary iter on cust.SHIPPING# = iter.shipto&#13;&#10;join Nav_DSD_User usr on  iter.[Key] = usr.[ID]&#13;&#10;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;&#13;&#10;select cust.Customer# CustomerNo,cust.Name,iter.[Key] ROUTE,usr.FACILITY,usr.LOCATION,usr.ROUTEGROUP from [EXPORT].[vw_Nav_DSD_Customer_Details] cust&#13;&#10;join EXPORT.vw_Nav_DSD_Itinerary iter on cust.SHIPPING# = iter.shipto&#13;&#10;join EXPORT.vw_Nav_DSD_User usr on  iter.[Key] = usr.[ID]&#13;&#10;&quot;"/>
     <elementParameter field="LABEL" name="NOTE" show="false" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" show="false" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -1398,13 +1398,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_157134d6-1afa-411f-8aaa-0e6d648bc07b"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>NbCwv6l/mZINlOLJwWyCjUQNcsEp31ONtv80MXSWIupysUh4u6v6RcBsX0kNCwLg9PCdQp8f3onj
-f7Acr3zk2g==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_57168aa0-2f62-4182-ba81-c9005dfade7e"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>bwMd9kYL1MXKrn+M8B/ISyaqvpAYNXnbGpPBNVknwpJEVUEzam4GR8ZVigXJngAwWkvrvoKTv65p
-KMdxcHdlEA==</DigestValue></Reference></SignedInfo><SignatureValue>vD68l7eofOOD1bCMovVez8wwGFxIllcV1GXGFEbQrfGeEnNrOC4gxPCzuiScTKcu2aydk8sZc6wN
-1Gyyo0Kz4gDscfV1/k37LmTHfyyTbYFVG776Vr6wzBZEcnddqtto/reHSNDxPyT+WTEL9u5BtDaR
-pBWF4fqB5GLSkyfTjltNmML9M1jvow+m4QjctW70wIiOi82hSU+1hm6qiuBvNaIsFlTw6n3OwYDM
-eGBt1HaNElFEX8NPn0SnsnZhD+wvIMFuP7Slc1nAyf9hCCQxi+JlK+YLU/6qn/7ijEE/ex13Ox8e
-+MITHJ0olYf6ZronZfH7n8nufvKqkvk7uQ7yzw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_95c66238-f7c9-4fcf-8e79-b66a888bf169"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>/xucmxPXa6u9sJin+oqH4ze7QwjOPBrNo5deba8EChA+BGyWj4rfbFWzEcfP3gif+DM2OFBB4XNl
+znUyaKteKg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_eee64f53-6855-4f2b-a637-6eaf4547d7ba"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>PsPIGFAoh2XDjDJzD7AoAd7ZjpwpK8Rg5OmD7ZAF5kcSEIll29eJNjgVDHVEj6TH8eZV7Za1Qq+D
+8NE/pRmt0g==</DigestValue></Reference></SignedInfo><SignatureValue>RAjUp6nXIKNM56ARspp8LCdrgrf8oMcPVvJIzt3QhcJuQGxvqNJLoBiX2+ItZw1NylxGmO+hGiWM
+ha4kkjmSm2f6QFXWTB56XUUojmQQV1nmBccwHvMFiB9uythCc8y0T7llwDWWfoUvEVIPbpeXr1v6
+DkN5HHcnwGS1DuiKQ4q90v9gvvqf4i1poH6wi8ziYHW+SHc/OlB4ZkDRtm3roxEN733A3eQeYdB4
+NJea3PDDu1jI70FqTpeIj8HiV8hlsQqiUMEVmd9dY51L4a+yAbiLr1yLwWTSqLVHaAUg4antbuIE
+fIOVps0u+5HiN830z7lxG1T3kWuKbsZMjXJKzg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -1428,4 +1428,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_57168aa0-2f62-4182-ba81-c9005dfade7e" Target="#_157134d6-1afa-411f-8aaa-0e6d648bc07b"><Timestamp>2020-03-07 01:47:28</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_eee64f53-6855-4f2b-a637-6eaf4547d7ba" Target="#_95c66238-f7c9-4fcf-8e79-b66a888bf169"><Timestamp>2020-03-07 01:52:35</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
