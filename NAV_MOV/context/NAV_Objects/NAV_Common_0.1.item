@@ -2,11 +2,11 @@
   <talendfile:ContextType confirmationNeeded="false" name="Default" xmi:id="_OwcnwQfTEeqqn_wI9dbZVA">
     <contextParameter comment="" name="NAV_Customer" prompt="NAV_Customer?" promptNeeded="false" type="id_String" value="Nav_DSD_Customer Download" xmi:id="_OwcnwgfTEeqqn_wI9dbZVA"/>
     <contextParameter comment="" name="NAV_Contact" prompt="NAV_Contact?" promptNeeded="false" type="id_String" value="NAV_DSD_Contacts" xmi:id="_OwcnwwfTEeqqn_wI9dbZVA"/>
-    <contextParameter comment="" name="NAV_Shipment" prompt="NAV_Shipment?" promptNeeded="false" type="id_String" value="NAV_DSD_Shipment" xmi:id="_OwcnxAfTEeqqn_wI9dbZVA"/>
-    <contextParameter comment="" name="NAV_Order" prompt="NAV_Order?" promptNeeded="false" type="id_String" value="NAV_DSD_Order" xmi:id="_OwcnxQfTEeqqn_wI9dbZVA"/>
-    <contextParameter comment="" name="NAV_Itinerary" prompt="NAV_Itinerary?" promptNeeded="false" type="id_String" value="Nav_DSD_Itinerary" xmi:id="_OwcnxgfTEeqqn_wI9dbZVA"/>
+    <contextParameter comment="" name="NAV_Shipment" prompt="NAV_Shipment?" promptNeeded="false" type="id_String" value="vw_Nav_DSD_Shipment" xmi:id="_OwcnxAfTEeqqn_wI9dbZVA"/>
+    <contextParameter comment="" name="NAV_Order" prompt="NAV_Order?" promptNeeded="false" type="id_String" value="vw_Nav_DSD_Order" xmi:id="_OwcnxQfTEeqqn_wI9dbZVA"/>
+    <contextParameter comment="" name="NAV_Itinerary" prompt="NAV_Itinerary?" promptNeeded="false" type="id_String" value="vw_Nav_DSD_Itinerary" xmi:id="_OwcnxgfTEeqqn_wI9dbZVA"/>
     <contextParameter comment="" name="NAV_Item" prompt="NAV_Item?" promptNeeded="false" type="id_String" value="" xmi:id="_OwcnxwfTEeqqn_wI9dbZVA"/>
-    <contextParameter comment="" name="NAV_User" prompt="NAV_User?" promptNeeded="false" type="id_String" value="Nav_DSD_User" xmi:id="_OwcnyAfTEeqqn_wI9dbZVA"/>
+    <contextParameter comment="" name="NAV_User" prompt="NAV_User?" promptNeeded="false" type="id_String" value="vw_Nav_DSD_User" xmi:id="_OwcnyAfTEeqqn_wI9dbZVA"/>
     <contextParameter comment="" name="NAV_Route" prompt="NAV_Route?" promptNeeded="false" type="id_String" value="" xmi:id="_OwcnyQfTEeqqn_wI9dbZVA"/>
     <contextParameter comment="" name="NAV_OrderControl" prompt="NAV_OrderControl?" promptNeeded="false" type="id_String" value="Nav_DSD_Order_Control_Group" xmi:id="_OwcnygfTEeqqn_wI9dbZVA"/>
     <contextParameter comment="" name="NAV_Vehicle" prompt="NAV_Vehicle?" promptNeeded="false" type="id_String" value="" xmi:id="_OwcnywfTEeqqn_wI9dbZVA"/>
@@ -22,11 +22,11 @@
   <talendfile:ContextType confirmationNeeded="false" name="PREPROD" xmi:id="_RFHcoBbHEeqMH7FvAvMWGg">
     <contextParameter comment="" name="NAV_Customer" prompt="NAV_Customer?" promptNeeded="false" type="id_String" value="Nav_DSD_Customer Download" xmi:id="_RFHcoRbHEeqMH7FvAvMWGg"/>
     <contextParameter comment="" name="NAV_Contact" prompt="NAV_Contact?" promptNeeded="false" type="id_String" value="NAV_DSD_Contacts" xmi:id="_RFHcohbHEeqMH7FvAvMWGg"/>
-    <contextParameter comment="" name="NAV_Shipment" prompt="NAV_Shipment?" promptNeeded="false" type="id_String" value="NAV_DSD_Shipment" xmi:id="_RFHcoxbHEeqMH7FvAvMWGg"/>
-    <contextParameter comment="" name="NAV_Order" prompt="NAV_Order?" promptNeeded="false" type="id_String" value="NAV_DSD_Order" xmi:id="_RFHcpBbHEeqMH7FvAvMWGg"/>
-    <contextParameter comment="" name="NAV_Itinerary" prompt="NAV_Itinerary?" promptNeeded="false" type="id_String" value="Nav_DSD_Itinerary" xmi:id="_RFHcpRbHEeqMH7FvAvMWGg"/>
+    <contextParameter comment="" name="NAV_Shipment" prompt="NAV_Shipment?" promptNeeded="false" type="id_String" value="vw_Nav_DSD_Shipment" xmi:id="_RFHcoxbHEeqMH7FvAvMWGg"/>
+    <contextParameter comment="" name="NAV_Order" prompt="NAV_Order?" promptNeeded="false" type="id_String" value="vw_Nav_DSD_Order" xmi:id="_RFHcpBbHEeqMH7FvAvMWGg"/>
+    <contextParameter comment="" name="NAV_Itinerary" prompt="NAV_Itinerary?" promptNeeded="false" type="id_String" value="vw_Nav_DSD_Itinerary" xmi:id="_RFHcpRbHEeqMH7FvAvMWGg"/>
     <contextParameter comment="" name="NAV_Item" prompt="NAV_Item?" promptNeeded="false" type="id_String" value="" xmi:id="_RFHcphbHEeqMH7FvAvMWGg"/>
-    <contextParameter comment="" name="NAV_User" prompt="NAV_User?" promptNeeded="false" type="id_String" value="Nav_DSD_User" xmi:id="_RFHcpxbHEeqMH7FvAvMWGg"/>
+    <contextParameter comment="" name="NAV_User" prompt="NAV_User?" promptNeeded="false" type="id_String" value="vw_Nav_DSD_User" xmi:id="_RFHcpxbHEeqMH7FvAvMWGg"/>
     <contextParameter comment="" name="NAV_Route" prompt="NAV_Route?" promptNeeded="false" type="id_String" value="" xmi:id="_RFHcqBbHEeqMH7FvAvMWGg"/>
     <contextParameter comment="" name="NAV_OrderControl" prompt="NAV_OrderControl?" promptNeeded="false" type="id_String" value="Nav_DSD_Order_Control_Group" xmi:id="_RFHcqRbHEeqMH7FvAvMWGg"/>
     <contextParameter comment="" name="NAV_Vehicle" prompt="NAV_Vehicle?" promptNeeded="false" type="id_String" value="" xmi:id="_RFHcqhbHEeqMH7FvAvMWGg"/>
@@ -42,11 +42,11 @@
   <talendfile:ContextType confirmationNeeded="false" name="PROD" xmi:id="_RFHcsxbHEeqMH7FvAvMWGg">
     <contextParameter comment="" name="NAV_Customer" prompt="NAV_Customer?" promptNeeded="false" type="id_String" value="Nav_DSD_Customer Download" xmi:id="_RFHctBbHEeqMH7FvAvMWGg"/>
     <contextParameter comment="" name="NAV_Contact" prompt="NAV_Contact?" promptNeeded="false" type="id_String" value="NAV_DSD_Contacts" xmi:id="_RFHctRbHEeqMH7FvAvMWGg"/>
-    <contextParameter comment="" name="NAV_Shipment" prompt="NAV_Shipment?" promptNeeded="false" type="id_String" value="NAV_DSD_Shipment" xmi:id="_RFHcthbHEeqMH7FvAvMWGg"/>
-    <contextParameter comment="" name="NAV_Order" prompt="NAV_Order?" promptNeeded="false" type="id_String" value="NAV_DSD_Order" xmi:id="_RFHctxbHEeqMH7FvAvMWGg"/>
-    <contextParameter comment="" name="NAV_Itinerary" prompt="NAV_Itinerary?" promptNeeded="false" type="id_String" value="Nav_DSD_Itinerary" xmi:id="_RFHcuBbHEeqMH7FvAvMWGg"/>
+    <contextParameter comment="" name="NAV_Shipment" prompt="NAV_Shipment?" promptNeeded="false" type="id_String" value="vw_Nav_DSD_Shipment" xmi:id="_RFHcthbHEeqMH7FvAvMWGg"/>
+    <contextParameter comment="" name="NAV_Order" prompt="NAV_Order?" promptNeeded="false" type="id_String" value="vw_Nav_DSD_Order" xmi:id="_RFHctxbHEeqMH7FvAvMWGg"/>
+    <contextParameter comment="" name="NAV_Itinerary" prompt="NAV_Itinerary?" promptNeeded="false" type="id_String" value="vw_Nav_DSD_Itinerary" xmi:id="_RFHcuBbHEeqMH7FvAvMWGg"/>
     <contextParameter comment="" name="NAV_Item" prompt="NAV_Item?" promptNeeded="false" type="id_String" value="" xmi:id="_RFHcuRbHEeqMH7FvAvMWGg"/>
-    <contextParameter comment="" name="NAV_User" prompt="NAV_User?" promptNeeded="false" type="id_String" value="Nav_DSD_User" xmi:id="_RFHcuhbHEeqMH7FvAvMWGg"/>
+    <contextParameter comment="" name="NAV_User" prompt="NAV_User?" promptNeeded="false" type="id_String" value="vw_Nav_DSD_User" xmi:id="_RFHcuhbHEeqMH7FvAvMWGg"/>
     <contextParameter comment="" name="NAV_Route" prompt="NAV_Route?" promptNeeded="false" type="id_String" value="" xmi:id="_RFHcuxbHEeqMH7FvAvMWGg"/>
     <contextParameter comment="" name="NAV_OrderControl" prompt="NAV_OrderControl?" promptNeeded="false" type="id_String" value="Nav_DSD_Order_Control_Group" xmi:id="_RFHcvBbHEeqMH7FvAvMWGg"/>
     <contextParameter comment="" name="NAV_Vehicle" prompt="NAV_Vehicle?" promptNeeded="false" type="id_String" value="" xmi:id="_RFHcvRbHEeqMH7FvAvMWGg"/>
@@ -59,13 +59,13 @@
     <contextParameter comment="" name="NAV_Delivery" prompt="NAV_Delivery?" promptNeeded="false" type="id_String" value="Nav_DSD_Delivery" xmi:id="_RFHcxBbHEeqMH7FvAvMWGg"/>
     <contextParameter comment="" name="NAV_SalesDate" prompt="NAV_SalesDate?" promptNeeded="false" type="id_String" value="DSD_Sales_Download_Date" xmi:id="_RFHcxRbHEeqMH7FvAvMWGg"/>
   </talendfile:ContextType>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_6aff8c96-16e5-4800-8cfd-c7e79715af3e"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>EHDdy2N2o7nw6g5rSaEOM+nJDwGq9OCqUVvJKuOXSDljm3itrsgQLvRELG5RRZYz8gIeSqnk8bd9
-MVjcNe0EuA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_c45ed48a-7ff2-4f36-ae9c-a3e484417865"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>E3s+ziiE4VT+Jbx+KpPDE89yuAEAIiPUP1UDvqSXlDxcVdDAAPH+jJ8nKDu2stUenfQ8gHmmQLu8
-0YMjR7h/hg==</DigestValue></Reference></SignedInfo><SignatureValue>A3eZtVkfXJTuMXAAdjLiq2Za3tCEgaFDC8M6mEuP/ansnejIiv3MeeRjMmVcKRXu1VDf4CYerhPI
-M7SVPQOYLbadu+pNnMzaqp9OgNP7lFaAjAPsklEr6QosQK6Mc86MPMlShoMdKKOBj/a+R74o1GEj
-2t4kiczwcgzg5MZKckYagJCCfFUGhHfNQo7216gRvOMwZv6R7mC3WI1LWZqDbVFPC7+tu6Vy5Yab
-Cy8pTWH7htAgRGHpVbi+JiYaVxKbS1dXtU45d12GfMq9eSlGICTy6UB6WjORDoynpMNO1iapgF5y
-WX8ht6Zbx23TMEKVIQN/pJbBcdGBjQ+vLFyMdg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_0c429a43-fdc1-4f56-9a34-d215846ae965"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>cQqrxPyM1BMiu+b5E5047Rvs2kMYpFBTSa6LY5GrdViSOxVfGq1dfkQeKp+NqUmaLQibhpWHD8Sb
+y9i8nw7lIg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_9cd11ef9-24d7-489f-83ec-7d3bb3ead5e5"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>lD30QmpFe4s7QAdIBNgsRu6gnyWfxv2IiiAMx2I3BuzHAKJL5Aw0QtERin/lFYzpZsC2J+xbdkDi
+9beFqyEbIg==</DigestValue></Reference></SignedInfo><SignatureValue>KuOu6CAO1Y2QAIxWb9vbCKu3rH5d2u7s5x1WPPQzWysiimThkx8yKYtZiI4MwsMw22MZkAVg04H0
+tOHHhMbg2GuXDPMP3meOkVBcvScEedVTQ6pKPAsvQsAgqg1/ZI7VouWJFkY4VVRvdElTpDJ7m65M
+2HPeGFVafcc5ESfbzPTivgnsBXpnbK4PKyaJYSzdONtOGstbNygDctMpNwuoFvTsk2toYpAbk+C7
+dx/0EEt/p46taU5w+Q1loQK6i13v8ExYSj8ugSGuEYMufPS/lE6FFroLNKi7S6T6vjJ8TQ7ByODy
+Ngo7ni/THbhf0gm22tW7ITydYMpkYtfSAn1Vtg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -89,4 +89,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_c45ed48a-7ff2-4f36-ae9c-a3e484417865" Target="#_6aff8c96-16e5-4800-8cfd-c7e79715af3e"><Timestamp>2019-12-04 18:52:48</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></xmi:XMI>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_9cd11ef9-24d7-489f-83ec-7d3bb3ead5e5" Target="#_0c429a43-fdc1-4f56-9a34-d215846ae965"><Timestamp>2020-03-07 01:57:16</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></xmi:XMI>
