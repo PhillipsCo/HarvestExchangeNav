@@ -46,7 +46,7 @@
     <module>jobs/process/ERP_TO_DSD/j_navexport_010_price_pricebase_x_set_dates_0.1</module>
     <module>jobs/process/DSD_TO_ERP/j_dsdtonav_010_order_order_0.1</module>
     <module>jobs/process/ERP_TO_DSD/j_navexport_010_price_0.1</module>
-    <module>jobs/process/ERP_TO_DSD/j_rmexport_010_price_pricebase_x_ref_0.1</module>
+    <module>jobs/process/ERP_TO_DSD/j_navexport_010_price_pricebase_x_ref_0.1</module>
   </modules>
   <properties>
     <talend.project.name>NAV_MOV</talend.project.name>
