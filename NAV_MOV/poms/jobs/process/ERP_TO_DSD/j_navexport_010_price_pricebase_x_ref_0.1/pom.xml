@@ -52,22 +52,12 @@
     </dependency>
     <dependency>
       <groupId>org.talend.libraries</groupId>
-      <artifactId>advancedPersistentLookupLib-1.2</artifactId>
-      <version>6.0.0</version>
-    </dependency>
-    <dependency>
-      <groupId>org.talend.libraries</groupId>
       <artifactId>commons-beanutils-1.9.2</artifactId>
       <version>6.0.0-SNAPSHOT</version>
     </dependency>
     <dependency>
       <groupId>org.talend.libraries</groupId>
       <artifactId>commons-codec-1.6</artifactId>
-      <version>6.0.0</version>
-    </dependency>
-    <dependency>
-      <groupId>org.talend.libraries</groupId>
-      <artifactId>commons-collections-3.2.2</artifactId>
       <version>6.0.0</version>
     </dependency>
     <dependency>
@@ -87,7 +77,7 @@
     </dependency>
     <dependency>
       <groupId>org.talend.libraries</groupId>
-      <artifactId>jboss-serialization</artifactId>
+      <artifactId>external_sort</artifactId>
       <version>6.0.0</version>
     </dependency>
     <dependency>
@@ -107,11 +97,6 @@
     </dependency>
     <dependency>
       <groupId>org.talend.libraries</groupId>
-      <artifactId>log4j-1.2.15</artifactId>
-      <version>6.0.0</version>
-    </dependency>
-    <dependency>
-      <groupId>org.talend.libraries</groupId>
       <artifactId>log4j-1.2.16</artifactId>
       <version>6.0.0</version>
     </dependency>
@@ -128,11 +113,6 @@
     <dependency>
       <groupId>org.talend.libraries</groupId>
       <artifactId>talend_file_enhanced_20070724</artifactId>
-      <version>6.0.0</version>
-    </dependency>
-    <dependency>
-      <groupId>org.talend.libraries</groupId>
-      <artifactId>trove</artifactId>
       <version>6.0.0</version>
     </dependency>
     <dependency>
