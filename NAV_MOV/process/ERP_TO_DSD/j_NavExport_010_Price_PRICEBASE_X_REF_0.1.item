@@ -8,13 +8,6 @@
     <contextParameter comment="" name="RouteGroup" prompt="RouteGroup?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value="006"/>
     <contextParameter comment="" name="SystemId" prompt="SystemId?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value=""/>
     <contextParameter comment="" name="SystemPassword" prompt="SystemPassword?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value=""/>
-    <contextParameter comment="" name="DB_DSD_Navision_AdditionalParams" prompt="DB_DSD_Navision_AdditionalParams?" promptNeeded="false" repositoryContextId="_-gSaIJ1XEearDNNcLbjjxQ" type="id_String" value=""/>
-    <contextParameter comment="" name="DB_DSD_Navision_Database" prompt="DB_DSD_Navision_Database?" promptNeeded="false" repositoryContextId="_-gSaIJ1XEearDNNcLbjjxQ" type="id_String" value="[TEST-USB-2013]"/>
-    <contextParameter comment="" name="DB_DSD_Navision_Login" prompt="DB_DSD_Navision_Login?" promptNeeded="false" repositoryContextId="_-gSaIJ1XEearDNNcLbjjxQ" type="id_String" value="talend_hfs2"/>
-    <contextParameter comment="" name="DB_DSD_Navision_Password" prompt="DB_DSD_Navision_Password?" promptNeeded="false" repositoryContextId="_-gSaIJ1XEearDNNcLbjjxQ" type="id_Password" value="PrT+NDdqPMBr/HtJWqzj6w=="/>
-    <contextParameter comment="" name="DB_DSD_Navision_Port" prompt="DB_DSD_Navision_Port?" promptNeeded="false" repositoryContextId="_-gSaIJ1XEearDNNcLbjjxQ" type="id_String" value="1433"/>
-    <contextParameter comment="" name="DB_DSD_Navision_Schema" prompt="DB_DSD_Navision_Schema?" promptNeeded="false" repositoryContextId="_-gSaIJ1XEearDNNcLbjjxQ" type="id_String" value="dbo"/>
-    <contextParameter comment="" name="DB_DSD_Navision_Server" prompt="DB_DSD_Navision_Server?" promptNeeded="false" repositoryContextId="_-gSaIJ1XEearDNNcLbjjxQ" type="id_String" value="testnav10.corp.usbakery.com"/>
     <contextParameter comment="" name="DB_ERP_DSD_Integration_AdditionalParams" prompt="DB_ERP_DSD_Integration_AdditionalParams?" promptNeeded="false" repositoryContextId="_-v_zwEGGEeazMKeZhCw-4Q" type="id_String" value=""/>
     <contextParameter comment="" name="DB_ERP_DSD_Integration_Database" prompt="DB_ERP_DSD_Integration_Database?" promptNeeded="false" repositoryContextId="_-v_zwEGGEeazMKeZhCw-4Q" type="id_String" value="ERP_DSD_Integration_DEV"/>
     <contextParameter comment="" name="DB_ERP_DSD_Integration_Login" prompt="DB_ERP_DSD_Integration_Login?" promptNeeded="false" repositoryContextId="_-v_zwEGGEeazMKeZhCw-4Q" type="id_String" value="talend"/>
@@ -22,6 +15,14 @@
     <contextParameter comment="" name="DB_ERP_DSD_Integration_Port" prompt="DB_ERP_DSD_Integration_Port?" promptNeeded="false" repositoryContextId="_-v_zwEGGEeazMKeZhCw-4Q" type="id_String" value="1433"/>
     <contextParameter comment="" name="DB_ERP_DSD_Integration_Schema" prompt="DB_ERP_DSD_Integration_Schema?" promptNeeded="false" repositoryContextId="_-v_zwEGGEeazMKeZhCw-4Q" type="id_String" value="dbo"/>
     <contextParameter comment="" name="DB_ERP_DSD_Integration_Server" prompt="DB_ERP_DSD_Integration_Server?" promptNeeded="false" repositoryContextId="_-v_zwEGGEeazMKeZhCw-4Q" type="id_String" value="srvrsql200.harvestfoodsolutions.com"/>
+    <contextParameter comment="" name="DB_Navision_AdditionalParams" prompt="DB_Navision_AdditionalParams?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value=""/>
+    <contextParameter comment="" name="DB_Navision_Database" prompt="DB_Navision_Database?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="DSD-NAV_Interface"/>
+    <contextParameter comment="" name="DB_Navision_Login" prompt="DB_Navision_Login?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="talend_hfs2"/>
+    <contextParameter comment="" name="DB_Navision_Password" prompt="DB_Navision_Password?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_Password" value="PrT+NDdqPMBr/HtJWqzj6w=="/>
+    <contextParameter comment="" name="DB_Navision_Port" prompt="DB_Navision_Port?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="1433"/>
+    <contextParameter comment="" name="DB_Navision_Schema" prompt="DB_Navision_Schema?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="EXPORT"/>
+    <contextParameter comment="" name="DB_Navision_Server" prompt="DB_Navision_Server?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="testnav10.corp.usbakery.com"/>
+    <contextParameter comment="" name="DB_Navision_Target_Staging" prompt="DB_Navision_Target_Staging?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value=""/>
     <contextParameter comment="" name="DB_Talend_Context_AdditionalParams" prompt="DB_Talend_Context_AdditionalParams?" promptNeeded="false" repositoryContextId="_ypE2UFnREeaCBrSnOG5XMg" type="id_String" value=""/>
     <contextParameter comment="" name="DB_Talend_Context_Database" prompt="DB_Talend_Context_Database?" promptNeeded="false" repositoryContextId="_ypE2UFnREeaCBrSnOG5XMg" type="id_String" value="talend_context"/>
     <contextParameter comment="" name="DB_Talend_Context_Login" prompt="DB_Talend_Context_Login?" promptNeeded="false" repositoryContextId="_ypE2UFnREeaCBrSnOG5XMg" type="id_String" value="talend"/>
@@ -40,13 +41,6 @@
     <contextParameter comment="" name="RouteGroup" prompt="RouteGroup?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value="006"/>
     <contextParameter comment="" name="SystemId" prompt="SystemId?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value=""/>
     <contextParameter comment="" name="SystemPassword" prompt="SystemPassword?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value=""/>
-    <contextParameter comment="" name="DB_DSD_Navision_AdditionalParams" prompt="DB_DSD_Navision_AdditionalParams?" promptNeeded="false" repositoryContextId="_-gSaIJ1XEearDNNcLbjjxQ" type="id_String" value=""/>
-    <contextParameter comment="" name="DB_DSD_Navision_Database" prompt="DB_DSD_Navision_Database?" promptNeeded="false" repositoryContextId="_-gSaIJ1XEearDNNcLbjjxQ" type="id_String" value="[TEST-USB-2013]"/>
-    <contextParameter comment="" name="DB_DSD_Navision_Login" prompt="DB_DSD_Navision_Login?" promptNeeded="false" repositoryContextId="_-gSaIJ1XEearDNNcLbjjxQ" type="id_String" value="talend_hfs2"/>
-    <contextParameter comment="" name="DB_DSD_Navision_Password" prompt="DB_DSD_Navision_Password?" promptNeeded="false" repositoryContextId="_-gSaIJ1XEearDNNcLbjjxQ" type="id_Password" value="PrT+NDdqPMBr/HtJWqzj6w=="/>
-    <contextParameter comment="" name="DB_DSD_Navision_Port" prompt="DB_DSD_Navision_Port?" promptNeeded="false" repositoryContextId="_-gSaIJ1XEearDNNcLbjjxQ" type="id_String" value="1433"/>
-    <contextParameter comment="" name="DB_DSD_Navision_Schema" prompt="DB_DSD_Navision_Schema?" promptNeeded="false" repositoryContextId="_-gSaIJ1XEearDNNcLbjjxQ" type="id_String" value="dbo"/>
-    <contextParameter comment="" name="DB_DSD_Navision_Server" prompt="DB_DSD_Navision_Server?" promptNeeded="false" repositoryContextId="_-gSaIJ1XEearDNNcLbjjxQ" type="id_String" value="testnav10.corp.usbakery.com"/>
     <contextParameter comment="" name="DB_ERP_DSD_Integration_AdditionalParams" prompt="DB_ERP_DSD_Integration_AdditionalParams?" promptNeeded="false" repositoryContextId="_-v_zwEGGEeazMKeZhCw-4Q" type="id_String" value=""/>
     <contextParameter comment="" name="DB_ERP_DSD_Integration_Database" prompt="DB_ERP_DSD_Integration_Database?" promptNeeded="false" repositoryContextId="_-v_zwEGGEeazMKeZhCw-4Q" type="id_String" value="ERP_DSD_Integration_QA"/>
     <contextParameter comment="" name="DB_ERP_DSD_Integration_Login" prompt="DB_ERP_DSD_Integration_Login?" promptNeeded="false" repositoryContextId="_-v_zwEGGEeazMKeZhCw-4Q" type="id_String" value="talend"/>
@@ -54,6 +48,14 @@
     <contextParameter comment="" name="DB_ERP_DSD_Integration_Port" prompt="DB_ERP_DSD_Integration_Port?" promptNeeded="false" repositoryContextId="_-v_zwEGGEeazMKeZhCw-4Q" type="id_String" value="1433"/>
     <contextParameter comment="" name="DB_ERP_DSD_Integration_Schema" prompt="DB_ERP_DSD_Integration_Schema?" promptNeeded="false" repositoryContextId="_-v_zwEGGEeazMKeZhCw-4Q" type="id_String" value="dbo"/>
     <contextParameter comment="" name="DB_ERP_DSD_Integration_Server" prompt="DB_ERP_DSD_Integration_Server?" promptNeeded="false" repositoryContextId="_-v_zwEGGEeazMKeZhCw-4Q" type="id_String" value="srvrsql200.harvestfoodsolutions.com"/>
+    <contextParameter comment="" name="DB_Navision_AdditionalParams" prompt="DB_Navision_AdditionalParams?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value=""/>
+    <contextParameter comment="" name="DB_Navision_Database" prompt="DB_Navision_Database?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="DSD-NAV_Interface"/>
+    <contextParameter comment="" name="DB_Navision_Login" prompt="DB_Navision_Login?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="talend_hfs2"/>
+    <contextParameter comment="" name="DB_Navision_Password" prompt="DB_Navision_Password?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_Password" value="PrT+NDdqPMBr/HtJWqzj6w=="/>
+    <contextParameter comment="" name="DB_Navision_Port" prompt="DB_Navision_Port?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="1433"/>
+    <contextParameter comment="" name="DB_Navision_Schema" prompt="DB_Navision_Schema?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="EXPORT"/>
+    <contextParameter comment="" name="DB_Navision_Server" prompt="DB_Navision_Server?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="testnav10.corp.usbakery.com"/>
+    <contextParameter comment="" name="DB_Navision_Target_Staging" prompt="DB_Navision_Target_Staging?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value=""/>
     <contextParameter comment="" name="DB_Talend_Context_AdditionalParams" prompt="DB_Talend_Context_AdditionalParams?" promptNeeded="false" repositoryContextId="_ypE2UFnREeaCBrSnOG5XMg" type="id_String" value=""/>
     <contextParameter comment="" name="DB_Talend_Context_Database" prompt="DB_Talend_Context_Database?" promptNeeded="false" repositoryContextId="_ypE2UFnREeaCBrSnOG5XMg" type="id_String" value="talend_context"/>
     <contextParameter comment="" name="DB_Talend_Context_Login" prompt="DB_Talend_Context_Login?" promptNeeded="false" repositoryContextId="_ypE2UFnREeaCBrSnOG5XMg" type="id_String" value="talend"/>
@@ -72,13 +74,6 @@
     <contextParameter comment="" name="RouteGroup" prompt="RouteGroup?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value="006"/>
     <contextParameter comment="" name="SystemId" prompt="SystemId?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value=""/>
     <contextParameter comment="" name="SystemPassword" prompt="SystemPassword?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value=""/>
-    <contextParameter comment="" name="DB_DSD_Navision_AdditionalParams" prompt="DB_DSD_Navision_AdditionalParams?" promptNeeded="false" repositoryContextId="_-gSaIJ1XEearDNNcLbjjxQ" type="id_String" value=""/>
-    <contextParameter comment="" name="DB_DSD_Navision_Database" prompt="DB_DSD_Navision_Database?" promptNeeded="false" repositoryContextId="_-gSaIJ1XEearDNNcLbjjxQ" type="id_String" value="[TEST-USB-2013]"/>
-    <contextParameter comment="" name="DB_DSD_Navision_Login" prompt="DB_DSD_Navision_Login?" promptNeeded="false" repositoryContextId="_-gSaIJ1XEearDNNcLbjjxQ" type="id_String" value="talend_hfs2"/>
-    <contextParameter comment="" name="DB_DSD_Navision_Password" prompt="DB_DSD_Navision_Password?" promptNeeded="false" repositoryContextId="_-gSaIJ1XEearDNNcLbjjxQ" type="id_Password" value="PrT+NDdqPMBr/HtJWqzj6w=="/>
-    <contextParameter comment="" name="DB_DSD_Navision_Port" prompt="DB_DSD_Navision_Port?" promptNeeded="false" repositoryContextId="_-gSaIJ1XEearDNNcLbjjxQ" type="id_String" value="1433"/>
-    <contextParameter comment="" name="DB_DSD_Navision_Schema" prompt="DB_DSD_Navision_Schema?" promptNeeded="false" repositoryContextId="_-gSaIJ1XEearDNNcLbjjxQ" type="id_String" value="dbo"/>
-    <contextParameter comment="" name="DB_DSD_Navision_Server" prompt="DB_DSD_Navision_Server?" promptNeeded="false" repositoryContextId="_-gSaIJ1XEearDNNcLbjjxQ" type="id_String" value="testnav10.corp.usbakery.com"/>
     <contextParameter comment="" name="DB_ERP_DSD_Integration_AdditionalParams" prompt="DB_ERP_DSD_Integration_AdditionalParams?" promptNeeded="false" repositoryContextId="_-v_zwEGGEeazMKeZhCw-4Q" type="id_String" value=""/>
     <contextParameter comment="" name="DB_ERP_DSD_Integration_Database" prompt="DB_ERP_DSD_Integration_Database?" promptNeeded="false" repositoryContextId="_-v_zwEGGEeazMKeZhCw-4Q" type="id_String" value="ERP_DSD_Integration_PROD"/>
     <contextParameter comment="" name="DB_ERP_DSD_Integration_Login" prompt="DB_ERP_DSD_Integration_Login?" promptNeeded="false" repositoryContextId="_-v_zwEGGEeazMKeZhCw-4Q" type="id_String" value="talend"/>
@@ -86,6 +81,14 @@
     <contextParameter comment="" name="DB_ERP_DSD_Integration_Port" prompt="DB_ERP_DSD_Integration_Port?" promptNeeded="false" repositoryContextId="_-v_zwEGGEeazMKeZhCw-4Q" type="id_String" value="1433"/>
     <contextParameter comment="" name="DB_ERP_DSD_Integration_Schema" prompt="DB_ERP_DSD_Integration_Schema?" promptNeeded="false" repositoryContextId="_-v_zwEGGEeazMKeZhCw-4Q" type="id_String" value="dbo"/>
     <contextParameter comment="" name="DB_ERP_DSD_Integration_Server" prompt="DB_ERP_DSD_Integration_Server?" promptNeeded="false" repositoryContextId="_-v_zwEGGEeazMKeZhCw-4Q" type="id_String" value="srvrsql200.harvestfoodsolutions.com"/>
+    <contextParameter comment="" name="DB_Navision_AdditionalParams" prompt="DB_Navision_AdditionalParams?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value=""/>
+    <contextParameter comment="" name="DB_Navision_Database" prompt="DB_Navision_Database?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="DSD-NAV_Interface"/>
+    <contextParameter comment="" name="DB_Navision_Login" prompt="DB_Navision_Login?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="talend_hfs2"/>
+    <contextParameter comment="" name="DB_Navision_Password" prompt="DB_Navision_Password?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_Password" value="PrT+NDdqPMBr/HtJWqzj6w=="/>
+    <contextParameter comment="" name="DB_Navision_Port" prompt="DB_Navision_Port?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="1433"/>
+    <contextParameter comment="" name="DB_Navision_Schema" prompt="DB_Navision_Schema?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="EXPORT"/>
+    <contextParameter comment="" name="DB_Navision_Server" prompt="DB_Navision_Server?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="testnav10.corp.usbakery.com"/>
+    <contextParameter comment="" name="DB_Navision_Target_Staging" prompt="DB_Navision_Target_Staging?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value=""/>
     <contextParameter comment="" name="DB_Talend_Context_AdditionalParams" prompt="DB_Talend_Context_AdditionalParams?" promptNeeded="false" repositoryContextId="_ypE2UFnREeaCBrSnOG5XMg" type="id_String" value=""/>
     <contextParameter comment="" name="DB_Talend_Context_Database" prompt="DB_Talend_Context_Database?" promptNeeded="false" repositoryContextId="_ypE2UFnREeaCBrSnOG5XMg" type="id_String" value="talend_context"/>
     <contextParameter comment="" name="DB_Talend_Context_Login" prompt="DB_Talend_Context_Login?" promptNeeded="false" repositoryContextId="_ypE2UFnREeaCBrSnOG5XMg" type="id_String" value="talend"/>
@@ -104,13 +107,6 @@
     <contextParameter comment="" name="RouteGroup" prompt="RouteGroup?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value="006"/>
     <contextParameter comment="" name="SystemId" prompt="SystemId?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value=""/>
     <contextParameter comment="" name="SystemPassword" prompt="SystemPassword?" promptNeeded="false" repositoryContextId="_jR2goFkAEeaP16Jdpyukmw" type="id_String" value=""/>
-    <contextParameter comment="" name="DB_DSD_Navision_AdditionalParams" prompt="DB_DSD_Navision_AdditionalParams?" promptNeeded="false" repositoryContextId="_-gSaIJ1XEearDNNcLbjjxQ" type="id_String" value=""/>
-    <contextParameter comment="" name="DB_DSD_Navision_Database" prompt="DB_DSD_Navision_Database?" promptNeeded="false" repositoryContextId="_-gSaIJ1XEearDNNcLbjjxQ" type="id_String" value="[TEST-USB-2013]"/>
-    <contextParameter comment="" name="DB_DSD_Navision_Login" prompt="DB_DSD_Navision_Login?" promptNeeded="false" repositoryContextId="_-gSaIJ1XEearDNNcLbjjxQ" type="id_String" value="talend_hfs2"/>
-    <contextParameter comment="" name="DB_DSD_Navision_Password" prompt="DB_DSD_Navision_Password?" promptNeeded="false" repositoryContextId="_-gSaIJ1XEearDNNcLbjjxQ" type="id_Password" value="PrT+NDdqPMBr/HtJWqzj6w=="/>
-    <contextParameter comment="" name="DB_DSD_Navision_Port" prompt="DB_DSD_Navision_Port?" promptNeeded="false" repositoryContextId="_-gSaIJ1XEearDNNcLbjjxQ" type="id_String" value="1433"/>
-    <contextParameter comment="" name="DB_DSD_Navision_Schema" prompt="DB_DSD_Navision_Schema?" promptNeeded="false" repositoryContextId="_-gSaIJ1XEearDNNcLbjjxQ" type="id_String" value="dbo"/>
-    <contextParameter comment="" name="DB_DSD_Navision_Server" prompt="DB_DSD_Navision_Server?" promptNeeded="false" repositoryContextId="_-gSaIJ1XEearDNNcLbjjxQ" type="id_String" value="testnav10.corp.usbakery.com"/>
     <contextParameter comment="" name="DB_ERP_DSD_Integration_AdditionalParams" prompt="DB_ERP_DSD_Integration_AdditionalParams?" promptNeeded="false" repositoryContextId="_-v_zwEGGEeazMKeZhCw-4Q" type="id_String" value=""/>
     <contextParameter comment="" name="DB_ERP_DSD_Integration_Database" prompt="DB_ERP_DSD_Integration_Database?" promptNeeded="false" repositoryContextId="_-v_zwEGGEeazMKeZhCw-4Q" type="id_String" value="ERP_DSD_Integration_PREPROD"/>
     <contextParameter comment="" name="DB_ERP_DSD_Integration_Login" prompt="DB_ERP_DSD_Integration_Login?" promptNeeded="false" repositoryContextId="_-v_zwEGGEeazMKeZhCw-4Q" type="id_String" value="talend"/>
@@ -118,6 +114,14 @@
     <contextParameter comment="" name="DB_ERP_DSD_Integration_Port" prompt="DB_ERP_DSD_Integration_Port?" promptNeeded="false" repositoryContextId="_-v_zwEGGEeazMKeZhCw-4Q" type="id_String" value="1433"/>
     <contextParameter comment="" name="DB_ERP_DSD_Integration_Schema" prompt="DB_ERP_DSD_Integration_Schema?" promptNeeded="false" repositoryContextId="_-v_zwEGGEeazMKeZhCw-4Q" type="id_String" value="dbo"/>
     <contextParameter comment="" name="DB_ERP_DSD_Integration_Server" prompt="DB_ERP_DSD_Integration_Server?" promptNeeded="false" repositoryContextId="_-v_zwEGGEeazMKeZhCw-4Q" type="id_String" value="srvrsql200.harvestfoodsolutions.com"/>
+    <contextParameter comment="" name="DB_Navision_AdditionalParams" prompt="DB_Navision_AdditionalParams?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value=""/>
+    <contextParameter comment="" name="DB_Navision_Database" prompt="DB_Navision_Database?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="DSD-NAV_Interface"/>
+    <contextParameter comment="" name="DB_Navision_Login" prompt="DB_Navision_Login?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="talend_hfs2"/>
+    <contextParameter comment="" name="DB_Navision_Password" prompt="DB_Navision_Password?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_Password" value="PrT+NDdqPMBr/HtJWqzj6w=="/>
+    <contextParameter comment="" name="DB_Navision_Port" prompt="DB_Navision_Port?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="1433"/>
+    <contextParameter comment="" name="DB_Navision_Schema" prompt="DB_Navision_Schema?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="EXPORT"/>
+    <contextParameter comment="" name="DB_Navision_Server" prompt="DB_Navision_Server?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value="testnav10.corp.usbakery.com"/>
+    <contextParameter comment="" name="DB_Navision_Target_Staging" prompt="DB_Navision_Target_Staging?" promptNeeded="false" repositoryContextId="_WSR1sE3lEeaYYuHJp6GolQ" type="id_String" value=""/>
     <contextParameter comment="" name="DB_Talend_Context_AdditionalParams" prompt="DB_Talend_Context_AdditionalParams?" promptNeeded="false" repositoryContextId="_ypE2UFnREeaCBrSnOG5XMg" type="id_String" value=""/>
     <contextParameter comment="" name="DB_Talend_Context_Database" prompt="DB_Talend_Context_Database?" promptNeeded="false" repositoryContextId="_ypE2UFnREeaCBrSnOG5XMg" type="id_String" value="talend_context"/>
     <contextParameter comment="" name="DB_Talend_Context_Login" prompt="DB_Talend_Context_Login?" promptNeeded="false" repositoryContextId="_ypE2UFnREeaCBrSnOG5XMg" type="id_String" value="talend"/>
@@ -2666,13 +2670,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_b47494f8-d6f8-4970-80ed-1164b65dfd35"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>gGA7eKDhzKmS79Q/3RHPSO0vpHAZ2pdyBNXw3YeqBIE69tACU+jgCluSBBwYv/rngvp5hz98DRz4
-5CVGh8FnSQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_ef7223b7-05a7-4444-9f08-98bd9fd11391"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>PUr1/jDFVyfs4+xJk1EUljdNUfjZoklPWngCY8+GPfj8/7UWtYQhj2Swb2uj9FCz6MIsutYz/6Vp
-96Y7tIwwpA==</DigestValue></Reference></SignedInfo><SignatureValue>UFZKo/I1echyMtpyviitPB+xgc08sNP+A/m2VQ5suVopfLxjOk/C47/mEyLmhVzWy+JrqD0hAR2S
-ntbwVTdzd2WpcBYIXHnKBOsXiEES/cg1ia5kGPPkApE+ZXGm3WetjEzhzV1HAP4auvyKvN0soCJe
-UncFXEXTmWXVWLJjmvNmDlQ5OTUE/+Ne1Zx7KxEbXlvg7EUGjbUeHTCU92Sw/VuyK9V/lLeTAD5A
-zjr+gRygGGgdE3b0yOiAjf+NYEjFFIfNhsbV+TUJqFNsJsXsxMviUQ9gJFGFZiCyxR8TX7shfgbX
-DXslMM5XogPSsUMD8kQ/SjJXIZ0TabUF4vPIQA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_63ddc3f2-4d87-4009-a839-20a9051f7b2f"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>6KrkmeGyg8Ve4e075K34E+IHgKL2C0XQxVyEBQtRBJs1Ct3uTWXivITlr1AUgy26xlKwpQEWGKB+
+uUTXdcqNGg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_3d94bc14-5a89-4e08-91bd-6503b7525029"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>yQk4VlLojnONjY8my6mFESQGD9f9yMTt/5tv56bHnUOfBt6h44QQci8uM+Mbtxjb430i6grQCIaK
+FheoBcbJig==</DigestValue></Reference></SignedInfo><SignatureValue>zz2VVPdsZjYcjzwuqkp04w/v+RMUAMAXx04XfnnBrJolK6CTlbL7s5537rpPoyazs2vo0iZETlvE
+3OZNWHcJiPQD8dnSisuUI0B3WoIdvu0vNZh+/WwMnZuU6ERtgYmO3fYtcAnJ9u7OrjFEUKNqCIa8
+eMgA5niJ+z6/oLklW8vBosfa3mT5I8OGuECHvUyK5P9zHBMSDdTUNotWbpSHZJJBGmlGtHhwxWD1
+4QzfogW8/zAxNPMYotIOpHwbZDptMxsP49mO7O+2ILnaSjKiL1rTPaEdL6smP1xsxkaU2aj3Fm61
+1wg5GMgWgt9vFHpCWy2rFdytEZeekTPeCFU0PA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -2696,4 +2700,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_ef7223b7-05a7-4444-9f08-98bd9fd11391" Target="#_b47494f8-d6f8-4970-80ed-1164b65dfd35"><Timestamp>2020-03-10 12:00:42</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_3d94bc14-5a89-4e08-91bd-6503b7525029" Target="#_63ddc3f2-4d87-4009-a839-20a9051f7b2f"><Timestamp>2020-03-10 12:03:49</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
