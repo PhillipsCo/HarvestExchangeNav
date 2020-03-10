@@ -2242,7 +2242,48 @@
       <column comment="" key="false" length="10" name="Ending_Date" nullable="true" originalDbColumnName="Ending Date" originalLength="-1" pattern="" precision="0" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="352" posY="-192">
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="384" posY="-192">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_7"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_LC3kYCGcEeiVPdRQMkN5Iw-tMap_7-PREVIEW.bmp"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
+    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="LEVENSHTEIN" show="false" value="0"/>
+    <elementParameter field="TEXT" name="JACCARD" show="false" value="0"/>
+    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="P1">
+      <column comment="" key="false" length="100" name="tableNo" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="productNo" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <uiProperties shellMaximized="true"/>
+      <varTables name="Var" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="row20.Sales_Code " name="tableNo" type="id_String"/>
+        <mapperTableEntries expression="&quot;000&quot; + row20.ItemNo.replace(&quot;F&quot;,&quot;0&quot;)" name="productNo" type="id_String"/>
+        <mapperTableEntries name="price" type="id_String"/>
+        <mapperTableEntries name="startDate" type="id_String"/>
+        <mapperTableEntries name="endDate" type="id_String"/>
+      </varTables>
+      <outputTables name="P1" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="Var.tableNo " name="tableNo" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="Var.productNo " name="productNo" type="id_String"/>
+      </outputTables>
+      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row20" sizeState="INTERMEDIATE">
+        <mapperTableEntries name="Priority" nullable="true" type="id_Integer"/>
+        <mapperTableEntries name="Sales_Code" nullable="true" type="id_String"/>
+        <mapperTableEntries name="ItemNo" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Unit_Price" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries name="Starting_Date" nullable="true" type="id_Date"/>
+        <mapperTableEntries name="Ending_Date" nullable="true" type="id_Date"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="512" posY="-192">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_1"/>
     <elementParameter field="RADIO" name="BASIC_MODE" value="true"/>
     <elementParameter field="RADIO" name="TABLE_PRINT" value="false"/>
@@ -2256,29 +2297,17 @@
     <elementParameter field="CHECK" name="PRINT_COLNAMES" value="false"/>
     <elementParameter field="CHECK" name="USE_FIXED_LENGTH" value="false"/>
     <elementParameter field="TABLE" name="LENGTHS" show="false">
-      <elementValue elementRef="SCHEMA_COLUMN" value="Priority"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="tableNo"/>
       <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="Sales_Code"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ItemNo"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="Unit_Price"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="Starting_Date"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="Ending_Date"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="productNo"/>
       <elementValue elementRef="LENGTH" value="10"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
     <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tLogRow_1">
-      <column comment="" defaultValue="" key="false" length="10" name="Priority" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="100" name="Sales_Code" nullable="true" originalDbColumnName="Sales Code" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="100" name="ItemNo" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="18" name="Unit_Price" nullable="true" originalDbColumnName="Unit Price" originalLength="-1" pattern="" precision="2" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="Starting_Date" nullable="true" originalDbColumnName="Starting Date" originalLength="-1" pattern="" precision="0" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="Ending_Date" nullable="true" originalDbColumnName="Ending Date" originalLength="-1" pattern="" precision="0" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="100" name="tableNo" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="productNo" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tBufferInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1664" posY="896">
@@ -2591,9 +2620,13 @@
     <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="PRICE1"/>
   </connection>
-  <connection connectorName="FLOW" label="row20" lineStyle="0" metaname="tDBInput_1" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="tLogRow_1">
+  <connection connectorName="FLOW" label="row20" lineStyle="0" metaname="tDBInput_1" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="tMap_7">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row20"/>
+  </connection>
+  <connection connectorName="FLOW" label="P1" lineStyle="0" metaname="P1" offsetLabelX="0" offsetLabelY="0" source="tMap_7" target="tLogRow_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="P1"/>
   </connection>
   <connection connectorName="FLOW" label="row13" lineStyle="0" metaname="tBufferInput_1" offsetLabelX="0" offsetLabelY="0" source="tBufferInput_1" target="tFilterRow_16">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
@@ -2707,13 +2740,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_d973c1fb-fa8f-4cfc-8e9b-5ace54ad5e35"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Ol3Md5C59MKdRg0RoVfJ+k/GhacSQe5unhzg3unan5lMmRVleNQHTU7tqN+dLrBJ/WJI71qJPVVF
-04jIT4X8SQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_4c0fa82d-10c7-4b06-9576-558108ec3b0c"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>bR4GK5j7wU4Enbs8/5s78zmHJIq9vEVkBhJL4GqnHO9t38CBRiuLKe6gB45fW60GV9McbTkt2kJ3
-7nUV16TnZQ==</DigestValue></Reference></SignedInfo><SignatureValue>0NhNWKMHi27+D/4RLKUz7zERX0rhTnjqelRakMYd5Ynai5UYCHFIqZMMoGt4BIXPaOr+Ub1qr8NF
-cxzUDBnkMjGTh4pdFkLOZavm8Odny1GQxgQotWq+fY8G7T5zQ5FyfqYxx6J5QkvZ8Hhyfl54YcCM
-Tn2YLrgU1W1AuQsMN6yPnv6nGrqIeedHu3E1Vfunz8EuB2xC/F7dYL7gdTyPNNtFViuPWhSLhMV1
-sYTQJjCb+GZfgT7953hIt/ytw11Fwqd4p/CJmPf6gMPB8UPOuAn8nZzPO8fR2U1izRASVe8fU66P
-QEE40UETgzX6MmUtRbLC4UqmioScBgzi54Fe8Q==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_94a7d228-0636-4dcf-a334-1bebafe137f4"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>hmPhg/8WrdHeTjudnGY5gzn9FTp9ia/CUaxxacHqy9EIEkWsU1Xt7tIIcnTNz8aSyl25mvgq8eQh
+1++jotyohA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_44f72951-1b26-4578-9457-c7d60daf8b64"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>FqQNDEZvn6Y5x5xJONDQaIVf+GPM4Cau2Jg+Oz0T7KQsihYn2YctMqbl5U/exVg0hdmeemsKjble
+B5RZ80I+3A==</DigestValue></Reference></SignedInfo><SignatureValue>KacYp3IbF6F/hJSYvp7sE2kkou3MiUlw2/ljSqRb+1NnnpMQo+Es8pejcOTyXQrA64e7oB/RtI7u
+EzUlNDd8CJN/25uRJLErR7PAJeEni0O+t5rL4mJUPTlamQwDlXebTD7O2ba2M0nkR+Hw1SiPCqsz
+ecGGTKIsAjUsxmvK0acMxodX3P6Z5qXM087dKVgI04KNpXj9rTU/vgcEMddt9LPImUZzsKLLHlnH
+2p/WnYiekFqjuzWPZjgOpCNek+j360VcX1XqFbAbcH3MdMeGpcuO50MxAk6mjQTeLjwut7xCV/ZB
+NDYISR7RcIIurKNapW/PQvhyj0GcGJVygqakuA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -2737,4 +2770,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_4c0fa82d-10c7-4b06-9576-558108ec3b0c" Target="#_d973c1fb-fa8f-4cfc-8e9b-5ace54ad5e35"><Timestamp>2020-03-10 12:21:24</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_44f72951-1b26-4578-9457-c7d60daf8b64" Target="#_94a7d228-0636-4dcf-a334-1bebafe137f4"><Timestamp>2020-03-10 12:35:05</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
