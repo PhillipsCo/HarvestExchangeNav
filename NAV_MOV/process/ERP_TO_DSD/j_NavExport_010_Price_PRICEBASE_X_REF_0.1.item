@@ -1741,8 +1741,8 @@
   <node componentName="tJavaFlex" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="608" posY="-192">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJavaFlex_1"/>
     <elementParameter field="CHECK" name="DATA_AUTO_PROPAGATE" value="true"/>
-    <elementParameter field="MEMO_JAVA" name="CODE_START" value="String oldPriceKey = &quot;XXX&quot;;&#10;int seq = 1;&#10;      "/>
-    <elementParameter field="MEMO_JAVA" name="CODE_MAIN" value="String priceKey = P2.tableNo + P2.productNo ;&#10;if(priceKey.equals(oldPriceKey))&#10;&#9;seq +=1;&#10;else&#10;&#9;seq = 1;&#10;&#9;&#10;oldPriceKey = priceKey;&#10;"/>
+    <elementParameter field="MEMO_JAVA" name="CODE_START" value="String oldPriceKey = &quot;XXX&quot;;&#10;int priceSeq = 1;&#10;      "/>
+    <elementParameter field="MEMO_JAVA" name="CODE_MAIN" value="String priceKey = P2.tableNo + P2.productNo ;&#10;if(priceKey.equals(oldPriceKey))&#10;&#9;priceSeq +=1;&#10;else&#10;&#9;priceSeq = 1;&#10;&#9;&#10;oldPriceKey = priceKey;&#10;P3.seq = priceSeq&#10;"/>
     <elementParameter field="MEMO_JAVA" name="CODE_END" value="// end of the component, outside/closing the loop&#10;      "/>
     <elementParameter field="CHECK" name="Version_V2_0" show="false" value="false"/>
     <elementParameter field="CHECK" name="Version_V3_2" show="false" value="false"/>
@@ -1835,22 +1835,22 @@
     <elementParameter field="TEXT" name="BATCH_SIZE" value="10000"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBOutput_1">
-      <column comment="" key="false" length="100" name="tableNo" nullable="true" originalDbColumnName="TABLENO" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="100" name="tableNo" nullable="false" originalDbColumnName="TABLENO" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="productNo" nullable="false" originalDbColumnName="PRODUCTNO" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="price" nullable="false" originalDbColumnName="PRICE" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="startDate" nullable="false" originalDbColumnName="STARTDATE" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="endDate" nullable="false" originalDbColumnName="ENDDATE" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="priceBase" nullable="false" originalDbColumnName="PRICEBASE" originalLength="-1" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="seq" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="seq" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" name="REJECT">
-      <column comment="" key="false" length="100" name="tableNo" nullable="true" originalDbColumnName="TABLENO" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="100" name="tableNo" nullable="false" originalDbColumnName="TABLENO" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="productNo" nullable="false" originalDbColumnName="PRODUCTNO" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="price" nullable="false" originalDbColumnName="PRICE" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="startDate" nullable="false" originalDbColumnName="STARTDATE" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="endDate" nullable="false" originalDbColumnName="ENDDATE" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="priceBase" nullable="false" originalDbColumnName="PRICEBASE" originalLength="-1" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="seq" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="seq" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
@@ -2406,13 +2406,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_ce8aa23d-a9f1-4403-9a1d-bbf3b2d3d557"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>UehkezR9SIGNLnJbRJpPpZqfsheVFM3XIXAp2EVMiPmPqTWt/lk0jDJ+Aody/NRKI0KmBcb9Qk/7
-Lzq25t/F1Q==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_70ddc35d-78fe-496f-985a-71cd40310dc7"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>sxsGVacso2T/1GzVoT7UwjA0jh4spOjfKfb03guKd3dNUV2Bo7zRV8IACVdAK3U9a3tOq6o3PADU
-ML51C+uVkQ==</DigestValue></Reference></SignedInfo><SignatureValue>RDsc6kTFC0/OdFkHOF5rl0FBqRWW/vObFB0DSJYS/6W3gQGOUDTT5O+yZMyqmYchNXh3DSumHJGd
-56wTJueQWY1+MuEYxEfCsBc8mG57iTwmWDzyeD1kT9acLbvu6AdnOcfVXKlyeKDWGJUCQwDWLobV
-7jgSrwMzAxBJeBhWuaB4XlFmHCA4io97tmMnAJJPepM1YFesZQXkaOZ/cQVfWIWHM8aym/IvW1Dj
-i9KXUKA4SuQjnA6uKXuzw/3Po5D2mqOrf15VKQj/fPNbyxuYndF6omZpTwgthPQ2MR4QC4A8aV7B
-l2z/Uedx1msm1dqfUsPcg1VDspzGoTmPqzx7Kw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_71361a17-b2e8-40c2-8d2b-a41d1131733e"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>S3cyUXauRc5L1xDUSMdQigzBwhHSciVfqH2PH5B+dxHpT+q2q+0h0Nlb7ZbkccXhLTwA9+fLwjB6
+4+gtXEvlbQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_19c9c0af-e9a3-4d3d-b7d7-83f5eb738e7d"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>bUiSV1pkrpr397nKL1SJZ5WlwpLyceuYwY+bkq2pXZdmRA+IfqAY6eq++H+LrALX7LMrVJ/3h+p/
+loWwEJc4uw==</DigestValue></Reference></SignedInfo><SignatureValue>agtQZyJvdZnMTn971pUG+R6T3YSvqB6XueJYK2Ez5O3xe2w6t6FXVbPxpkCwcf568JaFebcYho1E
+Nzli7F+igARtfq8KVv5UYIf4Uz/K+jKJnUDHVk71L4Yt4o71GAE6wk4BIA6EkL990KiJeArNRlYm
+F8C3nySt/1jMFqVDG1yCfU5zcLSd0SZPA7iTucA7b4SJ6gopKREJuj8aB6hVKVxi5jszbdgCPccy
+65+os3SZikBuxN6C1zZtbhIRbmlhGTdYzOfyLqlnlFLyabN/wIsgutAceZwGTEtEx718LxxqPifD
+e7gan8HtGYT8NFAbN7qGcBCwlJlrkHYaohPx1g==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -2436,4 +2436,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_70ddc35d-78fe-496f-985a-71cd40310dc7" Target="#_ce8aa23d-a9f1-4403-9a1d-bbf3b2d3d557"><Timestamp>2020-03-10 15:57:51</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_19c9c0af-e9a3-4d3d-b7d7-83f5eb738e7d" Target="#_71361a17-b2e8-40c2-8d2b-a41d1131733e"><Timestamp>2020-03-10 16:02:10</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
