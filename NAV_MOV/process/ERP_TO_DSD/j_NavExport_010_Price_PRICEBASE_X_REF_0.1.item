@@ -425,7 +425,7 @@
     <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
     <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="STG_PRICE">
+    <metadata connector="FLOW" name="S3">
       <column comment="" key="false" length="-1" name="PRODUCTNO" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="TABLENO" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="STARTDATE" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
@@ -434,17 +434,22 @@
       <column comment="" defaultValue="" key="false" length="-1" name="PRICEBASE" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
-      <varTables name="Var" sizeState="INTERMEDIATE"/>
-      <outputTables activateCondensedTool="true" name="STG_PRICE" rejectInnerJoin="true" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="row4.PRODUCTNO " name="PRODUCTNO" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row4.TABLENO " name="TABLENO" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row4.STARTDATE " name="STARTDATE" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row4.ENDDATE " name="ENDDATE" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row4.PRICE " name="PRICE" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row4.PRICEBASE " name="PRICEBASE" nullable="true" type="id_Integer"/>
+      <uiProperties shellMaximized="true"/>
+      <varTables name="Var" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="Relational.ISNULL(S2.STARTDATE)? &quot;XXX&quot; : S2.STARTDATE " name="sDate" type="id_String"/>
+        <mapperTableEntries expression="Relational.ISNULL(S2.ENDDATE)? &quot;XXX&quot; : S2.ENDDATE " name="eDate" type="id_String"/>
+        <mapperTableEntries expression="Relational.ISNULL(S2.PRICE)? &quot;XXX&quot; : S2.PRICE " name="sPrice" type="id_String"/>
+        <mapperTableEntries expression="(Var.sDate + Var.eDate + Var.sPrice).equals(S1.STARTDATE + S1.ENDDATE + S1.PRICE) ? &quot;N&quot; : &quot;Y&quot; " name="sendYN" type="id_String"/>
+      </varTables>
+      <outputTables activateExpressionFilter="true" expressionFilter="Var.sendYN.equals(&quot;Y&quot;)" name="S3" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="S1.PRODUCTNO " name="PRODUCTNO" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="S1.TABLENO " name="TABLENO" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="S1.STARTDATE " name="STARTDATE" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="S1.ENDDATE " name="ENDDATE" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="S1.PRICE " name="PRICE" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="S1.PRICEBASE " name="PRICEBASE" nullable="true" type="id_Integer"/>
       </outputTables>
-      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row4" sizeState="INTERMEDIATE">
+      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="S1" sizeState="INTERMEDIATE">
         <mapperTableEntries name="PRODUCTNO" nullable="true" type="id_String"/>
         <mapperTableEntries name="TABLENO" nullable="true" type="id_String"/>
         <mapperTableEntries name="STARTDATE" nullable="true" type="id_String"/>
@@ -452,13 +457,13 @@
         <mapperTableEntries name="PRICE" nullable="true" type="id_String"/>
         <mapperTableEntries name="PRICEBASE" nullable="true" type="id_Integer"/>
       </inputTables>
-      <inputTables activateCondensedTool="true" activateExpressionFilter="true" innerJoin="true" lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row5" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="row4.PRODUCTNO" name="PRODUCTNO" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row4.TABLENO" name="TABLENO" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row4.STARTDATE " name="STARTDATE" nullable="true" operator="=" type="id_String"/>
-        <mapperTableEntries expression="row4.ENDDATE " name="ENDDATE" nullable="true" operator="=" type="id_String"/>
-        <mapperTableEntries expression="row4.PRICE " name="PRICE" nullable="true" operator="=" type="id_String"/>
-        <mapperTableEntries expression="row4.PRICEBASE " name="PRICEBASE" nullable="true" operator="=" type="id_Integer"/>
+      <inputTables activateCondensedTool="true" activateExpressionFilter="true" lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="S2" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="S1.PRODUCTNO" name="PRODUCTNO" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="S1.TABLENO" name="TABLENO" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="" name="STARTDATE" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="" name="ENDDATE" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="" name="PRICE" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="" name="PRICEBASE" nullable="true" type="id_Integer"/>
       </inputTables>
     </nodeData>
   </node>
@@ -1682,14 +1687,14 @@
     <nodeData xsi:type="TalendMapper:MapperData">
       <uiProperties shellMaximized="true"/>
       <varTables name="Var" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="row20.Sales_Code " name="tableNo" type="id_String"/>
-        <mapperTableEntries expression="&quot;000&quot; + row20.ItemNo.replace(&quot;F&quot;,&quot;0&quot;)" name="productNo" type="id_String"/>
-        <mapperTableEntries expression="row20.Unit_Price.toString()" name="price" type="id_String"/>
-        <mapperTableEntries expression="TalendDate.formatDate(&quot;yyyyMMdd&quot;,row20.Starting_Date) " name="startDate" type="id_String"/>
-        <mapperTableEntries expression="TalendDate.formatDate(&quot;yyyyMMdd&quot;,row20.Ending_Date) " name="endDate" type="id_String"/>
-        <mapperTableEntries expression="Integer.parseInt(row20.Sales_Code) == 1 ? 1 :&#13;&#10;Integer.parseInt(row20.Sales_Code) &gt; 1 &amp;&amp;&#13;&#10;Integer.parseInt(row20.Sales_Code) &lt; 100 ? 2 :&#13;&#10;Integer.parseInt(row20.Sales_Code) &gt; 999 &amp;&amp;&#13;&#10;Integer.parseInt(row20.Sales_Code) &lt; 10000 ? 4:0 " name="priceBase" type="id_Integer"/>
+        <mapperTableEntries expression="P0.Sales_Code " name="tableNo" type="id_String"/>
+        <mapperTableEntries expression="&quot;000&quot; + P0.ItemNo.replace(&quot;F&quot;,&quot;0&quot;)" name="productNo" type="id_String"/>
+        <mapperTableEntries expression="P0.Unit_Price.toString()" name="price" type="id_String"/>
+        <mapperTableEntries expression="TalendDate.formatDate(&quot;yyyyMMdd&quot;,P0.Starting_Date) " name="startDate" type="id_String"/>
+        <mapperTableEntries expression="TalendDate.formatDate(&quot;yyyyMMdd&quot;,P0.Ending_Date) " name="endDate" type="id_String"/>
+        <mapperTableEntries expression="Integer.parseInt(P0.Sales_Code) == 1 ? 1 :&#13;&#10;Integer.parseInt(P0.Sales_Code) &gt; 1 &amp;&amp;&#13;&#10;Integer.parseInt(P0.Sales_Code) &lt; 100 ? 2 :&#13;&#10;Integer.parseInt(P0.Sales_Code) &gt; 999 &amp;&amp;&#13;&#10;Integer.parseInt(P0.Sales_Code) &lt; 10000 ? 4:0 " name="priceBase" type="id_Integer"/>
       </varTables>
-      <outputTables activateExpressionFilter="true" expressionFilter="TalendDate.compareDate(row20.Starting_Date ,TalendDate.getCurrentDate()) &lt;=  0&#10;&amp;&amp;&#10;TalendDate.compareDate(row20.Ending_Date ,TalendDate.getCurrentDate()) &gt;  0&#10;&amp;&amp;&#10;Var.priceBase &gt; 0" name="P1" sizeState="INTERMEDIATE">
+      <outputTables activateExpressionFilter="true" expressionFilter="TalendDate.compareDate(P0.Starting_Date ,TalendDate.getCurrentDate()) &lt;=  0&#10;&amp;&amp;&#10;TalendDate.compareDate(P0.Ending_Date ,TalendDate.getCurrentDate()) &gt;  0&#10;&amp;&amp;&#10;Var.priceBase &gt; 0" name="P1" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="Var.tableNo " name="tableNo" nullable="true" type="id_String"/>
         <mapperTableEntries expression="Var.productNo " name="productNo" type="id_String"/>
         <mapperTableEntries expression="Var.price " name="price" type="id_String"/>
@@ -1697,7 +1702,7 @@
         <mapperTableEntries expression="Var.endDate " name="endDate" type="id_String"/>
         <mapperTableEntries expression="Var.priceBase " name="priceBase" type="id_Integer"/>
       </outputTables>
-      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row20" sizeState="INTERMEDIATE">
+      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="P0" sizeState="INTERMEDIATE">
         <mapperTableEntries name="Priority" nullable="true" type="id_Integer"/>
         <mapperTableEntries name="Sales_Code" nullable="true" type="id_String"/>
         <mapperTableEntries name="ItemNo" nullable="true" type="id_String"/>
@@ -2096,20 +2101,20 @@
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tMSSqlConnection_1" offsetLabelX="0" offsetLabelY="0" source="tMSSqlConnection_1" target="tDBConnection_1">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk8"/>
   </connection>
-  <connection connectorName="FLOW" label="row4" lineStyle="0" metaname="tMSSqlInput_1" offsetLabelX="0" offsetLabelY="0" source="tMSSqlInput_1" target="tMap_1">
+  <connection connectorName="FLOW" label="S1" lineStyle="0" metaname="tMSSqlInput_1" offsetLabelX="0" offsetLabelY="0" source="tMSSqlInput_1" target="tMap_1">
     <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" show="false" value="false"/>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row4"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="S1"/>
   </connection>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tMSSqlInput_1" offsetLabelX="0" offsetLabelY="0" source="tMSSqlInput_1" target="tDBInput_2">
     <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk3"/>
   </connection>
-  <connection connectorName="FLOW" label="row5" lineStyle="8" metaname="tMSSqlInput_2" offsetLabelX="0" offsetLabelY="0" source="tMSSqlInput_2" target="tMap_1">
+  <connection connectorName="FLOW" label="S2" lineStyle="8" metaname="tMSSqlInput_2" offsetLabelX="0" offsetLabelY="0" source="tMSSqlInput_2" target="tMap_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row5"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="S2"/>
   </connection>
-  <connection connectorName="FLOW" label="STG_PRICE" lineStyle="0" metaname="STG_PRICE" offsetLabelX="0" offsetLabelY="0" source="tMap_1" target="tMSSqlOutput_1">
+  <connection connectorName="FLOW" label="S3" lineStyle="0" metaname="S3" offsetLabelX="0" offsetLabelY="0" source="tMap_1" target="tMSSqlOutput_1">
     <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" show="false" value="false"/>
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
       <elementValue elementRef="TRACE_COLUMN" value="HFS_ID"/>
@@ -2129,23 +2134,43 @@
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="STG_PRICE"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="S3"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tMSSqlInput_5" offsetLabelX="0" offsetLabelY="0" source="tMSSqlInput_5" target="tMSSqlRow_1">
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk5"/>
   </connection>
   <connection connectorName="FLOW" label="row6" lineStyle="0" metaname="tMSSqlInput_5" offsetLabelX="0" offsetLabelY="0" source="tMSSqlInput_5" target="tMap_2">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row6"/>
   </connection>
-  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tMSSqlInput_5" offsetLabelX="0" offsetLabelY="0" source="tMSSqlInput_5" target="tMSSqlRow_1">
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk5"/>
-  </connection>
-  <connection connectorName="FLOW" label="masterdataPoolUpdate" lineStyle="0" metaname="masterdataPoolUpdate" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tMap_2" target="tJavaFlex_2">
+  <connection connectorName="FLOW" label="SendMasterData" lineStyle="0" metaname="SendMasterData" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tMap_2" target="tJavaFlex_5">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="newColumn"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="masterdataPoolUpdate"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="SendMasterData"/>
   </connection>
-  <connection connectorName="FLOW" label="MasterdataUpdate" lineStyle="0" metaname="MasterdataUpdate" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tMap_2" target="tJavaFlex_3">
+  <connection connectorName="FLOW" label="KONP" lineStyle="0" metaname="KONP" offsetLabelX="-45" offsetLabelY="-50" outputId="2" source="tMap_2" target="tJavaFlex_6">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="KONP"/>
+  </connection>
+  <connection connectorName="FLOW" label="VALIDITY" lineStyle="0" metaname="VALIDITY" offsetLabelX="0" offsetLabelY="0" outputId="3" source="tMap_2" target="tJavaFlex_7">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="VALIDITY"/>
+  </connection>
+  <connection connectorName="FLOW" label="Price4" lineStyle="0" metaname="Price4" offsetLabelX="0" offsetLabelY="0" outputId="4" source="tMap_2" target="tJavaFlex_4">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="Price4"/>
+  </connection>
+  <connection connectorName="FLOW" label="MasterdataUpdate" lineStyle="0" metaname="MasterdataUpdate" offsetLabelX="0" offsetLabelY="0" outputId="5" source="tMap_2" target="tJavaFlex_3">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
       <elementValue elementRef="TRACE_COLUMN" value="mafAppSpace"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
@@ -2155,30 +2180,10 @@
     <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="MasterdataUpdate"/>
   </connection>
-  <connection connectorName="FLOW" label="Price4" lineStyle="0" metaname="Price4" offsetLabelX="0" offsetLabelY="0" outputId="3" source="tMap_2" target="tJavaFlex_4">
+  <connection connectorName="FLOW" label="masterdataPoolUpdate" lineStyle="0" metaname="masterdataPoolUpdate" offsetLabelX="0" offsetLabelY="0" outputId="6" source="tMap_2" target="tJavaFlex_2">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="Price4"/>
-  </connection>
-  <connection connectorName="FLOW" label="VALIDITY" lineStyle="0" metaname="VALIDITY" offsetLabelX="0" offsetLabelY="0" outputId="4" source="tMap_2" target="tJavaFlex_7">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="VALIDITY"/>
-  </connection>
-  <connection connectorName="FLOW" label="KONP" lineStyle="0" metaname="KONP" offsetLabelX="-45" offsetLabelY="-50" outputId="5" source="tMap_2" target="tJavaFlex_6">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="KONP"/>
-  </connection>
-  <connection connectorName="FLOW" label="SendMasterData" lineStyle="0" metaname="SendMasterData" offsetLabelX="0" offsetLabelY="0" outputId="6" source="tMap_2" target="tJavaFlex_5">
-    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
-      <elementValue elementRef="TRACE_COLUMN" value="newColumn"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-    </elementParameter>
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="SendMasterData"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="masterdataPoolUpdate"/>
   </connection>
   <connection connectorName="FLOW" label="row15" lineStyle="0" metaname="tJavaFlex_5" offsetLabelX="0" offsetLabelY="0" source="tJavaFlex_5" target="tFilterRow_14">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
@@ -2200,12 +2205,7 @@
     <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row3"/>
   </connection>
-  <connection connectorName="FLOW" label="row8" lineStyle="0" metaname="tReplicate_1" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tReplicate_1" target="tExtractXMLField_2">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row8"/>
-  </connection>
-  <connection connectorName="FLOW" label="row9" lineStyle="0" metaname="tReplicate_1" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tReplicate_1" target="tExtractXMLField_1">
+  <connection connectorName="FLOW" label="row9" lineStyle="0" metaname="tReplicate_1" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tReplicate_1" target="tExtractXMLField_1">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
       <elementValue elementRef="TRACE_COLUMN" value="responseXML"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
@@ -2214,6 +2214,11 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row9"/>
+  </connection>
+  <connection connectorName="FLOW" label="row8" lineStyle="0" metaname="tReplicate_1" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tReplicate_1" target="tExtractXMLField_2">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row8"/>
   </connection>
   <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tUnite_1" offsetLabelX="0" offsetLabelY="0" source="tUnite_1" target="tMap_3">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
@@ -2265,9 +2270,9 @@
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tDBConnection_1" offsetLabelX="0" offsetLabelY="0" source="tDBConnection_1" target="tSetKeystore_1">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk6"/>
   </connection>
-  <connection connectorName="FLOW" label="row20" lineStyle="0" metaname="tDBInput_1" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="tMap_7">
+  <connection connectorName="FLOW" label="P0" lineStyle="0" metaname="tDBInput_1" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="tMap_7">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row20"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="P0"/>
   </connection>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBInput_1" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="tMSSqlInput_1">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk2"/>
@@ -2400,13 +2405,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_63d99e82-f884-43d7-9842-e75d7806a50a"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>mdwkuRBZPlwdBghxJQQ2+5UEteIo9Wb/C1+R5eWnzNiU/mN00mA7dq/ClN+F3/njuSJPv2GfuTTI
-DBzSWT9RKg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_d32b54b8-35a0-463c-8602-1c3abadb510f"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Z0W4mwXsFPU70Mfs5XnSKiFqXzHmE+y54biXkKC0gKAzaXhwJZ8E9yBeWrH+UlB5OTj5p/pkthhT
-Dg9J4/CbsA==</DigestValue></Reference></SignedInfo><SignatureValue>c/dTs0xMvK/WFLi0XPow9qED4Pc5QxZ8N5w4sxkmjcCgJTHK61fXaQxn/xDW8TGEQWl5Qy3LGBGs
-YBYSLvw0WKFWV7OAmJ7NaCB5dcipJRsZqL2KMgu+mRlFXrqv9C71dUemqp1JFFNkHo6AgFSZo+cD
-0v7+pEuDDgYnWA4HPlOFX/Z0cK2XB6bpYF1aC6RXhfeg/1naQbFHDW3j4lYu0vbdfgUlmmM452Qr
-Wr2WGKUi+UBuM298y0PDsKQhntNUM4G2+ue+0ICqkJJf0stpTW73/Qc6vOKzEzgxhvkIrFgs6pjB
-+Eg06tKRQh2YFtvk6qhVXMCkry7MZUneKba0DQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_a80f6299-c5a6-44e7-8436-058c4b0297c1"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>OZEbpzJIWp3lOmrhT45IW7++1pQ3VjA2rZcBBPsVzq6GM9nAlasqHMXS86sN+xpW5rGgJ3c6h7Dh
+HcJD7MwwGg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_13728d4d-8a97-473d-8e2a-1854904aa613"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>gtGRNMUZ5QIqUjcw8OVi/DKBSGyoe/ip8cfcSbe991X876dE0jcSsvdbcOt701MFSiiqhn0wkAjS
+7dcWS6CCnA==</DigestValue></Reference></SignedInfo><SignatureValue>IXmm688sdyeIT8Ac2SkVEHdlfVjmTjrmmF+bJJVWVODnmdevZm8xj4eLFsVbr17PjsmwQXJQu+86
+p2SIaF9nVoGeb6aFCGmAgHX9ITQA4EYMD8zZ95GqO581k4VTe+zGehJV3R1Gq2NgteIkRYZ3a4Uw
+OOwEb4ebDnZfULJwMhyMZSmCFG1KKfUmtDqzllzNYSvkDqNZSu+41OojSextKvIFiPsjfYlhBWn2
+jQvvxdGn4zIKRW1wSVlJFFTSIHSyBjsp0aDPmTlXdXxf7XEv75ZcrLeKqHDFlzXL/UtaasCXuqgd
+obEKHjvnuyoqCXHYVD4/R/+42UDCJhrn7xsJHg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -2430,4 +2435,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_d32b54b8-35a0-463c-8602-1c3abadb510f" Target="#_63d99e82-f884-43d7-9842-e75d7806a50a"><Timestamp>2020-03-10 16:35:44</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_13728d4d-8a97-473d-8e2a-1854904aa613" Target="#_a80f6299-c5a6-44e7-8436-058c4b0297c1"><Timestamp>2020-03-10 23:08:43</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
