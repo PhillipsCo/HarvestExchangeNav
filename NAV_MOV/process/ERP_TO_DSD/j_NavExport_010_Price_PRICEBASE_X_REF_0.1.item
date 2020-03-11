@@ -581,7 +581,6 @@
   </node>
   <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="608">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMSSqlInput_5"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tMSSqlConnection_1"/>
     <elementParameter field="TEXT" name="HOST" show="false" value="&quot;&quot;"/>
@@ -597,7 +596,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select * from RM_PRICE_STAGE&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select * from NAV_PRICE_STAGE where seq = &quot; + context.priceBase"/>
     <elementParameter field="LABEL" name="NOTE" show="false" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" show="false" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -611,37 +610,30 @@
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="TABLENO"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="PRICEDATE"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="STARTDATE"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ENDDATE"/>
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="PRICE"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="FILENAME"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PRICEBASE"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="DAYNO"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="SENDTOCLOUD"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ID"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="PRICEENDDATE"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="seq"/>
       <elementValue elementRef="TRIM" value="false"/>
     </elementParameter>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tMSSqlInput_5">
-      <column comment="" key="false" length="9" name="PRODUCTNO" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="4" name="TABLENO" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="8" name="PRICEDATE" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="9" name="PRICE" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="20" name="FILENAME" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="1" name="DAYNO" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="1" name="SENDTOCLOUD" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="-1" name="ID" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="8" name="PRICEENDDATE" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="PRODUCTNO" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="TABLENO" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="STARTDATE" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ENDDATE" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="PRICE" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="-1" name="PRICEBASE" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="-1" name="seq" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="416" posY="576">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_2"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
     <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
@@ -692,13 +684,13 @@
       <column comment="" key="false" length="-1" name="newColumn" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables name="Var" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="Integer.parseInt(row6.TABLENO)  == 1 ? &quot;PRICEBASEP1&quot; :&#13;&#10;(Integer.parseInt(row6.TABLENO) &gt;1 &amp;&amp;&#13;&#10; Integer.parseInt(row6.TABLENO) &lt; 100 )? &quot;PRICEBASEP2&quot;:&#13;&#10; (Integer.parseInt(row6.TABLENO) &gt;999 &amp;&amp;&#13;&#10; Integer.parseInt(row6.TABLENO) &lt; 10000 )? &quot;PRICEBASEP4&quot;:&quot;0&quot; " name="Pool" type="id_String"/>
-        <mapperTableEntries expression="Integer.parseInt(row6.TABLENO)  == 1 ? 1 :&#13;&#10;(Integer.parseInt(row6.TABLENO) &gt;1 &amp;&amp;&#13;&#10; Integer.parseInt(row6.TABLENO) &lt; 100 )? 2:&#13;&#10; (Integer.parseInt(row6.TABLENO) &gt;999 &amp;&amp;&#13;&#10; Integer.parseInt(row6.TABLENO) &lt; 10000 )? 4:0 " name="PriceLevel" type="id_Integer"/>
+        <mapperTableEntries expression="&quot;PRICEBASEP&quot; + row6.PRICEBASE " name="Pool" type="id_String"/>
+        <mapperTableEntries expression="row6.PRICEBASE " name="PriceLevel" type="id_Integer"/>
         <mapperTableEntries expression="Var.PriceLevel == 1? &quot;A001&quot; + &quot;_&quot;+String.format(&quot;%012d&quot;,Integer.parseInt(row6.PRODUCTNO)) :&#13;&#10;Var.PriceLevel == 2?  &quot;A002_&quot; + String.format(&quot;%04d&quot;,Integer.parseInt(row6.TABLENO))+ String.format(&quot;%012d&quot;,Integer.parseInt(row6.PRODUCTNO)) :&#13;&#10;&quot;A004_&quot; +String.format(&quot;%04d&quot;,Integer.parseInt(row6.TABLENO))+String.format(&quot;%012d&quot;,Integer.parseInt(row6.PRODUCTNO)) " name="Key" type="id_String"/>
-        <mapperTableEntries expression="row6.PRICE.substring(0, 1).equals(&quot;+&quot;) ?&#13;&#10;String.valueOf(Float.parseFloat(row6.PRICE.substring(1))):&#13;&#10;String.valueOf(Float.parseFloat(row6.PRICE)) " name="KBETR" type="id_String"/>
-        <mapperTableEntries expression="String.format(&quot;%010d&quot;,row6.ID )" name="UNIQUEID" type="id_String"/>
+        <mapperTableEntries expression="row6.PRICE " name="KBETR" type="id_String"/>
+        <mapperTableEntries expression="Numeric.sequence(&quot;name&quot;, 0, 1)" name="UNIQUEID" type="id_String"/>
       </varTables>
       <outputTables name="masterdataPoolUpdate" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="context.SystemId" name="SystemId" nullable="true" type="id_String"/>
@@ -706,9 +698,9 @@
         <mapperTableEntries expression="Var.Pool " name="Pool" nullable="true" type="id_String"/>
       </outputTables>
       <outputTables activateExpressionFilter="true" name="MasterdataUpdate" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="context.ProfitCenter" name="Group" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="&quot;04&quot;" name="Group" nullable="true" type="id_String"/>
         <mapperTableEntries expression="Var.Key " name="Key" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="context.description " name="Description" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="" name="Description" nullable="true" type="id_String"/>
       </outputTables>
       <outputTables name="Price4" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="&quot;1&quot;" name="COUNT" nullable="true" type="id_String"/>
@@ -717,8 +709,8 @@
       </outputTables>
       <outputTables name="VALIDITY" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="&quot;1&quot;" name="VALIDITY" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row6.PRICEDATE " name="DATAB" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row6.PRICEENDDATE " name="DATBI" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row6.STARTDATE " name="DATAB" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row6.ENDDATE " name="DATBI" nullable="true" type="id_String"/>
       </outputTables>
       <outputTables name="KONP" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="&quot;01&quot;" name="KONP" nullable="true" type="id_String"/>
@@ -738,21 +730,18 @@
         <mapperTableEntries name="newColumn" nullable="true" type="id_String"/>
       </outputTables>
       <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row6" sizeState="INTERMEDIATE">
-        <mapperTableEntries name="PRODUCTNO" type="id_String"/>
-        <mapperTableEntries name="TABLENO" type="id_String"/>
-        <mapperTableEntries name="PRICEDATE" type="id_String"/>
+        <mapperTableEntries name="PRODUCTNO" nullable="true" type="id_String"/>
+        <mapperTableEntries name="TABLENO" nullable="true" type="id_String"/>
+        <mapperTableEntries name="STARTDATE" nullable="true" type="id_String"/>
+        <mapperTableEntries name="ENDDATE" nullable="true" type="id_String"/>
         <mapperTableEntries name="PRICE" nullable="true" type="id_String"/>
-        <mapperTableEntries name="FILENAME" nullable="true" type="id_String"/>
-        <mapperTableEntries name="DAYNO" nullable="true" type="id_String"/>
-        <mapperTableEntries name="SENDTOCLOUD" nullable="true" type="id_String"/>
-        <mapperTableEntries name="ID" nullable="true" type="id_Integer"/>
-        <mapperTableEntries name="PRICEENDDATE" type="id_String"/>
+        <mapperTableEntries name="PRICEBASE" nullable="true" type="id_Integer"/>
+        <mapperTableEntries name="seq" nullable="true" type="id_Integer"/>
       </inputTables>
     </nodeData>
   </node>
   <node componentName="tJavaFlex" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="576" posY="448">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJavaFlex_2"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="DATA_AUTO_PROPAGATE" value="true"/>
     <elementParameter field="MEMO_JAVA" name="CODE_START" value="// start part of your Java code&#10;     int b=1;   "/>
     <elementParameter field="MEMO_JAVA" name="CODE_MAIN" value="routines.r_HarvestRoutineLoop.createAllObjects();&#10;&#10;if(b==1){&#10;&#10;routines.r_HarvestRoutineLoop.populateMasterdataPoolUpdate(masterdataPoolUpdate);}&#10;else if(b==250)&#10;{&#10;b=0;&#10;}&#10;b++;&#10;"/>
@@ -766,7 +755,6 @@
   </node>
   <node componentName="tJavaFlex" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="704" posY="480">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJavaFlex_3"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="DATA_AUTO_PROPAGATE" value="true"/>
     <elementParameter field="MEMO_JAVA" name="CODE_START" value="// start part of your Java code&#10;      "/>
     <elementParameter field="MEMO_JAVA" name="CODE_MAIN" value="// here is the main part of the component,&#10;// a piece of code executed in the row&#10;// loop&#10;routines.r_HarvestRoutineLoop.populateMasterdataUpdate(MasterdataUpdate);&#10;context.group=MasterdataUpdate.Group;&#10;context.key=MasterdataUpdate.Key;"/>
@@ -780,7 +768,6 @@
   </node>
   <node componentName="tJavaFlex" componentVersion="0.101" offsetLabelX="12" offsetLabelY="0" posX="768" posY="512">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJavaFlex_4"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="DATA_AUTO_PROPAGATE" value="true"/>
     <elementParameter field="MEMO_JAVA" name="CODE_START" value="// start part of your Java code&#10;"/>
     <elementParameter field="MEMO_JAVA" name="CODE_MAIN" value="// here is the main part of the component,&#10;// a piece of code executed in the row&#10;// loop&#10;//if(a==routines.r_HarvestRoutineLoop.getHMcountValue(Price4.KOTABNR+ String.valueOf(row6.ID))){&#10;//a=0;b=0;}&#10;&#10;routines.r_HarvestRoutineLoop.populateDataContainerEntry_No_Header(Price4);&#10;"/>
@@ -794,7 +781,6 @@
   </node>
   <node componentName="tJavaFlex" componentVersion="0.101" offsetLabelX="-20" offsetLabelY="0" posX="832" posY="576">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJavaFlex_6"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="DATA_AUTO_PROPAGATE" value="true"/>
     <elementParameter field="MEMO_JAVA" name="CODE_START" value="// start part of your Java code&#10;      "/>
     <elementParameter field="MEMO_JAVA" name="CODE_MAIN" value="// here is the main part of the component,&#10;// a piece of code executed in the row&#10;// loop&#10;&#9;&#9;&#9;routines.r_HarvestRoutineLoop.populateDataContainerEntryChildNode(KONP);&#10;routines.r_HarvestRoutineLoop.populateDataContainerEntryParentNode();&#10;routines.r_HarvestRoutineLoop.populateUpdateContainerEntry();"/>
@@ -808,7 +794,6 @@
   </node>
   <node componentName="tJavaFlex" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="736" posY="608">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJavaFlex_7"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="DATA_AUTO_PROPAGATE" value="true"/>
     <elementParameter field="MEMO_JAVA" name="CODE_START" value="// start part of your Java code&#10;      "/>
     <elementParameter field="MEMO_JAVA" name="CODE_MAIN" value="&#9;&#9;&#9;// here is the main part of the component,&#10;&#9;&#9;&#9;// a piece of code executed in the row&#10;&#9;&#9;&#9;// loop&#10;&#9;&#9;&#9;routines.r_HarvestRoutineLoop.populateDataContainerEntryChildNode(VALIDITY);&#10;&#9;&#9;&#9;routines.r_HarvestRoutineLoop.populateDataContainerEntryParentNode();"/>
@@ -822,7 +807,6 @@
   </node>
   <node componentName="tJavaFlex" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="640" posY="672">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJavaFlex_5"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="DATA_AUTO_PROPAGATE" value="true"/>
     <elementParameter field="MEMO_JAVA" name="CODE_START" value="// start part of your Java code&#10;  int a=1;    "/>
     <elementParameter field="MEMO_JAVA" name="CODE_MAIN" value="row15.responseXML = &quot;&quot;;&#10;&#10;if(a &lt; context.StageRecords /*&amp;&amp; f==(a-50)*/)&#10;{&#10;if(a%250 == 0)&#10;{&#10;row15.responseXML=routines.r_HarvestRoutineLoop.sendMasterData(context.movilizerURL, context.movilizerVersion);&#10;}&#10;}&#10;if(a==context.StageRecords)&#10;{&#10;row15.responseXML=routines.r_HarvestRoutineLoop.sendMasterData(context.movilizerURL, context.movilizerVersion);&#10;}&#10;&#10;&#10;&#10;//f = a;&#10;//a=0;&#10;//System.out.println(row15.responseXML);&#10;&#10;a++;&#10;routines.r_HarvestRoutineLoop.resetObjects();&#10;&#10;/*if(rowcount of file == counter &amp;&amp; a!=0)&#10;"/>
@@ -838,7 +822,6 @@
   </node>
   <node componentName="tFilterRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="864" posY="736">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFilterRow_14"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
     <elementParameter field="TABLE" name="CONDITIONS"/>
     <elementParameter field="CHECK" name="USE_ADVANCED" value="true"/>
@@ -858,7 +841,6 @@
   </node>
   <node componentName="tExtractXMLField" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1440" posY="736">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tExtractXMLField_1"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="PREV_COLUMN_LIST" name="XMLFIELD" value="responseXML"/>
     <elementParameter field="CHECK" name="USE_ITEMS" show="false" value="false"/>
     <elementParameter field="TEXT" name="LOOP_QUERY_BASE" show="false" value="&quot;&quot;"/>
@@ -921,7 +903,6 @@
   </node>
   <node componentName="tFilterRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1632" posY="736">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFilterRow_15"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
     <elementParameter field="TABLE" name="CONDITIONS"/>
     <elementParameter field="CHECK" name="USE_ADVANCED" value="true"/>
@@ -958,7 +939,6 @@
   </node>
   <node componentName="tReplicate" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1088" posY="736">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tReplicate_1"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="TEXT" name="LABEL" value="tReplicate_1"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tReplicate_1">
@@ -967,7 +947,6 @@
   </node>
   <node componentName="tUnite" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1824" posY="736">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tUnite_1"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="TEXT" name="LABEL" value="tUnite_1"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tUnite_1">
@@ -982,7 +961,6 @@
   </node>
   <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="1952" posY="736">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_3"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
     <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
@@ -1072,7 +1050,6 @@
   </node>
   <node componentName="tExtractXMLField" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1280" posY="864">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tExtractXMLField_2"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="PREV_COLUMN_LIST" name="XMLFIELD" value="responseXML"/>
     <elementParameter field="CHECK" name="USE_ITEMS" show="false" value="false"/>
     <elementParameter field="TEXT" name="LOOP_QUERY_BASE" show="false" value="&quot;&quot;"/>
@@ -1133,7 +1110,6 @@
   </node>
   <node componentName="tBufferOutput" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1440" posY="864">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tBufferOutput_1"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="TEXT" name="LABEL" value="tBufferOutput_1"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tBufferOutput_1">
@@ -1148,7 +1124,6 @@
   </node>
   <node componentName="tMSSqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="2112" posY="736">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMSSqlOutput_2"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_-uKbAEF2EeazMKeZhCw-4Q"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
@@ -1376,6 +1351,61 @@
       <column comment="" key="false" length="255" name="ProcessTimeStamp" nullable="true" originalLength="255" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="-1" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tBufferInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1664" posY="896">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tBufferInput_1"/>
+    <elementParameter field="CHECK" name="ADVANCED_SEPARATOR" value="false"/>
+    <elementParameter field="TEXT" name="THOUSANDS_SEPARATOR" show="false" value="&quot;,&quot;"/>
+    <elementParameter field="TEXT" name="DECIMAL_SEPARATOR" show="false" value="&quot;.&quot;"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="TEXT" name="LABEL" value="tBufferInput_1"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tBufferInput_1">
+      <column comment="" key="false" length="-1" name="Pool" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Group" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Key" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Timestamp" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="isReference" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ValidationErrorCode" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Message" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tFilterRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1824" posY="896">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFilterRow_16"/>
+    <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
+    <elementParameter field="TABLE" name="CONDITIONS"/>
+    <elementParameter field="CHECK" name="USE_ADVANCED" value="true"/>
+    <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="!(row13.Key == null || row13.Key.isEmpty())"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFilterRow_16">
+      <column comment="" key="false" length="-1" name="Pool" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Group" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Key" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Timestamp" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="isReference" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ValidationErrorCode" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Message" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="FILTER" name="FILTER">
+      <column comment="" key="false" length="-1" name="Pool" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Group" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Key" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Timestamp" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="isReference" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ValidationErrorCode" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Message" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="REJECT" name="REJECT">
+      <column comment="" key="false" length="-1" name="Pool" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Group" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Key" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Timestamp" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="isReference" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ValidationErrorCode" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Message" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tPostjob" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="-160" posY="1184">
@@ -1927,63 +1957,6 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBCommit_1"/>
   </node>
-  <node componentName="tBufferInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1664" posY="896">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tBufferInput_1"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
-    <elementParameter field="CHECK" name="ADVANCED_SEPARATOR" value="false"/>
-    <elementParameter field="TEXT" name="THOUSANDS_SEPARATOR" show="false" value="&quot;,&quot;"/>
-    <elementParameter field="TEXT" name="DECIMAL_SEPARATOR" show="false" value="&quot;.&quot;"/>
-    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
-    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
-    <elementParameter field="TEXT" name="LABEL" value="tBufferInput_1"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tBufferInput_1">
-      <column comment="" key="false" length="-1" name="Pool" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Group" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Key" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Timestamp" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="isReference" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="ValidationErrorCode" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Message" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="tFilterRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1824" posY="896">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFilterRow_16"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
-    <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
-    <elementParameter field="TABLE" name="CONDITIONS"/>
-    <elementParameter field="CHECK" name="USE_ADVANCED" value="true"/>
-    <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="!(row13.Key == null || row13.Key.isEmpty())"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tFilterRow_16">
-      <column comment="" key="false" length="-1" name="Pool" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Group" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Key" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Timestamp" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="isReference" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="ValidationErrorCode" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Message" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-    </metadata>
-    <metadata connector="FILTER" name="FILTER">
-      <column comment="" key="false" length="-1" name="Pool" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Group" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Key" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Timestamp" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="isReference" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="ValidationErrorCode" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Message" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-    </metadata>
-    <metadata connector="REJECT" name="REJECT">
-      <column comment="" key="false" length="-1" name="Pool" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Group" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Key" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Timestamp" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="isReference" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="ValidationErrorCode" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Message" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-    </metadata>
-  </node>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPrejob_1" offsetLabelX="0" offsetLabelY="0" source="tPrejob_1" target="tMSSqlInput_6">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk1"/>
   </connection>
@@ -2032,67 +2005,56 @@
   </connection>
   <connection connectorName="FLOW" label="row6" lineStyle="0" metaname="tMSSqlInput_5" offsetLabelX="0" offsetLabelY="0" source="tMSSqlInput_5" target="tMap_2">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row6"/>
   </connection>
-  <connection connectorName="FLOW" label="SendMasterData" lineStyle="0" metaname="SendMasterData" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tMap_2" target="tJavaFlex_5">
-    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
-      <elementValue elementRef="TRACE_COLUMN" value="newColumn"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-    </elementParameter>
+  <connection connectorName="FLOW" label="masterdataPoolUpdate" lineStyle="0" metaname="masterdataPoolUpdate" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tMap_2" target="tJavaFlex_2">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="SendMasterData"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="masterdataPoolUpdate"/>
   </connection>
-  <connection connectorName="FLOW" label="KONP" lineStyle="0" metaname="KONP" offsetLabelX="-45" offsetLabelY="-50" outputId="2" source="tMap_2" target="tJavaFlex_6">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="KONP"/>
-  </connection>
-  <connection connectorName="FLOW" label="VALIDITY" lineStyle="0" metaname="VALIDITY" offsetLabelX="0" offsetLabelY="0" outputId="3" source="tMap_2" target="tJavaFlex_7">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="VALIDITY"/>
-  </connection>
-  <connection connectorName="FLOW" label="Price4" lineStyle="0" metaname="Price4" offsetLabelX="0" offsetLabelY="0" outputId="4" source="tMap_2" target="tJavaFlex_4">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="Price4"/>
-  </connection>
-  <connection connectorName="FLOW" label="MasterdataUpdate" lineStyle="0" metaname="MasterdataUpdate" offsetLabelX="0" offsetLabelY="0" outputId="5" source="tMap_2" target="tJavaFlex_3">
+  <connection connectorName="FLOW" label="MasterdataUpdate" lineStyle="0" metaname="MasterdataUpdate" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tMap_2" target="tJavaFlex_3">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
       <elementValue elementRef="TRACE_COLUMN" value="mafAppSpace"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="MasterdataUpdate"/>
   </connection>
-  <connection connectorName="FLOW" label="masterdataPoolUpdate" lineStyle="0" metaname="masterdataPoolUpdate" offsetLabelX="0" offsetLabelY="0" outputId="6" source="tMap_2" target="tJavaFlex_2">
+  <connection connectorName="FLOW" label="Price4" lineStyle="0" metaname="Price4" offsetLabelX="0" offsetLabelY="0" outputId="3" source="tMap_2" target="tJavaFlex_4">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="masterdataPoolUpdate"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="Price4"/>
+  </connection>
+  <connection connectorName="FLOW" label="VALIDITY" lineStyle="0" metaname="VALIDITY" offsetLabelX="0" offsetLabelY="0" outputId="4" source="tMap_2" target="tJavaFlex_7">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="VALIDITY"/>
+  </connection>
+  <connection connectorName="FLOW" label="KONP" lineStyle="0" metaname="KONP" offsetLabelX="-45" offsetLabelY="-50" outputId="5" source="tMap_2" target="tJavaFlex_6">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="KONP"/>
+  </connection>
+  <connection connectorName="FLOW" label="SendMasterData" lineStyle="0" metaname="SendMasterData" offsetLabelX="0" offsetLabelY="0" outputId="6" source="tMap_2" target="tJavaFlex_5">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="newColumn"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="SendMasterData"/>
   </connection>
   <connection connectorName="FLOW" label="row15" lineStyle="0" metaname="tJavaFlex_5" offsetLabelX="0" offsetLabelY="0" source="tJavaFlex_5" target="tFilterRow_14">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row15"/>
   </connection>
   <connection connectorName="FILTER" label="row19" lineStyle="0" metaname="tFilterRow_14" offsetLabelX="0" offsetLabelY="0" source="tFilterRow_14" target="tReplicate_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row19"/>
   </connection>
   <connection connectorName="FLOW" label="row11" lineStyle="0" metaname="tExtractXMLField_1" offsetLabelX="0" offsetLabelY="0" source="tExtractXMLField_1" target="tFilterRow_15">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row11"/>
   </connection>
   <connection connectorName="FILTER" label="row3" lineStyle="10" mergeOrder="1" metaname="tFilterRow_15" offsetLabelX="0" offsetLabelY="0" source="tFilterRow_15" target="tUnite_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row3"/>
   </connection>
   <connection connectorName="FLOW" label="row9" lineStyle="0" metaname="tReplicate_1" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tReplicate_1" target="tExtractXMLField_1">
@@ -2102,28 +2064,31 @@
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row9"/>
   </connection>
   <connection connectorName="FLOW" label="row8" lineStyle="0" metaname="tReplicate_1" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tReplicate_1" target="tExtractXMLField_2">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row8"/>
   </connection>
   <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tUnite_1" offsetLabelX="0" offsetLabelY="0" source="tUnite_1" target="tMap_3">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
   </connection>
   <connection connectorName="FLOW" label="responseXML" lineStyle="0" metaname="responseXML" offsetLabelX="0" offsetLabelY="0" source="tMap_3" target="tMSSqlOutput_2">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="responseXML"/>
   </connection>
   <connection connectorName="FLOW" label="row10" lineStyle="0" metaname="tExtractXMLField_2" offsetLabelX="0" offsetLabelY="0" source="tExtractXMLField_2" target="tBufferOutput_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row10"/>
+  </connection>
+  <connection connectorName="FLOW" label="row13" lineStyle="0" metaname="tBufferInput_1" offsetLabelX="0" offsetLabelY="0" source="tBufferInput_1" target="tFilterRow_16">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row13"/>
+  </connection>
+  <connection connectorName="FILTER" label="row2" lineStyle="10" mergeOrder="2" metaname="tFilterRow_16" offsetLabelX="0" offsetLabelY="0" source="tFilterRow_16" target="tUnite_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row2"/>
   </connection>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPostjob_1" offsetLabelX="0" offsetLabelY="0" source="tPostjob_1" target="tMSSqlCommit_1">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk2"/>
@@ -2149,7 +2114,6 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="iterate2"/>
   </connection>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tJava_2" offsetLabelX="0" offsetLabelY="0" source="tJava_2" target="tMSSqlInput_5">
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk5"/>
   </connection>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tDBConnection_1" offsetLabelX="0" offsetLabelY="0" source="tDBConnection_1" target="tSetKeystore_1">
@@ -2191,16 +2155,6 @@
   </connection>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBCommit_1" offsetLabelX="0" offsetLabelY="0" source="tDBCommit_1" target="tLoop_1">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk4"/>
-  </connection>
-  <connection connectorName="FLOW" label="row13" lineStyle="0" metaname="tBufferInput_1" offsetLabelX="0" offsetLabelY="0" source="tBufferInput_1" target="tFilterRow_16">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row13"/>
-  </connection>
-  <connection connectorName="FILTER" label="row2" lineStyle="10" mergeOrder="2" metaname="tFilterRow_16" offsetLabelX="0" offsetLabelY="0" source="tFilterRow_16" target="tUnite_1">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row2"/>
   </connection>
   <subjob>
     <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" show="false" value="true"/>
@@ -2279,18 +2233,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-  <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tBufferInput_1"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
-  </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_8ca8ef4a-f5d6-4aa6-a143-0251a2cd2e25"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ukDMvcJDHuY1xFo/HlPpEm9Qkqp1jchYkRszrbT3Gi/T4E0QBTO5pZmnx16kY/QaBK4OzSw2muLQ
-IhtlOQVX5w==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_088c00fb-68fa-4a88-94ec-6575d0e9cc83"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>hyOecGg2JPBBQGaskCGpC8DCDL7eiRHkj3oOUdYLqSSZ0YV72TtYMie56VJV54QHm7qoKSCfvXw4
-9XJD802Qww==</DigestValue></Reference></SignedInfo><SignatureValue>EsWQ6tacWh5ml+AUOS4m8bKMsaariJaBFp8zzB1aNRiIz1eg8xK3V7AKmfh4khvx2MBUZb26+bN4
-VXbv1hC/UhlJlSgBj2VJVClQFvE1kAl24MvOrd1xC6EhbzwIlw6tMrb3U4EyiDKlpd0xkNU40aoF
-2/yuseJwFjZgVjQu3VdUztoyPp1RSBPsMBmWCZoV4nGXB6GrEIr9k/phhgFf2wtnJAjWTtbNA3xY
-Kk82cC87TTJ6gEatCGKgWTmVzGibfLDdNmmP8XhayYw2uB0TiRl53ishmVufatkq6WI1AGvbw+gx
-GE3dI6KIonYuomURZcuZ67flvUG3aeK4Iq4KNw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_8fc89325-3f43-4c1a-a5ca-023edb1433aa"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>enBuQfqIG1VppUkkHL8wfCRKH9LX2BoOW6LuXW2pJV0M2cqTih/nFICO4zIvpR4mLQvLDxhjVN7X
+/hYi1R8s4g==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_688a8ac8-ccc8-44ef-8cbd-67a20eb54b85"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>oVboG+x5aoBL3v8oBadQI/G/cbVc4RH8AZAaMkDAhXMO0q0LD/rEZJdLn3Zf4835u9L6jwukQLKZ
+Z3Bc2hNLcw==</DigestValue></Reference></SignedInfo><SignatureValue>p5LR97uAdH8Bb8BKq3yUCLGcslcYTCvcZ96OSUL5pMilLa5UqhUgFET4J01emlzs8kuJRWUdcKbE
+pdtKxNBpkPEvxFdy5pkhgaYFzEZPBYTlCHfEc7CXNtjcaE7DoLj5TY/NRP1dsX7UuxH4Izk7vROc
+HWaSrk6MlvVKYuzojigKesGCsdImIy2I0j2tEt7s7nMOHWzmn8XPciE3XkrvNXICfvGKyt7jKNtv
+coiHWiYOBxSBYeQPkU4HUUJG0wTfxpPab/003onqZfmJoAT3lwJYYmm8QTAPretOQ759UhwoVbVX
+RbHRI9gswD22Af2xezE3uS3ZsxB3o2uI4RaEKA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -2314,4 +2263,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_088c00fb-68fa-4a88-94ec-6575d0e9cc83" Target="#_8ca8ef4a-f5d6-4aa6-a143-0251a2cd2e25"><Timestamp>2020-03-10 23:33:41</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_688a8ac8-ccc8-44ef-8cbd-67a20eb54b85" Target="#_8fc89325-3f43-4c1a-a5ca-023edb1433aa"><Timestamp>2020-03-11 00:11:07</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
