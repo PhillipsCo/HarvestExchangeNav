@@ -42,7 +42,7 @@
     <contextParameter comment="" name="DB_Talend_Context_Schema" prompt="DB_Talend_Context_Schema?" promptNeeded="false" repositoryContextId="_ypE2UFnREeaCBrSnOG5XMg" type="id_String" value="dbo"/>
     <contextParameter comment="" name="DB_Talend_Context_Server" prompt="DB_Talend_Context_Server?" promptNeeded="false" repositoryContextId="_ypE2UFnREeaCBrSnOG5XMg" type="id_String" value="SRVRSQL200.harvestfoodsolutions.com"/>
     <contextParameter comment="" name="NAV_Price" prompt="NAV_Price?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value=""/>
-    <contextParameter comment="" name="StageRecords" prompt="StageRecords?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="StageRecords" prompt="StageRecords?" promptNeeded="false" type="id_Integer" value=""/>
   </context>
   <context confirmationNeeded="false" name="QA">
     <contextParameter comment="" name="priceBase" prompt="priceBase?" promptNeeded="false" type="id_Integer" value=""/>
@@ -87,7 +87,7 @@
     <contextParameter comment="" name="DB_Talend_Context_Schema" prompt="DB_Talend_Context_Schema?" promptNeeded="false" repositoryContextId="_ypE2UFnREeaCBrSnOG5XMg" type="id_String" value="dbo"/>
     <contextParameter comment="" name="DB_Talend_Context_Server" prompt="DB_Talend_Context_Server?" promptNeeded="false" repositoryContextId="_ypE2UFnREeaCBrSnOG5XMg" type="id_String" value="SRVRSQL200.harvestfoodsolutions.com"/>
     <contextParameter comment="" name="NAV_Price" prompt="NAV_Price?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value=""/>
-    <contextParameter comment="" name="StageRecords" prompt="StageRecords?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="StageRecords" prompt="StageRecords?" promptNeeded="false" type="id_Integer" value=""/>
   </context>
   <context confirmationNeeded="false" name="PROD">
     <contextParameter comment="" name="priceBase" prompt="priceBase?" promptNeeded="false" type="id_Integer" value=""/>
@@ -132,7 +132,7 @@
     <contextParameter comment="" name="DB_Talend_Context_Schema" prompt="DB_Talend_Context_Schema?" promptNeeded="false" repositoryContextId="_ypE2UFnREeaCBrSnOG5XMg" type="id_String" value="dbo"/>
     <contextParameter comment="" name="DB_Talend_Context_Server" prompt="DB_Talend_Context_Server?" promptNeeded="false" repositoryContextId="_ypE2UFnREeaCBrSnOG5XMg" type="id_String" value="SRVRSQL200.harvestfoodsolutions.com"/>
     <contextParameter comment="" name="NAV_Price" prompt="NAV_Price?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value=""/>
-    <contextParameter comment="" name="StageRecords" prompt="StageRecords?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="StageRecords" prompt="StageRecords?" promptNeeded="false" type="id_Integer" value=""/>
   </context>
   <context confirmationNeeded="false" name="PREPROD">
     <contextParameter comment="" name="priceBase" prompt="priceBase?" promptNeeded="false" type="id_Integer" value=""/>
@@ -177,7 +177,7 @@
     <contextParameter comment="" name="DB_Talend_Context_Schema" prompt="DB_Talend_Context_Schema?" promptNeeded="false" repositoryContextId="_ypE2UFnREeaCBrSnOG5XMg" type="id_String" value="dbo"/>
     <contextParameter comment="" name="DB_Talend_Context_Server" prompt="DB_Talend_Context_Server?" promptNeeded="false" repositoryContextId="_ypE2UFnREeaCBrSnOG5XMg" type="id_String" value="SRVRSQL200.harvestfoodsolutions.com"/>
     <contextParameter comment="" name="NAV_Price" prompt="NAV_Price?" promptNeeded="false" repositoryContextId="_L79x4Jv0EeaZqY2oYor1fQ" type="id_String" value=""/>
-    <contextParameter comment="" name="StageRecords" prompt="StageRecords?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="StageRecords" prompt="StageRecords?" promptNeeded="false" type="id_Integer" value=""/>
   </context>
   <parameters>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" show="false" value="192"/>
@@ -2338,13 +2338,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_9e7eaa4a-553e-4b93-942f-4b101919373e"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>LC7WlIkooLgO9+ABK2EyAsworr7TO57phXe2xW4rlQ8xdyzzwRyoxO2MhGPsarXf7+CHqGIkjaxB
-k8OUkClLeA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_dcebde86-06a0-4302-8466-6ed52d76be6c"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>T23wlIM6oLPB1RUdZLMV0neqIliNlcBT+OtKlq7SEKUqD97beGFpJDUaQrR1ThEL6JVteNfWF/Gy
-vDZSPfVD/A==</DigestValue></Reference></SignedInfo><SignatureValue>GXXrxKuEwXZol/eV4NlJsy+QD7MHsmFr1ackZkeoOXRNws/rDXvMLuRteiTlE4/8w1ebW1Ad9sGh
-z+VOJB2TZHLW0rfsMIEL/LFjaQewE1W6150tXW5h58wlwah7zSFrPbT//PoQOZx3TAtKQDx45yXY
-HY863WDDiwmJFSafbLCulgHhDDPgBNovTZ/ZnVlhFDg8gVVOS024yQOH91pWzAtpAOqL296+tT/Q
-1oCWHTm5iFfHgkNzDpCfZnvJeaYo2lfJ9FVLZ6IML84h3u1us10/VB0ckQyJVJi0O+oEa3VHREqn
-mLmAizTzgutEPfBFdeBZPYxBkyxTNb8V+E37oA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_4ba4eaa9-f01f-418c-8935-fc327811dda1"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>gNw4HGA6aToL8W/69geDzrFi2ko5EoxryGxvbdu6UQ9d/IWnEFu+nqyr/aQymKaVzf18FPkZe1VY
+VUjKvwzobw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_76de4a6e-296a-4ad4-b385-62b825d50a88"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>LbIsvo6gsH4gyXSp//hYOSxFEeX/Mz8ULttsrd7HZOCHzvQOM+8Zq+3cTgXplvsm/+mS2RwhXg6Y
+iFhCBB1KOQ==</DigestValue></Reference></SignedInfo><SignatureValue>yFyufVvQ4e/cSo+OB9yRblptPNZmL7EFDUhsfFGcrN9F/viFGwGcGhRTsbjz0yQjq+lnb2V51ozG
+n2ToE8da2FK7wrMvW4zieqHh6dG5ShyOvmeKds8Lb5koQ5zStE2WCp2atMzm0+0P7/FgnxLA7ph2
+rGqXlcjm67FtWEZA7jxR/zItORzFirgWZCZRlsLa8TvhFOgb1q7pvR3zx8TRBC8wRwVot5Q0+jDU
+5BMd7qOsRiOqnRsOY16y3XzOZlwEGj+mCfYTp/AQsxrcKERUerUqLlr5tsazWsssGekFlEc5392F
+JiAL+3F1blENcYIBQkW7/71npk8+nIa66jWp7g==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -2368,4 +2368,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_dcebde86-06a0-4302-8466-6ed52d76be6c" Target="#_9e7eaa4a-553e-4b93-942f-4b101919373e"><Timestamp>2020-03-11 00:22:22</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_76de4a6e-296a-4ad4-b385-62b825d50a88" Target="#_4ba4eaa9-f01f-418c-8935-fc327811dda1"><Timestamp>2020-03-11 00:23:13</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
